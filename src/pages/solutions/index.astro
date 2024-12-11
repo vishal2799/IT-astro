@@ -1,0 +1,66 @@
+---
+import BreadcrumbImg from '../../assets/images/breadcrumbsolution.jpg';
+import { Icon } from 'astro-icon/components';
+import Layout from '../../layouts/Layout.astro';
+import { SolutionsTwo } from '../../constants';
+import ServiceCard2 from '../../components/ServiceCard2.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+const breadCrumbsDetails = {
+  img: BreadcrumbImg,
+  title: 'Solutions for any Department',
+  desc: 'Save time, escalate efficiency and deliver more value in any area of your business.',
+};
+---
+
+<Layout>
+  <div class='min-h-screen bg-gradient-to-b from-white-100 to-primary-100'>
+    {/* Breadcrumbs */}
+    <Breadcrumbs details={breadCrumbsDetails} />
+    <div class='container mx-auto px-4 py-16'>
+      <div class='flex gap-10 mb-28'>
+        <div class='flex flex-col gap-5 flex-1 px-5'>
+          <h3 class='text-2xl text-darkBlue font-semibold'>
+            Redefine what’s possible across your enterprise
+          </h3>
+          <div class='text-sm text-darkText'>
+            Solve productivity challenges in any department and free teams from
+            wasting hours on tedious, time consuming tasks. With fast, agile
+            automation, you can step up efficiency, reduce risk and power
+            lasting change in any function or process. Whether you need to scale
+            up output or support a more distributed workforce, we are here to
+            help.
+          </div>
+        </div>
+        <div class='flex flex-col gap-5 flex-1 px-5'>
+          <h3 class='text-2xl text-darkBlue font-semibold'>
+            Why automate with us?
+          </h3>
+          <div class='flex flex-col gap-3'>
+            {
+              [
+                'Finance',
+                'Operations',
+                'Human Resources',
+                'Sales & Marketing',
+                'Information Technology',
+              ].map((el) => (
+                <div class='flex gap-3 items-center'>
+                  <Icon name='check2-circle' size='30' class='text-primary' />
+                  <div class='font-medium text-darkText'>{el}</div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+      <div class='grid gap-10'>
+        {
+          SolutionsTwo.map((service, index) => (
+            <ServiceCard2 service={service} index={index} />
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</Layout>

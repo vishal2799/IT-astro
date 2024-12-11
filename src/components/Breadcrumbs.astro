@@ -1,0 +1,21 @@
+---
+import { Image } from 'astro:assets';
+const { details } = Astro.props;
+---
+
+<section class='relative h-[350px] bg-black-200 text-white'>
+  <Image
+    src={details.img}
+    alt='Velocity IT Team'
+    class='absolute inset-0 h-full w-full object-cover'
+  />
+  <div class='absolute inset-0 bg-black bg-opacity-50'></div>
+  <div class='absolute inset-0 flex items-center justify-start px-10'>
+    <div class='text-left'>
+      <h1 class='text-4xl md:text-5xl font-bold mb-4'>{details.title}</h1>
+      <p class='text-xl md:text-2xl'>
+        {details.desc}
+      </p>
+    </div>
+  </div>
+</section>
