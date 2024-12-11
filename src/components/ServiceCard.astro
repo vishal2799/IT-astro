@@ -1,0 +1,28 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const { service } = Astro.props;
+---
+
+<div
+  class='border border-darkBlue p-6 group hover:bg-primary hover:border-none transition-colors duration-1000 ease-in-out'
+>
+  <div class='flex justify-between items-center mb-5'>
+    <div class='p-5 bg-lightBlue rounded-full'>
+      <Icon size={28} name={service.icon} class='text-primary' />
+    </div>
+    <div class='text-primary text-xl font-medium group-hover:text-lightGray'>
+      0{service.id}
+    </div>
+  </div>
+  <a
+    href='
+  '
+    class='inline-block mb-3 relative underline-animation text-primary text-2xl group-hover:text-lightGray'
+  >
+    {service.name}
+  </a>
+  <p class='text-darkText text-lg group-hover:text-lightGray'>
+    {service.description}
+  </p>
+</div>
