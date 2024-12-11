@@ -6,6 +6,7 @@ import { SolutionsTwo } from '../../constants';
 import ServiceCard2 from '../../components/ServiceCard2.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import PageOverview from '../../components/PageOverview.astro';
+import CTAOne from '../../components/CTAOne.astro';
 
 const breadCrumbsDetails = {
   img: BreadcrumbImg,
@@ -35,13 +36,15 @@ const overview = {
     <div class='container mx-auto px-4 py-16'>
       <PageOverview overview={overview} />
 
-      <div class='grid gap-10'>
+      <div class='grid gap-10 mt-20 mb-14'>
         {
           SolutionsTwo.map((service, index) => (
             <ServiceCard2 service={service} index={index} />
           ))
         }
       </div>
+
+      <CTAOne />
     </div>
   </div>
 </Layout>
