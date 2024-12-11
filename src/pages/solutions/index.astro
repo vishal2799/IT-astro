@@ -5,11 +5,26 @@ import Layout from '../../layouts/Layout.astro';
 import { SolutionsTwo } from '../../constants';
 import ServiceCard2 from '../../components/ServiceCard2.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import PageOverview from '../../components/PageOverview.astro';
 
 const breadCrumbsDetails = {
   img: BreadcrumbImg,
   title: 'Solutions for any Department',
   desc: 'Save time, escalate efficiency and deliver more value in any area of your business.',
+};
+
+const overview = {
+  leftTitle: 'Redefine what’s possible across your enterprise',
+  leftDescription:
+    'Solve productivity challenges in any department and free teams from wasting hours on tedious, time-consuming tasks. With fast, agile automation, you can step up efficiency, reduce risk, and power lasting change in any function or process. Whether you need to scale up output or support a more distributed workforce, we are here to help.',
+  rightTitle: 'Why automate with us?',
+  rightPoints: [
+    'Finance',
+    'Operations',
+    'Human Resources',
+    'Sales & Marketing',
+    'Information Technology',
+  ],
 };
 ---
 
@@ -18,51 +33,7 @@ const breadCrumbsDetails = {
     {/* Breadcrumbs */}
     <Breadcrumbs details={breadCrumbsDetails} />
     <div class='container mx-auto px-4 py-16'>
-      <div
-        class='flex flex-col md:flex-row gap-10 lg:gap-16 mb-28 lg:mb-36 px-6'
-      >
-        <!-- Left Column -->
-        <div class='flex flex-col gap-5 flex-1'>
-          <h3
-            class='text-2xl sm:text-3xl font-semibold text-darkBlue hover:text-primary'
-          >
-            Redefine what’s possible across your enterprise
-          </h3>
-          <p class='text-sm sm:text-base text-darkText leading-relaxed'>
-            Solve productivity challenges in any department and free teams from
-            wasting hours on tedious, time-consuming tasks. With fast, agile
-            automation, you can step up efficiency, reduce risk, and power
-            lasting change in any function or process. Whether you need to scale
-            up output or support a more distributed workforce, we are here to
-            help.
-          </p>
-        </div>
-
-        <!-- Right Column -->
-        <div class='flex flex-col gap-5 flex-1'>
-          <h3
-            class='text-2xl sm:text-3xl font-semibold text-darkBlue hover:text-primary'
-          >
-            Why automate with us?
-          </h3>
-          <div class='flex flex-col gap-3'>
-            {
-              [
-                'Finance',
-                'Operations',
-                'Human Resources',
-                'Sales & Marketing',
-                'Information Technology',
-              ].map((el) => (
-                <div class='flex items-center gap-3'>
-                  <Icon name='check2-circle' size='30' class='text-primary' />
-                  <span class='font-medium text-darkText'>{el}</span>
-                </div>
-              ))
-            }
-          </div>
-        </div>
-      </div>
+      <PageOverview overview={overview} />
 
       <div class='grid gap-10'>
         {

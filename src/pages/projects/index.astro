@@ -1,5 +1,6 @@
 ---
 import CTAOne from '../../components/CTAOne.astro';
+import PageIntro from '../../components/PageIntro.astro';
 import ProjectCard from '../../components/ProjectCard.astro';
 import { Projects } from '../../constants';
 import Layout from '../../layouts/Layout.astro';
@@ -8,19 +9,12 @@ import Layout from '../../layouts/Layout.astro';
 <Layout>
   <div class='min-h-screen bg-gradient-to-b from-white to-lightGray'>
     <div class='container mx-auto px-4 py-8'>
-      <div class='mb-12 mt-8 text-center max-w-screen-md mx-auto'>
-        <h1
-          class='text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-primary mb-4'
-        >
-          Explore Our Recent Projects
-        </h1>
-        <p class='text-xl text-darkText'>
-          Explore the stories behind each project, uncovering challenges,
-          strategies, and remarkable results.
-        </p>
-      </div>
+      <PageIntro
+        heading='Explore Our Recent Projects'
+        paragraph='Explore the stories behind each project, uncovering challenges, strategies, and remarkable results.'
+      />
 
-      <div class='grid md:grid-cols-2 gap-8 mb-10'>
+      <div class='grid md:grid-cols-2 gap-8 mt-12 mb-10'>
         {Projects.map((project) => <ProjectCard project={project} />)}
       </div>
 
