@@ -2,12 +2,14 @@
 import { Icon } from 'astro-icon/components';
 ---
 
-<div class='bg-darkBlue text-white px-12 py-16 flex items-end justify-between'>
-  <div class='w-9/12'>
-    <h3 class='text-2xl font-semibold mb-4'>
+<div
+  class='bg-darkBlue text-white px-6 sm:px-8 lg:px-12 py-8 sm:py-12 lg:py-16 flex flex-col lg:flex-row items-center justify-between'
+>
+  <div class='w-full lg:w-9/12 mb-6 lg:mb-0'>
+    <h3 class='text-2xl sm:text-3xl font-semibold mb-4'>
       Take the pain out of your processes
     </h3>
-    <p class='text-sm font-normal leading-relaxed'>
+    <p class='text-sm sm:text-base font-normal leading-relaxed'>
       Your customers live in a digital world. If your business still leans on
       manual data entry and spreadsheets over email, you risk falling behind the
       times and the competition. We’re here to help.
@@ -18,12 +20,13 @@ import { Icon } from 'astro-icon/components';
       </a>
     </p>
   </div>
-  <div class='flex justify-end w-1/5'>
+
+  <div class='flex justify-center lg:justify-end w-full lg:w-1/5'>
     <a
       href=''
-      class='flex items-center px-6 py-3 bg-primary text-white rounded-3xl hover:bg-accent'
+      class='flex items-center px-6 py-3 bg-primary text-white rounded-3xl hover:bg-accent transition-colors duration-300'
     >
-      Get Started <Icon name='arrow-right' class='ml-3' />
+      Get Started <Icon name='arrow-right' class='ml-3 text-lg sm:text-xl' />
     </a>
   </div>
 </div>
