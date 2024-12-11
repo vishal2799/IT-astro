@@ -139,7 +139,7 @@ const SolutionsTwo = [
     id: 6,
     name: 'Marketing',
     icon: 'bank',
-    image: '/marketing.jpg',
+    image: '/finance.jpg',
     description:
       'Automate marketing campaigns, lead generation, and customer engagement processes to maximize brand visibility and drive sales growth.',
   },

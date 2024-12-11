@@ -19,44 +19,48 @@ const breadCrumbsDetails = {
     <Breadcrumbs details={breadCrumbsDetails} />
 
     <div class='container mx-auto px-4 py-16'>
-      <div class='flex gap-10 mb-28'>
-        <div class='flex flex-col gap-5 flex-1 px-5'>
-          <h3 class='text-2xl text-darkBlue font-semibold'>
-            Business as usual or better?
+      <div
+        class='flex flex-col md:flex-row gap-10 lg:gap-16 mb-28 lg:mb-36 px-6'
+      >
+        <!-- Left Column -->
+        <div class='flex flex-col gap-5 flex-1'>
+          <h3 class='text-2xl sm:text-3xl font-semibold text-darkBlue'>
+            Redefine what’s possible across your enterprise
           </h3>
-          <div class='text-sm text-darkText'>
-            Relying on different systems and spreadsheets, endless email chains
-            and all-consuming manual activities is not a viable way to work in a
-            fast-moving world.<br /><br />
-
-            We can help you to operate smarter and outsource the heavy lifting
-            to a digital workforce, in a way that makes customers and employees
-            happy –and keeps your business profitable.<br /><br />
-
-            If you are not sure where to start, we will work with you to flag
-            the problem areas and build better processes before adding tech. If
-            you’ve already begun your automation journey, we can help you to
-            level up and solve more complex problems.
-          </div>
+          <p class='text-sm sm:text-base text-darkText leading-relaxed'>
+            Solve productivity challenges in any department and free teams from
+            wasting hours on tedious, time-consuming tasks. With fast, agile
+            automation, you can step up efficiency, reduce risk, and power
+            lasting change in any function or process. Whether you need to scale
+            up output or support a more distributed workforce, we are here to
+            help.
+          </p>
         </div>
-        <div class='flex flex-col gap-5 flex-1 px-5'>
-          <h3 class='text-2xl text-darkBlue font-semibold'>
+
+        <!-- Right Column -->
+        <div class='flex flex-col gap-5 flex-1'>
+          <h3 class='text-2xl sm:text-3xl font-semibold text-darkBlue'>
             Why automate with us?
           </h3>
           <div class='flex flex-col gap-3'>
             {
-              [1, 2, 3, 4, 5].map((el) => (
-                <div class='flex gap-3 items-center'>
+              [
+                'Finance',
+                'Operations',
+                'Human Resources',
+                'Sales & Marketing',
+                'Information Technology',
+              ].map((el) => (
+                <div class='flex items-center gap-3'>
                   <Icon name='check2-circle' size='30' class='text-primary' />
-                  <div class='font-medium text-darkText'>
-                    Increase efficiency without increasing headcount
-                  </div>
+                  <span class='font-medium text-darkText'>{el}</span>
                 </div>
               ))
             }
           </div>
         </div>
       </div>
+
       <div class='grid gap-10'>
         {
           ServicesTwo.map((service, index) => (
