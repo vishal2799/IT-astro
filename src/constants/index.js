@@ -43,4 +43,43 @@ const Services = [
   },
 ];
 
-export { Services };
+const Projects = [
+  {
+    id: 1,
+    name: 'Product Design',
+    image: '/project1.jpg',
+    category: 'App Design',
+  },
+  {
+    id: 2,
+    name: 'Web Development',
+    image: '/project1.jpg',
+    category: 'Frontend Development',
+  },
+  {
+    id: 3,
+    name: 'Mobile App',
+    image: '/project1.jpg',
+    category: 'App Development',
+  },
+  {
+    id: 4,
+    name: 'UI/UX Research',
+    image: '/project1.jpg',
+    category: 'UX Design',
+  },
+  {
+    id: 5,
+    name: 'Digital Marketing Campaign',
+    image: '/project1.jpg',
+    category: 'Marketing',
+  },
+  {
+    id: 6,
+    name: 'Brand Identity',
+    image: '/project1.jpg',
+    category: 'Branding',
+  },
+];
+
+export { Services, Projects };
