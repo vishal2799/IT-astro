@@ -97,51 +97,51 @@ const ServicesTwo = [
 const SolutionsTwo = [
   {
     id: 1,
-    name: 'Product Design',
-    icon: 'phone',
-    image: '/service21.jpg',
+    name: 'Finance',
+    icon: 'bank',
+    image: '/finance.jpg',
     description:
-      'Brainstorming and generating ideas based on research findings. This phase involves sketching, creating mood boards, and exploring different concepts to develop innovative solutions.',
+      'Streamline and simplify daily financial processes. We can help you identify and optimise the tasks that halt progress and automate workflows for efficiency, accuracy and compliance confidence. Freeing professionals from non-productive activities allows your finance department to devote more time to higher priority, strategic work.',
   },
   {
     id: 2,
-    name: 'Web Development',
-    icon: 'code-slash',
-    image: '/service21.jpg',
+    name: 'Healthcare',
+    icon: 'bank',
+    image: '/finance.jpg',
     description:
-      'Building responsive and scalable websites using modern frameworks and technologies, ensuring cross-browser compatibility and optimal performance.',
+      'Enhance patient care through streamlined processes and data management. Our solutions help healthcare providers focus on patients by automating routine administrative tasks.',
   },
   {
     id: 3,
-    name: 'Mobile App Development',
-    icon: 'terminal',
-    image: '/service21.jpg',
+    name: 'Education',
+    icon: 'bank',
+    image: '/finance.jpg',
     description:
-      'Creating intuitive and user-friendly mobile applications for iOS and Android platforms with a focus on smooth performance and appealing UI/UX design.',
+      'Improve educational management systems through automated enrollment, grading, and reporting processes, enabling educators to focus on teaching and student success.',
   },
   {
     id: 4,
-    name: 'UI/UX Design',
-    icon: 'palette',
-    image: '/service21.jpg',
+    name: 'Retail',
+    icon: 'bank',
+    image: '/finance.jpg',
     description:
-      'Designing visually appealing and user-centered interfaces that enhance user experience and ensure seamless interaction across devices.',
+      'Boost customer engagement and streamline inventory management with automated retail solutions, ensuring seamless shopping experiences and increased profitability.',
   },
   {
     id: 5,
-    name: 'Digital Marketing',
-    icon: 'megaphone',
-    image: '/service21.jpg',
+    name: 'Logistics',
+    icon: 'bank',
+    image: '/finance.jpg',
     description:
-      'Implementing data-driven marketing strategies, including SEO, social media management, and content marketing to maximize brand visibility and reach.',
+      'Optimize supply chain and logistics operations with real-time tracking and automated task management, ensuring timely deliveries and efficient resource utilization.',
   },
   {
     id: 6,
-    name: 'Branding & Identity',
-    icon: 'briefcase',
-    image: '/service21.jpg',
+    name: 'Marketing',
+    icon: 'bank',
+    image: '/marketing.jpg',
     description:
-      'Creating strong brand identities through logo design, visual storytelling, and brand strategy development to build lasting customer impressions.',
+      'Automate marketing campaigns, lead generation, and customer engagement processes to maximize brand visibility and drive sales growth.',
   },
 ];
 

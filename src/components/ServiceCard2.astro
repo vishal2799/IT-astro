@@ -5,7 +5,7 @@ const { service, index } = Astro.props;
 ---
 
 <div
-  class={`flex shadow-lg gap-10 ${index % 2 === 0 ? 'flex-row-reverse' : ''}`}
+  class={`flex bg-white shadow-lg gap-10 ${index % 2 === 0 ? 'flex-row-reverse' : ''}`}
 >
   <div class='flex flex-col gap-4 justify-center px-6 flex-1'>
     <Icon name={service.icon} size={40} class='text-darkBlue' />
