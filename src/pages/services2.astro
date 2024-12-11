@@ -1,0 +1,77 @@
+---
+import { Image } from 'astro:assets';
+import ServiceCard2 from '../components/ServiceCard2.astro';
+import Layout from '../layouts/Layout.astro';
+import HeroImg from '../assets/images/serviceHero.jpg';
+import { ServicesTwo } from '../constants';
+import { Icon } from 'astro-icon/components';
+---
+
+<Layout>
+  <div class='min-h-screen bg-gradient-to-b from-white-100 to-primary-100'>
+    {/* Hero Section */}
+    <section class='relative h-[350px] bg-black-200 text-white'>
+      <Image
+        src={HeroImg}
+        alt='Velocity IT Team'
+        class='absolute inset-0 h-full w-full object-cover'
+      />
+      <div class='absolute inset-0 bg-black bg-opacity-50'></div>
+      <div class='absolute inset-0 flex items-center justify-start px-10'>
+        <div class='text-left'>
+          <h1 class='text-4xl md:text-5xl font-bold mb-4'>Our Services</h1>
+          <p class='text-xl md:text-2xl'>
+            Your Process Automation Partner from beginning to end.
+          </p>
+        </div>
+      </div>
+    </section>
+    <div class='container mx-auto px-4 py-16'>
+      <div class='flex gap-10 mb-28'>
+        <div class='flex flex-col gap-5 flex-1 px-5'>
+          <h3 class='text-2xl text-darkBlue font-semibold'>
+            Business as usual or better?
+          </h3>
+          <div class='text-sm text-darkText'>
+            Relying on different systems and spreadsheets, endless email chains
+            and all-consuming manual activities is not a viable way to work in a
+            fast-moving world.<br /><br />
+
+            We can help you to operate smarter and outsource the heavy lifting
+            to a digital workforce, in a way that makes customers and employees
+            happy –and keeps your business profitable.<br /><br />
+
+            If you are not sure where to start, we will work with you to flag
+            the problem areas and build better processes before adding tech. If
+            you’ve already begun your automation journey, we can help you to
+            level up and solve more complex problems.
+          </div>
+        </div>
+        <div class='flex flex-col gap-5 flex-1 px-5'>
+          <h3 class='text-2xl text-darkBlue font-semibold'>
+            Why automate with us?
+          </h3>
+          <div class='flex flex-col gap-3'>
+            {
+              [1, 2, 3, 4, 5].map((el) => (
+                <div class='flex gap-3 items-center'>
+                  <Icon name='check2-circle' size='30' class='text-primary' />
+                  <div class='font-medium text-darkText'>
+                    Increase efficiency without increasing headcount
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+      <div class='grid gap-10'>
+        {
+          ServicesTwo.map((service, index) => (
+            <ServiceCard2 service={service} index={index} />
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</Layout>

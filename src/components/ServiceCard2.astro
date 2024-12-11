@@ -1,0 +1,29 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const { service, index } = Astro.props;
+---
+
+<div
+  class={`flex shadow-lg gap-10 ${index % 2 === 0 ? 'flex-row-reverse' : ''}`}
+>
+  <div class='flex flex-col gap-4 justify-center px-6 flex-1'>
+    <Icon name={service.icon} size={40} class='text-darkBlue' />
+    <h3 class='inline-block text-darkBlue text-2xl'>
+      {service.name}
+    </h3>
+    <p class='text-darkText text-lg group-hover:text-lightGray'>
+      {service.description}
+    </p>
+    <a
+      href='/services'
+      class='flex items-center uppercase text-darkText font-medium'
+    >
+      Find Out More
+      <div class='bg-primary ml-2 p-2 rounded-full'>
+        <Icon name='arrow-right' size={18} class='text-lightGray' />
+      </div>
+    </a>
+  </div>
+  <img src={service.image} alt='' class='h-[400px] flex-1' />
+</div>
