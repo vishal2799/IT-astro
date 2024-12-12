@@ -8,7 +8,11 @@ import ServiceCard from '../../components/ServiceCard.astro';
 
 <div class='flex flex-col-reverse lg:flex-row-reverse gap-20 items-center'>
   <div class='flex-1 grid md:grid-cols-2 gap-10'>
-    {Services.slice(0, 4).map((service) => <ServiceCard service={service} />)}
+    {
+      Services.slice(0, 4).map((service) => (
+        <ServiceCard home={true} service={service} />
+      ))
+    }
   </div>
   <div class='flex-1'>
     <div class='mb-6 flex items-center gap-4'>

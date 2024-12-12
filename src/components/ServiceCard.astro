@@ -1,7 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components';
 
-const { service } = Astro.props;
+const { service, home } = Astro.props;
 ---
 
 <div
@@ -26,6 +26,6 @@ const { service } = Astro.props;
   <p
     class='text-textPrimary text-lg leading-relaxed group-hover:text-highlight'
   >
-    {service.description}
+    {home ? service.shortdesc : service.description}
   </p>
 </div>
