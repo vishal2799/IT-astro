@@ -7,15 +7,15 @@ export default {
         poppins: ['Poppins'],
       },
       colors: {
-        primary: '#1A73E8', // Blue
-        darkBlue: '#12355B', // Dark Blue
-        lightBlue: '#E8F0FE', // Light Blue
-        accent: '#0BC5EA', // Teal
-        lightGray: '#F7F9FC', // Light Gray
-        darkText: '#2D3748', // Dark Gray
-        success: '#38A169', // Green
-        warning: '#ECC94B', // Yellow
-        error: '#E53E3E', // Red
+        primary: '#1A73E8', // Main Action/Brand
+        secondary: '#12355B', // Supporting or Contrast
+        highlight: '#E8F0FE', // Light Accent/Background
+        accent: '#0BC5EA', // Call to Action/Links
+        background: '#F7F9FC', // Background
+        textPrimary: '#2D3748', // Main Text
+        success: '#38A169', // Success/Positive
+        warning: '#ECC94B', // Warning/Attention
+        error: '#E53E3E', // Errors/Danger
       },
     },
   },
