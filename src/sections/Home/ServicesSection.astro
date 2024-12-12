@@ -1,0 +1,45 @@
+---
+import { Image } from 'astro:assets';
+import AboutImg from '../../assets/images/About.jpg';
+import { Icon } from 'astro-icon/components';
+import { Services } from '../../constants';
+import ServiceCard from '../../components/ServiceCard.astro';
+---
+
+<div class='flex flex-row-reverse gap-20 items-center'>
+  <div class='grid lg:grid-cols-2 gap-10'>
+    {Services.slice(0, 4).map((service) => <ServiceCard service={service} />)}
+  </div>
+  <div>
+    <div class='mb-6 flex items-center gap-4'>
+      <div class='h-[1px] w-12 bg-accent'></div>
+      <div class='text-accent text-lg'>Services</div>
+    </div>
+    <h1
+      class='text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight text-primary mb-6'
+    >
+      We Offer The Best Services to Our Clients
+    </h1>
+    <p class='text-lg sm:text-xl text-textPrimary leading-relaxed mb-10'>
+      A digital business agency is a company or organization that specializes in
+      providing services related to digital marketing, online present, and
+      overall digital strategy for businesses.
+    </p>
+    <a
+      href='#'
+      class='relative inline-flex items-center justify-center px-6 py-3 text-lg font-medium text-primary bg-highlight rounded-full overflow-hidden group'
+    >
+      <!-- Button background color transition (left to right) -->
+      <span
+        class='absolute inset-0 w-full h-full bg-accent transform -translate-x-full group-hover:translate-x-0 transition-all duration-300'
+      ></span>
+
+      <!-- Text with hover color transition -->
+      <span
+        class='relative z-10 mr-2 group-hover:text-highlight transition-all duration-300'
+      >
+        Browse All Services
+      </span>
+    </a>
+  </div>
+</div>
