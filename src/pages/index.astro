@@ -6,17 +6,24 @@ import Gap from '../components/Gap.astro';
 import ProjectWorkflow from '../sections/ProjectWorkflow.astro';
 import TestimonialSection from '../sections/TestimonialSection.astro';
 import BlogSection from '../sections/Home/BlogSection.astro';
+import StatsSection from '../sections/StatsSection.astro';
+import CTATwo from '../components/CTATwo.astro';
+import CTAOne from '../components/CTAOne.astro';
 ---
 
 <Layout>
   <div class='min-h-screen'>
+    <StatsSection />
     <div class='container mx-auto px-4 py-28'>
       <AboutSection />
       <Gap />
       <ServicesSection />
+      <Gap />
+      <CTATwo />
     </div>
     <ProjectWorkflow />
     <TestimonialSection />
+    <CTAOne />
     <BlogSection />
   </div>
 </Layout>
