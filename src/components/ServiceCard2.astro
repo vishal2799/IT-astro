@@ -5,26 +5,26 @@ const { service, index } = Astro.props;
 ---
 
 <div
-  class={`flex flex-col md:flex-row bg-white shadow-lg gap-10 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
+  class={`flex flex-col md:flex-row bg-background shadow-lg gap-10 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
 >
   <div class='flex flex-col gap-4 justify-center px-4 md:px-6 flex-1'>
-    <Icon name={service.icon} size={40} class='text-darkBlue' />
-    <h3 class='inline-block text-darkBlue text-2xl font-semibold'>
+    <Icon name={service.icon} size={40} class='text-primary' />
+    <h3 class='inline-block text-textPrimary text-2xl font-semibold'>
       {service.name}
     </h3>
-    <p class='text-darkText text-lg leading-relaxed'>
+    <p class='text-textPrimary text-lg leading-relaxed'>
       {service.description}
     </p>
     <a
       href='/services'
-      class='flex items-center uppercase text-darkText font-medium hover:text-primary transition-colors'
+      class='flex items-center uppercase text-textPrimary font-medium group hover:text-accent transition-colors'
       aria-label={`Learn more about ${service.name}`}
     >
       Find Out More
       <div
-        class='bg-primary ml-2 p-2 rounded-full hover:bg-darkBlue transition'
+        class='bg-accent ml-2 p-2 rounded-full group-hover:bg-primary transition'
       >
-        <Icon name='arrow-right' size={18} class='text-lightGray' />
+        <Icon name='arrow-right' size={18} class='text-highlight' />
       </div>
     </a>
   </div>
