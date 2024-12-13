@@ -1,148 +1,197 @@
----
-import { Icon } from 'astro-icon/components';
----
+<header class='bg-gray-800 text-white p-4'>
+  <nav class='flex items-center justify-between'>
+    <div class='text-lg font-bold'>YourBrand</div>
+    <ul class='flex space-x-6'>
+      <!-- Products Link -->
+      <li class='relative group'>
+        <button class='hover:opacity-50 cursor-pointer px-3 py-2'
+          >Products</button
+        >
 
-<header class='py-4 px-6 bg-white'>
-  <div class='container mx-auto'>
-    <div class='flex justify-between items-center'>
-      <!-- Logo Section -->
-      <div class='flex flex-col'>
-        <a href='/' class='inline-block'>
-          <img src='/velocity-logo.svg' alt='Velocity' class='h-12' />
-        </a>
-        <p class='text-sm text-gray-600 mt-1'>
-          automate | transform | optimise
-        </p>
-      </div>
+        <!-- Products Mega Menu -->
+        <div
+          class='mega-menu absolute left-0 top-full mt-2 bg-white rounded-xl shadow-xl max-w-none z-50 opacity-0 invisible transition-all transform group-hover:opacity-100 group-hover:visible group-hover:block'
+        >
+          <div class='relative p-6'>
+            <div
+              class='w-10 h-10 bg-white transform rotate-45 absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-sm'
+            >
+            </div>
 
-      <!-- Main Navigation -->
-      <nav class='hidden lg:flex items-center space-x-8'>
-        <a href='/services' class='text-gray-800 hover:text-red-600 font-medium'
-          >SERVICES</a
-        >
-        <a
-          href='/technology'
-          class='text-gray-800 hover:text-red-600 font-medium'>TECHNOLOGY</a
-        >
-        <a
-          href='/solutions'
-          class='text-gray-800 hover:text-red-600 font-medium'>SOLUTIONS</a
-        >
-        <a
-          href='/case-studies'
-          class='text-gray-800 hover:text-red-600 font-medium'>CASE STUDIES</a
-        >
-        <a href='/about-us' class='text-gray-800 hover:text-red-600 font-medium'
-          >ABOUT US</a
-        >
-      </nav>
-
-      <!-- Right Section -->
-      <div class='hidden lg:flex items-center space-x-6'>
-        <!-- Top Menu -->
-        <div class='flex items-center space-x-6'>
-          <a
-            href='/knowledge-hub'
-            class='text-sm text-gray-600 hover:text-red-600'>KNOWLEDGE HUB</a
-          >
-          <a href='/careers' class='text-sm text-gray-600 hover:text-red-600'
-            >CAREERS</a
-          >
-          <a href='/contact' class='text-sm text-gray-600 hover:text-red-600'
-            >CONTACT</a
-          >
-          <button aria-label='Search' class='text-gray-600 hover:text-red-600'>
-            <Icon name='search' class='w-5 h-5' />
-          </button>
+            <div class='relative z-10'>
+              <div class='grid grid-cols-2 gap-6'>
+                <div>
+                  <p
+                    class='uppercase tracking-wider text-gray-500 font-medium text-[13px]'
+                  >
+                    The Suite
+                  </p>
+                  <ul class='mt-3 text-[15px] space-y-3'>
+                    <li>
+                      <a
+                        href='#'
+                        class='block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600'
+                        >Course Editor</a>
+                    </li>
+                    <li>
+                      <a
+                        href='#'
+                        class='block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600'
+                        >Accept payments</a>
+                    </li>
+                    <li>
+                      <a
+                        href='#'
+                        class='block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600'
+                        >Close captioning</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <p
+                    class='uppercase tracking-wider text-gray-500 font-medium text-[13px]'
+                  >
+                    Extensions
+                  </p>
+                  <ul class='mt-3 text-[15px] space-y-3'>
+                    <li>
+                      <a
+                        href='#'
+                        class='block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600'
+                        >Plugins</a>
+                    </li>
+                    <li>
+                      <a
+                        href='#'
+                        class='block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600'
+                        >Batch uploads</a>
+                    </li>
+                    <li>
+                      <a
+                        href='#'
+                        class='block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600'
+                        >Social sharing</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </li>
 
-        <!-- Social Icons -->
-        <div class='flex items-center space-x-4'>
-          <a
-            href='https://linkedin.com'
-            class='text-gray-600 hover:text-red-600'
-            aria-label='LinkedIn'
-          >
-            <Icon name='instagram' class='w-5 h-5' />
-          </a>
-          <a
-            href='https://twitter.com'
-            class='text-gray-600 hover:text-red-600'
-            aria-label='Twitter'
-          >
-            <Icon name='twitter-x' class='w-5 h-5' />
-          </a>
-          <a
-            href='https://facebook.com'
-            class='text-gray-600 hover:text-red-600'
-            aria-label='Facebook'
-          >
-            <Icon name='facebook' class='w-5 h-5' />
-          </a>
-        </div>
-
-        <!-- Phone Button -->
-        <a
-          href='tel:+440190873825'
-          class='bg-emerald-400 text-white px-4 py-2 rounded-full hover:bg-emerald-500 transition-colors'
+      <!-- Services Link -->
+      <li class='relative group'>
+        <button class='hover:opacity-50 cursor-pointer px-3 py-2'
+          >Services</button
         >
-          <Icon name='phone' class='w-4 h-4 inline-block mr-2' />
-          +44(0) 1908 738 254
-        </a>
-      </div>
 
-      <!-- Mobile Menu Button -->
-      <button
-        class='lg:hidden text-gray-600 hover:text-red-600'
-        aria-label='Menu'
-        id='mobile-menu-button'
-      >
-        <Icon name='list' class='w-6 h-6' />
-      </button>
-    </div>
-  </div>
+        <!-- Services Mega Menu -->
+        <div
+          class='mega-menu absolute left-0 top-full mt-2 bg-white rounded-xl shadow-xl max-w-none z-50 opacity-0 invisible transition-all transform group-hover:opacity-100 group-hover:visible group-hover:block'
+        >
+          <div class='relative p-6'>
+            <div
+              class='w-10 h-10 bg-white transform rotate-45 absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-sm'
+            >
+            </div>
 
-  <!-- Mobile Menu -->
-  <div class='lg:hidden hidden' id='mobile-menu'>
-    <nav class='mt-4 px-4 py-2 space-y-2'>
-      <a href='/services' class='block py-2 text-gray-800 hover:text-red-600'
-        >SERVICES</a
-      >
-      <a href='/technology' class='block py-2 text-gray-800 hover:text-red-600'
-        >TECHNOLOGY</a
-      >
-      <a href='/solutions' class='block py-2 text-gray-800 hover:text-red-600'
-        >SOLUTIONS</a
-      >
-      <a
-        href='/case-studies'
-        class='block py-2 text-gray-800 hover:text-red-600'>CASE STUDIES</a
-      >
-      <a href='/about-us' class='block py-2 text-gray-800 hover:text-red-600'
-        >ABOUT US</a
-      >
-      <div class='border-t border-gray-200 my-2'></div>
-      <a
-        href='/knowledge-hub'
-        class='block py-2 text-gray-600 hover:text-red-600'>KNOWLEDGE HUB</a
-      >
-      <a href='/careers' class='block py-2 text-gray-600 hover:text-red-600'
-        >CAREERS</a
-      >
-      <a href='/contact' class='block py-2 text-gray-600 hover:text-red-600'
-        >CONTACT</a
-      >
-    </nav>
-  </div>
+            <div class='relative z-10'>
+              <div class='grid grid-cols-2 gap-6'>
+                <div>
+                  <p
+                    class='uppercase tracking-wider text-gray-500 font-medium text-[13px]'
+                  >
+                    Web Development
+                  </p>
+                  <ul class='mt-3 text-[15px] space-y-3'>
+                    <li>
+                      <a
+                        href='#'
+                        class='block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600'
+                        >Custom Websites</a>
+                    </li>
+                    <li>
+                      <a
+                        href='#'
+                        class='block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600'
+                        >Landing Pages</a>
+                    </li>
+                    <li>
+                      <a
+                        href='#'
+                        class='block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600'
+                        >E-Commerce Solutions</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <p
+                    class='uppercase tracking-wider text-gray-500 font-medium text-[13px]'
+                  >
+                    Design & Branding
+                  </p>
+                  <ul class='mt-3 text-[15px] space-y-3'>
+                    <li>
+                      <a
+                        href='#'
+                        class='block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600'
+                        >Logo Design</a>
+                    </li>
+                    <li>
+                      <a
+                        href='#'
+                        class='block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600'
+                        >Branding Strategy</a>
+                    </li>
+                    <li>
+                      <a
+                        href='#'
+                        class='block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600'
+                        >UI/UX Design</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </nav>
 </header>
 
-<script>
-  const mobileMenuButton = document.getElementById('mobile-menu-button');
-  const mobileMenu = document.getElementById('mobile-menu');
-
-  if (mobileMenuButton && mobileMenu) {
-    mobileMenuButton.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
+<!-- TailwindCSS for mega menu styles -->
+<style>
+  .mega-menu {
+    position: fixed; /* Fix the position relative to the screen */
+    left: 0; /* Align to the left of the screen */
+    top: 60px; /* Adjust based on your header height */
+    width: 100%; /* Make it span the full width */
+    z-index: 50; /* Ensure it's on top of other elements */
+    visibility: hidden;
+    opacity: 0;
+    transition:
+      opacity 0.3s ease,
+      visibility 0s 0.3s;
   }
-</script>
+
+  /* When the group is hovered, show the mega menu */
+  .group:hover .mega-menu {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+
+  /* Prevent horizontal scrollbar */
+  .group:hover .mega-menu {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+
+  /* Mega menu arrow */
+  .mega-menu .w-10 {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+</style>
