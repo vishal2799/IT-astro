@@ -1,0 +1,309 @@
+---
+import { Icon } from 'astro-icon/components';
+import { Image } from 'astro:assets';
+
+const navItems = [
+  { label: 'Home', href: '/' },
+  {
+    label: 'Services',
+    href: '#',
+    megaMenu: {
+      column1: [
+        { label: 'Tour Packages', href: '/services/tour-packages' },
+        { label: 'Custom Itineraries', href: '/services/custom-itineraries' },
+        { label: 'Group Tours', href: '/services/group-tours' },
+        { label: 'Adventure Trips', href: '/services/adventure-trips' },
+      ],
+      column2: [
+        { label: 'Luxury Travel', href: '/services/luxury-travel' },
+        { label: 'Honeymoon Packages', href: '/services/honeymoon-packages' },
+        { label: 'Spiritual Journeys', href: '/services/spiritual-journeys' },
+        {
+          label: 'Cultural Experiences',
+          href: '/services/cultural-experiences',
+        },
+      ],
+    },
+  },
+  {
+    label: 'Destinations',
+    href: '#',
+    megaMenu: {
+      column1: [
+        { label: 'North India', href: '/destinations/north-india' },
+        { label: 'South India', href: '/destinations/south-india' },
+        { label: 'East India', href: '/destinations/east-india' },
+        { label: 'West India', href: '/destinations/west-india' },
+      ],
+      column2: [
+        { label: 'Rajasthan', href: '/destinations/rajasthan' },
+        { label: 'Kerala', href: '/destinations/kerala' },
+        { label: 'Goa', href: '/destinations/goa' },
+        { label: 'Himalayas', href: '/destinations/himalayas' },
+      ],
+    },
+  },
+  { label: 'About', href: '/about' },
+  { label: 'Contact', href: '/contact' },
+];
+---
+
+<header class='bg-white shadow-md sticky top-0 z-50 overflow-x-hidden'>
+  <div class='container mx-auto px-4 py-4'>
+    <div class='flex items-center justify-between'>
+      <a href='/' class='flex items-center space-x-2 group'>
+        <Image
+          src='/placeholder.svg'
+          alt='Indian Wanderlust'
+          width={40}
+          height={40}
+          class='w-10 h-10 transition-transform duration-300 group-hover:scale-110'
+        />
+        <span
+          class='text-xl font-bold text-primary transition-colors duration-300 group-hover:text-secondary'
+          >Indian Wanderlust</span
+        >
+      </a>
+
+      <nav class='hidden lg:flex items-center space-x-6'>
+        {
+          navItems.map((item) => (
+            <div class='relative group'>
+              <a
+                href={item.href}
+                class='text-sm font-medium text-black-200 hover:text-primary transition-colors duration-300 flex items-center'
+              >
+                {item.label}
+                {item.megaMenu && (
+                  <Icon
+                    name='chevron-right'
+                    class='inline-block w-4 h-4 ml-1 transition-transform duration-300 group-hover:rotate-180'
+                  />
+                )}
+              </a>
+              {item.megaMenu && (
+                <div class='fixed left-0 w-full flex justify-center mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50'>
+                  <div class='w-[80vw] max-w-6xl bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5'>
+                    <div class='p-6 grid grid-cols-2 gap-8'>
+                      <div class='space-y-4 max-h-[60vh] overflow-y-auto pr-4 scrollbar-thin scrollbar-thumb-primary scrollbar-track-gray-100'>
+                        <h3 class='font-semibold text-lg text-primary mb-2'>
+                          Column 1
+                        </h3>
+                        {item.megaMenu.column1.map((subItem) => (
+                          <a
+                            href={subItem.href}
+                            class='block text-sm text-gray-700 hover:text-primary transition-colors duration-200'
+                          >
+                            {subItem.label}
+                          </a>
+                        ))}
+                        {/* Dummy content for scrolling */}
+                        {Array(20)
+                          .fill(0)
+                          .map((_, index) => (
+                            <p class='text-sm text-gray-500'>
+                              Dummy content {index + 1}
+                            </p>
+                          ))}
+                      </div>
+                      <div class='space-y-4 max-h-[60vh] overflow-y-auto pr-4 scrollbar-thin scrollbar-thumb-primary scrollbar-track-gray-100'>
+                        <h3 class='font-semibold text-lg text-primary mb-2'>
+                          Column 2
+                        </h3>
+                        {item.megaMenu.column2.map((subItem) => (
+                          <a
+                            href={subItem.href}
+                            class='block text-sm text-gray-700 hover:text-primary transition-colors duration-200'
+                          >
+                            {subItem.label}
+                          </a>
+                        ))}
+                        {/* Dummy content for scrolling */}
+                        {Array(20)
+                          .fill(0)
+                          .map((_, index) => (
+                            <p class='text-sm text-gray-500'>
+                              Dummy content {index + 1}
+                            </p>
+                          ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          ))
+        }
+        <a
+          href='/quote'
+          class='btn-primary transform transition duration-300 hover:scale-105 hover:shadow-lg'
+        >
+          Get Quote
+        </a>
+      </nav>
+
+      <button
+        id='mobileMenuToggle'
+        class='lg:hidden text-black-200 hover:text-primary transition-colors duration-300 focus:outline-none'
+        aria-label='Toggle mobile menu'
+      >
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          fill='none'
+          viewBox='0 0 24 24'
+          stroke='currentColor'
+          class='w-6 h-6 transition-transform duration-300'
+        >
+          <path
+            stroke-linecap='round'
+            stroke-linejoin='round'
+            stroke-width='2'
+            d='M4 6h16M4 12h16M4 18h16'></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu (unchanged) -->
+  <div
+    id='mobileMenu'
+    class='lg:hidden bg-white overflow-hidden transition-all duration-300 max-h-0'
+  >
+    <nav class='container mx-auto px-4 py-4 space-y-4'>
+      {
+        navItems.map((item) => (
+          <div>
+            <button
+              class='w-full text-left text-sm font-medium text-black-200 hover:text-primary transition-colors duration-300 flex items-center justify-between focus:outline-none'
+              aria-expanded='false'
+            >
+              {item.label}
+              {item.megaMenu && (
+                <Icon
+                  name='chevron-right'
+                  class='w-4 h-4 transition-transform duration-300'
+                />
+              )}
+            </button>
+            {item.megaMenu && (
+              <div class='pl-4 mt-2 space-y-2 hidden'>
+                {[...item.megaMenu.column1, ...item.megaMenu.column2].map(
+                  (subItem) => (
+                    <a
+                      href={subItem.href}
+                      class='block text-sm text-gray-700 hover:text-primary transition-colors duration-200'
+                    >
+                      {subItem.label}
+                    </a>
+                  )
+                )}
+              </div>
+            )}
+          </div>
+        ))
+      }
+      <a
+        href='/quote'
+        class='btn-primary block text-center transform transition duration-300 hover:scale-105 hover:shadow-lg'
+      >
+        Get Quote
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const dropdownButtons = document.querySelectorAll('#mobileMenu button');
+
+  if (mobileMenuToggle && mobileMenu) {
+    mobileMenuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('max-h-0');
+      mobileMenu.classList.toggle('max-h-screen');
+
+      const icon = mobileMenuToggle.querySelector('svg');
+      icon!.classList.toggle('rotate-90');
+
+      const expanded = mobileMenu.classList.contains('max-h-screen');
+      mobileMenuToggle.setAttribute(
+        'aria-expanded',
+        expanded ? 'true' : 'false'
+      );
+    });
+  }
+
+  dropdownButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const dropdown: any = button.nextElementSibling;
+      const icon = button.querySelector('svg');
+
+      if (dropdown) {
+        dropdown.classList.toggle('hidden');
+        icon!.classList.toggle('rotate-180');
+
+        const expanded = !dropdown.classList.contains('hidden');
+        button.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+
+        // Animate height
+        if (expanded) {
+          dropdown.style.maxHeight = '0';
+          dropdown.style.opacity = '0';
+          setTimeout(() => {
+            dropdown.style.maxHeight = dropdown.scrollHeight + 'px';
+            dropdown.style.opacity = '1';
+          }, 0);
+        } else {
+          dropdown.style.maxHeight = dropdown.scrollHeight + 'px';
+          dropdown.style.opacity = '1';
+          setTimeout(() => {
+            dropdown.style.maxHeight = '0';
+            dropdown.style.opacity = '0';
+          }, 0);
+        }
+      }
+    });
+  });
+</script>
+
+<style>
+  #mobileMenu {
+    transition:
+      max-height 0.3s ease-in-out,
+      opacity 0.3s ease-in-out;
+  }
+
+  #mobileMenu > nav > div > div {
+    transition:
+      max-height 0.3s ease-in-out,
+      opacity 0.3s ease-in-out;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+
+  #mobileMenu > nav > div > div.hidden {
+    display: block !important;
+  }
+
+  /* Scrollbar styles */
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scrollbar-thumb-primary::-webkit-scrollbar-thumb {
+    background-color: theme('colors.primary');
+    border-radius: 3px;
+  }
+
+  .scrollbar-track-gray-100::-webkit-scrollbar-track {
+    background-color: theme('colors.gray.100');
+  }
+
+  /* Ensure mega menu doesn't overflow screen width */
+  @media (min-width: 1024px) {
+    .group:hover > div > div {
+      max-width: calc(100vw - 2rem);
+    }
+  }
+</style>
