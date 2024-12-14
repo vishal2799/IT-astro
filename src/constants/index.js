@@ -163,7 +163,7 @@ const Projects = [
   },
   {
     id: 2,
-    name: 'Web Development',
+    name: 'Web Dev',
     image: '/project1.jpg',
     category: 'Frontend Development',
   },
