@@ -1,42 +1,61 @@
 ---
 import { Image } from 'astro:assets';
-import AboutImg from '../../assets/images/About.jpg';
 import { Icon } from 'astro-icon/components';
+import AboutImg from '../../assets/images/About.jpg';
+
+const points = [
+  'Fast and easy to help your brand',
+  'Innovative solutions for digital marketing',
+  'Experienced team of professionals',
+  'Data-driven strategies for optimal results',
+];
 ---
 
-<div class='grid md:grid-cols-2 items-center gap-10 md:gap-20'>
-  <Image
-    src={AboutImg}
-    alt='about section image'
-    class='w-full h-[350px] md:h-[550px] object-cover'
-  />
-  <div>
-    <div class='mb-6 flex items-center gap-4'>
-      <div class='h-[1px] w-12 bg-accent'></div>
-      <div class='text-accent text-lg'>About Us</div>
-    </div>
-    <h1
-      class='text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-primary mb-6'
-    >
-      Why Work With Us And How We Work?
-    </h1>
-    <p class='text-lg sm:text-xl text-textPrimary leading-relaxed mb-10'>
-      Marketing online presence and overall in the digital world to make awesome
-      strategies for startup businesses.
-    </p>
-    <div class='flex flex-col gap-3'>
-      {
-        [1, 2, 3, 4].map((point: unknown, index: any) => (
-          <div class='flex items-center gap-3'>
-            <div class='bg-highlight p-1 rounded-full'>
-              <Icon name='check' size={24} class='text-primary' />
-            </div>
-            <span class='text-lg font-normal text-textPrimary'>
-              Fast and easy to help your brand.
-            </span>
-          </div>
-        ))
-      }
+<section class='py-16 px-4 sm:px-6 lg:px-8 bg-white'>
+  <div class='max-w-7xl mx-auto'>
+    <div class='grid lg:grid-cols-2 gap-12 lg:gap-20 items-center'>
+      <div
+        class='relative h-[350px] sm:h-[450px] lg:h-[550px] rounded-lg overflow-hidden shadow-xl'
+      >
+        <Image
+          src={AboutImg}
+          alt='About our company'
+          class='w-full h-full object-cover'
+          widths={[400, 800, 1200]}
+          sizes='(max-width: 1024px) 100vw, 50vw'
+          loading='eager'
+        />
+      </div>
+      <div class='space-y-8'>
+        <div class='flex items-center gap-4'>
+          <div class='h-[2px] w-12 bg-accent'></div>
+          <span class='text-accent font-semibold tracking-wide uppercase'
+            >About Us</span
+          >
+        </div>
+        <h2
+          class='text-3xl sm:text-4xl lg:text-5xl font-bold text-primary leading-tight'
+        >
+          Why Work With Us And How We Work?
+        </h2>
+        <p class='text-lg sm:text-xl text-gray-700 leading-relaxed'>
+          We enhance your online presence and develop comprehensive digital
+          strategies to propel startup businesses to success in the
+          ever-evolving digital landscape.
+        </p>
+        <ul class='space-y-4'>
+          {
+            points.map((point) => (
+              <li class='flex items-center gap-3'>
+                <div class='bg-highlight p-1.5 rounded-full'>
+                  <Icon name='check' class='w-5 h-5 text-primary' />
+                </div>
+                <span class='text-lg text-gray-700'>{point}</span>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
     </div>
   </div>
-</div>
+</section>
