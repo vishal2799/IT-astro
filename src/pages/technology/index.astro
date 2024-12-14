@@ -1,0 +1,57 @@
+---
+import CTAOne from '../../components/CTAOne.astro';
+import CTATwo from '../../components/CTATwo.astro';
+import Gap from '../../components/Gap.astro';
+import PageIntro from '../../components/PageIntro.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import TechnologyCard from '../../components/TechnologyCard.astro';
+import { Services, Technology } from '../../constants';
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout>
+  <div class='min-h-screen bg-gradient-to-b from-white to-highlight'>
+    <div class='container mx-auto px-4 py-24'>
+      <div class='text-left max-w-screen-lg'>
+        <h1
+          class='text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-textPrimary mb-4 transition-transform duration-500 ease-in-out transform hover:scale-105'
+        >
+          Technology that works for you
+        </h1>
+        <p class='text-lg sm:text-xl text-textSecondary leading-relaxed'>
+          We’re all about making top tier tech more accessible to your people.
+          We can help you bridge skills gaps, change mind sets and tap the full
+          potential of the smartest software available today for fast and
+          lasting transformation across your enterprise. Whether you want to
+          start simple or reset your IT strategy, develop apps or build robots
+          with cognitive powers, we’ll help you get it right, from day one.
+        </p>
+      </div>
+
+      <div class='grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 mb-14'>
+        {Technology.map((tech) => <TechnologyCard technology={tech} />)}
+      </div>
+
+      <CTATwo />
+      <Gap />
+      <div class='text-left max-w-screen-md'>
+        <h1
+          class='text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-textPrimary mb-4 transition-transform duration-500 ease-in-out transform hover:scale-105'
+        >
+          Our Automation Services
+        </h1>
+        <p class='text-lg sm:text-xl text-textSecondary leading-relaxed'>
+          As your automation partner from strategy to go-live and beyond – we
+          help you seize transformation opportunities in your business with the
+          following technologies and services.
+        </p>
+      </div>
+
+      <div class='grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 mb-14'>
+        {Services.map((service) => <ServiceCard service={service} />)}
+      </div>
+
+      <CTAOne />
+    </div>
+  </div>
+</Layout>

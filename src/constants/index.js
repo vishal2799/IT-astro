@@ -1,3 +1,42 @@
+const Technology = [
+  {
+    id: 1,
+    name: 'UiPath',
+    image: '/uipath.png',
+    desc: 'Build software robots to save time, cut out manual work and minimise errors using Robotic Process Automation software that’s trusted by the world’s leading companies.',
+  },
+  {
+    id: 2,
+    name: 'Power BI',
+    image: '/powerbi.png',
+    desc: 'Turn your data into actionable insights with business intelligence tools that help visualize data and share insights across your organization.',
+  },
+  {
+    id: 3,
+    name: 'Azure',
+    image: '/uipath.png',
+    desc: 'Build, deploy, and manage applications with cloud services that provide unparalleled scalability and reliability.',
+  },
+  {
+    id: 4,
+    name: 'React',
+    image: '/powerbi.png',
+    desc: 'Create dynamic and responsive user interfaces with this popular JavaScript library developed by Facebook.',
+  },
+  {
+    id: 5,
+    name: 'Node.js',
+    image: '/uipath.png',
+    desc: 'Build scalable and efficient backend services using Node.js, a JavaScript runtime built on Chrome’s V8 JavaScript engine.',
+  },
+  {
+    id: 6,
+    name: 'Angular',
+    image: '/powerbi.png',
+    desc: 'Develop powerful and maintainable web applications using Angular, a platform for building client-side apps with TypeScript.',
+  },
+];
+
 const Services = [
   {
     id: 1,
@@ -244,4 +283,4 @@ const Blogs = [
   },
 ];
 
-export { Services, Projects, ServicesTwo, SolutionsTwo, Blogs };
+export { Services, Projects, ServicesTwo, SolutionsTwo, Blogs, Technology };

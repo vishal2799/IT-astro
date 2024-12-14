@@ -1,0 +1,36 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const { technology } = Astro.props;
+---
+
+<div class='bg-white shadow-lg p-5 group'>
+  <div
+    class='flex justify-center items-center h-[250px] bg-highlight rounded-sm mb-6'
+  >
+    <img src={technology.image} class='object-contain' />
+  </div>
+  <div class='mb-7'>
+    <a
+      href=''
+      class="inline-block mb-3 text-textPrimary text-2xl font-bold relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-all after:duration-1000 group-hover:after:w-full"
+    >
+      {technology.name}
+    </a>
+    <p class='text-textPrimary text-lg leading-relaxed'>
+      {technology.desc}
+    </p>
+  </div>
+  <a
+    href='/services'
+    class='flex items-center uppercase text-textPrimary font-medium group hover:text-accent transition-colors'
+    aria-label={`Learn more about ${technology.name}`}
+  >
+    Explore
+    <div
+      class='bg-accent ml-2 p-2 rounded-full group-hover:bg-primary transition'
+    >
+      <Icon name='arrow-right' size={18} class='text-highlight' />
+    </div>
+  </a>
+</div>
