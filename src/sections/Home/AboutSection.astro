@@ -4,11 +4,11 @@ import AboutImg from '../../assets/images/About.jpg';
 import { Icon } from 'astro-icon/components';
 ---
 
-<div class='flex flex-col lg:flex-row gap-20 items-center'>
+<div class='grid md:grid-cols-2 items-center gap-10 md:gap-20'>
   <Image
     src={AboutImg}
     alt='about section image'
-    class='h-[400px] md:h-[600px] object-cover'
+    class='w-full h-[350px] md:h-[550px] object-cover'
   />
   <div>
     <div class='mb-6 flex items-center gap-4'>
@@ -16,7 +16,7 @@ import { Icon } from 'astro-icon/components';
       <div class='text-accent text-lg'>About Us</div>
     </div>
     <h1
-      class='text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight text-primary mb-6'
+      class='text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-primary mb-6'
     >
       Why Work With Us And How We Work?
     </h1>
