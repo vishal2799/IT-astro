@@ -1,0 +1,101 @@
+---
+import { Icon } from 'astro-icon/components';
+import MegaMenuCTA from '../components/MegaMenuCTA.astro';
+---
+
+<div class='relative bg-highlight shadow-md w-11/12 mx-auto max-h-[500px]'>
+  <div class='relative z-10'>
+    <div class='flex gap-6'>
+      <!-- First Column -->
+      <div class='border-r border-slate-300 max-h-full overflow-y-auto w-3/12'>
+        <div>
+          <ul>
+            <li class='p-5 group hover:bg-white'>
+              <a href='' class='text-secondary'>UiPath</a>
+            </li>
+            <li class='p-5 group hover:bg-white'>
+              <a href='' class='text-secondary'>Mendix</a>
+            </li>
+            <li class='p-5 group hover:bg-white'>
+              <a href='' class='text-secondary'>Nintex</a>
+            </li>
+            <li class='p-5 group hover:bg-white'>
+              <a href='' class='text-secondary'>K2</a>
+            </li>
+            <li class='p-5 group hover:bg-white'>
+              <a href='' class='text-secondary'>Netcall</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Second Column -->
+      <div class='max-h-full overflow-y-auto w-9/12 p-6'>
+        <div class='grid grid-cols-3 gap-5'>
+          <div class='bg-white shadow-lg p-5 group'>
+            <div
+              class='flex justify-center items-center overflow-hidden h-[100px] bg-highlight rounded-sm mb-4'
+            >
+              <img src='/uipath.png' class='object-contain' />
+            </div>
+            <div class='mb-5'>
+              <a
+                href=''
+                class='inline-block mb-2 text-textPrimary text-xl font-bold'
+              >
+                YOUR EXPERT RPA PARTNER
+              </a>
+              <p class='text-textPrimary text-base leading-relaxed'>
+                Team up with our RPA strategy and tech specialists for maximum
+                automation impact
+              </p>
+            </div>
+            <a
+              href='/services'
+              class='flex items-center uppercase text-textPrimary font-medium group hover:text-accent transition-colors'
+              aria-label={`Learn more about RPA`}
+            >
+              Find Out More
+              <div
+                class='bg-accent ml-2 p-2 rounded-full hover:bg-primary transition'
+              >
+                <Icon name='arrow-right' size={18} class='text-highlight' />
+              </div>
+            </a>
+          </div>
+          <div class='bg-white shadow-lg p-5 group'>
+            <div
+              class='flex justify-center items-center overflow-hidden h-[100px] bg-highlight rounded-sm mb-4'
+            >
+              <img src='/uipath.png' class='object-contain' />
+            </div>
+            <div class='mb-4'>
+              <a
+                href=''
+                class='inline-block mb-2 text-textPrimary text-xl font-bold'
+              >
+                YOUR EXPERT RPA PARTNER
+              </a>
+              <p class='text-textPrimary text-base leading-relaxed'>
+                Team up with our RPA strategy and tech specialists for maximum
+                automation impact
+              </p>
+            </div>
+            <a
+              href='/services'
+              class='flex items-center uppercase text-textPrimary font-medium group hover:text-accent transition-colors'
+              aria-label={`Learn more about RPA`}
+            >
+              Find Out More
+              <div
+                class='bg-accent ml-2 p-2 rounded-full hover:bg-primary transition'
+              >
+                <Icon name='arrow-right' size={18} class='text-highlight' />
+              </div>
+            </a>
+          </div>
+          <MegaMenuCTA />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
