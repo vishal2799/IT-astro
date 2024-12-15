@@ -1,41 +1,68 @@
 ---
 import { Image } from 'astro:assets';
 
+interface Project {
+  name: string;
+  image: string;
+  category: string;
+  desc: string;
+}
+
+interface Props {
+  project: Project;
+}
+
 const { project } = Astro.props;
 
-// Define a default aspect ratio (16:9) and calculate height based on a default width
-const defaultWidth = 800;
-const defaultHeight = Math.round(defaultWidth / (16 / 9));
+const imageWidth = 800;
+const imageHeight = 600;
 ---
 
 <article
-  class='bg-background dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl'
+  class='bg-secondary rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl'
 >
-  <div class='bg-highlight p-4 sm:p-6'>
+  <div class='relative'>
     <Image
       src={project.image}
       alt={`${project.name} project thumbnail`}
-      width={defaultWidth}
-      height={defaultHeight}
-      class='w-full h-48 sm:h-64 object-cover rounded-lg'
-      widths={[400, 800]}
-      sizes='(max-width: 640px) 100vw, 50vw'
-      loading='lazy'
+      width={imageWidth}
+      height={imageHeight}
+      class='w-full h-48 sm:h-56 object-cover'
     />
-  </div>
-  <div
-    class='flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 px-4 sm:px-6 py-4 sm:py-5'
-  >
-    <a
-      href='/projects'
-      class='text-xl sm:text-2xl text-textPrimary dark:text-white font-bold hover:underline'
-    >
-      {project.name}
-    </a>
     <div
-      class='bg-highlight dark:bg-gray-700 text-highlight dark:text-primary-dark text-sm font-medium border border-highlight dark:border-primary-dark rounded-full px-3 py-1'
+      class='absolute top-0 left-0 right-0 p-4 bg-gradient-to-b from-black/70 to-transparent'
     >
-      {project.category}
+      <span
+        class='inline-block bg-highlight text-primary text-xs font-bold px-2 py-1 rounded-full'
+      >
+        {project.category}
+      </span>
     </div>
+  </div>
+
+  <div class='p-4 flex justify-between items-center'>
+    <div class='pr-4'>
+      <h3 class='text-xl font-bold text-highlight mb-2'>{project.name}</h3>
+      <p class='text-highlight text-sm line-clamp-2'>{project.desc}</p>
+    </div>
+    <a
+      href={`/projects/${project.name.toLowerCase().replace(/\s+/g, '-')}`}
+      class='inline-flex text-nowrap items-center text-highlight font-medium hover:underline'
+    >
+      View Details
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        class='h-4 w-4 ml-1'
+        fill='none'
+        viewBox='0 0 24 24'
+        stroke='currentColor'
+      >
+        <path
+          stroke-linecap='round'
+          stroke-linejoin='round'
+          stroke-width='2'
+          d='M9 5l7 7-7 7'></path>
+      </svg>
+    </a>
   </div>
 </article>

@@ -199,36 +199,42 @@ const Projects = [
     name: 'Product Design',
     image: '/project1.jpg',
     category: 'App Design',
+    desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde fuga iste commodi.',
   },
   {
     id: 2,
     name: 'Web Dev',
     image: '/project1.jpg',
     category: 'Frontend Development',
+    desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde fuga iste commodi.',
   },
   {
     id: 3,
     name: 'Mobile App',
     image: '/project1.jpg',
     category: 'App Development',
+    desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde fuga iste commodi.',
   },
   {
     id: 4,
     name: 'UI/UX Research',
     image: '/project1.jpg',
     category: 'UX Design',
+    desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde fuga iste commodi.',
   },
   {
     id: 5,
     name: 'Digital Marketing Campaign',
     image: '/project1.jpg',
     category: 'Marketing',
+    desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde fuga iste commodi.',
   },
   {
     id: 6,
     name: 'Brand Identity',
     image: '/project1.jpg',
     category: 'Branding',
+    desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde fuga iste commodi.',
   },
 ];
 
