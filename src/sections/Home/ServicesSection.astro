@@ -1,49 +1,47 @@
 ---
 import { Image } from 'astro:assets';
-import AboutImg from '../../assets/images/About.jpg';
 import { Icon } from 'astro-icon/components';
 import { Services } from '../../constants';
 import ServiceCard from '../../components/ServiceCard.astro';
+
+// Assuming AboutImg is not used in this component, so I've removed it
 ---
 
-<div class='grid md:grid-cols-2 gap-10 items-center'>
-  <div>
-    <div class='mb-6 flex items-center gap-4'>
-      <div class='h-[1px] w-12 bg-accent'></div>
-      <div class='text-accent text-lg'>Services</div>
+<section class='px-4'>
+  <div class='max-w-7xl mx-auto'>
+    <div class='grid lg:grid-cols-2 gap-12 lg:gap-16 items-start'>
+      <div class='space-y-8'>
+        <div class='flex items-center gap-4'>
+          <div class='h-[2px] w-12 bg-accent'></div>
+          <span class='text-accent font-semibold tracking-wide uppercase'
+            >Services</span
+          >
+        </div>
+        <h2
+          class='text-3xl sm:text-4xl lg:text-5xl font-bold text-primary leading-tight'
+        >
+          We Offer The Best Services to Our Clients
+        </h2>
+        <p class='text-lg text-textPrimary leading-relaxed'>
+          A digital business agency is a company or organization that
+          specializes in providing services related to digital marketing, online
+          presence, and overall digital strategy for businesses.
+        </p>
+        <a
+          href='#'
+          class='inline-flex items-center justify-center px-6 py-3 text-lg font-medium text-primary bg-highlight rounded-full overflow-hidden group transition-colors duration-300 hover:bg-accent hover:text-highlight'
+        >
+          <span class='mr-2 text-nowrap'>Browse All Services</span>
+          <Icon name='arrow-right' class='w-5 h-5' />
+        </a>
+      </div>
+      <div class='grid sm:grid-cols-2 gap-6 lg:gap-8'>
+        {
+          Services.slice(0, 4).map((service) => (
+            <ServiceCard home={true} service={service} />
+          ))
+        }
+      </div>
     </div>
-    <h1
-      class='text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-primary mb-6'
-    >
-      We Offer The Best Services to Our Clients
-    </h1>
-    <p class='text-lg sm:text-xl text-textPrimary leading-relaxed mb-10'>
-      A digital business agency is a company or organization that specializes in
-      providing services related to digital marketing, online present, and
-      overall digital strategy for businesses.
-    </p>
-    <a
-      href='#'
-      class='relative inline-flex items-center justify-center px-6 py-3 text-lg font-medium text-primary bg-highlight rounded-full overflow-hidden group'
-    >
-      <!-- Button background color transition (left to right) -->
-      <span
-        class='absolute inset-0 w-full h-full bg-accent transform -translate-x-full group-hover:translate-x-0 transition-all duration-300'
-      ></span>
-
-      <!-- Text with hover color transition -->
-      <span
-        class='relative z-10 mr-2 group-hover:text-highlight transition-all duration-300'
-      >
-        Browse All Services
-      </span>
-    </a>
   </div>
-  <div class='grid md:grid-cols-1 lg:grid-cols-2 gap-10'>
-    {
-      Services.slice(0, 4).map((service) => (
-        <ServiceCard home={true} service={service} />
-      ))
-    }
-  </div>
-</div>
+</section>

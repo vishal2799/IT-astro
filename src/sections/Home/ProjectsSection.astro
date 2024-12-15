@@ -1,43 +1,44 @@
 ---
+import { Icon } from 'astro-icon/components';
 import ProjectCard from '../../components/ProjectCard.astro';
 import { Projects } from '../../constants';
 ---
 
-<section class='bg-background py-24'>
+<section class='bg-background py-16 sm:py-24'>
   <div class='container mx-auto px-4'>
     <div
-      class='flex flex-col justify-start items-start md:flex-row md:justify-between md:items-center mb-10'
+      class='flex flex-col gap-8 sm:flex-row sm:justify-between sm:items-end mb-12'
     >
-      <div>
-        <div class='mb-6 flex items-center gap-4 justify-start'>
-          <div class='h-[1px] w-12 bg-accent'></div>
-          <div class='text-accent text-lg'>Projects</div>
+      <div class='space-y-4'>
+        <div class='flex items-center gap-4'>
+          <div class='h-[2px] w-12 bg-accent'></div>
+          <span class='text-accent font-semibold tracking-wide uppercase'
+            >Projects</span
+          >
         </div>
-        <h1
-          class='text-3xl md:text-5xl lg:text-6xl font-medium tracking-tight text-primary mb-6'
+        <h2
+          class='text-3xl sm:text-4xl lg:text-5xl font-bold text-primary leading-tight'
         >
           Some of Our Creative Works
-        </h1>
+        </h2>
       </div>
       <a
         href='#'
-        class='relative inline-flex items-center justify-center px-6 py-3 text-lg font-medium text-primary bg-highlight rounded-full overflow-hidden group'
+        class='inline-flex items-center justify-center px-6 py-3 text-lg font-medium text-primary bg-highlight rounded-full transition-colors duration-300 hover:bg-accent hover:text-highlight group'
       >
-        <!-- Button background color transition (left to right) -->
-        <span
-          class='absolute inset-0 w-full h-full bg-accent transform -translate-x-full group-hover:translate-x-0 transition-all duration-300'
-        ></span>
-
-        <!-- Text with hover color transition -->
-        <span
-          class='relative text-nowrap z-10 mr-2 group-hover:text-highlight transition-all duration-300'
-        >
-          Explore More
-        </span>
+        <span class='mr-2 text-nowrap'>Explore More</span>
+        <Icon
+          name='arrow-right'
+          class='w-5 h-5 transition-transform duration-300 group-hover:translate-x-1'
+        />
       </a>
     </div>
-    <div class='grid md:grid-cols-2 gap-8 mt-12 mb-10'>
-      {Projects.slice(0, 4).map((project) => <ProjectCard project={project} />)}
+    <div class='grid md:grid-cols-2 gap-8'>
+      {
+        Projects.slice(0, 4).map((project: any) => (
+          <ProjectCard project={project} />
+        ))
+      }
     </div>
   </div>
 </section>

@@ -1,36 +1,56 @@
 ---
+import { Image } from 'astro:assets';
 import { Icon } from 'astro-icon/components';
 
 const { service, index } = Astro.props;
+
+// Define a default aspect ratio (16:9) and calculate height based on a default width
+const defaultWidth = 800;
+const defaultHeight = Math.round(defaultWidth / (16 / 9));
 ---
 
-<div
-  class={`flex flex-col md:flex-row bg-background shadow-lg gap-10 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
+<article
+  class={`flex flex-col lg:flex-row bg-background dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl ${index % 2 === 0 ? 'lg:flex-row-reverse' : ''}`}
 >
-  <div class='flex flex-col gap-4 justify-center p-4 md:p-6 flex-1'>
-    <Icon name={service.icon} size={40} class='text-primary' />
-    <h3 class='inline-block text-textPrimary text-2xl font-semibold'>
+  <div class='flex flex-col gap-6 justify-center p-6 lg:p-8 flex-1'>
+    <Icon
+      name={service.icon}
+      class='w-12 h-12 text-primary dark:text-primary-dark'
+    />
+    <h3
+      class='text-textPrimary dark:text-white text-2xl sm:text-3xl font-semibold'
+    >
       {service.name}
     </h3>
-    <p class='text-textPrimary text-lg leading-relaxed'>
+    <p
+      class='text-textPrimary dark:text-gray-300 text-base sm:text-lg leading-relaxed'
+    >
       {service.description}
     </p>
     <a
       href='/services'
-      class='flex items-center uppercase text-textPrimary font-medium group hover:text-accent transition-colors'
+      class='inline-flex items-center uppercase text-textPrimary dark:text-white font-medium group hover:text-accent dark:hover:text-accent transition-colors'
       aria-label={`Learn more about ${service.name}`}
     >
       Find Out More
       <div
-        class='bg-accent ml-2 p-2 rounded-full group-hover:bg-primary transition'
+        class='bg-accent dark:bg-accent-dark ml-2 p-2 rounded-full group-hover:bg-primary dark:group-hover:bg-primary-dark transition-colors'
       >
-        <Icon name='arrow-right' size={18} class='text-highlight' />
+        <Icon
+          name='arrow-right'
+          class='w-4 h-4 text-highlight dark:text-highlight-dark'
+        />
       </div>
     </a>
   </div>
-  <img
-    src={service.image}
-    alt={service.name}
-    class='h-250 w-full md:h-[500px] md:w-1/2 object-cover'
-  />
-</div>
+  <div class='lg:w-1/2'>
+    <Image
+      src={service.image}
+      alt={`Illustration for ${service.name} service`}
+      width={defaultWidth}
+      height={defaultHeight}
+      class='w-full h-64 sm:h-80 lg:h-full object-cover'
+      loading='lazy'
+    />
+  </div>
+</article>

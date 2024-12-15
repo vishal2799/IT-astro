@@ -1,25 +1,41 @@
 ---
+import { Image } from 'astro:assets';
+
 const { project } = Astro.props;
+
+// Define a default aspect ratio (16:9) and calculate height based on a default width
+const defaultWidth = 800;
+const defaultHeight = Math.round(defaultWidth / (16 / 9));
 ---
 
-<div class='bg-background shadow-lg rounded-lg overflow-hidden'>
-  <div class='bg-highlight p-6'>
-    <img
+<article
+  class='bg-background dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl'
+>
+  <div class='bg-highlight p-4 sm:p-6'>
+    <Image
       src={project.image}
-      class='w-full h-[300px] object-cover rounded-t-lg'
+      alt={`${project.name} project thumbnail`}
+      width={defaultWidth}
+      height={defaultHeight}
+      class='w-full h-48 sm:h-64 object-cover rounded-lg'
+      widths={[400, 800]}
+      sizes='(max-width: 640px) 100vw, 50vw'
+      loading='lazy'
     />
   </div>
-  <div class='flex justify-between items-center px-6 py-5'>
+  <div
+    class='flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 px-4 sm:px-6 py-4 sm:py-5'
+  >
     <a
       href='/projects'
-      class='inline-block text-2xl lg:text-3xl text-textPrimary font-bold hover:underline'
+      class='text-xl sm:text-2xl text-textPrimary dark:text-white font-bold hover:underline'
     >
       {project.name}
     </a>
     <div
-      class='bg-highlight text-primary font-medium border border-primary rounded-2xl px-4 py-2'
+      class='bg-highlight dark:bg-gray-700 text-highlight dark:text-primary-dark text-sm font-medium border border-highlight dark:border-primary-dark rounded-full px-3 py-1'
     >
       {project.category}
     </div>
   </div>
-</div>
+</article>
