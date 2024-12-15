@@ -104,7 +104,7 @@ const ServicesTwo = [
     id: 2,
     name: 'Digital Transformation',
     icon: 'code-slash',
-    image: '/service21.jpg',
+    image: '/finance.jpg',
     description:
       'Digital technology grows more accessible, flexible and powerful by the day. We can help you to keep pace with progress without going through an expensive and disruptive IT change project. We take a partnership approach to transformation, delivering strategies and solutions suited to your business goals.',
   },
@@ -120,7 +120,7 @@ const ServicesTwo = [
     id: 4,
     name: 'Robotic Process Automation (RPA)',
     icon: 'palette',
-    image: '/service21.jpg',
+    image: '/finance.jpg',
     description:
       'Why waste another minute on routine tasks that a robot could handle for you? RPA software robots are digital workers that can be quickly trained to execute tasks exactly the way you want them to, using the systems you already have in place. Accelerate productivity without hiring extra people and cut operating costs without replacing critical IT systems. Are you ready to join the RPA revolution?',
   },
@@ -136,7 +136,7 @@ const ServicesTwo = [
     id: 6,
     name: 'Artificial Intelligence (AI) Automation',
     icon: 'briefcase',
-    image: '/service21.jpg',
+    image: '/finance.jpg',
     description:
       'Time to make your software robots smarter or push your automation capabilities even further? Artificial Intelligence (AI) uses intelligent algorithms to automate more complex work. You can unlock more value from data, make predictions to support better decisions, process unstructured content and much more. Ready for intelligent automation?',
   },
@@ -154,15 +154,15 @@ const SolutionsTwo = [
   {
     id: 2,
     name: 'Operations',
-    icon: 'bank',
-    image: '/finance.jpg',
+    icon: 'terminal',
+    image: '/service21.jpg',
     description:
       'Together, we can build digital forms that replace paper and streamline data, custom apps that solve your most pressing problems, and automated workflows that accelerate any operational process. With agile process automation, you can make operations leaner and improve compliance without disrupting core systems and processes.',
   },
   {
     id: 3,
     name: 'Human Resources',
-    icon: 'bank',
+    icon: 'megaphone',
     image: '/finance.jpg',
     description:
       'Automation helps to build an efficient, responsive HR department and a happy, productive workplace. By optimising and automating HR processes, from onboarding and induction to training and development, your HR department is better equipped to give your employees the support and opportunities they need to fulfil their potential.',
@@ -170,15 +170,15 @@ const SolutionsTwo = [
   {
     id: 4,
     name: 'Sales & Marketing',
-    icon: 'bank',
-    image: '/finance.jpg',
+    icon: 'briefcase',
+    image: '/service21.jpg',
     description:
       'All too often, data silos and fragmented point solutions lead to a disconnect between Sales and Marketing. We can help you to streamline workflows and leverage automation to bring Sales and Marketing closer together. With a shared vision and a single source of truth for customer data, you can pave the way to exceptional CX.',
   },
   {
     id: 5,
     name: 'Information Technology',
-    icon: 'bank',
+    icon: 'code-slash',
     image: '/finance.jpg',
     description:
       'Is IT under pressure to deliver more digital solutions, faster than ever before? We can help you to accelerate time to market for automation projects and ramp up internal capacity for digital transformation. Are you ready to benefit from time saving tech and free up more hours for complex projects?',
