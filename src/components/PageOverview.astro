@@ -12,7 +12,16 @@ const { overview } = Astro.props;
       {overview.leftTitle}
     </h3>
     <p class='text-sm sm:text-base text-textSecondary leading-relaxed'>
-      {overview.leftDescription}
+      {
+        overview.leftDescription
+          .split('\n')
+          .map((line: unknown, index: any) => (
+            <span>
+              {line}
+              <br />
+            </span>
+          ))
+      }
     </p>
   </div>
 

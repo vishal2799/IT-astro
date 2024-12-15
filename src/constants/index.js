@@ -94,51 +94,51 @@ const Services = [
 const ServicesTwo = [
   {
     id: 1,
-    name: 'Product Design',
+    name: 'Business Process Automation',
     icon: 'phone',
     image: '/service21.jpg',
     description:
-      'Brainstorming and generating ideas based on research findings. This phase involves sketching, creating mood boards, and exploring different concepts to develop innovative solutions.',
+      'Every business can benefit from automation. Together, we can kick-start, speed up or scale your automation initiatives with process transformation expertise and best-in-breed technologies. It’s time to leave manual approaches in the past –and build a future-focused workplace today.',
   },
   {
     id: 2,
-    name: 'Web Development',
+    name: 'Digital Transformation',
     icon: 'code-slash',
     image: '/service21.jpg',
     description:
-      'Building responsive and scalable websites using modern frameworks and technologies, ensuring cross-browser compatibility and optimal performance.',
+      'Digital technology grows more accessible, flexible and powerful by the day. We can help you to keep pace with progress without going through an expensive and disruptive IT change project. We take a partnership approach to transformation, delivering strategies and solutions suited to your business goals.',
   },
   {
     id: 3,
-    name: 'Mobile App Development',
+    name: 'Process Automation Consultancy',
     icon: 'terminal',
     image: '/service21.jpg',
     description:
-      'Creating intuitive and user-friendly mobile applications for iOS and Android platforms with a focus on smooth performance and appealing UI/UX design.',
+      'We’ve been experts in this field since process automation was in its infancy –and bring an exceptional amount of business transformation and automation experience to the table. If you want to solve a specific business problem or scale automation through your enterprise, we have the knowledge and technical skills you need.',
   },
   {
     id: 4,
-    name: 'UI/UX Design',
+    name: 'Robotic Process Automation (RPA)',
     icon: 'palette',
     image: '/service21.jpg',
     description:
-      'Designing visually appealing and user-centered interfaces that enhance user experience and ensure seamless interaction across devices.',
+      'Why waste another minute on routine tasks that a robot could handle for you? RPA software robots are digital workers that can be quickly trained to execute tasks exactly the way you want them to, using the systems you already have in place. Accelerate productivity without hiring extra people and cut operating costs without replacing critical IT systems. Are you ready to join the RPA revolution?',
   },
   {
     id: 5,
-    name: 'Digital Marketing',
+    name: 'Low-Code Automation (BPM)',
     icon: 'megaphone',
     image: '/service21.jpg',
     description:
-      'Implementing data-driven marketing strategies, including SEO, social media management, and content marketing to maximize brand visibility and reach.',
+      'Build the digital forms, workflows and other solutions you need in days or weeks rather than months or years. Low-code automation gets your custom solutions to market up to 78% faster than conventional software development. Beyond the incredible time savings, you also have the agility to update your solutions quickly and scale automation into every department.',
   },
   {
     id: 6,
-    name: 'Branding & Identity',
+    name: 'Artificial Intelligence (AI) Automation',
     icon: 'briefcase',
     image: '/service21.jpg',
     description:
-      'Creating strong brand identities through logo design, visual storytelling, and brand strategy development to build lasting customer impressions.',
+      'Time to make your software robots smarter or push your automation capabilities even further? Artificial Intelligence (AI) uses intelligent algorithms to automate more complex work. You can unlock more value from data, make predictions to support better decisions, process unstructured content and much more. Ready for intelligent automation?',
   },
 ];
 
@@ -153,43 +153,35 @@ const SolutionsTwo = [
   },
   {
     id: 2,
-    name: 'Healthcare',
+    name: 'Operations',
     icon: 'bank',
     image: '/finance.jpg',
     description:
-      'Enhance patient care through streamlined processes and data management. Our solutions help healthcare providers focus on patients by automating routine administrative tasks.',
+      'Together, we can build digital forms that replace paper and streamline data, custom apps that solve your most pressing problems, and automated workflows that accelerate any operational process. With agile process automation, you can make operations leaner and improve compliance without disrupting core systems and processes.',
   },
   {
     id: 3,
-    name: 'Education',
+    name: 'Human Resources',
     icon: 'bank',
     image: '/finance.jpg',
     description:
-      'Improve educational management systems through automated enrollment, grading, and reporting processes, enabling educators to focus on teaching and student success.',
+      'Automation helps to build an efficient, responsive HR department and a happy, productive workplace. By optimising and automating HR processes, from onboarding and induction to training and development, your HR department is better equipped to give your employees the support and opportunities they need to fulfil their potential.',
   },
   {
     id: 4,
-    name: 'Retail',
+    name: 'Sales & Marketing',
     icon: 'bank',
     image: '/finance.jpg',
     description:
-      'Boost customer engagement and streamline inventory management with automated retail solutions, ensuring seamless shopping experiences and increased profitability.',
+      'All too often, data silos and fragmented point solutions lead to a disconnect between Sales and Marketing. We can help you to streamline workflows and leverage automation to bring Sales and Marketing closer together. With a shared vision and a single source of truth for customer data, you can pave the way to exceptional CX.',
   },
   {
     id: 5,
-    name: 'Logistics',
+    name: 'Information Technology',
     icon: 'bank',
     image: '/finance.jpg',
     description:
-      'Optimize supply chain and logistics operations with real-time tracking and automated task management, ensuring timely deliveries and efficient resource utilization.',
-  },
-  {
-    id: 6,
-    name: 'Marketing',
-    icon: 'bank',
-    image: '/finance.jpg',
-    description:
-      'Automate marketing campaigns, lead generation, and customer engagement processes to maximize brand visibility and drive sales growth.',
+      'Is IT under pressure to deliver more digital solutions, faster than ever before? We can help you to accelerate time to market for automation projects and ramp up internal capacity for digital transformation. Are you ready to benefit from time saving tech and free up more hours for complex projects?',
   },
 ];
 
