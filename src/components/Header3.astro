@@ -231,7 +231,7 @@ const navItems = [
               class='w-full text-left text-sm font-medium text-black-200 hover:text-primary transition-colors duration-300 flex items-center justify-between focus:outline-none'
               aria-expanded='false'
             >
-              {item.label}
+              <a href={item.href}>{item.label}</a>
               {item.megaMenu && (
                 <Icon
                   name='chevron-down'
