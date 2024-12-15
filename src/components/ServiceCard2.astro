@@ -10,36 +10,29 @@ const defaultHeight = Math.round(defaultWidth / (16 / 9));
 ---
 
 <article
-  class={`flex flex-col lg:flex-row bg-background dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl ${index % 2 === 0 ? 'lg:flex-row-reverse' : ''}`}
+  class={`flex flex-col lg:flex-row bg-background shadow-lg rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl ${index % 2 === 0 ? 'lg:flex-row-reverse' : ''}`}
 >
   <div class='flex flex-col gap-6 justify-center p-6 lg:p-8 flex-1'>
     <Icon
       name={service.icon}
       class='w-12 h-12 text-primary dark:text-primary-dark'
     />
-    <h3
-      class='text-textPrimary dark:text-white text-2xl sm:text-3xl font-semibold'
-    >
+    <h3 class='text-textPrimary text-2xl sm:text-3xl font-semibold'>
       {service.name}
     </h3>
-    <p
-      class='text-textPrimary dark:text-gray-300 text-base sm:text-lg leading-relaxed'
-    >
+    <p class='text-textPrimary text-base sm:text-lg leading-relaxed'>
       {service.description}
     </p>
     <a
       href='/services'
-      class='inline-flex items-center uppercase text-textPrimary dark:text-white font-medium group hover:text-accent dark:hover:text-accent transition-colors'
+      class='inline-flex items-center uppercase text-textPrimary font-medium group hover:text-accent transition-colors'
       aria-label={`Learn more about ${service.name}`}
     >
       Find Out More
       <div
-        class='bg-accent dark:bg-accent-dark ml-2 p-2 rounded-full group-hover:bg-primary dark:group-hover:bg-primary-dark transition-colors'
+        class='bg-accent ml-2 p-2 rounded-full group-hover:bg-primary transition-colors'
       >
-        <Icon
-          name='arrow-right'
-          class='w-4 h-4 text-highlight dark:text-highlight-dark'
-        />
+        <Icon name='arrow-right' class='w-4 h-4 text-highlight' />
       </div>
     </a>
   </div>
