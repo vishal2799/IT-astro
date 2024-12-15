@@ -81,21 +81,55 @@ const navItems = [
       ],
     },
   },
-  { label: 'Contact', href: '/contact-us' },
+  { label: 'Projects', href: '/projects' },
 ];
 ---
 
 <header class='bg-white shadow-md sticky top-0 z-50 overflow-x-hidden'>
-  <div class='container mx-auto px-4 py-4'>
-    <div class='flex items-center justify-between'>
+  <div class='container mx-auto px-4'>
+    <div class='flex justify-end'>
+      <nav class='hidden lg:flex items-center space-x-6 border-b py-4'>
+        <a
+          href='/about-us'
+          class='text-sm font-medium text-black-200 hover:text-primary transition-colors duration-300 flex items-center'
+          >About Us</a
+        >
+        <a
+          href='/contact-us'
+          class='text-sm font-medium text-black-200 hover:text-primary transition-colors duration-300 flex items-center'
+          >Contact Us</a
+        >
+        <a
+          href='/'
+          class='text-sm font-medium text-black-200 hover:text-primary transition-colors duration-300 flex items-center'
+          >Blog</a
+        >
+        <a
+          href='/'
+          class='text-xl font-medium text-textPrimary hover:text-primary transition-colors duration-300 flex items-center'
+          ><Icon name='facebook' /></a
+        >
+        <a
+          href='/'
+          class='text-xl font-medium text-textPrimary hover:text-primary transition-colors duration-300 flex items-center'
+          ><Icon name='instagram' /></a
+        >
+        <a
+          href='/'
+          class='text-xl font-medium text-textPrimary hover:text-primary transition-colors duration-300 flex items-center'
+          ><Icon name='twitter-x' /></a
+        >
+      </nav>
+    </div>
+    <div class='flex items-center justify-between py-4'>
       <a href='/' class='flex items-center space-x-2 group'>
-        <Image
+        <!-- <Image
           src='/placeholder.svg'
           alt='Indian Wanderlust'
           width={40}
           height={40}
           class='w-10 h-10 transition-transform duration-300 group-hover:scale-110'
-        />
+        /> -->
         <span
           class='text-xl font-bold text-primary transition-colors duration-300 group-hover:text-secondary'
           >Alicorn Solutions</span
@@ -127,10 +161,10 @@ const navItems = [
                         <div class='border-r border-slate-300 max-h-[60vh] overflow-y-auto w-3/12'>
                           <ul>
                             {item.megaMenu.column1.map((subItem) => (
-                              <li class='group hover:bg-white'>
+                              <li class='group hover:bg-highlight'>
                                 <a
                                   href={subItem.href}
-                                  class='block p-5 text-primary hover:text-secondary transition-colors duration-200'
+                                  class='block p-5 text-primary hover:text-textPrimary transition-colors duration-200'
                                 >
                                   {subItem.label}
                                 </a>
@@ -189,10 +223,11 @@ const navItems = [
           ))
         }
         <a
-          href='/quote'
-          class='btn-primary transform transition duration-300 hover:scale-105 hover:shadow-lg'
+          href=''
+          class='inline-flex items-center px-6 py-3 bg-primary text-background rounded-3xl hover:bg-accent transition-colors duration-300'
         >
-          Get Quote
+          <Icon name='telephone' class='mr-3 text-lg sm:text-xl' /> +44(0) 1908 738
+          254
         </a>
       </nav>
 
@@ -256,11 +291,43 @@ const navItems = [
           </div>
         ))
       }
+      <div>
+        <nav class='flex flex-col space-y-5 border-t py-4'>
+          <a
+            href='/about-us'
+            class='text-sm font-medium text-textPrimary hover:text-primary transition-colors duration-300'
+            >About Us</a
+          >
+          <a
+            href='/contact-us'
+            class='text-sm font-medium text-textPrimary hover:text-primary transition-colors duration-300'
+            >Contact Us</a
+          >
+          <div class='flex gap-6'>
+            <a
+              href='/'
+              class='text-sm font-medium text-textPrimary hover:text-primary transition-colors duration-300'
+              ><Icon name='facebook' /></a
+            >
+            <a
+              href='/'
+              class='text-sm font-medium text-textPrimary hover:text-primary transition-colors duration-300'
+              ><Icon name='instagram' /></a
+            >
+            <a
+              href='/'
+              class='text-sm font-medium text-textPrimary hover:text-primary transition-colors duration-300'
+              ><Icon name='twitter-x' /></a
+            >
+          </div>
+        </nav>
+      </div>
       <a
-        href='/quote'
-        class='btn-primary block text-center transform transition duration-300 hover:scale-105 hover:shadow-lg'
+        href=''
+        class='inline-flex items-center px-6 py-3 bg-primary text-background rounded-3xl hover:bg-accent transition-colors duration-300'
       >
-        Get Quote
+        <Icon name='telephone' class='mr-3 text-lg sm:text-xl' /> +44(0) 1908 738
+        254
       </a>
     </nav>
   </div>
