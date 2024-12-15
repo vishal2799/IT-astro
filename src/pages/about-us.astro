@@ -1,0 +1,111 @@
+---
+import { Image } from 'astro:assets';
+import BreadcrumbImg from '../assets/images/breadcrumbsolution.jpg';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTAOne from '../components/CTAOne.astro';
+import Gap from '../components/Gap.astro';
+import Layout from '../layouts/Layout.astro';
+import ProjectWorkflow from '../sections/ProjectWorkflow.astro';
+import StatsSection from '../sections/StatsSection.astro';
+import AboutImg from '../assets/images/About.jpg';
+import ServiceImg from '../assets/images/service21.jpg';
+import { Icon } from 'astro-icon/components';
+
+const breadCrumbsDetails = {
+  img: BreadcrumbImg,
+  title: 'About Us',
+  desc: 'Delivering success to corporations worldwide.',
+};
+---
+
+<Layout>
+  <div class='min-h-screen'>
+    <Breadcrumbs details={breadCrumbsDetails} />
+    <div class='px-4 py-12 md:py-24 container mx-auto'>
+      <StatsSection />
+      <Gap />
+      <div class='max-w-7xl mx-auto'>
+        <div class='grid lg:grid-cols-2 gap-12 lg:gap-20 items-center'>
+          <div
+            class='relative h-[250px] sm:h-[350px] lg:h-[400px] rounded-lg overflow-hidden shadow-xl'
+          >
+            <Image
+              src={AboutImg}
+              alt='About our company'
+              class='w-full h-full object-cover'
+              widths={[400, 800, 1200]}
+              sizes='(max-width: 1024px) 100vw, 50vw'
+              loading='eager'
+            />
+          </div>
+          <div class='space-y-8'>
+            <h2
+              class='text-2xl md:text-4xl font-bold text-primary leading-tight'
+            >
+              The Velocity IT approach
+            </h2>
+            <p class='text-lg sm:text-xl text-gray-700 leading-7'>
+              We take time to understand how your teams work and where your
+              challenges lie, so we can make strategic technology choices.
+              Beyond delivering these professionally, we believe in carrying out
+              sound scenario planning and realtime testing to ensure your
+              digital transformation project delivers maximum value, now and in
+              the future.
+            </p>
+            <a
+              href=''
+              class='inline-flex items-center px-6 py-3 bg-primary text-background rounded-3xl hover:bg-accent transition-colors duration-300'
+            >
+              TRANSFORM YOUR BUSINESS <Icon
+                name='arrow-right'
+                class='ml-3 text-lg sm:text-xl'
+              />
+            </a>
+          </div>
+        </div>
+        <Gap />
+        <div class='grid lg:grid-cols-2 gap-12 lg:gap-20 items-center'>
+          <div class='space-y-8'>
+            <h2
+              class='text-2xl md:text-4xl font-bold text-primary leading-tight'
+            >
+              Our focus is our client’s success
+            </h2>
+            <p class='text-lg sm:text-xl text-gray-700 leading-7'>
+              Velocity IT partners with global organisations in every sector,
+              from multi-national enterprises to government agencies and
+              charities. We’re incredibly proud of our highly skilled, reliable
+              and collaborative team that gains a deep understanding of our
+              clients’ requirements and consistently delivers a first-class
+              service.
+            </p>
+            <a
+              href=''
+              class='inline-flex items-center px-6 py-3 bg-primary text-background rounded-3xl hover:bg-accent transition-colors duration-300'
+            >
+              View case studies <Icon
+                name='arrow-right'
+                class='ml-3 text-lg sm:text-xl'
+              />
+            </a>
+          </div>
+          <div
+            class='relative h-[250px] sm:h-[350px] lg:h-[400px] rounded-lg overflow-hidden shadow-xl'
+          >
+            <Image
+              src={ServiceImg}
+              alt='About our company'
+              class='w-full h-full object-cover'
+              widths={[400, 800, 1200]}
+              sizes='(max-width: 1024px) 100vw, 50vw'
+              loading='eager'
+            />
+          </div>
+        </div>
+      </div>
+      <Gap />
+      <CTAOne />
+    </div>
+    <ProjectWorkflow />
+  </div>
+</Layout>
