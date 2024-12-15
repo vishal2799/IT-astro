@@ -2,20 +2,21 @@
 import { Icon } from 'astro-icon/components';
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
+import PageIntro from '../components/PageIntro.astro';
 
 const contactInfo = [
   {
-    icon: 'bank',
+    icon: 'globe',
     title: 'Visit Us',
     details: '123 Business Street, New York, NY 10001',
   },
   {
-    icon: 'bank',
+    icon: 'telephone',
     title: 'Call Us',
     details: '+1 (555) 123-4567',
   },
   {
-    icon: 'bank',
+    icon: 'envelope',
     title: 'Email Us',
     details: 'hello@vibebes.com',
   },
@@ -25,20 +26,15 @@ const contactInfo = [
 <Layout>
   <main class='min-h-screen bg-white'>
     <!-- Hero Section -->
-    <section class='py-16 md:py-24'>
+    <section class='py-10 md:py-24'>
       <div class='container mx-auto px-4'>
-        <div class='text-center max-w-3xl mx-auto mb-16'>
-          <h1 class='text-4xl md:text-5xl font-bold text-gray-900 mb-6'>
-            Get in Touch with Us
-          </h1>
-          <p class='text-lg text-gray-600'>
-            Have questions or want to learn more? We'd love to hear from you.
-            Contact us using the form below.
-          </p>
-        </div>
+        <PageIntro
+          heading='Get in Touch with Us'
+          paragraph='Have questions or want to learn more? Wed love to hear from you. Contact us using the form below.'
+        />
 
         <!-- Contact Info Cards -->
-        <div class='grid md:grid-cols-3 gap-8 mb-16'>
+        <div class='grid md:grid-cols-3 gap-8 mb-16 mt-10'>
           {
             contactInfo.map(({ icon, title, details }) => (
               <div class='bg-gray-50 p-8 rounded-lg text-center hover:shadow-lg transition-shadow duration-300'>
@@ -60,7 +56,7 @@ const contactInfo = [
         >
           <div class='relative h-full min-h-[400px] md:min-h-[600px]'>
             <Image
-              src='/finance.jpg'
+              src='/service21.jpg'
               alt='Contact Us'
               width={800}
               height={1000}
