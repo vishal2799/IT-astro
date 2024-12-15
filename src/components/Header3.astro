@@ -1,50 +1,87 @@
 ---
 import { Icon } from 'astro-icon/components';
 import { Image } from 'astro:assets';
+import MegaMenuCTA from './MegaMenuCTA.astro';
 
 const navItems = [
   { label: 'Home', href: '/' },
   {
     label: 'Services',
-    href: '#',
+    href: 'services',
     megaMenu: {
       column1: [
-        { label: 'Tour Packages', href: '/services/tour-packages' },
-        { label: 'Custom Itineraries', href: '/services/custom-itineraries' },
-        { label: 'Group Tours', href: '/services/group-tours' },
-        { label: 'Adventure Trips', href: '/services/adventure-trips' },
+        { label: 'Business Process Automation', href: '/services' },
+        { label: 'Digital Transformation', href: '/services' },
+        { label: 'Process Automation Consultancy', href: '/services' },
+        { label: 'Robotic Process Automation (RPA)', href: '/services' },
+        { label: 'Low-Code Automation (BPM)', href: '/services' },
+        { label: 'Artificial Intelligence (AI) Automation', href: '/services' },
       ],
       column2: [
-        { label: 'Luxury Travel', href: '/services/luxury-travel' },
-        { label: 'Honeymoon Packages', href: '/services/honeymoon-packages' },
-        { label: 'Spiritual Journeys', href: '/services/spiritual-journeys' },
         {
-          label: 'Cultural Experiences',
-          href: '/services/cultural-experiences',
+          label: 'READY, SET, AUTOMATE',
+          desc: 'Lets choose, design and deploy a process automation solution for your business.',
+          href: '/services',
+        },
+        {
+          label: 'TRANSFORM YOUR BUSINESS',
+          desc: 'Lets analyse your business to discover opportunities for innovation and automation.',
+          href: '/services',
         },
       ],
     },
   },
   {
     label: 'Technology',
-    href: '#',
+    href: 'technology',
     megaMenu: {
       column1: [
-        { label: 'North India', href: '/destinations/north-india' },
-        { label: 'South India', href: '/destinations/south-india' },
-        { label: 'East India', href: '/destinations/east-india' },
-        { label: 'West India', href: '/destinations/west-india' },
+        { label: 'UiPath', href: '/technology' },
+        { label: 'Mendix', href: '/technology' },
+        { label: 'Netcall', href: '/technology' },
+        { label: 'Nintex', href: '/technology' },
+        { label: 'K2', href: '/technology' },
       ],
       column2: [
-        { label: 'Rajasthan', href: '/destinations/rajasthan' },
-        { label: 'Kerala', href: '/destinations/kerala' },
-        { label: 'Goa', href: '/destinations/goa' },
-        { label: 'Himalayas', href: '/destinations/himalayas' },
+        {
+          label: 'YOUR EXPERT RPA PARTNER',
+          desc: 'Team up with our RPA strategy and tech specialists for maximum automation impact',
+          href: '/technology',
+        },
+        {
+          label: 'Harness the power of UiPath in your business.',
+          desc: 'Team up with our RPA strategy and tech specialists for maximum automation impact',
+          href: '/technology',
+        },
       ],
     },
   },
-  { label: 'About', href: '/about' },
-  { label: 'Contact', href: '/contact' },
+  {
+    label: 'Solutions',
+    href: 'solutions',
+    megaMenu: {
+      column1: [
+        { label: 'Finance', href: '/solutions' },
+        { label: 'Operations', href: '/solutions' },
+        { label: 'Human Resources', href: '/solutions' },
+        { label: 'Sales & Marketing', href: '/solutions' },
+        { label: 'Information Technology', href: '/solutions' },
+      ],
+      column2: [
+        {
+          label: 'AUTOMATE EVERY FUNCTION',
+          desc: 'Automate where it matters most. Scale to solve challenges in every area',
+          href: '/solutions',
+        },
+        {
+          label: 'GIVE EVERY TEAM THE TOOLS FOR SUCCESS',
+          desc: 'Equip people with user-friendly solutions that save time and make work easier',
+          href: '/solutions',
+        },
+      ],
+    },
+  },
+  { label: 'Contact', href: '/contact-us' },
 ];
 ---
 
@@ -61,7 +98,7 @@ const navItems = [
         />
         <span
           class='text-xl font-bold text-primary transition-colors duration-300 group-hover:text-secondary'
-          >Indian Wanderlust</span
+          >Alicorn Solutions</span
         >
       </a>
 
@@ -83,7 +120,7 @@ const navItems = [
               </a>
               {item.megaMenu && (
                 <div class='fixed left-0 w-full flex justify-center mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50'>
-                  <div class='w-[80vw] max-w-6xl bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5'>
+                  <div class='w-[80vw] max-w-7xl bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5'>
                     <div class='p-6'>
                       <div class='flex gap-6'>
                         {/* First Column - Categories */}
@@ -103,13 +140,13 @@ const navItems = [
                         </div>
 
                         {/* Second Column - Featured Content */}
-                        <div class='max-h-[60vh] overflow-y-auto w-9/12 p-6'>
+                        <div class='max-h-[75vh] overflow-y-auto w-9/12 p-6'>
                           <div class='grid grid-cols-3 gap-5'>
-                            {item.megaMenu.column2.map((subItem) => (
+                            {item.megaMenu.column2.map((subItem: any) => (
                               <div class='bg-white shadow-lg p-5 group'>
                                 <div class='flex justify-center items-center overflow-hidden h-[100px] bg-primary-100 rounded-sm mb-4'>
                                   <Image
-                                    src='/placeholder.svg?height=100&width=100'
+                                    src='/uipath.png'
                                     alt={subItem.label}
                                     width={100}
                                     height={100}
@@ -124,8 +161,7 @@ const navItems = [
                                     {subItem.label}
                                   </a>
                                   <p class='text-black-300 text-base leading-relaxed'>
-                                    Discover amazing experiences and
-                                    destinations
+                                    {subItem.desc}
                                   </p>
                                 </div>
                                 <a
@@ -141,6 +177,7 @@ const navItems = [
                                 </a>
                               </div>
                             ))}
+                            <MegaMenuCTA />
                           </div>
                         </div>
                       </div>
@@ -205,16 +242,15 @@ const navItems = [
             {item.megaMenu && (
               <div class='pl-4 space-y-2 hidden'>
                 <div class='h-2 w-full' />
-                {[...item.megaMenu.column1, ...item.megaMenu.column2].map(
-                  (subItem) => (
-                    <a
-                      href={subItem.href}
-                      class='block text-sm text-gray-700 hover:text-primary transition-colors duration-200'
-                    >
-                      {subItem.label}
-                    </a>
-                  )
-                )}
+                {/* {[...item.megaMenu.column1, ...item.megaMenu.column2].map( */}
+                {[...item.megaMenu.column1].map((subItem) => (
+                  <a
+                    href={subItem.href}
+                    class='block text-sm text-gray-700 hover:text-primary transition-colors duration-200'
+                  >
+                    {subItem.label}
+                  </a>
+                ))}
               </div>
             )}
           </div>
