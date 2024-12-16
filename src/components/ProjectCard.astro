@@ -1,58 +1,49 @@
 ---
 import { Image } from 'astro:assets';
 
-interface Project {
+interface ProjectProps {
+  id: number;
   name: string;
   image: string;
   category: string;
   desc: string;
 }
 
-interface Props {
-  project: Project;
-}
-
-const { project } = Astro.props;
-
-const imageWidth = 800;
-const imageHeight = 600;
+const { id, name, image, category, desc }: ProjectProps = Astro.props.project;
 ---
 
 <article
-  class='bg-secondary rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl'
+  class='group bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl'
 >
   <div class='relative'>
     <Image
-      src={project.image}
-      alt={`${project.name} project thumbnail`}
-      width={imageWidth}
-      height={imageHeight}
-      class='w-full h-48 sm:h-56 object-cover'
+      src={image}
+      alt={name}
+      width={600}
+      height={400}
+      class='w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105'
     />
     <div
-      class='absolute top-0 left-0 right-0 p-4 bg-gradient-to-b from-black/70 to-transparent'
+      class='absolute top-0 left-0 bg-primary text-highlight text-xs font-semibold px-3 py-1 m-4 rounded-full'
     >
-      <span
-        class='inline-block bg-highlight text-primary text-xs font-bold px-2 py-1 rounded-full'
-      >
-        {project.category}
-      </span>
+      {category}
     </div>
   </div>
-
-  <div class='p-4 flex justify-between items-center'>
-    <div class='pr-4'>
-      <h3 class='text-xl font-bold text-highlight mb-2'>{project.name}</h3>
-      <p class='text-highlight text-sm line-clamp-2'>{project.desc}</p>
-    </div>
-    <a
-      href={`/projects/${project.name.toLowerCase().replace(/\s+/g, '-')}`}
-      class='inline-flex text-nowrap items-center text-highlight font-medium hover:underline'
+  <div class='p-6'>
+    <h3
+      class='text-xl font-bold text-textPrimary mb-2 group-hover:text-primary transition-colors duration-300'
     >
-      View Details
+      {name}
+    </h3>
+    <p class='text-gray-600 text-sm mb-4'>{desc}</p>
+    <a
+      href={`/projects/${id}`}
+      class='inline-flex items-center text-primary font-medium hover:text-accent transition-colors duration-300'
+    >
+      View Project
       <svg
         xmlns='http://www.w3.org/2000/svg'
-        class='h-4 w-4 ml-1'
+        class='h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform duration-300'
         fill='none'
         viewBox='0 0 24 24'
         stroke='currentColor'
@@ -61,7 +52,7 @@ const imageHeight = 600;
           stroke-linecap='round'
           stroke-linejoin='round'
           stroke-width='2'
-          d='M9 5l7 7-7 7'></path>
+          d='M17 8l4 4m0 0l-4 4m4-4H3'></path>
       </svg>
     </a>
   </div>
