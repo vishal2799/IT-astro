@@ -14,8 +14,49 @@ import ProjectsSection from '../sections/Home/ProjectsSection.astro';
 
 <Layout>
   <div class='min-h-screen'>
+    <section class='bg-gradient-to-r from-primary to-secondary text-white'>
+      <div class='container mx-auto px-4 py-20 md:py-32'>
+        <div class='flex flex-col md:flex-row items-center justify-between'>
+          <div class='md:w-1/2 mb-10 md:mb-0'>
+            <h1
+              class='text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4'
+            >
+              Innovate with Our Cutting-Edge IT Solutions
+            </h1>
+            <p class='text-xl md:text-2xl mb-8 text-blue-100'>
+              Empowering businesses with advanced technology and expert
+              services.
+            </p>
+            <div class='flex flex-col sm:flex-row gap-4'>
+              <a
+                href='#contact'
+                class='bg-white text-primary hover:bg-highlight transition duration-300 ease-in-out py-3 px-8 rounded-full font-semibold text-lg inline-block text-center'
+              >
+                Get Started
+              </a>
+              <a
+                href='#services'
+                class='bg-transparent border-2 border-white hover:bg-white hover:text-primary transition duration-300 ease-in-out py-3 px-8 rounded-full font-semibold text-lg inline-block text-center'
+              >
+                Our Services
+              </a>
+            </div>
+          </div>
+          <div class='md:w-1/2'>
+            <img
+              src='/hero.png'
+              alt='IT Solutions Illustration'
+              class='w-full max-w-md mx-auto'
+              width='500'
+              height='500'
+              loading='eager'
+            />
+          </div>
+        </div>
+      </div>
+    </section>
     <StatsSection />
-    <div class='container mx-auto px-4 py-10 md:py-16'>
+    <div class='container mx-auto px-4 py-10 md:py-12'>
       <AboutSection />
       <Gap />
       <ServicesSection />

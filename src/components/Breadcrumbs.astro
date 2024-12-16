@@ -3,13 +3,13 @@ import { Image } from 'astro:assets';
 const { details } = Astro.props;
 ---
 
-<section class='relative h-[350px] bg-secondary text-textPrimary'>
+<section class='relative h-[350px] bg-secondary'>
   <Image
     src={details.img}
     alt={details.title}
     class='absolute inset-0 h-full w-full object-cover'
   />
-  <div class='absolute inset-0 bg-gradient-to-b from-secondary to-primary/50'>
+  <div class='absolute inset-0 bg-gradient-to-b from-black/80 to-black/50'>
   </div>
 
   <div
