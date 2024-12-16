@@ -1,0 +1,424 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../../layouts/Layout.astro';
+
+const serviceData = {
+  title: 'Cloud Migration Services',
+  description:
+    'Seamlessly transition your business to the cloud with our expert migration services.',
+  heroImage: '/images/cloud-migration.jpg',
+  features: [
+    'Comprehensive cloud readiness assessment',
+    'Customized migration strategy',
+    'Data transfer and application modernization',
+    'Post-migration support and optimization',
+  ],
+  benefits: [
+    'Increased scalability and flexibility',
+    'Enhanced security and compliance',
+    'Cost optimization and resource efficiency',
+    'Improved performance and reliability',
+  ],
+  process: [
+    {
+      title: 'Assessment',
+      description:
+        'We evaluate your current infrastructure and applications to determine the best migration approach.',
+    },
+    {
+      title: 'Planning',
+      description:
+        'Our team develops a tailored migration strategy and roadmap aligned with your business goals.',
+    },
+    {
+      title: 'Execution',
+      description:
+        'We implement the migration plan, ensuring minimal disruption to your operations.',
+    },
+    {
+      title: 'Optimization',
+      description:
+        'Post-migration, we fine-tune your cloud environment for optimal performance and cost-efficiency.',
+    },
+  ],
+  casestudy: {
+    title: 'Global Retail Chain Achieves 40% Cost Savings with Cloud Migration',
+    description:
+      'Learn how we helped a major retail chain migrate their legacy systems to the cloud, resulting in significant cost savings and improved operational efficiency.',
+    link: '/case-studies/retail-cloud-migration',
+  },
+  faq: [
+    {
+      question: 'How long does a typical cloud migration take?',
+      answer:
+        'The duration of a cloud migration can vary depending on the complexity and scale of your infrastructure. Typically, it can range from a few weeks for small businesses to several months for large enterprises.',
+    },
+    {
+      question: 'Is cloud migration secure?',
+      answer:
+        'Yes, we prioritize security throughout the migration process. We implement industry-best security practices and comply with relevant regulations to ensure your data remains protected during and after migration.',
+    },
+    {
+      question: 'What cloud platforms do you support?',
+      answer:
+        "We have expertise in migrating to all major cloud platforms, including AWS, Microsoft Azure, Google Cloud Platform, and IBM Cloud. We'll help you choose the best platform for your specific needs.",
+    },
+  ],
+  relatedServices: [
+    { title: 'Cloud Security', link: '/services/cloud-security' },
+    { title: 'DevOps Automation', link: '/services/devops-automation' },
+    { title: 'Data Analytics', link: '/services/data-analytics' },
+  ],
+};
+---
+
+<Layout title={serviceData.title}>
+  <div class='bg-gradient-to-b from-blue-50 to-white'>
+    <!-- Hero Section -->
+    <section
+      class='relative h-[55vh] min-h-[450px] flex items-center justify-center'
+    >
+      <Image
+        src='/service21.jpg'
+        alt={serviceData.title}
+        width={1920}
+        height={1080}
+        class='absolute inset-0 w-full h-full object-cover'
+      />
+      <div class='absolute inset-0 bg-black opacity-60'></div>
+      <div class='relative z-10 text-center text-white px-4'>
+        <h1 class='text-4xl md:text-6xl font-bold mb-6'>{serviceData.title}</h1>
+        <p class='text-xl md:text-2xl max-w-3xl mx-auto mb-8'>
+          {serviceData.description}
+        </p>
+        <a
+          href='#contact'
+          class='bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-full transition duration-300 text-lg'
+          >Get Started</a
+        >
+      </div>
+    </section>
+
+    <!-- Features Section (Previous Version) -->
+    <section class='py-20 px-4'>
+      <div class='container mx-auto max-w-6xl'>
+        <h2 class='text-3xl md:text-4xl font-bold text-center mb-16'>
+          Key Features
+        </h2>
+        <div class='grid grid-cols-1 md:grid-cols-2 gap-8'>
+          {
+            serviceData.features.map((feature) => (
+              <div class='flex items-start'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  class='h-6 w-6 text-primary mt-1 mr-4'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  stroke='currentColor'
+                >
+                  <path
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    stroke-width='2'
+                    d='M5 13l4 4L19 7'
+                  />
+                </svg>
+                <p class='text-lg'>{feature}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class='py-20 px-4 bg-gray-50'>
+      <div class='container mx-auto max-w-6xl'>
+        <h2 class='text-3xl md:text-4xl font-bold text-center mb-16'>
+          Our Migration Process
+        </h2>
+        <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+          {
+            serviceData.process.map((step, index) => (
+              <div class='bg-white p-6 rounded-lg shadow-md'>
+                <div class='text-primary font-bold text-5xl mb-4'>
+                  {index + 1}
+                </div>
+                <h3 class='text-xl font-semibold mb-2'>{step.title}</h3>
+                <p class='text-textPrimary'>{step.description}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class='py-20 px-4'>
+      <div class='container mx-auto max-w-6xl'>
+        <h2 class='text-3xl md:text-4xl font-bold text-center mb-16'>
+          Benefits of Cloud Migration
+        </h2>
+        <div class='grid grid-cols-1 md:grid-cols-2 gap-12'>
+          {
+            serviceData.benefits.map((benefit) => (
+              <div class='bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300'>
+                <h3 class='text-xl font-semibold mb-4'>{benefit}</h3>
+                <p class='text-textPrimary'>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris.
+                </p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Study Section -->
+    <section class='py-20 px-4 bg-primary text-white'>
+      <div class='container mx-auto max-w-4xl text-center'>
+        <h2 class='text-3xl md:text-4xl font-bold mb-6'>Case Study</h2>
+        <h3 class='text-2xl md:text-3xl font-semibold mb-4'>
+          {serviceData.casestudy.title}
+        </h3>
+        <p class='text-xl mb-8'>{serviceData.casestudy.description}</p>
+        <a
+          href={serviceData.casestudy.link}
+          class='inline-block bg-white text-primary font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300'
+          >Read Case Study</a
+        >
+      </div>
+    </section>
+
+    <!-- FAQ Section (Collapsible) -->
+    <section class='py-20 px-4'>
+      <div class='container mx-auto max-w-4xl'>
+        <h2 class='text-3xl md:text-4xl font-bold text-center mb-16'>
+          Frequently Asked Questions
+        </h2>
+        <div class='space-y-4' id='faq-container'>
+          {
+            serviceData.faq.map((item, index) => (
+              <div class='bg-white rounded-lg shadow-md overflow-hidden'>
+                <button
+                  class='faq-question w-full text-left p-6 focus:outline-none'
+                  data-index={index}
+                >
+                  <div class='flex justify-between items-center'>
+                    <h3 class='text-xl font-semibold'>{item.question}</h3>
+                    <svg
+                      xmlns='http://www.w3.org/2000/svg'
+                      class='h-6 w-6 transform transition-transform duration-300'
+                      fill='none'
+                      viewBox='0 0 24 24'
+                      stroke='currentColor'
+                    >
+                      <path
+                        stroke-linecap='round'
+                        stroke-linejoin='round'
+                        stroke-width='2'
+                        d='M19 9l-7 7-7-7'
+                      />
+                    </svg>
+                  </div>
+                </button>
+                <div class='faq-answer hidden p-6 pt-0'>
+                  <p class='text-textPrimary'>{item.answer}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class='py-20 px-4 bg-gray-50'>
+      <div class='container mx-auto max-w-3xl text-center'>
+        <h2 class='text-3xl md:text-4xl font-bold mb-6'>
+          Ready to Migrate to the Cloud?
+        </h2>
+        <p class='text-xl text-gray-600 mb-8'>
+          Let our experts guide you through a seamless cloud migration process.
+          Get in touch today for a free consultation.
+        </p>
+        <a
+          href='#contact'
+          class='inline-block bg-primary text-white font-bold py-3 px-8 rounded-full hover:bg-primary/90 transition duration-300 text-lg'
+          >Get Started</a
+        >
+      </div>
+    </section>
+
+    <!-- Related Services Section -->
+    <section class='py-20 px-4'>
+      <div class='container mx-auto max-w-6xl'>
+        <h2 class='text-3xl md:text-4xl font-bold text-center mb-16'>
+          Related Services
+        </h2>
+        <div class='grid grid-cols-1 md:grid-cols-3 gap-8'>
+          {
+            serviceData.relatedServices.map((service) => (
+              <a href={service.link} class='block group'>
+                <div class='bg-white p-6 rounded-lg shadow-md transition duration-300 group-hover:shadow-xl'>
+                  <h3 class='text-xl font-semibold mb-2 group-hover:text-primary transition duration-300'>
+                    {service.title}
+                  </h3>
+                  <p class='text-textPrimary mb-4'>
+                    Learn more about our {service.title.toLowerCase()} services
+                    and how they can benefit your business.
+                  </p>
+                  <span class='text-primary font-medium group-hover:text-primary/90 transition duration-300'>
+                    Explore
+                    <svg
+                      xmlns='http://www.w3.org/2000/svg'
+                      class='h-5 w-5 inline-block ml-2 transform group-hover:translate-x-1 transition duration-300'
+                      fill='none'
+                      viewBox='0 0 24 24'
+                      stroke='currentColor'
+                    >
+                      <path
+                        stroke-linecap='round'
+                        stroke-linejoin='round'
+                        stroke-width='2'
+                        d='M17 8l4 4m0 0l-4 4m4-4H3'
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Back to Services Button Section -->
+    <!-- <section class='py-20 px-4 bg-gray-50'>
+      <div class='container mx-auto max-w-6xl text-center'>
+        <a
+          href='/services'
+          class='inline-flex items-center justify-center bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300 text-lg'
+        >
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            class='h-5 w-5 mr-2'
+            viewBox='0 0 20 20'
+            fill='currentColor'
+          >
+            <path
+              fill-rule='evenodd'
+              d='M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z'
+              clip-rule='evenodd'></path>
+          </svg>
+          Back to Services
+        </a>
+      </div>
+    </section> -->
+
+    <!-- Contact Form Section -->
+    <!-- <section id='contact' class='py-20 px-4 bg-gray-50'>
+      <div class='container mx-auto max-w-3xl'>
+        <h2 class='text-3xl md:text-4xl font-bold text-center mb-16'>
+          Contact Us
+        </h2>
+        <form class='space-y-6'>
+          <div class='grid grid-cols-1 md:grid-cols-2 gap-6'>
+            <div>
+              <label
+                for='name'
+                class='block text-sm font-medium text-gray-700 mb-1'>Name</label
+              >
+              <input
+                type='text'
+                id='name'
+                name='name'
+                class='w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500'
+                required
+              />
+            </div>
+            <div>
+              <label
+                for='email'
+                class='block text-sm font-medium text-gray-700 mb-1'
+                >Email</label
+              >
+              <input
+                type='email'
+                id='email'
+                name='email'
+                class='w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500'
+                required
+              />
+            </div>
+          </div>
+          <div>
+            <label
+              for='company'
+              class='block text-sm font-medium text-gray-700 mb-1'
+              >Company</label
+            >
+            <input
+              type='text'
+              id='company'
+              name='company'
+              class='w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500'
+            />
+          </div>
+          <div>
+            <label
+              for='message'
+              class='block text-sm font-medium text-gray-700 mb-1'
+              >Message</label
+            >
+            <textarea
+              id='message'
+              name='message'
+              rows='4'
+              class='w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500'
+              required></textarea>
+          </div>
+          <div>
+            <button
+              type='submit'
+              class='w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-md hover:bg-blue-700 transition duration-300'
+              >Send Message</button
+            >
+          </div>
+        </form>
+      </div>
+    </section> -->
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const faqContainer = document.getElementById('faq-container');
+
+      faqContainer!.addEventListener('click', (e: any) => {
+        const question = e.target.closest('.faq-question');
+        if (question) {
+          const index = question.dataset.index;
+          const answer = question.nextElementSibling;
+          const icon = question.querySelector('svg');
+
+          answer.classList.toggle('hidden');
+          icon.classList.toggle('rotate-180');
+
+          // Close other open questions
+          const allAnswers = faqContainer!.querySelectorAll('.faq-answer');
+          const allIcons = faqContainer!.querySelectorAll('.faq-question svg');
+
+          allAnswers.forEach((item, idx) => {
+            if (idx !== parseInt(index) && !item.classList.contains('hidden')) {
+              item.classList.add('hidden');
+              allIcons[idx].classList.remove('rotate-180');
+            }
+          });
+        }
+      });
+    });
+  </script>
+</Layout>
