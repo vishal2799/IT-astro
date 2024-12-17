@@ -1,5 +1,6 @@
 ---
 import BlogCard from '../../components/BlogCard.astro';
+import BlogCard2 from '../../components/BlogCard2.astro';
 import { Blogs } from '../../constants';
 ---
 
@@ -21,7 +22,7 @@ import { Blogs } from '../../constants';
       </p>
     </div>
     <div class='grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12'>
-      {Blogs.slice(0, 3).map((blog) => <BlogCard blog={blog} />)}
+      {Blogs.slice(0, 3).map((blog) => <BlogCard2 />)}
     </div>
   </div>
 </section>
