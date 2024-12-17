@@ -1,0 +1,563 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../../layouts/Layout.astro';
+
+const techData = {
+  name: 'AutoFlow',
+  tagline: 'Streamline Your Workflow with Intelligent Automation',
+  description:
+    'AutoFlow is a cutting-edge Robotic Process Automation (RPA) platform that empowers businesses to automate repetitive tasks, streamline workflows, and boost productivity across the organization.',
+  heroImage: '/images/autoflow-hero.jpg',
+  features: [
+    {
+      title: 'Intuitive Drag-and-Drop Interface',
+      description: 'Build complex automation workflows without coding skills.',
+    },
+    {
+      title: 'AI-Powered Decision Making',
+      description:
+        'Leverage machine learning for intelligent process automation.',
+    },
+    {
+      title: 'Cross-Platform Compatibility',
+      description:
+        'Seamlessly integrate with your existing software ecosystem.',
+    },
+    {
+      title: 'Real-time Analytics Dashboard',
+      description:
+        'Monitor and optimize your automation performance with detailed insights.',
+    },
+    {
+      title: 'Secure Data Handling',
+      description:
+        'Ensure compliance with industry standards and data protection regulations.',
+    },
+    {
+      title: 'Scalable Architecture',
+      description:
+        'Grow your automation initiatives from a single process to enterprise-wide deployment.',
+    },
+  ],
+  benefits: [
+    'Increase operational efficiency by up to 80%',
+    'Reduce human errors and improve accuracy',
+    'Free up employees for higher-value tasks',
+    'Achieve faster ROI with quick implementation',
+    'Enhance customer satisfaction through faster service delivery',
+    'Gain competitive advantage with agile business processes',
+  ],
+  useCases: [
+    {
+      title: 'Finance & Accounting',
+      description:
+        'Automate invoice processing, reconciliations, and financial reporting.',
+    },
+    {
+      title: 'Human Resources',
+      description:
+        'Streamline onboarding, payroll, and employee data management.',
+    },
+    {
+      title: 'Customer Service',
+      description:
+        'Enhance response times and automate ticket routing and resolution.',
+    },
+    {
+      title: 'IT Operations',
+      description:
+        'Automate system maintenance, updates, and security protocols.',
+    },
+    {
+      title: 'Supply Chain Management',
+      description:
+        'Optimize inventory tracking, order processing, and supplier communications.',
+    },
+    {
+      title: 'Healthcare Administration',
+      description:
+        'Streamline patient data management, billing, and appointment scheduling.',
+    },
+  ],
+  pricing: [
+    {
+      plan: 'Starter',
+      price: '$499/month',
+      features: [
+        'Up to 5 users',
+        '20 automated processes',
+        '8/5 support',
+        'Basic analytics',
+        'Community forum access',
+      ],
+    },
+    {
+      plan: 'Professional',
+      price: '$999/month',
+      features: [
+        'Up to 20 users',
+        'Unlimited processes',
+        '24/7 support',
+        'Advanced analytics',
+        'AI capabilities',
+        'Priority queue for automations',
+      ],
+    },
+    {
+      plan: 'Enterprise',
+      price: 'Custom',
+      features: [
+        'Unlimited users',
+        'Dedicated account manager',
+        'On-premise deployment option',
+        'Custom integrations',
+        'Advanced security features',
+        'Tailored training programs',
+      ],
+    },
+  ],
+  testimonials: [
+    {
+      name: 'Sarah Johnson',
+      role: 'CTO, TechCorp',
+      quote:
+        "AutoFlow has revolutionized our internal processes. We've seen a 40% increase in productivity since implementation.",
+    },
+    {
+      name: 'Michael Chen',
+      role: 'Operations Manager, GlobalLogistics',
+      quote:
+        'The AI-powered decision making in AutoFlow has significantly reduced our error rates and improved customer satisfaction.',
+    },
+    {
+      name: 'Emily Rodriguez',
+      role: 'HR Director, InnovateNow',
+      quote:
+        "Our HR team now focuses on strategic initiatives instead of paperwork, thanks to AutoFlow's automation capabilities.",
+    },
+  ],
+  faq: [
+    {
+      question: 'What is Robotic Process Automation (RPA)?',
+      answer:
+        "RPA is a technology that uses software robots or 'bots' to automate repetitive, rule-based tasks typically performed by humans. It can interact with digital systems and software just like a human would, but with greater speed, accuracy, and consistency.",
+    },
+    {
+      question: 'How long does it take to implement AutoFlow?',
+      answer:
+        'The implementation time varies depending on the complexity of your processes and the scale of automation. Simple automations can be up and running within days, while more complex, enterprise-wide implementations may take several weeks to months. Our team works closely with you to ensure a smooth and efficient deployment.',
+    },
+    {
+      question: 'Can AutoFlow integrate with my existing systems?',
+      answer:
+        'Yes, AutoFlow is designed to integrate seamlessly with a wide range of existing systems and software, including ERP, CRM, and legacy applications. Our platform supports various integration methods, including APIs, to ensure compatibility with your current tech stack.',
+    },
+    {
+      question: 'Is coding knowledge required to use AutoFlow?',
+      answer:
+        'No, AutoFlow features an intuitive drag-and-drop interface that allows users to create automation workflows without coding. However, for more advanced customizations, there is an option to use scripting for those with programming skills.',
+    },
+    {
+      question: 'How secure is AutoFlow?',
+      answer:
+        'AutoFlow prioritizes security and compliance. We employ industry-standard encryption, role-based access control, and regular security audits. AutoFlow is compliant with GDPR, HIPAA, and other major data protection regulations.',
+    },
+    {
+      question: 'Can AutoFlow handle unstructured data?',
+      answer:
+        "Yes, AutoFlow's AI capabilities allow it to process and extract information from unstructured data sources such as emails, documents, and images. This enables automation of more complex, cognitive tasks.",
+    },
+  ],
+  stats: [
+    { value: '500+', label: 'Enterprise Clients' },
+    { value: '1M+', label: 'Processes Automated' },
+    { value: '98%', label: 'Client Satisfaction' },
+    { value: '$100M+', label: 'Client Savings' },
+  ],
+};
+---
+
+<Layout title={techData.name}>
+  <div class='bg-gradient-to-b from-purple-50 to-white'>
+    <!-- Hero Section -->
+    <section
+      class='relative h-[60vh] min-h-[500px] flex items-center justify-center'
+    >
+      <Image
+        src='/service21.jpg'
+        alt={techData.name}
+        width={1920}
+        height={1080}
+        class='absolute inset-0 w-full h-full object-cover'
+      />
+      <div class='absolute inset-0 bg-primary opacity-70'></div>
+      <div class='relative z-10 text-center text-white px-4'>
+        <h1 class='text-4xl md:text-6xl font-bold mb-4'>{techData.name}</h1>
+        <p class='text-xl md:text-2xl mb-8'>{techData.tagline}</p>
+        <p class='text-lg md:text-xl max-w-3xl mx-auto mb-8'>
+          {techData.description}
+        </p>
+        <a
+          href='#contact'
+          class='bg-white text-primary hover:bg-highlight font-bold py-3 px-8 rounded-full transition duration-300 text-lg'
+          >Get Started</a
+        >
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class='py-16 bg-white'>
+      <div class='container mx-auto max-w-6xl'>
+        <div class='grid grid-cols-2 md:grid-cols-4 gap-8 text-center'>
+          {
+            techData.stats.map((stat) => (
+              <div>
+                <p class='text-4xl font-bold text-primary'>{stat.value}</p>
+                <p class='text-gray-600'>{stat.label}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class='py-20 px-4'>
+      <div class='container mx-auto max-w-6xl'>
+        <h2 class='text-3xl md:text-4xl font-bold text-center mb-16'>
+          Key Features
+        </h2>
+        <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12'>
+          {
+            techData.features.map((feature) => (
+              <div class='bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300'>
+                <h3 class='text-xl font-semibold mb-4'>{feature.title}</h3>
+                <p class='text-textPrimary'>{feature.description}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class='py-20 px-4 bg-highlight'>
+      <div class='container mx-auto max-w-4xl'>
+        <h2 class='text-3xl md:text-4xl font-bold text-center mb-16'>
+          Benefits of AutoFlow
+        </h2>
+        <ul class='space-y-6'>
+          {
+            techData.benefits.map((benefit) => (
+              <li class='flex items-start'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  class='h-6 w-6 text-primary mt-1 mr-4'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  stroke='currentColor'
+                >
+                  <path
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    stroke-width='2'
+                    d='M5 13l4 4L19 7'
+                  />
+                </svg>
+                <p class='text-lg'>{benefit}</p>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class='py-20 px-4'>
+      <div class='container mx-auto max-w-6xl'>
+        <h2 class='text-3xl md:text-4xl font-bold text-center mb-16'>
+          Use Cases
+        </h2>
+        <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12'>
+          {
+            techData.useCases.map((useCase) => (
+              <div class='bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300'>
+                <h3 class='text-xl font-semibold mb-4'>{useCase.title}</h3>
+                <p class='text-textPrimary'>{useCase.description}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class='py-20 px-4 bg-gray-50'>
+      <div class='container mx-auto max-w-4xl'>
+        <h2 class='text-3xl md:text-4xl font-bold text-center mb-16'>
+          How AutoFlow Works
+        </h2>
+        <div class='space-y-12'>
+          <div class='flex flex-col md:flex-row items-center gap-8'>
+            <div class='w-full md:w-1/2'>
+              <h3 class='text-2xl font-semibold mb-4'>1. Process Analysis</h3>
+              <p class='text-textPrimary'>
+                Our experts work with you to identify and analyze processes
+                suitable for automation, ensuring maximum impact and ROI.
+              </p>
+            </div>
+            <div class='w-full md:w-1/2'>
+              <Image
+                src='/service21.jpg'
+                alt='Process Analysis'
+                width={500}
+                height={300}
+                class='rounded-lg shadow-md'
+              />
+            </div>
+          </div>
+          <div class='flex flex-col md:flex-row-reverse items-center gap-8'>
+            <div class='w-full md:w-1/2'>
+              <h3 class='text-2xl font-semibold mb-4'>2. Workflow Design</h3>
+              <p class='text-textPrimary'>
+                Using our intuitive drag-and-drop interface, create automated
+                workflows that mirror your business processes with precision.
+              </p>
+            </div>
+            <div class='w-full md:w-1/2'>
+              <Image
+                src='/service21.jpg'
+                alt='Workflow Design'
+                width={500}
+                height={300}
+                class='rounded-lg shadow-md'
+              />
+            </div>
+          </div>
+          <div class='flex flex-col md:flex-row items-center gap-8'>
+            <div class='w-full md:w-1/2'>
+              <h3 class='text-2xl font-semibold mb-4'>3. Bot Deployment</h3>
+              <p class='text-textPrimary'>
+                Deploy your automated workflows with a click. Our intelligent
+                bots start working immediately, handling tasks 24/7 with
+                consistency and accuracy.
+              </p>
+            </div>
+            <div class='w-full md:w-1/2'>
+              <Image
+                src='/service21.jpg'
+                alt='Bot Deployment'
+                width={500}
+                height={300}
+                class='rounded-lg shadow-md'
+              />
+            </div>
+          </div>
+          <div class='flex flex-col md:flex-row-reverse items-center gap-8'>
+            <div class='w-full md:w-1/2'>
+              <h3 class='text-2xl font-semibold mb-4'>
+                4. Monitoring and Optimization
+              </h3>
+              <p class='text-textPrimary'>
+                Track performance in real-time and continuously optimize your
+                automated processes for peak efficiency and effectiveness.
+              </p>
+            </div>
+            <div class='w-full md:w-1/2'>
+              <Image
+                src='/service21.jpg'
+                alt='Monitoring and Optimization'
+                width={500}
+                height={300}
+                class='rounded-lg shadow-md'
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <!-- <section class='py-20 px-4 bg-primary text-white'>
+      <div class='container mx-auto max-w-4xl'>
+        <h2 class='text-3xl md:text-4xl font-bold text-center mb-16'>
+          What Our Clients Say
+        </h2>
+        <div class='grid gap-8 md:grid-cols-3'>
+          {
+            techData.testimonials.map((testimonial) => (
+              <div class='bg-primary p-6 rounded-lg'>
+                <p class='text-lg mb-4'>"{testimonial.quote}"</p>
+                <p class='font-semibold'>{testimonial.name}</p>
+                <p class='text-purple-300'>{testimonial.role}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Pricing Section -->
+    <section class='py-20 px-4 bg-gray-50'>
+      <div class='container mx-auto max-w-6xl'>
+        <h2 class='text-3xl md:text-4xl font-bold text-center mb-16'>
+          Pricing Plans
+        </h2>
+        <div class='grid grid-cols-1 md:grid-cols-3 gap-8'>
+          {
+            techData.pricing.map((plan) => (
+              <div class='bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 flex flex-col'>
+                <h3 class='text-2xl font-bold mb-4'>{plan.plan}</h3>
+                <p class='text-3xl font-bold text-primary mb-6'>{plan.price}</p>
+                <ul class='space-y-2 mb-8 flex-grow'>
+                  {plan.features.map((feature) => (
+                    <li class='flex items-center'>
+                      <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        class='h-5 w-5 text-green-500 mr-2'
+                        viewBox='0 0 20 20'
+                        fill='currentColor'
+                      >
+                        <path
+                          fill-rule='evenodd'
+                          d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
+                          clip-rule='evenodd'
+                        />
+                      </svg>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href='#contact'
+                  class='bg-primary/90 text-white hover:bg-primary font-bold py-2 px-4 rounded-full transition duration-300 text-center'
+                >
+                  Get Started
+                </a>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class='py-20 px-4'>
+      <div class='container mx-auto max-w-4xl'>
+        <h2 class='text-3xl md:text-4xl font-bold text-center mb-16'>
+          Frequently Asked Questions
+        </h2>
+        <div class='space-y-4' id='faq-container'>
+          {
+            techData.faq.map((item, index) => (
+              <div class='bg-white rounded-lg shadow-md overflow-hidden'>
+                <button
+                  class='faq-question w-full text-left p-6 focus:outline-none'
+                  data-index={index}
+                >
+                  <div class='flex justify-between items-center'>
+                    <h3 class='text-xl font-semibold'>{item.question}</h3>
+                    <svg
+                      xmlns='http://www.w3.org/2000/svg'
+                      class='h-6 w-6 transform transition-transform duration-300'
+                      fill='none'
+                      viewBox='0 0 24 24'
+                      stroke='currentColor'
+                    >
+                      <path
+                        stroke-linecap='round'
+                        stroke-linejoin='round'
+                        stroke-width='2'
+                        d='M19 9l-7 7-7-7'
+                      />
+                    </svg>
+                  </div>
+                </button>
+                <div class='faq-answer hidden p-6 pt-0'>
+                  <p class='text-textPrimary'>{item.answer}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class='py-20 px-4 bg-primary text-white'>
+      <div class='container mx-auto max-w-3xl text-center'>
+        <h2 class='text-3xl md:text-4xl font-bold mb-6'>
+          Ready to Automate Your Workflow?
+        </h2>
+        <p class='text-xl mb-8'>
+          Join thousands of businesses that have transformed their operations
+          with AutoFlow.
+        </p>
+        <a
+          href='#contact'
+          class='inline-block bg-white text-primary font-bold py-3 px-8 rounded-full hover:bg-purple-100 transition duration-300 text-lg'
+          >Get Started Today</a
+        >
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <!-- <section id="contact" class="py-20 px-4">
+      <div class="container mx-auto max-w-3xl">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Contact Us</h2>
+        <form class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+              <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-purple-500 focus:border-purple-500" required>
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+              <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-purple-500 focus:border-purple-500" required>
+            </div>
+          </div>
+          <div>
+            <label for="company" class="block text-sm font-medium text-gray-700 mb-1">Company</label>
+            <input type="text" id="company" name="company" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-purple-500 focus:border-purple-500">
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-purple-500 focus:border-purple-500" required></textarea>
+          </div>
+          <div>
+            <button type="submit" class="w-full bg-purple-600 text-white font-bold py-3 px-4 rounded-md hover:bg-purple-700 transition duration-300">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </section> -->
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const faqContainer = document.getElementById('faq-container');
+
+      faqContainer!.addEventListener('click', (e: any) => {
+        const question = e.target.closest('.faq-question');
+        if (question) {
+          const index = question.dataset.index;
+          const answer = question.nextElementSibling;
+          const icon = question.querySelector('svg');
+
+          answer.classList.toggle('hidden');
+          icon.classList.toggle('rotate-180');
+
+          // Close other open questions
+          const allAnswers = faqContainer!.querySelectorAll('.faq-answer');
+          const allIcons = faqContainer!.querySelectorAll('.faq-question svg');
+
+          allAnswers.forEach((item, idx) => {
+            if (idx !== parseInt(index) && !item.classList.contains('hidden')) {
+              item.classList.add('hidden');
+              allIcons[idx].classList.remove('rotate-180');
+            }
+          });
+        }
+      });
+    });
+  </script>
+</Layout>

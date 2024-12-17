@@ -1,0 +1,456 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../../layouts/Layout.astro';
+
+const financeData = {
+  name: 'FinanceFlow',
+  tagline: 'Streamline Your Financial Operations',
+  description:
+    'FinanceFlow is an advanced fintech solution that empowers businesses to optimize their financial processes, enhance security, and make data-driven decisions.',
+  heroImage: '/images/finance-hero.jpg',
+  features: [
+    {
+      title: 'AI-Powered Analytics',
+      description:
+        'Leverage machine learning algorithms to gain predictive insights and optimize financial strategies.',
+      icon: 'chart-line',
+    },
+    {
+      title: 'Secure Transactions',
+      description:
+        'Ensure the highest level of security for all financial transactions with blockchain technology.',
+      icon: 'shield-check',
+    },
+    {
+      title: 'Automated Reporting',
+      description:
+        'Generate comprehensive financial reports with a single click, saving time and reducing errors.',
+      icon: 'document-report',
+    },
+    {
+      title: 'Real-time Monitoring',
+      description:
+        'Track financial metrics in real-time with customizable dashboards and alerts.',
+      icon: 'chart-square-bar',
+    },
+  ],
+  stats: [
+    { value: '99.9%', label: 'Accuracy Rate' },
+    { value: '50%', label: 'Time Saved' },
+    { value: '30%', label: 'Cost Reduction' },
+    { value: '24/7', label: 'Monitoring' },
+  ],
+  testimonials: [
+    {
+      quote:
+        "FinanceFlow has revolutionized our financial operations. We've cut costs and improved our decision-making process significantly.",
+      author: 'Emily Chen',
+      position: 'CFO, TechCorp Inc.',
+    },
+    {
+      quote:
+        'The real-time analytics and automated reporting have given us unprecedented insights into our financial health.',
+      author: 'Michael Johnson',
+      position: 'Finance Director, Global Innovations',
+    },
+  ],
+  faq: [
+    {
+      question: 'How secure is FinanceFlow?',
+      answer:
+        'FinanceFlow employs bank-level security measures, including end-to-end encryption, multi-factor authentication, and regular security audits. We are compliant with industry standards such as SOC 2 and ISO 27001.',
+    },
+    {
+      question: 'Can FinanceFlow integrate with our existing systems?',
+      answer:
+        'Yes, FinanceFlow is designed to integrate seamlessly with a wide range of financial and accounting software. We provide APIs and custom integration solutions to ensure smooth data flow between systems.',
+    },
+    {
+      question: 'How long does implementation take?',
+      answer:
+        "The implementation timeline varies depending on your organization's size and complexity. Typically, small to medium businesses can be up and running within 2-4 weeks, while larger enterprises may take 6-8 weeks for full implementation.",
+    },
+  ],
+};
+
+const iconMap = {
+  'chart-line': `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />`,
+  'shield-check': `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />`,
+  'document-report': `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />`,
+  'chart-square-bar': `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />`,
+};
+---
+
+<Layout title={`${financeData.name} - Advanced Financial Solutions`}>
+  <main class='bg-white'>
+    <!-- Hero Section -->
+    <section class='bg-blue-50 py-20'>
+      <div class='container mx-auto px-4'>
+        <div class='flex flex-col lg:flex-row items-center'>
+          <div class='lg:w-1/2 mb-10 lg:mb-0'>
+            <h1 class='text-4xl md:text-5xl font-bold mb-6 text-gray-900'>
+              {financeData.name}
+            </h1>
+            <p class='text-xl md:text-2xl mb-8 text-gray-700'>
+              {financeData.tagline}
+            </p>
+            <p class='text-lg mb-10 text-gray-600 max-w-lg'>
+              {financeData.description}
+            </p>
+            <a
+              href='#contact'
+              class='bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 inline-block'
+              >Get Started</a
+            >
+          </div>
+          <div class='lg:w-1/2'>
+            <Image
+              src='/service21.jpg'
+              alt='FinanceFlow Dashboard'
+              width={600}
+              height={400}
+              class='rounded-lg shadow-xl'
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class='py-20'>
+      <div class='container mx-auto px-4'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900'
+        >
+          Key Features
+        </h2>
+        <div class='grid grid-cols-1 md:grid-cols-2 gap-12'>
+          {
+            financeData.features.map((feature) => (
+              <div class='bg-white p-8 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition duration-300'>
+                <div class='flex items-center mb-4'>
+                  <svg
+                    class='w-8 h-8 text-blue-600 mr-3'
+                    fill='none'
+                    stroke='currentColor'
+                    viewBox='0 0 24 24'
+                    xmlns='http://www.w3.org/2000/svg'
+                  >
+                    {/* <Fragment set:html={iconMap[feature.icon]} /> */}
+                  </svg>
+                  <h3 class='text-xl font-semibold text-gray-900'>
+                    {feature.title}
+                  </h3>
+                </div>
+                <p class='text-gray-600'>{feature.description}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class='py-20 bg-blue-600 text-white'>
+      <div class='container mx-auto px-4'>
+        <div class='grid grid-cols-2 md:grid-cols-4 gap-8 text-center'>
+          {
+            financeData.stats.map((stat) => (
+              <div>
+                <p class='text-4xl font-bold mb-2'>{stat.value}</p>
+                <p class='text-xl'>{stat.label}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class='py-20 bg-gray-50'>
+      <div class='container mx-auto px-4'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900'
+        >
+          How FinanceFlow Works
+        </h2>
+        <div
+          class='flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12'
+        >
+          <div class='flex flex-col items-center text-center max-w-xs'>
+            <div class='bg-blue-100 rounded-full p-6 mb-4'>
+              <svg
+                class='w-12 h-12 text-blue-600'
+                fill='none'
+                stroke='currentColor'
+                viewBox='0 0 24 24'
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <path
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  stroke-width='2'
+                  d='M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01'
+                ></path>
+              </svg>
+            </div>
+            <h3 class='text-xl font-semibold mb-2 text-gray-900'>
+              1. Data Integration
+            </h3>
+            <p class='text-gray-600'>
+              Connect your financial data sources securely to FinanceFlow.
+            </p>
+          </div>
+          <div class='flex flex-col items-center text-center max-w-xs'>
+            <div class='bg-blue-100 rounded-full p-6 mb-4'>
+              <svg
+                class='w-12 h-12 text-blue-600'
+                fill='none'
+                stroke='currentColor'
+                viewBox='0 0 24 24'
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <path
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  stroke-width='2'
+                  d='M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z'
+                ></path>
+              </svg>
+            </div>
+            <h3 class='text-xl font-semibold mb-2 text-gray-900'>
+              2. AI Analysis
+            </h3>
+            <p class='text-gray-600'>
+              Our AI algorithms analyze your data for insights and optimization
+              opportunities.
+            </p>
+          </div>
+          <div class='flex flex-col items-center text-center max-w-xs'>
+            <div class='bg-blue-100 rounded-full p-6 mb-4'>
+              <svg
+                class='w-12 h-12 text-blue-600'
+                fill='none'
+                stroke='currentColor'
+                viewBox='0 0 24 24'
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <path
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  stroke-width='2'
+                  d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'></path>
+              </svg>
+            </div>
+            <h3 class='text-xl font-semibold mb-2 text-gray-900'>
+              3. Actionable Insights
+            </h3>
+            <p class='text-gray-600'>
+              Receive personalized recommendations and automate financial
+              processes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class='py-20'>
+      <div class='container mx-auto px-4'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900'
+        >
+          What Our Clients Say
+        </h2>
+        <div class='grid md:grid-cols-2 gap-12'>
+          {
+            financeData.testimonials.map((testimonial) => (
+              <div class='bg-white p-8 rounded-lg shadow-lg border border-gray-200'>
+                <svg
+                  class='w-12 h-12 text-blue-600 mb-6'
+                  fill='currentColor'
+                  viewBox='0 0 24 24'
+                  xmlns='http://www.w3.org/2000/svg'
+                >
+                  <path d='M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z' />
+                </svg>
+                <p class='text-lg mb-6 text-gray-700'>"{testimonial.quote}"</p>
+                <div>
+                  <p class='font-semibold text-gray-900'>
+                    {testimonial.author}
+                  </p>
+                  <p class='text-blue-600'>{testimonial.position}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class='py-20 bg-gray-50'>
+      <div class='container mx-auto px-4'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900'
+        >
+          Frequently Asked Questions
+        </h2>
+        <div class='max-w-3xl mx-auto space-y-8' id='faq-container'>
+          {
+            financeData.faq.map((item, index) => (
+              <div class='border-b border-gray-300 pb-8'>
+                <button
+                  class='faq-question w-full text-left focus:outline-none'
+                  data-index={index}
+                >
+                  <div class='flex justify-between items-center'>
+                    <h3 class='text-xl font-semibold text-gray-900'>
+                      {item.question}
+                    </h3>
+                    <svg
+                      class='w-6 h-6 text-blue-600 transform transition-transform duration-300'
+                      fill='none'
+                      stroke='currentColor'
+                      viewBox='0 0 24 24'
+                      xmlns='http://www.w3.org/2000/svg'
+                    >
+                      <path
+                        stroke-linecap='round'
+                        stroke-linejoin='round'
+                        stroke-width='2'
+                        d='M19 9l-7 7-7-7'
+                      />
+                    </svg>
+                  </div>
+                </button>
+                <div class='faq-answer hidden mt-4'>
+                  <p class='text-gray-600'>{item.answer}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class='py-20 bg-blue-600'>
+      <div class='container mx-auto px-4 text-center'>
+        <h2 class='text-3xl md:text-4xl font-bold mb-6 text-white'>
+          Ready to Optimize Your Finances?
+        </h2>
+        <p class='text-xl mb-8 text-blue-100'>
+          Join thousands of businesses that have transformed their financial
+          operations with FinanceFlow.
+        </p>
+        <a
+          href='#contact'
+          class='bg-white hover:bg-blue-50 text-blue-600 font-bold py-3 px-8 rounded-lg transition duration-300 inline-block'
+          >Get Started Today</a
+        >
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <!-- <section id='contact' class='py-20'>
+      <div class='container mx-auto px-4'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900'
+        >
+          Contact Us
+        </h2>
+        <form class='max-w-lg mx-auto space-y-6'>
+          <div>
+            <label
+              for='name'
+              class='block text-sm font-medium text-gray-700 mb-1'>Name</label
+            >
+            <input
+              type='text'
+              id='name'
+              name='name'
+              class='w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500'
+              required
+            />
+          </div>
+          <div>
+            <label
+              for='email'
+              class='block text-sm font-medium text-gray-700 mb-1'>Email</label
+            >
+            <input
+              type='email'
+              id='email'
+              name='email'
+              class='w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500'
+              required
+            />
+          </div>
+          <div>
+            <label
+              for='company'
+              class='block text-sm font-medium text-gray-700 mb-1'
+              >Company</label
+            >
+            <input
+              type='text'
+              id='company'
+              name='company'
+              class='w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500'
+            />
+          </div>
+          <div>
+            <label
+              for='message'
+              class='block text-sm font-medium text-gray-700 mb-1'
+              >Message</label
+            >
+            <textarea
+              id='message'
+              name='message'
+              rows='4'
+              class='w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500'
+              required></textarea>
+          </div>
+          <div>
+            <button
+              type='submit'
+              class='w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-md hover:bg-blue-700 transition duration-300'
+              >Send Message</button
+            >
+          </div>
+        </form>
+      </div>
+    </section> -->
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const faqContainer = document.getElementById('faq-container');
+
+      faqContainer!.addEventListener('click', (e: any) => {
+        const question = e.target.closest('.faq-question');
+        if (question) {
+          const index = question.dataset.index;
+          const answer = question.nextElementSibling;
+          const icon = question.querySelector('svg');
+
+          answer.classList.toggle('hidden');
+          icon.classList.toggle('rotate-180');
+
+          // Close other open questions
+          const allAnswers = faqContainer!.querySelectorAll('.faq-answer');
+          const allIcons = faqContainer!.querySelectorAll('.faq-question svg');
+
+          allAnswers.forEach((item, idx) => {
+            if (idx !== parseInt(index) && !item.classList.contains('hidden')) {
+              item.classList.add('hidden');
+              allIcons[idx].classList.remove('rotate-180');
+            }
+          });
+        }
+      });
+    });
+  </script>
+</Layout>
