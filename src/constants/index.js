@@ -289,7 +289,7 @@ const services = [
     icon: 'cloud',
     description:
       'Streamline your business operations with our cutting-edge Business Process Automation solutions.',
-    heroImage: '/images/bpa-services.jpg',
+    heroImage: '/breadcrumb1.jpg',
     features: [
       'End-to-end process analysis and optimization',
       'Automated workflow design and deployment',
@@ -365,10 +365,10 @@ const services = [
 
   {
     title: 'Robotic Process Automation (RPA)',
-    icon: 'cloud',
+    icon: 'robot',
     description:
       'Automate repetitive tasks with our intelligent RPA solutions to drive operational efficiency.',
-    heroImage: '/images/rpa-services.jpg',
+    heroImage: '/service2.jpg',
     features: [
       'Bot design and development',
       'Process automation consulting',
@@ -439,10 +439,10 @@ const services = [
 
   {
     title: 'Low-Code Automation (BPM)',
-    icon: 'cloud',
+    icon: 'pie-chart',
     description:
       'Transform your business with low-code automation powered by BPM solutions.',
-    heroImage: '/images/bpm-services.jpg',
+    heroImage: '/service3.jpg',
     features: [
       'Drag-and-drop workflow design',
       'Pre-built connectors and integrations',
@@ -519,8 +519,8 @@ const technology = [
     description:
       'Nintex offers a comprehensive process automation platform enabling businesses to streamline workflows and improve operational efficiency.',
     icon: 'cloud',
-    image: '/service21.jpg',
-    heroImage: '/images/nintex-hero.jpg',
+    image: '/service1.jpg',
+    heroImage: '/breadcrumb1.jpg',
     features: [
       {
         title: 'Workflow Automation',
@@ -590,9 +590,9 @@ const technology = [
     tagline: 'Build Business Apps Fast',
     description:
       'K2 provides a powerful low-code automation platform that helps organizations create scalable business applications quickly.',
-    icon: 'cloud',
-    image: '/service21.jpg',
-    heroImage: '/images/k2-hero.jpg',
+    icon: 'robot',
+    image: '/service2.jpg',
+    heroImage: '/breadcrumb2.jpg',
     features: [
       {
         title: 'Visual Workflow Designer',
@@ -662,9 +662,9 @@ const technology = [
     tagline: 'Automate Smarter, Faster, Better',
     description:
       'UiPath offers a leading RPA platform that automates repetitive tasks and enhances productivity with AI-powered bots.',
-    icon: 'cloud',
-    image: '/service21.jpg',
-    heroImage: '/images/uipath-hero.jpg',
+    icon: 'pie-chart',
+    image: '/service3.jpg',
+    heroImage: '/breadcrumb3.jpg',
     features: [
       {
         title: 'Attended & Unattended Automation',
@@ -738,7 +738,7 @@ const solutions = [
     tagline: 'Empower Your Workforce with Intelligent HR Solutions',
     description:
       'HRFlow is a comprehensive human resource management platform designed to streamline recruitment, onboarding, payroll, and performance management processes.',
-    heroImage: '/images/hr-hero.jpg',
+    heroImage: '/breadcrumb1.jpg',
     process: [
       {
         title: 'Talent Acquisition',
@@ -805,7 +805,7 @@ const solutions = [
     tagline: 'Optimize Operations for Maximum Efficiency',
     description:
       'OpsFlow is an intelligent operations management solution that automates business processes, streamlines workflows, and boosts operational efficiency.',
-    heroImage: '/images/ops-hero.jpg',
+    heroImage: '/breadcrumb2.jpg',
     process: [
       {
         title: 'Process Automation',
@@ -872,7 +872,7 @@ const solutions = [
     tagline: 'Accelerate Sales with Smarter CRM Solutions',
     description:
       'SalesFlow is a cutting-edge CRM platform that helps businesses manage customer relationships, track sales, and boost revenue with AI-powered insights.',
-    heroImage: '/images/sales-hero.jpg',
+    heroImage: '/breadcrumb3.jpg',
     process: [
       {
         title: 'Lead Management',
@@ -939,7 +939,7 @@ const solutions = [
     tagline: 'Drive Growth with Automated Marketing Campaigns',
     description:
       'MarketingFlow is a comprehensive marketing automation platform that simplifies campaign management, lead generation, and customer engagement.',
-    heroImage: '/images/marketing-hero.jpg',
+    heroImage: '/breadcrumb4.jpg',
     process: [
       {
         title: 'Campaign Creation',
@@ -1009,7 +1009,7 @@ const projects = [
     category: 'E-commerce',
     description:
       'Redesigned and optimized a major e-commerce platform, resulting in a 40% increase in conversion rates and improved user experience.',
-    image: '/service21.jpg',
+    image: '/service1.jpg',
     client: 'MegaShop Inc.',
     duration: '8 months',
     technologies: ['React', 'Node.js', 'MongoDB', 'AWS'],
