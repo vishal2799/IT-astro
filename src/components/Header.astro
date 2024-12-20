@@ -10,7 +10,7 @@ const techCol1 = technology.map((tech, index) => ({
 
 const techCol2 = technology.slice(0, 2).map((tech, index) => ({
   label: tech.name,
-  desc: tech.description,
+  desc: tech.tagline,
   href: `/technology/${tech.name.toLowerCase().replace(/\s+/g, '-')}`,
   image: tech.image,
 }));
@@ -22,7 +22,7 @@ const solCol1 = solutions.map((sol, index) => ({
 
 const solCol2 = solutions.slice(0, 2).map((sol, index) => ({
   label: sol.name,
-  desc: sol.description,
+  desc: sol.tagline,
   href: `/solutions/${sol.name.toLowerCase().replace(/\s+/g, '-')}`,
   image: sol.heroImage,
 }));
