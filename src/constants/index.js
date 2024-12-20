@@ -1003,4 +1003,28 @@ const solutions = [
   },
 ];
 
-export { services, technology, solutions };
+const projects = [
+  {
+    title: 'Global E-commerce Platform Overhaul',
+    category: 'E-commerce',
+    description:
+      'Redesigned and optimized a major e-commerce platform, resulting in a 40% increase in conversion rates and improved user experience.',
+    image: '/service21.jpg',
+    client: 'MegaShop Inc.',
+    duration: '8 months',
+    technologies: ['React', 'Node.js', 'MongoDB', 'AWS'],
+    slug: 'global-ecommerce-platform-overhaul',
+    challenge:
+      'The clients existing e-commerce platform was outdated, slow, and unable to handle increasing traffic. They needed a complete overhaul to improve performance, user experience, and conversion rates.',
+    solution:
+      'We redesigned the entire platform using modern technologies, implemented a microservices architecture for better scalability, and optimized the user journey based on extensive user research and A/B testing.',
+    results: [
+      '40% increase in conversion rates',
+      '60% improvement in page load times',
+      '25% reduction in cart abandonment',
+      '50% increase in mobile sales',
+    ],
+  },
+];
+
+export { services, technology, solutions, projects };
