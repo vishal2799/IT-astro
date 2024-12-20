@@ -1,73 +1,43 @@
 ---
 import { Icon } from 'astro-icon/components';
+import { services, solutions, technology } from '../constants';
 
 const currentYear = new Date().getFullYear();
+
+const serviceLinks = services.map((service) => ({
+  label: service.title,
+  href: `/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`,
+}));
+
+const techLinks = technology.map((tech) => ({
+  label: tech.name,
+  href: `/technology/${tech.name.toLowerCase().replace(/\s+/g, '-')}`,
+}));
+
+const solLinks = solutions.map((sol) => ({
+  label: sol.name,
+  href: `/solutions/${sol.name.toLowerCase().replace(/\s+/g, '-')}`,
+}));
 
 const sections = [
   {
     title: 'Services',
-    links: [
-      {
-        href: '/services/business-process-automation/',
-        label: 'Business Process Automation',
-      },
-      {
-        href: '/services/digital-transformation/',
-        label: 'Digital Transformation',
-      },
-      {
-        href: '/services/business-consultancy/',
-        label: 'Process Automation Consultancy',
-      },
-      {
-        href: '/services/robotic-process-automation-rpa/',
-        label: 'Robotic Process Automation (RPA)',
-      },
-      {
-        href: '/services/low-code-automation/',
-        label: 'Low-Code Automation (BPM)',
-      },
-      {
-        href: '/services/artificial-intelligence-automation/',
-        label: 'AI Automation',
-      },
-      { href: '/services/process-mining/', label: 'Process Mining' },
-    ],
+    links: serviceLinks,
   },
   {
     title: 'Technology',
-    links: [
-      { href: '/technology/uipath/', label: 'UiPath' },
-      { href: '/technology/mendix/', label: 'Mendix' },
-      { href: '/technology/netcall/', label: 'Netcall' },
-      { href: '/technology/nintex/', label: 'Nintex' },
-      { href: '/technology/k2/', label: 'K2' },
-    ],
+    links: techLinks,
   },
   {
     title: 'Solutions',
-    links: [
-      { href: '/solutions/finance/', label: 'Finance Automation' },
-      { href: '/solutions/operations/', label: 'Operations Automation' },
-      { href: '/solutions/human-resources/', label: 'HR Automation' },
-      {
-        href: '/solutions/sales-marketing/',
-        label: 'Sales & Marketing Automation',
-      },
-      { href: '/solutions/information-technology/', label: 'IT Automation' },
-    ],
+    links: solLinks,
   },
   {
     title: 'Company',
     links: [
-      { href: '/about-us/', label: 'About Us' },
-      {
-        href: '/about-us/intelligent-automation-alliance/',
-        label: 'Innovation',
-      },
-      { href: '/knowledge-hub/', label: 'Knowledge Hub' },
-      { href: '/case-studies/', label: 'Case Studies' },
-      { href: '/about-us/careers/', label: 'Careers' },
+      { href: '/about-us', label: 'About Us' },
+      { href: '/contact-us', label: 'Contact Us' },
+      { href: '/projects', label: 'Projects' },
     ],
   },
 ];
