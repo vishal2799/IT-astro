@@ -732,4 +732,275 @@ const technology = [
   },
 ];
 
-export { services, technology };
+const solutions = [
+  {
+    name: 'HRFlow',
+    tagline: 'Empower Your Workforce with Intelligent HR Solutions',
+    description:
+      'HRFlow is a comprehensive human resource management platform designed to streamline recruitment, onboarding, payroll, and performance management processes.',
+    heroImage: '/images/hr-hero.jpg',
+    process: [
+      {
+        title: 'Talent Acquisition',
+        description:
+          'Find and hire top talent with AI-driven recruitment and automated job postings.',
+      },
+      {
+        title: 'Seamless Onboarding',
+        description:
+          'Automate onboarding processes with personalized workflows and documentation.',
+      },
+      {
+        title: 'Performance Management',
+        description:
+          'Track, evaluate, and enhance employee performance through real-time feedback and goal tracking.',
+      },
+    ],
+    features: [
+      {
+        title: 'Smart Recruitment',
+        description:
+          'Use AI-powered matching to connect job seekers with the best roles faster.',
+        icon: 'user-group',
+      },
+      {
+        title: 'Payroll Automation',
+        description:
+          'Automate payroll calculations, tax compliance, and salary disbursement.',
+        icon: 'currency-dollar',
+      },
+      {
+        title: 'Compliance Tracking',
+        description:
+          'Ensure legal and regulatory compliance with automatic updates and audit logs.',
+        icon: 'clipboard-check',
+      },
+      {
+        title: 'Employee Self-Service',
+        description:
+          'Provide a user-friendly portal for employees to access and manage personal records.',
+        icon: 'user-circle',
+      },
+    ],
+    faq: [
+      {
+        question: 'How secure is HRFlow?',
+        answer:
+          'HRFlow implements enterprise-grade security, including data encryption, role-based access control, and GDPR compliance. Regular audits ensure maximum data protection.',
+      },
+      {
+        question: 'Does HRFlow integrate with payroll systems?',
+        answer:
+          'Yes, HRFlow supports integration with major payroll systems and HRMS platforms, ensuring seamless data exchange and process automation.',
+      },
+      {
+        question: 'What is the typical implementation timeline?',
+        answer:
+          'Small to mid-sized organizations can expect full implementation within 3-6 weeks, while larger enterprises may take up to 12 weeks depending on customization needs.',
+      },
+    ],
+  },
+  {
+    name: 'OpsFlow',
+    tagline: 'Optimize Operations for Maximum Efficiency',
+    description:
+      'OpsFlow is an intelligent operations management solution that automates business processes, streamlines workflows, and boosts operational efficiency.',
+    heroImage: '/images/ops-hero.jpg',
+    process: [
+      {
+        title: 'Process Automation',
+        description:
+          'Automate repetitive operational tasks to reduce workload and improve efficiency.',
+      },
+      {
+        title: 'Resource Allocation',
+        description:
+          'Optimize resource utilization with intelligent scheduling and workload balancing.',
+      },
+      {
+        title: 'Performance Tracking',
+        description:
+          'Monitor key performance indicators in real time and make data-driven decisions.',
+      },
+    ],
+    features: [
+      {
+        title: 'Workflow Automation',
+        description:
+          'Create end-to-end workflows that reduce manual effort and speed up processes.',
+        icon: 'refresh',
+      },
+      {
+        title: 'Real-Time Analytics',
+        description:
+          'Gain actionable insights with dashboards and custom reports.',
+        icon: 'chart-bar',
+      },
+      {
+        title: 'Task Management',
+        description:
+          'Assign, track, and manage tasks with built-in task management features.',
+        icon: 'clipboard-list',
+      },
+      {
+        title: 'Integration Hub',
+        description:
+          'Connect with third-party apps and systems for a unified operations ecosystem.',
+        icon: 'link',
+      },
+    ],
+    faq: [
+      {
+        question: 'How customizable is OpsFlow?',
+        answer:
+          'OpsFlow offers highly customizable workflows, task automation rules, and reporting dashboards, enabling businesses to adapt the platform to their unique needs.',
+      },
+      {
+        question: 'Is OpsFlow suitable for small businesses?',
+        answer:
+          'Yes, OpsFlow is scalable and works well for businesses of all sizes, from startups to enterprises. Its modular design allows small businesses to start with essential features and expand as needed.',
+      },
+      {
+        question: 'What are the system requirements for OpsFlow?',
+        answer:
+          'OpsFlow is cloud-based, requiring only a web browser and internet connection. No additional hardware or complex IT infrastructure is needed.',
+      },
+    ],
+  },
+  {
+    name: 'SalesFlow',
+    tagline: 'Accelerate Sales with Smarter CRM Solutions',
+    description:
+      'SalesFlow is a cutting-edge CRM platform that helps businesses manage customer relationships, track sales, and boost revenue with AI-powered insights.',
+    heroImage: '/images/sales-hero.jpg',
+    process: [
+      {
+        title: 'Lead Management',
+        description:
+          'Capture, track, and nurture leads through an intuitive sales pipeline.',
+      },
+      {
+        title: 'Sales Automation',
+        description:
+          'Automate sales workflows, including follow-ups, reminders, and task assignments.',
+      },
+      {
+        title: 'Customer Insights',
+        description:
+          'Gain actionable customer insights with AI-driven analytics and reporting.',
+      },
+    ],
+    features: [
+      {
+        title: 'Sales Pipeline Tracking',
+        description:
+          'Visualize and manage your sales funnel with a powerful drag-and-drop interface.',
+        icon: 'chart-line',
+      },
+      {
+        title: 'Email Integration',
+        description:
+          'Connect your email account for seamless communication and automated follow-ups.',
+        icon: 'mail',
+      },
+      {
+        title: 'Custom Dashboards',
+        description:
+          'Create personalized dashboards with real-time sales metrics and performance indicators.',
+        icon: 'dashboard',
+      },
+      {
+        title: 'Mobile Access',
+        description:
+          'Access sales data anytime, anywhere with a responsive mobile app.',
+        icon: 'mobile',
+      },
+    ],
+    faq: [
+      {
+        question: 'Can SalesFlow integrate with my existing CRM?',
+        answer:
+          'Yes, SalesFlow supports integrations with popular CRM systems like Salesforce, HubSpot, and Zoho CRM.',
+      },
+      {
+        question: 'Is SalesFlow suitable for small businesses?',
+        answer:
+          'Absolutely! SalesFlow offers flexible pricing plans and scalable features tailored to businesses of all sizes.',
+      },
+      {
+        question: 'How does SalesFlow ensure data security?',
+        answer:
+          'SalesFlow employs industry-leading security measures, including data encryption, role-based access control, and GDPR compliance.',
+      },
+    ],
+  },
+  {
+    name: 'MarketingFlow',
+    tagline: 'Drive Growth with Automated Marketing Campaigns',
+    description:
+      'MarketingFlow is a comprehensive marketing automation platform that simplifies campaign management, lead generation, and customer engagement.',
+    heroImage: '/images/marketing-hero.jpg',
+    process: [
+      {
+        title: 'Campaign Creation',
+        description:
+          'Design, launch, and manage marketing campaigns with ease using pre-built templates.',
+      },
+      {
+        title: 'Lead Nurturing',
+        description:
+          'Automate email sequences and personalized messages to engage leads effectively.',
+      },
+      {
+        title: 'Performance Analytics',
+        description:
+          'Measure campaign success with real-time analytics and optimization tools.',
+      },
+    ],
+    features: [
+      {
+        title: 'Email Marketing Automation',
+        description:
+          'Create personalized email campaigns with dynamic content and automated triggers.',
+        icon: 'mail-open',
+      },
+      {
+        title: 'Social Media Management',
+        description:
+          'Schedule, publish, and monitor social media posts from a centralized platform.',
+        icon: 'share',
+      },
+      {
+        title: 'Landing Page Builder',
+        description:
+          'Design high-converting landing pages without any coding skills.',
+        icon: 'template',
+      },
+      {
+        title: 'A/B Testing',
+        description:
+          'Run A/B tests on campaigns to optimize messaging, design, and targeting.',
+        icon: 'adjustments',
+      },
+    ],
+    faq: [
+      {
+        question: 'Does MarketingFlow support third-party integrations?',
+        answer:
+          'Yes, MarketingFlow integrates with popular marketing tools like Google Analytics, Facebook Ads, and Mailchimp.',
+      },
+      {
+        question: 'How customizable are the email templates?',
+        answer:
+          'MarketingFlow offers a wide range of customizable templates, allowing complete control over design and content.',
+      },
+      {
+        question: 'Is training provided for new users?',
+        answer:
+          'Yes, we provide onboarding sessions, video tutorials, and a dedicated support team to help you get started quickly.',
+      },
+    ],
+  },
+];
+
+export { services, technology, solutions };

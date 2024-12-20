@@ -1,40 +1,41 @@
 ---
+import { solutions } from '../../constants';
 import MainLayout from '../../layouts/MainLayout.astro';
 
-const solutions = [
-  {
-    name: 'FinanceFlow',
-    tagline: 'Streamline Your Financial Operations',
-    description:
-      'Advanced fintech solution for optimizing financial processes, enhancing security, and making data-driven decisions.',
-    image: '/images/finance-solution.jpg',
-    link: '/solutions/finance-flow',
-  },
-  {
-    name: 'CloudMigrate',
-    tagline: 'Seamless Cloud Transition',
-    description:
-      'Expert cloud migration services to help businesses move their infrastructure and applications to the cloud efficiently.',
-    image: '/images/cloud-solution.jpg',
-    link: '/solutions/cloud-migrate',
-  },
-  {
-    name: 'SecureShield',
-    tagline: 'Robust Cybersecurity Protection',
-    description:
-      'Comprehensive cybersecurity solutions to safeguard your digital assets and protect against evolving threats.',
-    image: '/images/security-solution.jpg',
-    link: '/solutions/secure-shield',
-  },
-  {
-    name: 'DataInsight',
-    tagline: 'Unlock the Power of Your Data',
-    description:
-      'Advanced data analytics and visualization tools to help you make informed business decisions.',
-    image: '/images/data-solution.jpg',
-    link: '/solutions/data-insight',
-  },
-];
+// const solutions = [
+//   {
+//     name: 'FinanceFlow',
+//     tagline: 'Streamline Your Financial Operations',
+//     description:
+//       'Advanced fintech solution for optimizing financial processes, enhancing security, and making data-driven decisions.',
+//     image: '/images/finance-solution.jpg',
+//     link: '/solutions/finance-flow',
+//   },
+//   {
+//     name: 'CloudMigrate',
+//     tagline: 'Seamless Cloud Transition',
+//     description:
+//       'Expert cloud migration services to help businesses move their infrastructure and applications to the cloud efficiently.',
+//     image: '/images/cloud-solution.jpg',
+//     link: '/solutions/cloud-migrate',
+//   },
+//   {
+//     name: 'SecureShield',
+//     tagline: 'Robust Cybersecurity Protection',
+//     description:
+//       'Comprehensive cybersecurity solutions to safeguard your digital assets and protect against evolving threats.',
+//     image: '/images/security-solution.jpg',
+//     link: '/solutions/secure-shield',
+//   },
+//   {
+//     name: 'DataInsight',
+//     tagline: 'Unlock the Power of Your Data',
+//     description:
+//       'Advanced data analytics and visualization tools to help you make informed business decisions.',
+//     image: '/images/data-solution.jpg',
+//     link: '/solutions/data-insight',
+//   },
+// ];
 
 const commonFeatures = [
   'AI-Powered Analytics',
@@ -100,7 +101,7 @@ const stats = [
                 </p>
                 <p class='text-gray-600 mb-6'>{solution.description}</p>
                 <a
-                  href={solution.link}
+                  href={`/solutions/${solution.name.toLowerCase().replace(/\s+/g, '-')}`}
                   class='inline-block bg-primary hover:bg-primary/90 text-white font-bold py-2 px-6 rounded-lg transition duration-300'
                 >
                   Learn More
