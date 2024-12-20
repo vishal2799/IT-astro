@@ -12,6 +12,7 @@ const techCol2 = technology.slice(0, 2).map((tech, index) => ({
   label: tech.name,
   desc: tech.description,
   href: `/technology/${tech.name.toLowerCase().replace(/\s+/g, '-')}`,
+  image: tech.image,
 }));
 
 const solCol1 = solutions.map((sol, index) => ({
@@ -23,6 +24,7 @@ const solCol2 = solutions.slice(0, 2).map((sol, index) => ({
   label: sol.name,
   desc: sol.description,
   href: `/solutions/${sol.name.toLowerCase().replace(/\s+/g, '-')}`,
+  image: sol.heroImage,
 }));
 
 const serviceCol1 = services.map((service, index) => ({
@@ -34,6 +36,7 @@ const serviceCol2 = services.slice(0, 2).map((service, index) => ({
   label: service.title,
   desc: service.description,
   href: `/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`,
+  image: service.heroImage,
 }));
 
 const navItems = [
@@ -168,7 +171,7 @@ const navItems = [
                                     class='object-contain'
                                   /> */}
                                   <img
-                                    src='/uipath.png'
+                                    src={subItem.image}
                                     alt={subItem.label}
                                     class='object-contain'
                                   />

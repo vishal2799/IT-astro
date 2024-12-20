@@ -5,7 +5,7 @@ import TechCard from '../components/TechCard.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import TestimonialCard from '../components/TestimonialCard.astro';
 import CTA from '../components/CTA.astro';
-import { services } from '../constants';
+import { projects, services } from '../constants';
 import { technology } from '../constants';
 
 // const services = [
@@ -62,30 +62,30 @@ import { technology } from '../constants';
 //   },
 // ];
 
-const projects = [
-  {
-    title: 'Global E-commerce Platform Overhaul',
-    category: 'E-commerce',
-    description:
-      'Redesigned and optimized a major e-commerce platform, resulting in a 40% increase in conversion rates.',
-    image: '/images/ecommerce-project.jpg',
-    client: 'MegaShop Inc.',
-    duration: '8 months',
-    technologies: ['React', 'Node.js', 'MongoDB', 'AWS'],
-    slug: 'global-ecommerce-platform-overhaul',
-  },
-  {
-    title: 'AI-Powered Financial Forecasting Tool',
-    category: 'FinTech',
-    description:
-      'Developed an AI-driven financial forecasting tool that increased prediction accuracy by 30%.',
-    image: '/images/fintech-project.jpg',
-    client: 'InvestSmart LLC',
-    duration: '6 months',
-    technologies: ['Python', 'TensorFlow', 'AWS', 'React'],
-    slug: 'ai-powered-financial-forecasting-tool',
-  },
-];
+// const projects = [
+//   {
+//     title: 'Global E-commerce Platform Overhaul',
+//     category: 'E-commerce',
+//     description:
+//       'Redesigned and optimized a major e-commerce platform, resulting in a 40% increase in conversion rates.',
+//     image: '/images/ecommerce-project.jpg',
+//     client: 'MegaShop Inc.',
+//     duration: '8 months',
+//     technologies: ['React', 'Node.js', 'MongoDB', 'AWS'],
+//     slug: 'global-ecommerce-platform-overhaul',
+//   },
+//   {
+//     title: 'AI-Powered Financial Forecasting Tool',
+//     category: 'FinTech',
+//     description:
+//       'Developed an AI-driven financial forecasting tool that increased prediction accuracy by 30%.',
+//     image: '/images/fintech-project.jpg',
+//     client: 'InvestSmart LLC',
+//     duration: '6 months',
+//     technologies: ['Python', 'TensorFlow', 'AWS', 'React'],
+//     slug: 'ai-powered-financial-forecasting-tool',
+//   },
+// ];
 
 const testimonials = [
   {
@@ -197,7 +197,7 @@ const testimonials = [
                 name={tech.name}
                 tagline={tech.tagline}
                 description={tech.description}
-                image='/service21.jpg'
+                image={tech.image}
                 icon={tech.icon}
               />
             ))
@@ -205,7 +205,7 @@ const testimonials = [
         </div>
         <div class='text-center mt-12'>
           <a
-            href='/technologies'
+            href='/technology'
             class='inline-block bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full transition duration-300 text-lg'
             >Explore Our Tech Stack</a
           >
@@ -228,7 +228,7 @@ const testimonials = [
                 title={project.title}
                 category={project.category}
                 description={project.description}
-                image='/service21.jpg'
+                image={project.image}
                 client={project.client}
                 duration={project.duration}
                 technologies={project.technologies}
