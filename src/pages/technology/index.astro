@@ -1,45 +1,46 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
 import TechCard from '../../components/TechCard.astro';
+import { technology } from '../../constants';
 
-const technologies = [
-  {
-    name: 'AutoFlow',
-    tagline: 'Streamline Your Workflow with Intelligent Automation',
-    description:
-      'Cutting-edge Robotic Process Automation (RPA) platform for automating repetitive tasks and boosting productivity.',
-    image: '/service21.jpg',
-    link: '/technologies/autoflow',
-    icon: 'robot',
-  },
-  {
-    name: 'DataSense',
-    tagline: 'Unlock the Power of Your Data',
-    description:
-      'Advanced data analytics and visualization platform for making informed business decisions.',
-    image: '/service21.jpg',
-    link: '/technologies/datasense',
-    icon: 'pie-chart',
-  },
-  {
-    name: 'CloudGuard',
-    tagline: 'Secure Your Digital Assets in the Cloud',
-    description:
-      'Comprehensive cloud security solution to protect your data and applications in multi-cloud environments.',
-    image: '/service21.jpg',
-    link: '/technologies/cloudguard',
-    icon: 'cloud',
-  },
-  {
-    name: 'AIAssist',
-    tagline: 'Enhance Decision-Making with Artificial Intelligence',
-    description:
-      'AI-powered platform for predictive analytics, natural language processing, and intelligent automation.',
-    image: '/service21.jpg',
-    link: '/technologies/aiassist',
-    icon: 'robot',
-  },
-];
+// const technologies = [
+//   {
+//     name: 'AutoFlow',
+//     tagline: 'Streamline Your Workflow with Intelligent Automation',
+//     description:
+//       'Cutting-edge Robotic Process Automation (RPA) platform for automating repetitive tasks and boosting productivity.',
+//     image: '/service21.jpg',
+//     link: '/technologies/autoflow',
+//     icon: 'robot',
+//   },
+//   {
+//     name: 'DataSense',
+//     tagline: 'Unlock the Power of Your Data',
+//     description:
+//       'Advanced data analytics and visualization platform for making informed business decisions.',
+//     image: '/service21.jpg',
+//     link: '/technologies/datasense',
+//     icon: 'pie-chart',
+//   },
+//   {
+//     name: 'CloudGuard',
+//     tagline: 'Secure Your Digital Assets in the Cloud',
+//     description:
+//       'Comprehensive cloud security solution to protect your data and applications in multi-cloud environments.',
+//     image: '/service21.jpg',
+//     link: '/technologies/cloudguard',
+//     icon: 'cloud',
+//   },
+//   {
+//     name: 'AIAssist',
+//     tagline: 'Enhance Decision-Making with Artificial Intelligence',
+//     description:
+//       'AI-powered platform for predictive analytics, natural language processing, and intelligent automation.',
+//     image: '/service21.jpg',
+//     link: '/technologies/aiassist',
+//     icon: 'robot',
+//   },
+// ];
 
 const commonFeatures = [
   'Intuitive User Interface',
@@ -120,13 +121,12 @@ const stats = [
         </h2>
         <div class='grid grid-cols-1 md:grid-cols-2 gap-12'>
           {
-            technologies.map((tech) => (
+            technology.map((tech) => (
               <TechCard
                 name={tech.name}
                 tagline={tech.tagline}
                 description={tech.description}
                 image={tech.image}
-                link={tech.link}
                 icon={tech.icon}
               />
             ))

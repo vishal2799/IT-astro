@@ -1,7 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components';
 
-const { name, tagline, description, image, link, icon } = Astro.props;
+const { name, tagline, description, image, icon } = Astro.props;
 ---
 
 <div
@@ -22,7 +22,7 @@ const { name, tagline, description, image, link, icon } = Astro.props;
     <p class='text-lg font-semibold text-primary mb-3'>{tagline}</p>
     <p class='text-gray-600 mb-4'>{description}</p>
     <a
-      href={link}
+      href={`/technology/${name.toLowerCase().replace(/\s+/g, '-')}`}
       class='inline-flex items-center text-primary font-semibold hover:text-primary-dark transition-colors duration-300'
     >
       Learn More
