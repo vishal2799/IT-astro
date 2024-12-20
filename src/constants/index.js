@@ -761,25 +761,25 @@ const solutions = [
         title: 'Smart Recruitment',
         description:
           'Use AI-powered matching to connect job seekers with the best roles faster.',
-        icon: 'user-group',
+        icon: 'person-circle',
       },
       {
         title: 'Payroll Automation',
         description:
           'Automate payroll calculations, tax compliance, and salary disbursement.',
-        icon: 'currency-dollar',
+        icon: 'bank',
       },
       {
         title: 'Compliance Tracking',
         description:
           'Ensure legal and regulatory compliance with automatic updates and audit logs.',
-        icon: 'clipboard-check',
+        icon: 'robot',
       },
       {
         title: 'Employee Self-Service',
         description:
           'Provide a user-friendly portal for employees to access and manage personal records.',
-        icon: 'user-circle',
+        icon: 'headset',
       },
     ],
     faq: [
@@ -828,25 +828,25 @@ const solutions = [
         title: 'Workflow Automation',
         description:
           'Create end-to-end workflows that reduce manual effort and speed up processes.',
-        icon: 'refresh',
+        icon: 'robot',
       },
       {
         title: 'Real-Time Analytics',
         description:
           'Gain actionable insights with dashboards and custom reports.',
-        icon: 'chart-bar',
+        icon: 'pie-chart',
       },
       {
         title: 'Task Management',
         description:
           'Assign, track, and manage tasks with built-in task management features.',
-        icon: 'clipboard-list',
+        icon: 'terminal',
       },
       {
         title: 'Integration Hub',
         description:
           'Connect with third-party apps and systems for a unified operations ecosystem.',
-        icon: 'link',
+        icon: 'cloud',
       },
     ],
     faq: [
@@ -895,25 +895,25 @@ const solutions = [
         title: 'Sales Pipeline Tracking',
         description:
           'Visualize and manage your sales funnel with a powerful drag-and-drop interface.',
-        icon: 'chart-line',
+        icon: 'pie-chart',
       },
       {
         title: 'Email Integration',
         description:
           'Connect your email account for seamless communication and automated follow-ups.',
-        icon: 'mail',
+        icon: 'envelope',
       },
       {
         title: 'Custom Dashboards',
         description:
           'Create personalized dashboards with real-time sales metrics and performance indicators.',
-        icon: 'dashboard',
+        icon: 'list',
       },
       {
         title: 'Mobile Access',
         description:
           'Access sales data anytime, anywhere with a responsive mobile app.',
-        icon: 'mobile',
+        icon: 'telephone',
       },
     ],
     faq: [
@@ -962,25 +962,25 @@ const solutions = [
         title: 'Email Marketing Automation',
         description:
           'Create personalized email campaigns with dynamic content and automated triggers.',
-        icon: 'mail-open',
+        icon: 'envelope',
       },
       {
         title: 'Social Media Management',
         description:
           'Schedule, publish, and monitor social media posts from a centralized platform.',
-        icon: 'share',
+        icon: 'globe',
       },
       {
         title: 'Landing Page Builder',
         description:
           'Design high-converting landing pages without any coding skills.',
-        icon: 'template',
+        icon: 'code-slash',
       },
       {
         title: 'A/B Testing',
         description:
           'Run A/B tests on campaigns to optimize messaging, design, and targeting.',
-        icon: 'adjustments',
+        icon: 'robot',
       },
     ],
     faq: [
