@@ -4,13 +4,16 @@ import MainLayout from '../../layouts/MainLayout.astro';
 
 export async function getStaticPaths() {
   return technology.map((tech) => {
+    const relatedTechnology = technology
+      .filter((t) => t.name !== tech.name)
+      .slice(0, 3);
     return {
       params: { technology: tech.name.toLowerCase().replace(/\s+/g, '-') },
-      props: { techData: tech },
+      props: { techData: tech, relatedTechnology },
     };
   });
 }
-const { techData } = Astro.props;
+const { techData, relatedTechnology } = Astro.props;
 
 const pricing = [
   {
@@ -378,6 +381,53 @@ const stats = [
         >
       </div>
     </section>
+
+    {
+      relatedTechnology && relatedTechnology.length > 0 && (
+        <section class='section-padding px-4 bg-primary-50'>
+          <div class='container mx-auto max-w-6xl'>
+            <h2 class='text-3xl md:text-4xl font-bold text-gray-900 text-center mb-16'>
+              Related Technology
+            </h2>
+            <div class='grid grid-cols-1 md:grid-cols-3 gap-8'>
+              {relatedTechnology.map((tech) => (
+                <a
+                  href={`/technology/${tech.name.toLowerCase().replace(/\s+/g, '-')}`}
+                  class='block group'
+                >
+                  <div class='bg-white p-6 rounded-lg shadow-md transition duration-300 group-hover:shadow-xl'>
+                    <h3 class='text-xl text-gray-800 font-semibold mb-2 group-hover:text-primary transition duration-300'>
+                      {tech.name}
+                    </h3>
+                    <p class='text-gray-700 mb-4'>
+                      Learn more about our {tech.tagline.toLowerCase()}{' '}
+                      technology and how they can benefit your business.
+                    </p>
+                    <span class='text-primary font-medium group-hover:text-primary/90 transition duration-300'>
+                      Explore
+                      <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        class='h-5 w-5 inline-block ml-2 transform group-hover:translate-x-1 transition duration-300'
+                        fill='none'
+                        viewBox='0 0 24 24'
+                        stroke='currentColor'
+                      >
+                        <path
+                          stroke-linecap='round'
+                          stroke-linejoin='round'
+                          stroke-width='2'
+                          d='M17 8l4 4m0 0l-4 4m4-4H3'
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      )
+    }
 
     <!-- Contact Form Section -->
     <!-- <section id="contact" class="py-20 px-4">
