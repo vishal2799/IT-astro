@@ -1,6 +1,40 @@
 ---
 import { Icon } from 'astro-icon/components';
 import MegaMenuCTA from './MegaMenuCTA.astro';
+import { services, solutions, technology } from '../constants';
+
+const techCol1 = technology.map((tech, index) => ({
+  label: tech.name,
+  href: `/technology/${tech.name.toLowerCase().replace(/\s+/g, '-')}`,
+}));
+
+const techCol2 = technology.slice(0, 2).map((tech, index) => ({
+  label: tech.name,
+  desc: tech.description,
+  href: `/technology/${tech.name.toLowerCase().replace(/\s+/g, '-')}`,
+}));
+
+const solCol1 = solutions.map((sol, index) => ({
+  label: sol.name,
+  href: `/solutions/${sol.name.toLowerCase().replace(/\s+/g, '-')}`,
+}));
+
+const solCol2 = solutions.slice(0, 2).map((sol, index) => ({
+  label: sol.name,
+  desc: sol.description,
+  href: `/solutions/${sol.name.toLowerCase().replace(/\s+/g, '-')}`,
+}));
+
+const serviceCol1 = services.map((service, index) => ({
+  label: service.title,
+  href: `/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`,
+}));
+
+const serviceCol2 = services.slice(0, 2).map((service, index) => ({
+  label: service.title,
+  desc: service.description,
+  href: `/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`,
+}));
 
 const navItems = [
   { label: 'Home', href: '/' },
@@ -8,76 +42,24 @@ const navItems = [
     label: 'Services',
     href: 'services',
     megaMenu: {
-      column1: [
-        { label: 'Business Process Automation', href: '/services' },
-        { label: 'Digital Transformation', href: '/services' },
-        { label: 'Process Automation Consultancy', href: '/services' },
-        { label: 'Robotic Process Automation (RPA)', href: '/services' },
-        { label: 'Low-Code Automation (BPM)', href: '/services' },
-        { label: 'Artificial Intelligence (AI) Automation', href: '/services' },
-      ],
-      column2: [
-        {
-          label: 'READY, SET, AUTOMATE',
-          desc: 'Lets choose, design and deploy a process automation solution for your business.',
-          href: '/services',
-        },
-        {
-          label: 'TRANSFORM YOUR BUSINESS',
-          desc: 'Lets analyse your business to discover opportunities for innovation and automation.',
-          href: '/services',
-        },
-      ],
+      column1: serviceCol1,
+      column2: serviceCol2,
     },
   },
   {
     label: 'Technology',
     href: 'technology',
     megaMenu: {
-      column1: [
-        { label: 'UiPath', href: '/technology' },
-        { label: 'Mendix', href: '/technology' },
-        { label: 'Netcall', href: '/technology' },
-        { label: 'Nintex', href: '/technology' },
-        { label: 'K2', href: '/technology' },
-      ],
-      column2: [
-        {
-          label: 'YOUR EXPERT RPA PARTNER',
-          desc: 'Team up with our RPA strategy and tech specialists for maximum automation impact',
-          href: '/technology',
-        },
-        {
-          label: 'Harness the power of UiPath in your business.',
-          desc: 'Team up with our RPA strategy and tech specialists for maximum automation impact',
-          href: '/technology',
-        },
-      ],
+      column1: techCol1,
+      column2: techCol2,
     },
   },
   {
     label: 'Solutions',
     href: 'solutions',
     megaMenu: {
-      column1: [
-        { label: 'Finance', href: '/solutions' },
-        { label: 'Operations', href: '/solutions' },
-        { label: 'Human Resources', href: '/solutions' },
-        { label: 'Sales & Marketing', href: '/solutions' },
-        { label: 'Information Technology', href: '/solutions' },
-      ],
-      column2: [
-        {
-          label: 'AUTOMATE EVERY FUNCTION',
-          desc: 'Automate where it matters most. Scale to solve challenges in every area',
-          href: '/solutions',
-        },
-        {
-          label: 'GIVE EVERY TEAM THE TOOLS FOR SUCCESS',
-          desc: 'Equip people with user-friendly solutions that save time and make work easier',
-          href: '/solutions',
-        },
-      ],
+      column1: solCol1,
+      column2: solCol2,
     },
   },
   { label: 'Projects', href: '/projects' },
