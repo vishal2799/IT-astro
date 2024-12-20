@@ -1,74 +1,16 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
+import { services } from '../../constants';
 
-const serviceData = {
-  title: 'Cloud Migration Services',
-  description:
-    'Seamlessly transition your business to the cloud with our expert migration services.',
-  heroImage: '/images/cloud-migration.jpg',
-  features: [
-    'Comprehensive cloud readiness assessment',
-    'Customized migration strategy',
-    'Data transfer and application modernization',
-    'Post-migration support and optimization',
-  ],
-  benefits: [
-    'Increased scalability and flexibility',
-    'Enhanced security and compliance',
-    'Cost optimization and resource efficiency',
-    'Improved performance and reliability',
-  ],
-  process: [
-    {
-      title: 'Assessment',
-      description:
-        'We evaluate your current infrastructure and applications to determine the best migration approach.',
-    },
-    {
-      title: 'Planning',
-      description:
-        'Our team develops a tailored migration strategy and roadmap aligned with your business goals.',
-    },
-    {
-      title: 'Execution',
-      description:
-        'We implement the migration plan, ensuring minimal disruption to your operations.',
-    },
-    {
-      title: 'Optimization',
-      description:
-        'Post-migration, we fine-tune your cloud environment for optimal performance and cost-efficiency.',
-    },
-  ],
-  casestudy: {
-    title: 'Global Retail Chain Achieves 40% Cost Savings with Cloud Migration',
-    description:
-      'Learn how we helped a major retail chain migrate their legacy systems to the cloud, resulting in significant cost savings and improved operational efficiency.',
-    link: '/case-studies/retail-cloud-migration',
-  },
-  faq: [
-    {
-      question: 'How long does a typical cloud migration take?',
-      answer:
-        'The duration of a cloud migration can vary depending on the complexity and scale of your infrastructure. Typically, it can range from a few weeks for small businesses to several months for large enterprises.',
-    },
-    {
-      question: 'Is cloud migration secure?',
-      answer:
-        'Yes, we prioritize security throughout the migration process. We implement industry-best security practices and comply with relevant regulations to ensure your data remains protected during and after migration.',
-    },
-    {
-      question: 'What cloud platforms do you support?',
-      answer:
-        "We have expertise in migrating to all major cloud platforms, including AWS, Microsoft Azure, Google Cloud Platform, and IBM Cloud. We'll help you choose the best platform for your specific needs.",
-    },
-  ],
-  relatedServices: [
-    { title: 'Cloud Security', link: '/services/cloud-security' },
-    { title: 'DevOps Automation', link: '/services/devops-automation' },
-    { title: 'Data Analytics', link: '/services/data-analytics' },
-  ],
-};
+export async function getStaticPaths() {
+  return services.map((service) => {
+    return {
+      params: { service: service.title.toLowerCase().replace(/\s+/g, '-') },
+      props: { serviceData: service },
+    };
+  });
+}
+const { serviceData } = Astro.props;
 ---
 
 <MainLayout
@@ -179,14 +121,9 @@ const serviceData = {
             serviceData.benefits.map((benefit) => (
               <div class='bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300'>
                 <h3 class='text-xl font-semibold text-gray-800 mb-4'>
-                  {benefit}
+                  {benefit.title}
                 </h3>
-                <p class='text-gray-700'>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris.
-                </p>
+                <p class='text-gray-700'>{benefit.desc}</p>
               </div>
             ))
           }
