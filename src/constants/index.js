@@ -286,7 +286,7 @@
 const services = [
   {
     title: 'Business Process Automation Services',
-    slug: 'business-process-automation-services',
+    icon: 'cloud',
     description:
       'Streamline your business operations with our cutting-edge Business Process Automation solutions.',
     heroImage: '/images/bpa-services.jpg',
@@ -365,7 +365,7 @@ const services = [
 
   {
     title: 'Robotic Process Automation (RPA)',
-    slug: 'robotic-process-automation',
+    icon: 'cloud',
     description:
       'Automate repetitive tasks with our intelligent RPA solutions to drive operational efficiency.',
     heroImage: '/images/rpa-services.jpg',
@@ -439,7 +439,7 @@ const services = [
 
   {
     title: 'Low-Code Automation (BPM)',
-    slug: 'low-Code-automation',
+    icon: 'cloud',
     description:
       'Transform your business with low-code automation powered by BPM solutions.',
     heroImage: '/images/bpm-services.jpg',
