@@ -1,72 +1,281 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import AboutSection from '../sections/Home/AboutSection.astro';
-import ServicesSection from '../sections/Home/ServicesSection.astro';
-import Gap from '../components/Gap.astro';
-import ProjectWorkflow from '../sections/ProjectWorkflow.astro';
-import TestimonialSection from '../sections/TestimonialSection.astro';
-import BlogSection from '../sections/Home/BlogSection.astro';
-import StatsSection from '../sections/StatsSection.astro';
-import CTATwo from '../components/CTATwo.astro';
-import CTAOne from '../components/CTAOne.astro';
-import ProjectsSection from '../sections/Home/ProjectsSection.astro';
+import MainLayout from '../layouts/MainLayout.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import TechCard from '../components/TechCard.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import TestimonialCard from '../components/TestimonialCard.astro';
+import CTA from '../components/CTA.astro';
+
+const services = [
+  {
+    title: 'Cloud Migration',
+    description:
+      'Seamlessly transition your business to the cloud with our expert migration services.',
+    icon: 'cloud',
+    link: '/services/cloud-migration',
+  },
+  {
+    title: 'Data Analytics',
+    description:
+      'Unlock the power of your data with our advanced analytics solutions.',
+    icon: 'pie-chart',
+    link: '/services/data-analytics',
+  },
+  {
+    title: 'Cybersecurity',
+    description:
+      'Protect your digital assets with our comprehensive security solutions.',
+    icon: 'shield-check',
+    link: '/services/cybersecurity',
+  },
+];
+
+const technologies = [
+  {
+    name: 'AutoFlow',
+    tagline: 'Streamline Your Workflow',
+    description:
+      'Cutting-edge RPA platform for automating repetitive tasks and boosting productivity.',
+    image: '/images/autoflow.jpg',
+    icon: 'robot',
+    link: '/technologies/autoflow',
+  },
+  {
+    name: 'DataSense',
+    tagline: 'Unlock Data Insights',
+    description:
+      'Advanced data analytics and visualization platform for informed decision-making.',
+    image: '/images/datasense.jpg',
+    icon: 'pie-chart',
+    link: '/technologies/datasense',
+  },
+  {
+    name: 'CloudGuard',
+    tagline: 'Secure Cloud Assets',
+    description:
+      'Comprehensive cloud security solution to protect your data and applications.',
+    image: '/images/cloudguard.jpg',
+    icon: 'cloud',
+    link: '/technologies/cloudguard',
+  },
+];
+
+const projects = [
+  {
+    title: 'Global E-commerce Platform Overhaul',
+    category: 'E-commerce',
+    description:
+      'Redesigned and optimized a major e-commerce platform, resulting in a 40% increase in conversion rates.',
+    image: '/images/ecommerce-project.jpg',
+    client: 'MegaShop Inc.',
+    duration: '8 months',
+    technologies: ['React', 'Node.js', 'MongoDB', 'AWS'],
+    slug: 'global-ecommerce-platform-overhaul',
+  },
+  {
+    title: 'AI-Powered Financial Forecasting Tool',
+    category: 'FinTech',
+    description:
+      'Developed an AI-driven financial forecasting tool that increased prediction accuracy by 30%.',
+    image: '/images/fintech-project.jpg',
+    client: 'InvestSmart LLC',
+    duration: '6 months',
+    technologies: ['Python', 'TensorFlow', 'AWS', 'React'],
+    slug: 'ai-powered-financial-forecasting-tool',
+  },
+];
+
+const testimonials = [
+  {
+    quote:
+      "TechNova's expertise in cloud migration has transformed our IT infrastructure. We've seen significant improvements in efficiency and cost-savings.",
+    author: 'John Smith',
+    position: 'CTO, Global Enterprises Inc.',
+    image: '/images/testimonial-1.jpg',
+  },
+  {
+    quote:
+      "The AI-powered analytics solution provided by TechNova has given us unprecedented insights into our business operations. It's been a game-changer for us.",
+    author: 'Sarah Johnson',
+    position: 'Head of Analytics, DataDriven Co.',
+    image: '/images/testimonial-2.jpg',
+  },
+];
 ---
 
-<Layout>
-  <div class='min-h-screen'>
-    <section class='bg-gradient-to-r from-primary to-secondary text-white'>
-      <div class='container mx-auto px-4 py-20'>
-        <div class='flex flex-col md:flex-row items-center justify-between'>
-          <div class='md:w-1/2 mb-10 md:mb-0'>
-            <h1
-              class='text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4'
-            >
-              Innovate with Our Cutting-Edge IT Solutions
-            </h1>
-            <p class='text-xl md:text-2xl mb-8 text-blue-100'>
-              Empowering businesses with advanced technology and expert
-              services.
-            </p>
-            <div class='flex flex-col sm:flex-row gap-4'>
-              <a
-                href='#contact'
-                class='bg-white text-primary hover:bg-highlight transition duration-300 ease-in-out py-3 px-8 rounded-full font-semibold text-lg inline-block text-center'
-              >
-                Get Started
-              </a>
-              <a
-                href='#services'
-                class='bg-transparent border-2 border-white hover:bg-white hover:text-primary transition duration-300 ease-in-out py-3 px-8 rounded-full font-semibold text-lg inline-block text-center'
-              >
-                Our Services
-              </a>
-            </div>
-          </div>
-          <div class='md:w-1/2'>
-            <img
-              src='/hero.png'
-              alt='IT Solutions Illustration'
-              class='w-full max-w-md h-[350px] md:h-[450px] mx-auto'
-              loading='eager'
-            />
-          </div>
+<MainLayout
+  title='TechNova IT Services - Innovative Solutions for Your Business'
+  description='TechNova offers cutting-edge IT services including cloud migration, data analytics, and cybersecurity solutions to drive your business forward.'
+>
+  <main>
+    <!-- Hero Section -->
+    <section
+      class='relative h-[80vh] min-h-[600px] flex items-center justify-center'
+    >
+      <!-- <Image
+        src='/service21.jpg'
+        alt='TechNova IT Services'
+        width={1920}
+        height={1080}
+        class='absolute inset-0 w-full h-full object-cover'
+      /> -->
+      <img
+        src='/service21.jpg'
+        alt='TechNova IT Services'
+        class='absolute inset-0 w-full h-full object-cover'
+      />
+      <div
+        class='absolute inset-0 bg-gradient-to-r from-primary/80 to-primary-dark/80'
+      >
+      </div>
+      <div class='relative z-10 text-center text-white px-4 max-w-4xl mx-auto'>
+        <h1 class='text-4xl md:text-6xl font-bold mb-6'>
+          Innovative IT Solutions for the Digital Age
+        </h1>
+        <p class='text-xl md:text-2xl mb-8'>
+          Empowering businesses with cutting-edge technology to drive growth and
+          efficiency
+        </p>
+        <div class='flex flex-wrap justify-center gap-4'>
+          <a
+            href='/services'
+            class='bg-white text-primary hover:bg-gray-100 font-bold py-3 px-8 rounded-full transition duration-300 text-lg'
+            >Our Services</a
+          >
+          <a
+            href='/contact'
+            class='bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition duration-300 text-lg'
+            >Get in Touch</a
+          >
         </div>
       </div>
     </section>
-    <StatsSection />
-    <div class='container mx-auto px-4 py-8 md:py-10'>
-      <AboutSection />
-      <ServicesSection />
-      <Gap />
-      <CTATwo />
-    </div>
-    <ProjectWorkflow />
-    <ProjectsSection />
-    <BlogSection />
-    <div class='container mx-auto px-4'>
-      <CTAOne />
-      <Gap />
-    </div>
-    <TestimonialSection />
-  </div>
-</Layout>
+
+    <!-- Services Overview -->
+    <section class='py-20 px-4 bg-gray-50'>
+      <div class='container mx-auto max-w-6xl'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900'
+        >
+          Our Services
+        </h2>
+        <div class='grid grid-cols-1 md:grid-cols-3 gap-8'>
+          {
+            services.map((service) => (
+              <ServiceCard
+                title={service.title}
+                description={service.description}
+                icon={service.icon}
+                link={service.link}
+              />
+            ))
+          }
+        </div>
+        <div class='text-center mt-12'>
+          <a
+            href='/services'
+            class='inline-block bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full transition duration-300 text-lg'
+            >View All Services</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Technologies -->
+    <section class='py-20 px-4'>
+      <div class='container mx-auto max-w-6xl'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900'
+        >
+          Our Technologies
+        </h2>
+        <div class='grid grid-cols-1 md:grid-cols-3 gap-8'>
+          {
+            technologies.map((tech) => (
+              <TechCard
+                name={tech.name}
+                tagline={tech.tagline}
+                description={tech.description}
+                image='/service21.jpg'
+                icon={tech.icon}
+                link={tech.link}
+              />
+            ))
+          }
+        </div>
+        <div class='text-center mt-12'>
+          <a
+            href='/technologies'
+            class='inline-block bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full transition duration-300 text-lg'
+            >Explore Our Tech Stack</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Projects -->
+    <section class='py-20 px-4 bg-gray-50'>
+      <div class='container mx-auto max-w-6xl'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900'
+        >
+          Recent Projects
+        </h2>
+        <div class='grid grid-cols-1 md:grid-cols-2 gap-12'>
+          {
+            projects.map((project) => (
+              <ProjectCard
+                title={project.title}
+                category={project.category}
+                description={project.description}
+                image='/service21.jpg'
+                client={project.client}
+                duration={project.duration}
+                technologies={project.technologies}
+                slug={project.slug}
+              />
+            ))
+          }
+        </div>
+        <div class='text-center mt-12'>
+          <a
+            href='/projects'
+            class='inline-block bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full transition duration-300 text-lg'
+            >View All Projects</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class='py-20 px-4'>
+      <div class='container mx-auto max-w-4xl'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900'
+        >
+          What Our Clients Say
+        </h2>
+        <div class='grid md:grid-cols-2 gap-8'>
+          {
+            testimonials.map((testimonial) => (
+              <TestimonialCard
+                quote={testimonial.quote}
+                author={testimonial.author}
+                position={testimonial.position}
+                image='/service21.jpg'
+              />
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <CTA
+      title='Ready to Transform Your Business?'
+      description="Let's discuss how our innovative IT solutions can drive your business forward."
+      buttonText='Get Started'
+      buttonLink='/contact'
+    />
+  </main>
+</MainLayout>

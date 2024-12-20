@@ -1,6 +1,5 @@
 ---
-import { Image } from 'astro:assets';
-import Layout from '../../layouts/Layout.astro';
+import MainLayout from '../../layouts/MainLayout.astro';
 
 const techData = {
   name: 'AutoFlow',
@@ -177,17 +176,25 @@ const techData = {
 };
 ---
 
-<Layout title={techData.name}>
-  <div class='bg-gradient-to-b from-purple-50 to-white'>
+<MainLayout
+  title={`${techData.name} | TechNova IT Services`}
+  description={techData.description}
+>
+  <div class='bg-gradient-to-b from-primary-50 to-white'>
     <!-- Hero Section -->
     <section
       class='relative h-[60vh] min-h-[500px] flex items-center justify-center'
     >
-      <Image
+      <!-- <Image
         src='/service21.jpg'
         alt={techData.name}
         width={1920}
         height={1080}
+        class='absolute inset-0 w-full h-full object-cover'
+      /> -->
+      <img
+        src='/service21.jpg'
+        alt={techData.name}
         class='absolute inset-0 w-full h-full object-cover'
       />
       <div class='absolute inset-0 bg-primary opacity-70'></div>
@@ -199,7 +206,7 @@ const techData = {
         </p>
         <a
           href='#contact'
-          class='bg-white text-primary hover:bg-highlight font-bold py-3 px-8 rounded-full transition duration-300 text-lg'
+          class='bg-white text-primary hover:bg-white/90 font-bold py-3 px-8 rounded-full transition duration-300 text-lg'
           >Get Started</a
         >
       </div>
@@ -224,15 +231,19 @@ const techData = {
     <!-- Features Section -->
     <section class='py-20 px-4'>
       <div class='container mx-auto max-w-6xl'>
-        <h2 class='text-3xl md:text-4xl font-bold text-center mb-16'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900'
+        >
           Key Features
         </h2>
         <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12'>
           {
             techData.features.map((feature) => (
               <div class='bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300'>
-                <h3 class='text-xl font-semibold mb-4'>{feature.title}</h3>
-                <p class='text-textPrimary'>{feature.description}</p>
+                <h3 class='text-xl font-semibold mb-4 text-gray-800'>
+                  {feature.title}
+                </h3>
+                <p class='text-gray-700'>{feature.description}</p>
               </div>
             ))
           }
@@ -241,9 +252,11 @@ const techData = {
     </section>
 
     <!-- Benefits Section -->
-    <section class='py-20 px-4 bg-highlight'>
+    <section class='py-20 px-4 bg-white'>
       <div class='container mx-auto max-w-4xl'>
-        <h2 class='text-3xl md:text-4xl font-bold text-center mb-16'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-gray-900 text-center mb-16'
+        >
           Benefits of AutoFlow
         </h2>
         <ul class='space-y-6'>
@@ -264,7 +277,7 @@ const techData = {
                     d='M5 13l4 4L19 7'
                   />
                 </svg>
-                <p class='text-lg'>{benefit}</p>
+                <p class='text-lg text-gray-800'>{benefit}</p>
               </li>
             ))
           }
@@ -275,15 +288,19 @@ const techData = {
     <!-- Use Cases Section -->
     <section class='py-20 px-4'>
       <div class='container mx-auto max-w-6xl'>
-        <h2 class='text-3xl md:text-4xl font-bold text-center mb-16'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-gray-900 text-center mb-16'
+        >
           Use Cases
         </h2>
         <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12'>
           {
             techData.useCases.map((useCase) => (
               <div class='bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300'>
-                <h3 class='text-xl font-semibold mb-4'>{useCase.title}</h3>
-                <p class='text-textPrimary'>{useCase.description}</p>
+                <h3 class='text-xl font-semibold text-gray-800 mb-4'>
+                  {useCase.title}
+                </h3>
+                <p class='text-gray-700'>{useCase.description}</p>
               </div>
             ))
           }
@@ -294,81 +311,109 @@ const techData = {
     <!-- How It Works Section -->
     <section class='py-20 px-4 bg-gray-50'>
       <div class='container mx-auto max-w-4xl'>
-        <h2 class='text-3xl md:text-4xl font-bold text-center mb-16'>
+        <h2
+          class='text-3xl md:text-4xl text-gray-900 font-bold text-center mb-16'
+        >
           How AutoFlow Works
         </h2>
         <div class='space-y-12'>
           <div class='flex flex-col md:flex-row items-center gap-8'>
             <div class='w-full md:w-1/2'>
-              <h3 class='text-2xl font-semibold mb-4'>1. Process Analysis</h3>
-              <p class='text-textPrimary'>
+              <h3 class='text-2xl font-semibold text-gray-800 mb-4'>
+                1. Process Analysis
+              </h3>
+              <p class='text-gray-700'>
                 Our experts work with you to identify and analyze processes
                 suitable for automation, ensuring maximum impact and ROI.
               </p>
             </div>
             <div class='w-full md:w-1/2'>
-              <Image
+              <!-- <Image
                 src='/service21.jpg'
                 alt='Process Analysis'
                 width={500}
                 height={300}
+                class='rounded-lg shadow-md'
+              /> -->
+              <img
+                src='/service21.jpg'
+                alt='Process Analysis'
                 class='rounded-lg shadow-md'
               />
             </div>
           </div>
           <div class='flex flex-col md:flex-row-reverse items-center gap-8'>
             <div class='w-full md:w-1/2'>
-              <h3 class='text-2xl font-semibold mb-4'>2. Workflow Design</h3>
-              <p class='text-textPrimary'>
+              <h3 class='text-2xl font-semibold text-gray-800 mb-4'>
+                2. Workflow Design
+              </h3>
+              <p class='text-gray-700'>
                 Using our intuitive drag-and-drop interface, create automated
                 workflows that mirror your business processes with precision.
               </p>
             </div>
             <div class='w-full md:w-1/2'>
-              <Image
+              <!-- <Image
                 src='/service21.jpg'
                 alt='Workflow Design'
                 width={500}
                 height={300}
+                class='rounded-lg shadow-md'
+              /> -->
+              <img
+                src='/service21.jpg'
+                alt='Workflow Design'
                 class='rounded-lg shadow-md'
               />
             </div>
           </div>
           <div class='flex flex-col md:flex-row items-center gap-8'>
             <div class='w-full md:w-1/2'>
-              <h3 class='text-2xl font-semibold mb-4'>3. Bot Deployment</h3>
-              <p class='text-textPrimary'>
+              <h3 class='text-2xl font-semibold text-gray-800 mb-4'>
+                3. Bot Deployment
+              </h3>
+              <p class='text-gray-700'>
                 Deploy your automated workflows with a click. Our intelligent
                 bots start working immediately, handling tasks 24/7 with
                 consistency and accuracy.
               </p>
             </div>
             <div class='w-full md:w-1/2'>
-              <Image
+              <!-- <Image
                 src='/service21.jpg'
                 alt='Bot Deployment'
                 width={500}
                 height={300}
+                class='rounded-lg shadow-md'
+              /> -->
+              <img
+                src='/service21.jpg'
+                alt='Bot Deployment'
                 class='rounded-lg shadow-md'
               />
             </div>
           </div>
           <div class='flex flex-col md:flex-row-reverse items-center gap-8'>
             <div class='w-full md:w-1/2'>
-              <h3 class='text-2xl font-semibold mb-4'>
+              <h3 class='text-2xl font-semibold text-gray-800 mb-4'>
                 4. Monitoring and Optimization
               </h3>
-              <p class='text-textPrimary'>
+              <p class='text-gray-700'>
                 Track performance in real-time and continuously optimize your
                 automated processes for peak efficiency and effectiveness.
               </p>
             </div>
             <div class='w-full md:w-1/2'>
-              <Image
+              <!-- <Image
                 src='/service21.jpg'
                 alt='Monitoring and Optimization'
                 width={500}
                 height={300}
+                class='rounded-lg shadow-md'
+              /> -->
+              <img
+                src='/service21.jpg'
+                alt='Monitoring and Optimization'
                 class='rounded-lg shadow-md'
               />
             </div>
@@ -378,7 +423,7 @@ const techData = {
     </section>
 
     <!-- Testimonials Section -->
-    <!-- <section class='py-20 px-4 bg-primary text-white'>
+    <section class='py-20 px-4 bg-primary text-white'>
       <div class='container mx-auto max-w-4xl'>
         <h2 class='text-3xl md:text-4xl font-bold text-center mb-16'>
           What Our Clients Say
@@ -389,29 +434,33 @@ const techData = {
               <div class='bg-primary p-6 rounded-lg'>
                 <p class='text-lg mb-4'>"{testimonial.quote}"</p>
                 <p class='font-semibold'>{testimonial.name}</p>
-                <p class='text-purple-300'>{testimonial.role}</p>
+                <p class='text-primary-100'>{testimonial.role}</p>
               </div>
             ))
           }
         </div>
       </div>
-    </section> -->
+    </section>
 
     <!-- Pricing Section -->
     <section class='py-20 px-4 bg-gray-50'>
       <div class='container mx-auto max-w-6xl'>
-        <h2 class='text-3xl md:text-4xl font-bold text-center mb-16'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-gray-900 text-center mb-16'
+        >
           Pricing Plans
         </h2>
         <div class='grid grid-cols-1 md:grid-cols-3 gap-8'>
           {
             techData.pricing.map((plan) => (
               <div class='bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 flex flex-col'>
-                <h3 class='text-2xl font-bold mb-4'>{plan.plan}</h3>
+                <h3 class='text-2xl font-bold text-gray-800 mb-4'>
+                  {plan.plan}
+                </h3>
                 <p class='text-3xl font-bold text-primary mb-6'>{plan.price}</p>
                 <ul class='space-y-2 mb-8 flex-grow'>
                   {plan.features.map((feature) => (
-                    <li class='flex items-center'>
+                    <li class='flex items-center text-gray-700'>
                       <svg
                         xmlns='http://www.w3.org/2000/svg'
                         class='h-5 w-5 text-green-500 mr-2'
@@ -444,7 +493,9 @@ const techData = {
     <!-- FAQ Section -->
     <section class='py-20 px-4'>
       <div class='container mx-auto max-w-4xl'>
-        <h2 class='text-3xl md:text-4xl font-bold text-center mb-16'>
+        <h2
+          class='text-3xl md:text-4xl text-gray-900 font-bold text-center mb-16'
+        >
           Frequently Asked Questions
         </h2>
         <div class='space-y-4' id='faq-container'>
@@ -456,10 +507,12 @@ const techData = {
                   data-index={index}
                 >
                   <div class='flex justify-between items-center'>
-                    <h3 class='text-xl font-semibold'>{item.question}</h3>
+                    <h3 class='text-xl text-gray-800 font-semibold'>
+                      {item.question}
+                    </h3>
                     <svg
                       xmlns='http://www.w3.org/2000/svg'
-                      class='h-6 w-6 transform transition-transform duration-300'
+                      class='h-6 w-6 text-primary transform transition-transform duration-300'
                       fill='none'
                       viewBox='0 0 24 24'
                       stroke='currentColor'
@@ -489,13 +542,13 @@ const techData = {
         <h2 class='text-3xl md:text-4xl font-bold mb-6'>
           Ready to Automate Your Workflow?
         </h2>
-        <p class='text-xl mb-8'>
+        <p class='text-xl text-primary-100 mb-8'>
           Join thousands of businesses that have transformed their operations
           with AutoFlow.
         </p>
         <a
           href='#contact'
-          class='inline-block bg-white text-primary font-bold py-3 px-8 rounded-full hover:bg-purple-100 transition duration-300 text-lg'
+          class='inline-block bg-white text-primary font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300 text-lg'
           >Get Started Today</a
         >
       </div>
@@ -560,4 +613,4 @@ const techData = {
       });
     });
   </script>
-</Layout>
+</MainLayout>

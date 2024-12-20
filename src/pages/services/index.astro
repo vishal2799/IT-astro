@@ -1,33 +1,149 @@
 ---
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import CTAOne from '../../components/CTAOne.astro';
-import PageIntro from '../../components/PageIntro.astro';
-import ServiceCard from '../../components/ServiceCard.astro';
-import { Services } from '../../constants';
-import Layout from '../../layouts/Layout.astro';
-import BreadcrumbImg from '../../assets/images/breadcrumbsolution.jpg';
+import MainLayout from '../../layouts/MainLayout.astro';
 
-const breadCrumbsDetails = {
-  img: BreadcrumbImg,
-  title: 'Our Services',
-  desc: 'Your Process Automation Partner from beginning to end.',
-};
+const services = [
+  {
+    title: 'Cloud Migration Services',
+    description:
+      'Seamlessly transition your business to the cloud with our expert migration services.',
+    image: '/images/cloud-migration.jpg',
+    link: '/services/cloud-migration',
+  },
+  {
+    title: 'Cloud Security',
+    description:
+      'Protect your cloud infrastructure with our advanced security solutions.',
+    image: '/images/cloud-security.jpg',
+    link: '/services/cloud-security',
+  },
+  {
+    title: 'DevOps Automation',
+    description:
+      'Streamline your development and operations with our DevOps automation services.',
+    image: '/images/devops-automation.jpg',
+    link: '/services/devops-automation',
+  },
+  {
+    title: 'Data Analytics',
+    description:
+      'Unlock the power of your data with our advanced analytics solutions.',
+    image: '/images/data-analytics.jpg',
+    link: '/services/data-analytics',
+  },
+  {
+    title: 'AI and Machine Learning',
+    description:
+      'Leverage the power of AI and ML to transform your business processes.',
+    image: '/images/ai-ml.jpg',
+    link: '/services/ai-ml',
+  },
+  {
+    title: 'IT Consulting',
+    description: 'Get expert advice on your IT strategy and implementation.',
+    image: '/images/it-consulting.jpg',
+    link: '/services/it-consulting',
+  },
+];
 ---
 
-<Layout>
-  <div class='min-h-screen bg-gradient-to-b from-white to-highlight'>
-    <Breadcrumbs details={breadCrumbsDetails} />
-    <div class='container mx-auto px-4 py-12 md:py-24'>
-      <PageIntro
-        heading='Explore Our Services'
-        paragraph='We offer features and services for businesses and individuals with your unique needs in mind.'
+<MainLayout
+  title='Our Services | TechNova IT Services'
+  description='Explore our range of IT services designed to transform your business.'
+>
+  <div class='bg-gradient-to-b from-primary-50 to-white'>
+    <!-- Hero Section -->
+    <section
+      class='relative h-[40vh] min-h-[300px] flex items-center justify-center'
+    >
+      <!-- <Image
+        src='/service21.jpg'
+        alt='TechNova IT Services'
+        width={1920}
+        height={1080}
+        class='absolute inset-0 w-full h-full object-cover'
+      /> -->
+      <img
+        src='/service21.jpg'
+        alt='TechNova IT Services'
+        class='absolute inset-0 w-full h-full object-cover'
       />
-
-      <div class='grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 mb-14'>
-        {Services.map((service) => <ServiceCard service={service} />)}
+      <div class='absolute inset-0 bg-black opacity-60'></div>
+      <div class='relative z-10 text-center text-white px-4'>
+        <h1 class='text-4xl md:text-6xl font-bold mb-6'>Our Services</h1>
+        <p class='text-xl md:text-2xl max-w-3xl mx-auto'>
+          Transforming businesses with cutting-edge IT solutions
+        </p>
       </div>
+    </section>
 
-      <CTAOne />
-    </div>
+    <!-- Services Grid -->
+    <section class='py-20 px-4'>
+      <div class='container mx-auto max-w-6xl'>
+        <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          {
+            services.map((service) => (
+              <a href={service.link} class='group'>
+                <div class='bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 group-hover:shadow-xl'>
+                  {/* <Image
+                    src='/service21.jpg'
+                    alt={service.title}
+                    width={400}
+                    height={250}
+                    class='w-full h-48 object-cover'
+                  /> */}
+                  <img
+                    src='/service21.jpg'
+                    alt={service.title}
+                    class='w-full h-48 object-cover'
+                  />
+                  <div class='p-6'>
+                    <h3 class='text-xl font-semibold mb-2 group-hover:text-primary transition-colors duration-300'>
+                      {service.title}
+                    </h3>
+                    <p class='text-gray-600 mb-4'>{service.description}</p>
+                    <span class='text-primary font-medium group-hover:text-primary/90 transition-colors duration-300 flex items-center'>
+                      Learn More
+                      <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        class='h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300'
+                        fill='none'
+                        viewBox='0 0 24 24'
+                        stroke='currentColor'
+                      >
+                        <path
+                          stroke-linecap='round'
+                          stroke-linejoin='round'
+                          stroke-width='2'
+                          d='M17 8l4 4m0 0l-4 4m4-4H3'
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class='py-20 px-4 bg-primary text-white'>
+      <div class='container mx-auto max-w-4xl text-center'>
+        <h2 class='text-3xl md:text-4xl font-bold mb-6'>
+          Ready to Transform Your Business?
+        </h2>
+        <p class='text-xl mb-8'>
+          Our team of experts is here to help you navigate the complex world of
+          IT and drive your business forward.
+        </p>
+        <a
+          href='#contact'
+          class='inline-block bg-white text-primary font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300'
+        >
+          Get in Touch
+        </a>
+      </div>
+    </section>
   </div>
-</Layout>
+</MainLayout>

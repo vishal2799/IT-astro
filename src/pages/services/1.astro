@@ -1,6 +1,5 @@
 ---
-import { Image } from 'astro:assets';
-import Layout from '../../layouts/Layout.astro';
+import MainLayout from '../../layouts/MainLayout.astro';
 
 const serviceData = {
   title: 'Cloud Migration Services',
@@ -72,17 +71,25 @@ const serviceData = {
 };
 ---
 
-<Layout title={serviceData.title}>
-  <div class='bg-gradient-to-b from-blue-50 to-white'>
+<MainLayout
+  title={`${serviceData.title} | TechNova IT Services`}
+  description={serviceData.description}
+>
+  <div class='bg-gradient-to-b from-primary-50 to-white'>
     <!-- Hero Section -->
     <section
       class='relative h-[55vh] min-h-[450px] flex items-center justify-center'
     >
-      <Image
+      <!-- <Image
         src='/service21.jpg'
         alt={serviceData.title}
         width={1920}
         height={1080}
+        class='absolute inset-0 w-full h-full object-cover'
+      /> -->
+      <img
+        src='/service21.jpg'
+        alt={serviceData.title}
         class='absolute inset-0 w-full h-full object-cover'
       />
       <div class='absolute inset-0 bg-black opacity-60'></div>
@@ -102,7 +109,9 @@ const serviceData = {
     <!-- Features Section (Previous Version) -->
     <section class='py-20 px-4'>
       <div class='container mx-auto max-w-6xl'>
-        <h2 class='text-3xl md:text-4xl font-bold text-center mb-16'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900'
+        >
           Key Features
         </h2>
         <div class='grid grid-cols-1 md:grid-cols-2 gap-8'>
@@ -123,7 +132,7 @@ const serviceData = {
                     d='M5 13l4 4L19 7'
                   />
                 </svg>
-                <p class='text-lg'>{feature}</p>
+                <p class='text-lg text-gray-800'>{feature}</p>
               </div>
             ))
           }
@@ -134,7 +143,9 @@ const serviceData = {
     <!-- Process Section -->
     <section class='py-20 px-4 bg-gray-50'>
       <div class='container mx-auto max-w-6xl'>
-        <h2 class='text-3xl md:text-4xl font-bold text-center mb-16'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900'
+        >
           Our Migration Process
         </h2>
         <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
@@ -144,8 +155,10 @@ const serviceData = {
                 <div class='text-primary font-bold text-5xl mb-4'>
                   {index + 1}
                 </div>
-                <h3 class='text-xl font-semibold mb-2'>{step.title}</h3>
-                <p class='text-textPrimary'>{step.description}</p>
+                <h3 class='text-xl font-semibold mb-2 text-gray-800'>
+                  {step.title}
+                </h3>
+                <p class='text-gray-700'>{step.description}</p>
               </div>
             ))
           }
@@ -156,15 +169,19 @@ const serviceData = {
     <!-- Benefits Section -->
     <section class='py-20 px-4'>
       <div class='container mx-auto max-w-6xl'>
-        <h2 class='text-3xl md:text-4xl font-bold text-center mb-16'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-gray-900 text-center mb-16'
+        >
           Benefits of Cloud Migration
         </h2>
         <div class='grid grid-cols-1 md:grid-cols-2 gap-12'>
           {
             serviceData.benefits.map((benefit) => (
               <div class='bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300'>
-                <h3 class='text-xl font-semibold mb-4'>{benefit}</h3>
-                <p class='text-textPrimary'>
+                <h3 class='text-xl font-semibold text-gray-800 mb-4'>
+                  {benefit}
+                </h3>
+                <p class='text-gray-700'>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -196,7 +213,9 @@ const serviceData = {
     <!-- FAQ Section (Collapsible) -->
     <section class='py-20 px-4'>
       <div class='container mx-auto max-w-4xl'>
-        <h2 class='text-3xl md:text-4xl font-bold text-center mb-16'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900'
+        >
           Frequently Asked Questions
         </h2>
         <div class='space-y-4' id='faq-container'>
@@ -211,7 +230,7 @@ const serviceData = {
                     <h3 class='text-xl font-semibold'>{item.question}</h3>
                     <svg
                       xmlns='http://www.w3.org/2000/svg'
-                      class='h-6 w-6 transform transition-transform duration-300'
+                      class='h-6 w-6 text-primary transform transition-transform duration-300'
                       fill='none'
                       viewBox='0 0 24 24'
                       stroke='currentColor'
@@ -256,7 +275,9 @@ const serviceData = {
     <!-- Related Services Section -->
     <section class='py-20 px-4'>
       <div class='container mx-auto max-w-6xl'>
-        <h2 class='text-3xl md:text-4xl font-bold text-center mb-16'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-gray-900 text-center mb-16'
+        >
           Related Services
         </h2>
         <div class='grid grid-cols-1 md:grid-cols-3 gap-8'>
@@ -264,10 +285,10 @@ const serviceData = {
             serviceData.relatedServices.map((service) => (
               <a href={service.link} class='block group'>
                 <div class='bg-white p-6 rounded-lg shadow-md transition duration-300 group-hover:shadow-xl'>
-                  <h3 class='text-xl font-semibold mb-2 group-hover:text-primary transition duration-300'>
+                  <h3 class='text-xl text-gray-800 font-semibold mb-2 group-hover:text-primary transition duration-300'>
                     {service.title}
                   </h3>
-                  <p class='text-textPrimary mb-4'>
+                  <p class='text-gray-700 mb-4'>
                     Learn more about our {service.title.toLowerCase()} services
                     and how they can benefit your business.
                   </p>
@@ -421,4 +442,4 @@ const serviceData = {
       });
     });
   </script>
-</Layout>
+</MainLayout>

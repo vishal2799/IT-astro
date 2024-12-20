@@ -1,51 +1,185 @@
 ---
-import BreadcrumbImg from '../../assets/images/breadcrumbsolution.jpg';
-import { Icon } from 'astro-icon/components';
-import Layout from '../../layouts/Layout.astro';
-import { SolutionsTwo } from '../../constants';
-import ServiceCard2 from '../../components/ServiceCard2.astro';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import PageOverview from '../../components/PageOverview.astro';
-import CTAOne from '../../components/CTAOne.astro';
-import CTATwo from '../../components/CTATwo.astro';
+import MainLayout from '../../layouts/MainLayout.astro';
 
-const breadCrumbsDetails = {
-  img: BreadcrumbImg,
-  title: 'Solutions for any Department',
-  desc: 'Save time, escalate efficiency and deliver more value in any area of your business.',
-};
+const solutions = [
+  {
+    name: 'FinanceFlow',
+    tagline: 'Streamline Your Financial Operations',
+    description:
+      'Advanced fintech solution for optimizing financial processes, enhancing security, and making data-driven decisions.',
+    image: '/images/finance-solution.jpg',
+    link: '/solutions/finance-flow',
+  },
+  {
+    name: 'CloudMigrate',
+    tagline: 'Seamless Cloud Transition',
+    description:
+      'Expert cloud migration services to help businesses move their infrastructure and applications to the cloud efficiently.',
+    image: '/images/cloud-solution.jpg',
+    link: '/solutions/cloud-migrate',
+  },
+  {
+    name: 'SecureShield',
+    tagline: 'Robust Cybersecurity Protection',
+    description:
+      'Comprehensive cybersecurity solutions to safeguard your digital assets and protect against evolving threats.',
+    image: '/images/security-solution.jpg',
+    link: '/solutions/secure-shield',
+  },
+  {
+    name: 'DataInsight',
+    tagline: 'Unlock the Power of Your Data',
+    description:
+      'Advanced data analytics and visualization tools to help you make informed business decisions.',
+    image: '/images/data-solution.jpg',
+    link: '/solutions/data-insight',
+  },
+];
 
-const overview = {
-  leftTitle: 'Redefine what’s possible across your enterprise',
-  leftDescription:
-    'Solve productivity challenges in any department and free teams from wasting hours on tedious, time-consuming tasks. With fast, agile automation, you can step up efficiency, reduce risk, and power lasting change in any function or process. Whether you need to scale up output or support a more distributed workforce, we are here to help.',
-  rightTitle: 'Why automate with us?',
-  rightPoints: [
-    'Finance',
-    'Operations',
-    'Human Resources',
-    'Sales & Marketing',
-    'Information Technology',
-  ],
-};
+const commonFeatures = [
+  'AI-Powered Analytics',
+  'Secure Infrastructure',
+  'Automated Processes',
+  'Real-time Monitoring',
+  'Customizable Dashboards',
+  'Expert Support',
+];
+
+const stats = [
+  { value: '500+', label: 'Clients Served' },
+  { value: '98%', label: 'Client Satisfaction' },
+  { value: '40%', label: 'Average Efficiency Gain' },
+  { value: '24/7', label: 'Support Available' },
+];
 ---
 
-<Layout>
-  <div class='min-h-screen bg-gradient-to-b from-white to-highlight'>
-    {/* Breadcrumbs */}
-    <Breadcrumbs details={breadCrumbsDetails} />
-    <div class='container mx-auto px-4 py-10 md:py-20'>
-      <PageOverview overview={overview} />
-
-      <div class='grid gap-10 mt-20 mb-14'>
-        {
-          SolutionsTwo.map((service, index) => (
-            <ServiceCard2 service={service} index={index} />
-          ))
-        }
+<MainLayout
+  title='Our Solutions | TechNova IT Services'
+  description='Explore our range of innovative IT solutions designed to transform your business.'
+>
+  <main class='bg-white'>
+    <!-- Hero Section -->
+    <section class='bg-primary-50 py-20'>
+      <div class='container mx-auto px-4'>
+        <div class='text-center'>
+          <h1 class='text-4xl md:text-5xl font-bold mb-6 text-gray-900'>
+            Innovative Solutions for Your Business
+          </h1>
+          <p class='text-xl md:text-2xl mb-8 text-gray-700 max-w-3xl mx-auto'>
+            Discover our range of cutting-edge IT solutions designed to drive
+            growth, efficiency, and innovation in your organization.
+          </p>
+        </div>
       </div>
+    </section>
 
-      <CTATwo />
-    </div>
-  </div>
-</Layout>
+    <!-- Solutions Grid -->
+    <section class='py-20'>
+      <div class='container mx-auto px-4'>
+        <div class='grid grid-cols-1 md:grid-cols-2 gap-12'>
+          {
+            solutions.map((solution) => (
+              <div class='bg-white p-8 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition duration-300'>
+                {/* <Image
+                  src='/service21.jpg'
+                  alt={solution.name}
+                  width={400}
+                  height={225}
+                  class='rounded-lg mb-6'
+                /> */}
+                <img
+                  src='/service21.jpg'
+                  alt={solution.name}
+                  class='rounded-lg mb-6'
+                />
+                <h2 class='text-2xl font-bold mb-2 text-gray-900'>
+                  {solution.name}
+                </h2>
+                <p class='text-lg font-semibold mb-4 text-primary'>
+                  {solution.tagline}
+                </p>
+                <p class='text-gray-600 mb-6'>{solution.description}</p>
+                <a
+                  href={solution.link}
+                  class='inline-block bg-primary hover:bg-primary/90 text-white font-bold py-2 px-6 rounded-lg transition duration-300'
+                >
+                  Learn More
+                </a>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Common Features Section -->
+    <section class='py-20 bg-gray-50'>
+      <div class='container mx-auto px-4'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900'
+        >
+          Key Features Across Our Solutions
+        </h2>
+        <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          {
+            commonFeatures.map((feature) => (
+              <div class='flex items-center bg-white p-6 rounded-lg shadow-md'>
+                <svg
+                  class='w-6 h-6 text-primary mr-4'
+                  fill='none'
+                  stroke='currentColor'
+                  viewBox='0 0 24 24'
+                  xmlns='http://www.w3.org/2000/svg'
+                >
+                  <path
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    stroke-width='2'
+                    d='M5 13l4 4L19 7'
+                  />
+                </svg>
+                <span class='text-lg text-gray-800'>{feature}</span>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class='py-20 bg-primary text-white'>
+      <div class='container mx-auto px-4'>
+        <div class='grid grid-cols-2 md:grid-cols-4 gap-8 text-center'>
+          {
+            stats.map((stat) => (
+              <div>
+                <p class='text-4xl font-bold mb-2'>{stat.value}</p>
+                <p class='text-xl'>{stat.label}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class='py-20'>
+      <div class='container mx-auto px-4 text-center'>
+        <h2 class='text-3xl md:text-4xl font-bold mb-6 text-gray-900'>
+          Ready to Transform Your Business?
+        </h2>
+        <p class='text-xl mb-8 text-gray-600 max-w-3xl mx-auto'>
+          Our team of experts is ready to help you implement the perfect
+          solution for your business needs. Get in touch today for a
+          personalized consultation.
+        </p>
+        <a
+          href='#contact'
+          class='bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-lg transition duration-300 inline-block'
+        >
+          Schedule a Consultation
+        </a>
+      </div>
+    </section>
+  </main>
+</MainLayout>

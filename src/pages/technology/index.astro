@@ -1,66 +1,270 @@
 ---
-import CTAOne from '../../components/CTAOne.astro';
-import CTATwo from '../../components/CTATwo.astro';
-import Gap from '../../components/Gap.astro';
-import ServiceCard from '../../components/ServiceCard.astro';
-import TechnologyCard from '../../components/TechnologyCard.astro';
-import { Services, Technology } from '../../constants';
-import Layout from '../../layouts/Layout.astro';
-import BreadcrumbImg from '../../assets/images/breadcrumbsolution.jpg';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import MainLayout from '../../layouts/MainLayout.astro';
+import TechCard from '../../components/TechCard.astro';
 
-const breadCrumbsDetails = {
-  img: BreadcrumbImg,
-  title: 'Technology',
-  desc: 'Can you imagine a better, faster way to work? Let’s make it happen.',
-};
+const technologies = [
+  {
+    name: 'AutoFlow',
+    tagline: 'Streamline Your Workflow with Intelligent Automation',
+    description:
+      'Cutting-edge Robotic Process Automation (RPA) platform for automating repetitive tasks and boosting productivity.',
+    image: '/service21.jpg',
+    link: '/technologies/autoflow',
+    icon: 'robot',
+  },
+  {
+    name: 'DataSense',
+    tagline: 'Unlock the Power of Your Data',
+    description:
+      'Advanced data analytics and visualization platform for making informed business decisions.',
+    image: '/service21.jpg',
+    link: '/technologies/datasense',
+    icon: 'pie-chart',
+  },
+  {
+    name: 'CloudGuard',
+    tagline: 'Secure Your Digital Assets in the Cloud',
+    description:
+      'Comprehensive cloud security solution to protect your data and applications in multi-cloud environments.',
+    image: '/service21.jpg',
+    link: '/technologies/cloudguard',
+    icon: 'cloud',
+  },
+  {
+    name: 'AIAssist',
+    tagline: 'Enhance Decision-Making with Artificial Intelligence',
+    description:
+      'AI-powered platform for predictive analytics, natural language processing, and intelligent automation.',
+    image: '/service21.jpg',
+    link: '/technologies/aiassist',
+    icon: 'robot',
+  },
+];
+
+const commonFeatures = [
+  'Intuitive User Interface',
+  'Seamless Integration',
+  'Scalable Architecture',
+  'Real-time Analytics',
+  'Enterprise-grade Security',
+  'Dedicated Support',
+];
+
+const stats = [
+  { value: '1000+', label: 'Enterprise Clients' },
+  { value: '50M+', label: 'Processes Automated' },
+  { value: '99%', label: 'Client Satisfaction' },
+  { value: '$500M+', label: 'Client Savings' },
+];
 ---
 
-<Layout>
-  <div class='min-h-screen bg-gradient-to-b from-white to-highlight'>
-    {/* Breadcrumbs */}
-    <Breadcrumbs details={breadCrumbsDetails} />
-    <div class='container mx-auto px-4 py-10 md:py-24'>
-      <div class='text-left max-w-screen-lg'>
-        <h1
-          class='text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-textPrimary mb-4 transition-transform duration-500 ease-in-out transform hover:scale-105'
-        >
-          Technology that works for you
-        </h1>
-        <p class='text-lg sm:text-xl text-textSecondary leading-relaxed'>
-          We’re all about making top tier tech more accessible to your people.
-          We can help you bridge skills gaps, change mind sets and tap the full
-          potential of the smartest software available today for fast and
-          lasting transformation across your enterprise. Whether you want to
-          start simple or reset your IT strategy, develop apps or build robots
-          with cognitive powers, we’ll help you get it right, from day one.
+<MainLayout
+  title='Our Technologies | TechNova IT Services'
+  description='Explore our cutting-edge technologies designed to transform your business operations and drive innovation.'
+>
+  <main class='bg-gradient-to-b from-gray-100 to-white'>
+    <!-- Hero Section -->
+    <section
+      class='relative h-[60vh] min-h-[500px] flex items-center justify-center'
+    >
+      <!-- <Image
+        src='/service21.jpg'
+        alt='TechNova Technologies'
+        width={1920}
+        height={1080}
+        class='absolute inset-0 w-full h-full object-cover'
+      /> -->
+      <img
+        src='/service21.jpg'
+        alt='TechNova Technologies'
+        class='absolute inset-0 w-full h-full object-cover'
+      />
+      <div class='absolute inset-0 bg-black opacity-50'></div>
+      <div class='relative z-10 text-center text-white px-4'>
+        <h1 class='text-4xl md:text-6xl font-bold mb-4'>Our Technologies</h1>
+        <p class='text-xl md:text-2xl mb-8'>
+          Empowering Your Business with Cutting-Edge Solutions
         </p>
-      </div>
-
-      <div class='grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 mb-14'>
-        {Technology.map((tech) => <TechnologyCard technology={tech} />)}
-      </div>
-
-      <CTATwo />
-      <Gap />
-      <div class='text-left max-w-screen-md'>
-        <h1
-          class='text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-textPrimary mb-4 transition-transform duration-500 ease-in-out transform hover:scale-105'
+        <a
+          href='#technologies'
+          class='bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full transition duration-300 text-lg'
         >
-          Our Automation Services
-        </h1>
-        <p class='text-lg sm:text-xl text-textSecondary leading-relaxed'>
-          As your automation partner from strategy to go-live and beyond – we
-          help you seize transformation opportunities in your business with the
-          following technologies and services.
+          Explore Our Tech Stack
+        </a>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class='py-16 bg-white'>
+      <div class='container mx-auto max-w-6xl'>
+        <div class='grid grid-cols-2 md:grid-cols-4 gap-8 text-center'>
+          {
+            stats.map((stat) => (
+              <div class='bg-gray-50 p-6 rounded-lg shadow-md'>
+                <p class='text-4xl font-bold text-primary mb-2'>{stat.value}</p>
+                <p class='text-gray-600'>{stat.label}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id='technologies' class='py-20 px-4'>
+      <div class='container mx-auto max-w-6xl'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900'
+        >
+          Our Technology Stack
+        </h2>
+        <div class='grid grid-cols-1 md:grid-cols-2 gap-12'>
+          {
+            technologies.map((tech) => (
+              <TechCard
+                name={tech.name}
+                tagline={tech.tagline}
+                description={tech.description}
+                image={tech.image}
+                link={tech.link}
+                icon={tech.icon}
+              />
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Common Features Section -->
+    <section class='py-20 px-4 bg-primary-50'>
+      <div class='container mx-auto max-w-4xl'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-gray-900 text-center mb-16'
+        >
+          Common Features Across Our Technologies
+        </h2>
+        <div class='grid grid-cols-1 md:grid-cols-2 gap-8'>
+          {
+            commonFeatures.map((feature) => (
+              <div class='flex items-start bg-white p-6 rounded-lg shadow-md'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  class='h-6 w-6 text-primary mt-1 mr-4'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  stroke='currentColor'
+                >
+                  <path
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    stroke-width='2'
+                    d='M5 13l4 4L19 7'
+                  />
+                </svg>
+                <p class='text-lg text-gray-800'>{feature}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Integration Section -->
+    <section class='py-20 px-4'>
+      <div class='container mx-auto max-w-4xl'>
+        <h2
+          class='text-3xl md:text-4xl text-gray-900 font-bold text-center mb-16'
+        >
+          Seamless Integration
+        </h2>
+        <div class='flex flex-col md:flex-row items-center gap-8'>
+          <div class='w-full md:w-1/2'>
+            <h3 class='text-2xl font-semibold text-gray-800 mb-4'>
+              Connect Your Entire Tech Stack
+            </h3>
+            <p class='text-gray-700 mb-4'>
+              Our technologies are designed to work together seamlessly,
+              creating a powerful ecosystem for your business. Integrate with
+              your existing tools and systems to maximize efficiency and
+              productivity.
+            </p>
+            <ul class='space-y-2'>
+              <li class='flex items-center'>
+                <svg
+                  class='w-5 h-5 text-primary mr-2'
+                  fill='currentColor'
+                  viewBox='0 0 20 20'
+                >
+                  <path
+                    fill-rule='evenodd'
+                    d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
+                    clip-rule='evenodd'></path>
+                </svg>
+                Easy-to-use APIs
+              </li>
+              <li class='flex items-center'>
+                <svg
+                  class='w-5 h-5 text-primary mr-2'
+                  fill='currentColor'
+                  viewBox='0 0 20 20'
+                >
+                  <path
+                    fill-rule='evenodd'
+                    d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
+                    clip-rule='evenodd'></path>
+                </svg>
+                Pre-built connectors
+              </li>
+              <li class='flex items-center'>
+                <svg
+                  class='w-5 h-5 text-primary mr-2'
+                  fill='currentColor'
+                  viewBox='0 0 20 20'
+                >
+                  <path
+                    fill-rule='evenodd'
+                    d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
+                    clip-rule='evenodd'></path>
+                </svg>
+                Custom integration support
+              </li>
+            </ul>
+          </div>
+          <div class='w-full md:w-1/2'>
+            <!-- <Image
+              src='/service21.jpg'
+              alt='Technology Integration'
+              width={500}
+              height={300}
+              class='rounded-lg shadow-md'
+            /> -->
+            <img
+              src='/service21.jpg'
+              alt='Technology Integration'
+              class='rounded-lg shadow-md'
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class='py-20 px-4 bg-primary text-white'>
+      <div class='container mx-auto max-w-3xl text-center'>
+        <h2 class='text-3xl md:text-4xl font-bold mb-6'>
+          Ready to Transform Your Business?
+        </h2>
+        <p class='text-xl text-primary-100 mb-8'>
+          Discover how our cutting-edge technologies can drive innovation and
+          efficiency in your organization.
         </p>
+        <a
+          href='#contact'
+          class='inline-block bg-white text-primary font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300 text-lg'
+        >
+          Schedule a Demo
+        </a>
       </div>
-
-      <div class='grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 mb-14'>
-        {Services.map((service) => <ServiceCard service={service} />)}
-      </div>
-
-      <CTAOne />
-    </div>
-  </div>
-</Layout>
+    </section>
+  </main>
+</MainLayout>

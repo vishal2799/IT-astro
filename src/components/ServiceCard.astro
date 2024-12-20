@@ -1,31 +1,36 @@
 ---
 import { Icon } from 'astro-icon/components';
 
-const { service, home } = Astro.props;
+const { title, description, icon, link } = Astro.props;
 ---
 
 <div
-  class='border border-primary p-6 group bg-background hover:bg-primary hover:border-none transition-colors duration-1000 ease-in-out rounded-lg shadow-md'
+  class='bg-white rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-xl'
 >
-  <div class='flex justify-between items-center mb-5'>
-    <div class='flex items-center justify-center p-5 bg-highlight rounded-full'>
-      <Icon size={28} name={service.icon} class='text-primary' />
+  <div class='flex items-center mb-4'>
+    <div class='bg-primary/10 p-3 rounded-full mr-4'>
+      <Icon name={icon} class='w-6 h-6 text-primary' />
     </div>
-    <div
-      class='text-textPrimary text-2xl font-semibold group-hover:text-highlight'
-    >
-      0{service.id}
-    </div>
+    <h3 class='text-xl font-semibold text-gray-900'>{title}</h3>
   </div>
+  <p class='text-gray-600 mb-4'>{description}</p>
   <a
-    href=''
-    class="inline-block mb-3 text-textPrimary text-2xl font-bold relative group-hover:text-highlight after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-highlight after:transition-all after:duration-1000 group-hover:after:w-full"
+    href={link}
+    class='text-primary font-semibold hover:text-primary-dark transition-colors duration-300 flex items-center'
   >
-    {service.name}
+    Learn More
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      class='h-5 w-5 ml-2'
+      fill='none'
+      viewBox='0 0 24 24'
+      stroke='currentColor'
+    >
+      <path
+        stroke-linecap='round'
+        stroke-linejoin='round'
+        stroke-width='2'
+        d='M9 5l7 7-7 7'></path>
+    </svg>
   </a>
-  <p
-    class='text-textPrimary text-lg leading-relaxed group-hover:text-highlight'
-  >
-    {home ? service.shortdesc : service.description}
-  </p>
 </div>
