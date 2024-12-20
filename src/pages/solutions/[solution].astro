@@ -18,7 +18,7 @@ const stats = [
 const testimonials = [
   {
     quote:
-      "FinanceFlow has revolutionized our financial operations. We've cut costs and improved our decision-making process significantly.",
+      "Alicorn Solutions has revolutionized our financial operations. We've cut costs and improved our decision-making process significantly.",
     author: 'Emily Chen',
     position: 'CFO, TechCorp Inc.',
   },
@@ -42,7 +42,7 @@ const { financeData } = Astro.props;
 ---
 
 <MainLayout
-  title={`${financeData.name} | TechNova IT Services`}
+  title={`${financeData.name} | Alicorn Solutions`}
   description={financeData.description}
 >
   <main class='bg-white'>
@@ -85,7 +85,7 @@ const { financeData } = Astro.props;
     </section>
 
     <!-- Features Section -->
-    <section class='py-20'>
+    <section class='section-padding'>
       <div class='container mx-auto px-4'>
         <h2
           class='text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900'
@@ -120,7 +120,7 @@ const { financeData } = Astro.props;
     </section>
 
     <!-- Stats Section -->
-    <section class='py-20 bg-primary text-white'>
+    <section class='section-padding bg-primary text-white'>
       <div class='container mx-auto px-4'>
         <div class='grid grid-cols-2 md:grid-cols-4 gap-8 text-center'>
           {
@@ -136,7 +136,7 @@ const { financeData } = Astro.props;
     </section>
 
     <!-- How It Works Section -->
-    <section class='py-20 bg-gray-50'>
+    <section class='section-padding bg-gray-50'>
       <div class='container mx-auto px-4'>
         <h2
           class='text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900'
@@ -222,7 +222,7 @@ const { financeData } = Astro.props;
     </section>
 
     <!-- Testimonials Section -->
-    <section class='py-20'>
+    <section class='section-padding'>
       <div class='container mx-auto px-4'>
         <h2
           class='text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900'
@@ -256,7 +256,7 @@ const { financeData } = Astro.props;
     </section>
 
     <!-- FAQ Section -->
-    <section class='py-20 bg-gray-50'>
+    <section class='section-padding bg-gray-50'>
       <div class='container mx-auto px-4'>
         <h2
           class='text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900'
@@ -302,7 +302,7 @@ const { financeData } = Astro.props;
     </section>
 
     <!-- CTA Section -->
-    <section class='py-20 bg-primary'>
+    <section class='section-padding bg-primary'>
       <div class='container mx-auto px-4 text-center'>
         <h2 class='text-3xl md:text-4xl font-bold mb-6 text-white'>
           Ready to Optimize Your Finances?
