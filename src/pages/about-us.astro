@@ -1,0 +1,199 @@
+---
+import { Image } from 'astro:assets';
+import MainLayout from '../layouts/MainLayout.astro';
+import CTA from '../components/CTA.astro';
+import ValueCard from '../components/ValueCard.astro';
+import AchievementCard from '../components/AchievementCard.astro';
+
+const companyValues = [
+  {
+    title: 'Innovation',
+    description:
+      'We constantly push the boundaries of technology to deliver cutting-edge solutions.',
+    icon: 'robot',
+  },
+  {
+    title: 'Integrity',
+    description:
+      'We uphold the highest ethical standards in all our business practices.',
+    icon: 'shield-check',
+  },
+  {
+    title: 'Collaboration',
+    description:
+      'We believe in the power of teamwork and partnerships to achieve exceptional results.',
+    icon: 'person-circle',
+  },
+  {
+    title: 'Excellence',
+    description:
+      'We strive for excellence in every project and service we deliver.',
+    icon: 'star-fill',
+  },
+];
+
+const achievements = [
+  {
+    title: 'Projects Completed',
+    value: '500+',
+    icon: 'check',
+  },
+  {
+    title: 'Client Satisfaction',
+    value: '98%',
+    icon: 'arrow-up-right',
+  },
+  {
+    title: 'Years in Business',
+    value: '15+',
+    icon: 'calendar',
+  },
+  {
+    title: 'Industry Awards',
+    value: '20+',
+    icon: 'globe',
+  },
+];
+---
+
+<MainLayout
+  title='About Us | Alicorn Solutions'
+  description='Learn about Alicorn Solutions, our mission, values, and achievements in delivering innovative technology solutions.'
+>
+  <main class='bg-gradient-to-b from-gray-100 to-white'>
+    <!-- Hero Section -->
+    <section
+      class='relative h-[50vh] min-h-[400px] flex items-center justify-center'
+    >
+      <Image
+        src='/breadcrumb2.jpg'
+        alt='About TechNova'
+        width={1920}
+        height={1080}
+        class='absolute inset-0 w-full h-full object-cover'
+      />
+      <div class='absolute inset-0 bg-primary opacity-70'></div>
+      <div class='relative z-10 text-center text-white px-4'>
+        <h1 class='text-4xl md:text-6xl font-bold mb-4'>
+          About Alicorn Solutions
+        </h1>
+        <p class='text-xl md:text-2xl mb-8'>Innovating for a Better Tomorrow</p>
+      </div>
+    </section>
+
+    <!-- Mission Statement -->
+    <section class='section-padding px-4'>
+      <div class='container mx-auto max-w-4xl text-center'>
+        <h2 class='text-3xl md:text-4xl font-bold mb-6 text-gray-900'>
+          Our Mission
+        </h2>
+        <p class='text-xl text-gray-700 leading-relaxed'>
+          At Alicorn Solutions, our mission is to empower businesses through
+          innovative technology solutions. We strive to be at the forefront of
+          digital transformation, helping our clients navigate the complex world
+          of IT to achieve their goals and stay ahead in today's fast-paced
+          digital landscape.
+        </p>
+      </div>
+    </section>
+
+    <!-- Company Values -->
+    <section class='section-padding px-4 bg-gray-50'>
+      <div class='container mx-auto max-w-6xl'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900'
+        >
+          Our Values
+        </h2>
+        <div class='grid grid-cols-1 md:grid-cols-2 gap-8'>
+          {
+            companyValues.map((value) => (
+              <ValueCard
+                title={value.title}
+                description={value.description}
+                icon={value.icon}
+              />
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements -->
+    <section class='section-padding px-4'>
+      <div class='container mx-auto max-w-6xl'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900'
+        >
+          Our Achievements
+        </h2>
+        <div class='grid grid-cols-2 md:grid-cols-4 gap-8'>
+          {
+            achievements.map((achievement) => (
+              <AchievementCard
+                title={achievement.title}
+                value={achievement.value}
+                icon={achievement.icon}
+              />
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class='section-padding px-4 bg-primary-50'>
+      <div class='container mx-auto max-w-4xl'>
+        <h2
+          class='text-gray-900 text-3xl md:text-4xl font-bold text-center mb-12'
+        >
+          Why Choose Alicorn Solutions?
+        </h2>
+        <div class='grid md:grid-cols-2 gap-8'>
+          <div>
+            <h3 class='text-2xl text-gray-800 font-semibold mb-4'>Expertise</h3>
+            <p class='text-gray-700'>
+              Our team of seasoned professionals brings years of experience and
+              deep industry knowledge to every project.
+            </p>
+          </div>
+          <div>
+            <h3 class='text-2xl text-gray-800 font-semibold mb-4'>
+              Cutting-edge Technology
+            </h3>
+            <p class='text-gray-700'>
+              We stay at the forefront of technological advancements to provide
+              you with the most innovative solutions.
+            </p>
+          </div>
+          <div>
+            <h3 class='text-2xl text-gray-800 font-semibold mb-4'>
+              Client-centric Approach
+            </h3>
+            <p class='text-gray-700'>
+              Your success is our priority. We work closely with you to
+              understand your unique needs and deliver tailored solutions.
+            </p>
+          </div>
+          <div>
+            <h3 class='text-2xl text-gray-800 font-semibold mb-4'>
+              Proven Track Record
+            </h3>
+            <p class='text-gray-700'>
+              Our portfolio of successful projects and satisfied clients speaks
+              to our commitment to excellence.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <CTA
+      title='Ready to Transform Your Business?'
+      description="Let's discuss how our innovative IT solutions can drive your business forward."
+      buttonText='Get in Touch'
+      buttonLink='/contact'
+    />
+  </main>
+</MainLayout>
