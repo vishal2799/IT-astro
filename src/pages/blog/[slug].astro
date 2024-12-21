@@ -1,0 +1,121 @@
+---
+import { Image } from 'astro:assets';
+import MainLayout from '../../layouts/MainLayout.astro';
+import AuthorCard from '../../components/AuthorCard.astro';
+import RelatedPosts from '../../components/RelatedPosts.astro';
+import ShareButtons from '../../components/ShareButtons.astro';
+
+export async function getStaticPaths() {
+  // In a real application, you would fetch this data from a CMS or API
+  const posts = [
+    {
+      title: 'The Future of Cloud Computing: Trends to Watch',
+      content: `
+        <p>Cloud computing has revolutionized the way businesses operate, offering unprecedented scalability, flexibility, and cost-efficiency. As we look to the future, several emerging trends are set to shape the landscape of cloud computing. In this article, we'll explore these trends and their potential impact on businesses and technology.</p>
+
+        <h2>1. Edge Computing Integration</h2>
+        <p>Edge computing is becoming increasingly important as IoT devices proliferate and the need for real-time data processing grows. The integration of edge computing with cloud services will enable faster data processing and reduced latency, particularly beneficial for applications in autonomous vehicles, smart cities, and industrial IoT.</p>
+
+        <h2>2. Artificial Intelligence and Machine Learning as a Service</h2>
+        <p>AI and ML capabilities are becoming more accessible through cloud platforms. This democratization of AI will allow businesses of all sizes to leverage advanced analytics and intelligent automation without significant upfront investments in hardware and expertise.</p>
+
+        <h2>3. Multi-cloud and Hybrid Cloud Strategies</h2>
+        <p>Organizations are increasingly adopting multi-cloud and hybrid cloud approaches to optimize performance, cost, and compliance. This trend will drive the need for better cloud management tools and strategies to ensure seamless integration and operation across different cloud environments.</p>
+
+        <h2>4. Serverless Computing</h2>
+        <p>Serverless architectures are gaining traction, allowing developers to focus on writing code without worrying about infrastructure management. This trend will continue to grow, enabling more efficient resource utilization and faster development cycles.</p>
+
+        <h2>5. Enhanced Security Measures</h2>
+        <p>As cloud adoption increases, so does the need for robust security measures. We can expect to see advancements in cloud security, including AI-powered threat detection, quantum-resistant encryption, and zero-trust security models.</p>
+
+        <h2>Conclusion</h2>
+        <p>The future of cloud computing is bright and full of possibilities. By staying informed about these trends, businesses can position themselves to take full advantage of the cloud's evolving capabilities, driving innovation and maintaining a competitive edge in the digital landscape.</p>
+      `,
+      excerpt:
+        'Explore the emerging trends in cloud computing that are shaping the future of IT infrastructure.',
+      image: '/service1.jpg',
+      date: 'May 15, 2023',
+      author: {
+        name: 'Jane Doe',
+        bio: 'Jane is a cloud computing expert with over 10 years of experience in the field. She specializes in helping businesses optimize their cloud strategies.',
+        avatar: '/service21.jpg',
+      },
+      slug: 'future-of-cloud-computing',
+      category: 'Cloud Computing',
+    },
+    // Add more blog posts here...
+  ];
+
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+
+const relatedPosts = [
+  {
+    title: 'Cybersecurity Best Practices for Remote Work',
+    excerpt:
+      'Learn essential cybersecurity measures to protect your business in the era of remote work.',
+    image: '/service2.jpg',
+    date: 'June 2, 2023',
+    author: 'John Smith',
+    slug: 'cybersecurity-best-practices-remote-work',
+  },
+  {
+    title: 'Leveraging AI for Business Intelligence',
+    excerpt:
+      'Discover how artificial intelligence is revolutionizing business intelligence and decision-making processes.',
+    image: '/service3.jpg',
+    date: 'June 20, 2023',
+    author: 'Emily Chen',
+    slug: 'leveraging-ai-business-intelligence',
+  },
+];
+---
+
+<MainLayout title={`${post.title} | TechNova Blog`} description={post.excerpt}>
+  <main class='bg-gray-50 min-h-screen'>
+    <!-- Hero Section -->
+    <section class='relative section-padding px-4'>
+      <Image
+        src={post.image}
+        alt={post.title}
+        width={1920}
+        height={1080}
+        class='absolute inset-0 w-full h-full object-cover'
+      />
+      <div
+        class='absolute inset-0 bg-gradient-to-r from-primary to-primary-dark opacity-90'
+      >
+      </div>
+      <div
+        class='relative z-10 container mx-auto max-w-4xl text-center text-white'
+      >
+        <h1 class='text-4xl md:text-5xl font-bold mb-6'>{post.title}</h1>
+        <p class='text-xl mb-4'>{post.date} | {post.category}</p>
+        <p class='text-lg'>By {post.author.name}</p>
+      </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class='section-padding px-4'>
+      <div class='container mx-auto max-w-4xl'>
+        <article class='bg-white rounded-lg shadow-md p-8 mb-12'>
+          <div class='prose prose-lg max-w-none' set:html={post.content} />
+        </article>
+
+        <div
+          class='flex flex-col md:flex-row justify-between items-start md:items-center space-y-8 md:space-y-0 mb-12'
+        >
+          <!-- <AuthorCard author={post.author} /> -->
+          <ShareButtons title={post.title} url={Astro.url} />
+        </div>
+
+        <RelatedPosts posts={relatedPosts} />
+      </div>
+    </section>
+  </main>
+</MainLayout>
