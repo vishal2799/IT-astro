@@ -1,0 +1,49 @@
+---
+interface Props {
+  currentPage: number;
+  totalPages: number;
+}
+
+const { currentPage, totalPages } = Astro.props;
+
+const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
+---
+
+<nav class='flex justify-center items-center space-x-2'>
+  <a
+    href={currentPage > 1 ? `/blog?page=${currentPage - 1}` : '#'}
+    class={`px-4 py-2 rounded-md ${
+      currentPage === 1
+        ? 'bg-gray-200 text-gray-500 cursor-not-allowed'
+        : 'bg-primary text-white hover:bg-primary-dark'
+    }`}
+  >
+    Previous
+  </a>
+
+  {
+    pageNumbers.map((number) => (
+      <a
+        href={`/blog?page=${number}`}
+        class={`px-4 py-2 rounded-md ${
+          currentPage === number
+            ? 'bg-primary text-white'
+            : 'bg-white text-primary hover:bg-gray-100'
+        }`}
+      >
+        {number}
+      </a>
+    ))
+  }
+
+  <a
+    href={currentPage < totalPages ? `/blog?page=${currentPage + 1}` : '#'}
+    class={`px-4 py-2 rounded-md ${
+      currentPage === totalPages
+        ? 'bg-gray-200 text-gray-500 cursor-not-allowed'
+        : 'bg-primary text-white hover:bg-primary-dark'
+    }`}
+  >
+    Next
+  </a>
+</nav>
