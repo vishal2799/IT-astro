@@ -7,6 +7,8 @@ import TestimonialCard from '../components/TestimonialCard.astro';
 import CTA from '../components/CTA.astro';
 import { projects, services } from '../constants';
 import { technology } from '../constants';
+import { Image } from 'astro:assets';
+import BlogPostCard from '../components/BlogPostCard.astro';
 
 // const services = [
 //   {
@@ -103,6 +105,36 @@ const testimonials = [
     image: '/images/testimonial-2.jpg',
   },
 ];
+
+const blogPosts = [
+  {
+    title: 'The Future of Cloud Computing: Trends to Watch',
+    excerpt:
+      'Explore the emerging trends in cloud computing that are shaping the future of IT infrastructure.',
+    image: '/service1.jpg',
+    date: 'May 15, 2023',
+    author: 'Jane Doe',
+    slug: 'future-of-cloud-computing',
+  },
+  {
+    title: 'Cybersecurity Best Practices for Remote Work',
+    excerpt:
+      'Learn essential cybersecurity measures to protect your business in the era of remote work.',
+    image: '/service2.jpg',
+    date: 'June 2, 2023',
+    author: 'John Smith',
+    slug: 'cybersecurity-best-practices-remote-work',
+  },
+  {
+    title: 'Leveraging AI for Business Intelligence',
+    excerpt:
+      'Discover how artificial intelligence is revolutionizing business intelligence and decision-making processes.',
+    image: '/service3.jpg',
+    date: 'June 20, 2023',
+    author: 'Emily Chen',
+    slug: 'leveraging-ai-business-intelligence',
+  },
+];
 ---
 
 <MainLayout
@@ -149,6 +181,46 @@ const testimonials = [
             class='bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition duration-300 text-lg'
             >Get in Touch</a
           >
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class='section-padding px-4'>
+      <div class='container mx-auto max-w-6xl'>
+        <div class='flex flex-col md:flex-row items-center gap-12'>
+          <div class='md:w-1/2'>
+            <h2 class='text-3xl md:text-4xl font-bold mb-6 text-gray-900'>
+              About Alicorn Solutions
+            </h2>
+            <p class='text-lg text-gray-700 mb-6'>
+              Alicorn Solutions is a leading IT services company dedicated to
+              empowering businesses through innovative technology solutions.
+              With over a decade of experience, we've helped hundreds of
+              organizations across various industries to transform their digital
+              landscape and achieve their goals.
+            </p>
+            <p class='text-lg text-gray-700 mb-6'>
+              Our team of expert consultants and developers are passionate about
+              staying at the forefront of technological advancements, ensuring
+              that our clients always have access to the most cutting-edge
+              solutions.
+            </p>
+            <a
+              href='/about-us'
+              class='inline-block bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full transition duration-300 text-lg'
+              >Learn More About Us</a
+            >
+          </div>
+          <div class='md:w-1/2'>
+            <Image
+              src='/service21.jpg'
+              alt='About Alicorn Solutions'
+              width={600}
+              height={400}
+              class='rounded-lg shadow-xl'
+            />
+          </div>
         </div>
       </div>
     </section>
@@ -242,6 +314,38 @@ const testimonials = [
             href='/projects'
             class='inline-block bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full transition duration-300 text-lg'
             >View All Projects</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class='section-padding px-4'>
+      <div class='container mx-auto max-w-6xl'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900'
+        >
+          Latest Insights
+        </h2>
+        <div class='grid grid-cols-1 md:grid-cols-3 gap-8'>
+          {
+            blogPosts.map((post) => (
+              <BlogPostCard
+                title={post.title}
+                excerpt={post.excerpt}
+                image={post.image}
+                date={post.date}
+                author={post.author}
+                slug={post.slug}
+              />
+            ))
+          }
+        </div>
+        <div class='text-center mt-12'>
+          <a
+            href='/blog'
+            class='inline-block bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full transition duration-300 text-lg'
+            >Read More Articles</a
           >
         </div>
       </div>
