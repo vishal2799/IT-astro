@@ -1,0 +1,60 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+  address: string;
+  email: string;
+  phone: string;
+  socialMedia: {
+    name: string;
+    url: string;
+    icon: string;
+  }[];
+}
+
+const { address, email, phone, socialMedia } = Astro.props;
+---
+
+<div class='bg-white rounded-lg shadow-md p-8'>
+  <h2 class='text-2xl font-bold mb-6 text-gray-900'>Contact Information</h2>
+  <div class='space-y-4'>
+    <div class='flex items-start'>
+      <Icon name='globe' class='w-6 h-6 text-primary mr-4 mt-1' />
+      <p class='text-gray-700'>{address}</p>
+    </div>
+    <div class='flex items-center'>
+      <Icon name='envelope' class='w-6 h-6 text-primary mr-4' />
+      <a
+        href={`mailto:${email}`}
+        class='text-gray-700 hover:text-primary transition duration-300'
+        >{email}</a
+      >
+    </div>
+    <div class='flex items-center'>
+      <Icon name='telephone' class='w-6 h-6 text-primary mr-4' />
+      <a
+        href={`tel:${phone}`}
+        class='text-gray-700 hover:text-primary transition duration-300'
+        >{phone}</a
+      >
+    </div>
+  </div>
+  <div class='mt-8'>
+    <h3 class='text-xl font-semibold mb-4 text-gray-900'>Follow Us</h3>
+    <div class='flex space-x-4'>
+      {
+        socialMedia.map((platform) => (
+          <a
+            href={platform.url}
+            target='_blank'
+            rel='noopener noreferrer'
+            class='text-gray-600 hover:text-primary transition duration-300'
+          >
+            <Icon name={platform.icon} class='w-6 h-6' />
+            <span class='sr-only'>{platform.name}</span>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</div>
