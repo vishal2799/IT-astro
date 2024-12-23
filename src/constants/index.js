@@ -440,7 +440,7 @@ const services = [
   // },
   {
     title: 'Business Automation Solutions',
-    icon: 'automation',
+    icon: 'robot',
     description:
       'Drive efficiency and innovation with our comprehensive business automation solutions powered by the latest technologies.',
     heroImage: '/servicebas.jpg',
@@ -520,7 +520,7 @@ const services = [
   },
   {
     title: 'UI/UX Design & Development',
-    icon: 'design',
+    icon: 'palette',
     description:
       'Craft user-centric designs that blend aesthetics and functionality for seamless digital experiences.',
     heroImage: '/serviceuiux.jpg',
