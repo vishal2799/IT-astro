@@ -2,7 +2,8 @@
 import MainLayout from '../../layouts/MainLayout.astro';
 import ProjectCard from '../../components/ProjectCard.astro';
 import { projects } from '../../constants';
-
+import ProjectBreadcrumbImage from '../../assets/images/ProjectBreadcrumb.jpg';
+import { Image } from 'astro:assets';
 // const projects = [
 //   {
 //     title: 'Global E-commerce Platform Overhaul',
@@ -65,18 +66,18 @@ import { projects } from '../../constants';
     <section
       class='relative h-[40vh] min-h-[300px] flex items-center justify-center'
     >
-      <!-- <Image
-        src='/service21.jpg'
-        alt='TechNova Projects'
+      <Image
+        src={ProjectBreadcrumbImage}
+        alt='Alicorn Solutions Projects'
         width={1920}
         height={1080}
         class='absolute inset-0 w-full h-full object-cover'
-      /> -->
-      <img
+      />
+      <!-- <img
         src='/breadcrumb1.jpg'
         alt='TechNova Projects'
         class='absolute inset-0 w-full h-full object-cover'
-      />
+      /> -->
       <div class='absolute inset-0 bg-black opacity-50'></div>
       <div class='relative z-10 text-center text-white px-4'>
         <h1 class='text-4xl md:text-6xl font-bold mb-4'>Our Projects</h1>
