@@ -286,10 +286,10 @@
 const services = [
   {
     title: 'Custom Software Development',
-    icon: 'settings',
+    icon: 'gear',
     description:
       'Empowering businesses with tailor-made software solutions using modern technologies for frontend, backend, and full-stack development.',
-    heroImage: '/custom-software-development.jpg',
+    heroImage: '/service21.jpg',
     overview:
       'Our Custom Software Development services are designed to help businesses overcome unique challenges and unlock new opportunities. Whether you need a dynamic frontend to deliver engaging user experiences, a robust backend to handle complex data and operations, or a comprehensive full-stack solution that brings everything together, we’ve got you covered. <br><br> We specialize in cutting-edge technologies like ReactJS and Angular for frontend development, Node.js, .NET, and Java for backend systems, and full-stack expertise for seamless, end-to-end integration. From startups looking for agile solutions to enterprises requiring scalable and secure platforms, we adapt to your needs and deliver exceptional results. <br><br> Our team’s deep understanding of UI/UX design ensures that your software is intuitive and user-friendly, while our cloud integration services, including Azure, AWS, and Google Cloud, ensure scalability and performance. Whether it’s custom applications, enterprise-grade systems, or cross-platform solutions, we build software that not only meets your requirements but also drives growth and innovation for your business.',
     features: [
@@ -364,6 +364,236 @@ const services = [
       title: 'Let’s Build the Future of Your Business Together',
       description:
         'Ready to transform your ideas into powerful, custom software solutions? Partner with us to create innovative, scalable, and user-focused applications tailored to your business needs. Contact us today to get started on your next big project!',
+    },
+  },
+  // {
+  //   title: 'Cloud Solutions',
+  //   icon: 'cloud',
+  //   description:
+  //     'Empower your business with scalable and secure cloud solutions tailored to your needs.',
+  //   heroImage: '/service21.jpg',
+  //   overview:
+  //     'Our Cloud Solutions help businesses leverage the power of cloud computing to achieve scalability, flexibility, and cost-efficiency. From public cloud services like Azure, AWS, and Google Cloud to hybrid and private cloud infrastructures, we provide end-to-end cloud services tailored to your specific business requirements.<br><br>Our team ensures a seamless transition to the cloud, offering expertise in cloud migration, architecture design, and ongoing management. By embracing the cloud, you can improve collaboration, enhance operational efficiency, and stay ahead in today’s fast-paced digital landscape.',
+  //   features: [
+  //     'Cloud migration and deployment',
+  //     'Multi-cloud and hybrid cloud solutions',
+  //     'Scalable and secure cloud architectures',
+  //     'Ongoing cloud management and optimization',
+  //   ],
+  //   benefits: [
+  //     {
+  //       title: 'Enhanced Scalability',
+  //       desc: 'Easily scale resources up or down based on business needs without infrastructure limitations.',
+  //     },
+  //     {
+  //       title: 'Improved Cost Efficiency',
+  //       desc: 'Reduce operational costs with a pay-as-you-go model and optimized resource utilization.',
+  //     },
+  //     {
+  //       title: 'Increased Security',
+  //       desc: 'Leverage industry-leading security protocols to protect your data and systems.',
+  //     },
+  //     {
+  //       title: 'Greater Business Agility',
+  //       desc: 'Accelerate innovation and respond to market changes quickly with flexible cloud solutions.',
+  //     },
+  //   ],
+  //   process: [
+  //     {
+  //       title: 'Assessment',
+  //       description:
+  //         'Analyze your existing IT infrastructure and define cloud objectives.',
+  //     },
+  //     {
+  //       title: 'Planning',
+  //       description:
+  //         'Design a custom cloud strategy aligned with your business goals.',
+  //     },
+  //     {
+  //       title: 'Migration',
+  //       description:
+  //         'Execute a seamless migration to the cloud with minimal disruption.',
+  //     },
+  //     {
+  //       title: 'Optimization',
+  //       description:
+  //         'Continuously monitor and enhance cloud performance for maximum ROI.',
+  //     },
+  //   ],
+  //   faq: [
+  //     {
+  //       question: 'Which cloud platform should I choose?',
+  //       answer:
+  //         'We help you select the best platform, such as Azure, AWS, or Google Cloud, based on your business needs and goals.',
+  //     },
+  //     {
+  //       question: 'How secure are cloud solutions?',
+  //       answer:
+  //         'Cloud platforms employ advanced security protocols, including encryption and multi-factor authentication, to ensure data safety.',
+  //     },
+  //   ],
+  //   cta: {
+  //     title: 'Unlock the Power of the Cloud',
+  //     description:
+  //       'Take your business to the next level with our expert cloud solutions. Contact us today to start your cloud transformation journey!',
+  //   },
+  // },
+  {
+    title: 'Business Automation Solutions',
+    icon: 'automation',
+    description:
+      'Drive efficiency and innovation with our comprehensive business automation solutions powered by the latest technologies.',
+    heroImage: '/service21.jpg',
+    overview:
+      "Transform your business operations with our comprehensive Business Automation Solutions. By leveraging cutting-edge platforms such as Power Platform (Power Apps, Power Automate, Power BI), Robotic Process Automation (RPA) tools like UiPath and Automation Anywhere, and Business Process Management (BPM) frameworks such as K2 and Nintex, we enable your organization to achieve unprecedented efficiency and agility.<br><br>Our tailored solutions empower businesses to automate repetitive tasks, streamline workflows, and gain actionable insights from data, driving operational excellence and fostering innovation. Whether you're looking to optimize resource allocation, enhance compliance, or reduce costs, our expertise ensures that every automation initiative aligns with your strategic goals.<br><br>With a focus on scalability and seamless integration, our Business Automation Solutions are designed to adapt to your unique needs, helping your organization stay competitive in an ever-evolving digital landscape.",
+    features: [
+      'End-to-end workflow automation using Power Automate',
+      'Custom business applications with Power Apps',
+      'Insightful data analytics and visualization with Power BI',
+      'RPA implementation using UiPath and Automation Anywhere',
+      'Process modeling and optimization with K2 and Nintex',
+    ],
+    benefits: [
+      {
+        title: 'Streamlined Operations',
+        desc: 'Eliminate inefficiencies and focus on value-driven tasks with automated workflows.',
+      },
+      {
+        title: 'Enhanced Decision-Making',
+        desc: 'Leverage real-time insights and analytics to drive informed business decisions.',
+      },
+      {
+        title: 'Cost Savings',
+        desc: 'Reduce operational expenses by automating repetitive tasks and optimizing resource allocation.',
+      },
+      {
+        title: 'Scalability and Flexibility',
+        desc: 'Easily scale your automation efforts to meet evolving business requirements.',
+      },
+    ],
+    process: [
+      {
+        title: 'Discovery and Analysis',
+        description:
+          'Assess business processes to identify automation opportunities and define goals.',
+      },
+      {
+        title: 'Solution Design',
+        description:
+          'Develop tailored automation solutions using the right combination of tools and technologies.',
+      },
+      {
+        title: 'Implementation',
+        description:
+          'Deploy automation workflows and integrate them seamlessly with your existing systems.',
+      },
+      {
+        title: 'Optimization and Support',
+        description:
+          'Continuously monitor and refine automation processes to maximize efficiency.',
+      },
+    ],
+    faq: [
+      {
+        question:
+          'What is the Power Platform, and how can it help my business?',
+        answer:
+          'The Power Platform includes Power Apps for app development, Power Automate for workflow automation, and Power BI for data visualization, enabling businesses to streamline operations and improve decision-making.',
+      },
+      {
+        question: 'How is RPA different from traditional automation?',
+        answer:
+          'RPA uses software bots to mimic human actions, automating repetitive and rule-based tasks without altering existing systems.',
+      },
+      {
+        question:
+          'Can BPM tools like K2 and Nintex integrate with my existing systems?',
+        answer:
+          'Yes, BPM tools are designed to integrate seamlessly with various enterprise systems, providing a cohesive and optimized workflow.',
+      },
+    ],
+    cta: {
+      title: 'Elevate Your Business with Automation',
+      description:
+        'Partner with us to unlock the full potential of business automation. Let’s streamline your processes, enhance productivity, and drive growth. Contact us now!',
+    },
+  },
+  {
+    title: 'UI/UX Design & Development',
+    icon: 'design',
+    description:
+      'Craft user-centric designs that blend aesthetics and functionality for seamless digital experiences.',
+    heroImage: '/service21.jpg',
+    overview:
+      "Delight your users and elevate your digital presence with our UI/UX Design & Development services. We specialize in creating visually appealing, intuitive, and responsive designs for web and mobile platforms that prioritize user satisfaction and business goals.<br><br>Our process begins with in-depth user research and prototyping to ensure the final product aligns with your audience’s needs. With a focus on accessibility compliance and cutting-edge design trends, we deliver solutions that cater to diverse users while meeting industry standards. Whether it's building responsive websites or crafting immersive mobile applications, our team ensures that every interaction is meaningful and engaging.",
+    features: [
+      'Comprehensive user research and journey mapping',
+      'Interactive prototyping and wireframing',
+      'Responsive designs optimized for web and mobile',
+      'Accessibility compliance for inclusive user experiences',
+      'Creative, modern, and brand-aligned UI designs',
+    ],
+    benefits: [
+      {
+        title: 'Enhanced User Satisfaction',
+        desc: 'Deliver intuitive and delightful experiences that keep users engaged and loyal.',
+      },
+      {
+        title: 'Increased Conversion Rates',
+        desc: 'Optimize user journeys to drive actions and achieve your business objectives.',
+      },
+      {
+        title: 'Future-Proof Designs',
+        desc: 'Leverage responsive and scalable designs to adapt to evolving user behaviors.',
+      },
+      {
+        title: 'Inclusive Accessibility',
+        desc: 'Ensure compliance with accessibility standards to reach a broader audience.',
+      },
+    ],
+    process: [
+      {
+        title: 'Research and Analysis',
+        description:
+          'Understand user needs, preferences, and pain points through detailed research.',
+      },
+      {
+        title: 'Wireframing and Prototyping',
+        description:
+          'Create interactive prototypes to visualize and test the user journey.',
+      },
+      {
+        title: 'Design and Development',
+        description:
+          'Craft responsive, visually appealing designs and integrate them seamlessly with development.',
+      },
+      {
+        title: 'Testing and Refinement',
+        description:
+          'Conduct usability testing and incorporate feedback to deliver the best user experience.',
+      },
+    ],
+    faq: [
+      {
+        question: 'What is the importance of user research in UI/UX design?',
+        answer:
+          "User research helps understand the target audience's needs, preferences, and behaviors, ensuring that the design aligns with their expectations.",
+      },
+      {
+        question: 'How do you ensure accessibility in your designs?',
+        answer:
+          'We adhere to WCAG standards, incorporating features like text alternatives, keyboard navigation, and proper color contrast to make designs inclusive for all users.',
+      },
+      {
+        question: 'Can you redesign an existing website or app?',
+        answer:
+          'Yes, we specialize in enhancing existing designs by identifying pain points and optimizing the user experience.',
+      },
+    ],
+    cta: {
+      title: 'Transform Your Digital Experience with UI/UX Excellence',
+      description:
+        'Partner with us to create user-friendly, aesthetically pleasing designs that captivate your audience. Contact us today to discuss your UI/UX needs!',
     },
   },
 ];

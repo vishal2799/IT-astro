@@ -85,7 +85,10 @@ import { Image } from 'astro:assets';
           {
             services.map((service) => (
               <a
-                href={`/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`}
+                href={`/services/${service.title
+                  .toLowerCase()
+                  .replace(/\s+/g, '-') // Replace spaces with hyphens
+                  .replace(/[^\w-]/g, '')}`}
                 class='group'
               >
                 <div class='bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 group-hover:shadow-xl'>

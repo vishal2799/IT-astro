@@ -8,7 +8,12 @@ export async function getStaticPaths() {
       .filter((s) => s.title !== service.title)
       .slice(0, 3);
     return {
-      params: { service: service.title.toLowerCase().replace(/\s+/g, '-') },
+      params: {
+        service: service.title
+          .toLowerCase()
+          .replace(/\s+/g, '-')
+          .replace(/[^\w-]/g, ''),
+      },
       props: { serviceData: service, relatedServices },
     };
   });
@@ -234,7 +239,10 @@ const { serviceData, relatedServices } = Astro.props;
             <div class='grid grid-cols-1 md:grid-cols-3 gap-8'>
               {relatedServices.map((service) => (
                 <a
-                  href={`/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`}
+                  href={`/services/${service.title
+                    .toLowerCase()
+                    .replace(/\s+/g, '-')
+                    .replace(/[^\w-]/g, '')}`}
                   class='block group'
                 >
                   <div class='bg-white p-6 rounded-lg shadow-md transition duration-300 group-hover:shadow-xl'>
