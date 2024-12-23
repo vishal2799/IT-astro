@@ -87,8 +87,19 @@ const { financeData, relatedSolutions } = Astro.props;
       </div>
     </section>
 
-    <!-- Features Section -->
     <section class='section-padding'>
+      <div class='container mx-auto px-4'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900'
+        >
+          Overview
+        </h2>
+        <p class='text-gray-800 text-lg' set:html={financeData.overview} />
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class='section-padding bg-gray-50'>
       <div class='container mx-auto px-4'>
         <h2
           class='text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900'
@@ -144,7 +155,7 @@ const { financeData, relatedSolutions } = Astro.props;
         <h2
           class='text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900'
         >
-          How FinanceFlow Works
+          How It Works
         </h2>
         <div
           class='flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12'
