@@ -9,6 +9,8 @@ import { projects, services } from '../constants';
 import { technology } from '../constants';
 import { Image } from 'astro:assets';
 import BlogPostCard from '../components/BlogPostCard.astro';
+import HomeHeroImage from '../assets/images/HomeHero.jpg';
+import HomeAboutImage from '../assets/images/HomeAbout.jpg';
 
 // const services = [
 //   {
@@ -147,8 +149,8 @@ const blogPosts = [
       class='relative h-[70vh] min-h-[500px] flex items-center justify-center'
     >
       <Image
-        src='/service21.jpg'
-        alt='TechNova IT Services'
+        src={HomeHeroImage}
+        alt='Alicorn Solutions'
         width={1920}
         height={1080}
         class='absolute inset-0 w-full h-full object-cover'
@@ -173,7 +175,7 @@ const blogPosts = [
         <div class='flex flex-wrap justify-center gap-4'>
           <a
             href='/services'
-            class='bg-white text-primary hover:bg-gray-100 font-bold py-3 px-8 rounded-full transition duration-300 text-lg'
+            class='bg-white/90 text-primary hover:bg-white font-bold py-3 px-8 rounded-full transition duration-300 text-lg'
             >Our Services</a
           >
           <a
@@ -214,7 +216,7 @@ const blogPosts = [
           </div>
           <div class='md:w-1/2'>
             <Image
-              src='/service21.jpg'
+              src={HomeAboutImage}
               alt='About Alicorn Solutions'
               width={600}
               height={400}
