@@ -51,6 +51,18 @@ const { serviceData, relatedServices } = Astro.props;
       </div>
     </section>
 
+    <!-- Overview -->
+    <section class='section-padding px-4 bg-gray-50'>
+      <div class='container mx-auto max-w-6xl'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900'
+        >
+          Overview
+        </h2>
+        <p class='text-gray-800 text-lg' set:html={serviceData.overview} />
+      </div>
+    </section>
+
     <!-- Features Section (Previous Version) -->
     <section class='section-padding px-4'>
       <div class='container mx-auto max-w-6xl'>
@@ -91,7 +103,7 @@ const { serviceData, relatedServices } = Astro.props;
         <h2
           class='text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900'
         >
-          Our Migration Process
+          Our Process
         </h2>
         <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
           {
@@ -117,7 +129,7 @@ const { serviceData, relatedServices } = Astro.props;
         <h2
           class='text-3xl md:text-4xl font-bold text-gray-900 text-center mb-16'
         >
-          Benefits of Cloud Migration
+          Benefits of {serviceData.title}
         </h2>
         <div class='grid grid-cols-1 md:grid-cols-2 gap-12'>
           {
@@ -135,7 +147,7 @@ const { serviceData, relatedServices } = Astro.props;
     </section>
 
     <!-- Case Study Section -->
-    <section class='section-padding px-4 bg-primary text-white'>
+    <!-- <section class='section-padding px-4 bg-primary text-white'>
       <div class='container mx-auto max-w-4xl text-center'>
         <h2 class='text-3xl md:text-4xl font-bold mb-6'>Case Study</h2>
         <h3 class='text-2xl md:text-3xl font-semibold mb-4'>
@@ -148,7 +160,7 @@ const { serviceData, relatedServices } = Astro.props;
           >Read Case Study</a
         >
       </div>
-    </section>
+    </section> -->
 
     <!-- FAQ Section (Collapsible) -->
     <section class='section-padding px-4'>

@@ -285,229 +285,80 @@
 
 const services = [
   {
-    title: 'Business Process Automation Services',
-    icon: 'cloud',
+    title: 'Custom Software Development',
+    icon: 'settings',
     description:
-      'Streamline your business operations with our cutting-edge Business Process Automation solutions.',
-    heroImage: '/breadcrumb1.jpg',
+      'Empowering businesses with tailor-made software solutions using modern technologies for frontend, backend, and full-stack development.',
+    heroImage: '/custom-software-development.jpg',
+    overview:
+      'Our Custom Software Development services are designed to help businesses overcome unique challenges and unlock new opportunities. Whether you need a dynamic frontend to deliver engaging user experiences, a robust backend to handle complex data and operations, or a comprehensive full-stack solution that brings everything together, we’ve got you covered. <br><br> We specialize in cutting-edge technologies like ReactJS and Angular for frontend development, Node.js, .NET, and Java for backend systems, and full-stack expertise for seamless, end-to-end integration. From startups looking for agile solutions to enterprises requiring scalable and secure platforms, we adapt to your needs and deliver exceptional results. <br><br> Our team’s deep understanding of UI/UX design ensures that your software is intuitive and user-friendly, while our cloud integration services, including Azure, AWS, and Google Cloud, ensure scalability and performance. Whether it’s custom applications, enterprise-grade systems, or cross-platform solutions, we build software that not only meets your requirements but also drives growth and innovation for your business.',
     features: [
-      'End-to-end process analysis and optimization',
-      'Automated workflow design and deployment',
-      'Integration with enterprise applications',
-      'Real-time monitoring and reporting',
+      'Frontend development with ReactJS, Angular, and modern UI/UX frameworks',
+      'Backend solutions using Node.js, Java, .NET, and other robust technologies',
+      'Full-stack development for seamless end-to-end solutions',
+      'Integration with cloud platforms like Azure, AWS, and Google Cloud',
     ],
     benefits: [
       {
-        title: 'Improved Operational Efficiency',
-        desc: 'Automate repetitive tasks and focus on core business operations for increased productivity.',
+        title: 'User-Centric Frontend',
+        desc: 'Deliver engaging experiences with intuitive and responsive interfaces.',
       },
       {
-        title: 'Enhanced Process Visibility',
-        desc: 'Gain real-time insights into business processes with comprehensive analytics and dashboards.',
+        title: 'Scalable Backend Systems',
+        desc: 'Ensure robust data processing, storage, and API integration for your applications.',
       },
       {
-        title: 'Reduced Operational Costs',
-        desc: 'Lower costs by reducing manual work and streamlining resource allocation.',
+        title: 'Comprehensive Full-Stack Solutions',
+        desc: 'Achieve seamless communication between frontend and backend for optimal performance.',
       },
       {
-        title: 'Better Compliance and Governance',
-        desc: 'Ensure regulatory compliance with automated record-keeping and audit trails.',
+        title: 'Faster Time-to-Market',
+        desc: 'Leverage our expertise and efficient processes to deploy solutions quickly.',
       },
     ],
     process: [
       {
-        title: 'Discovery',
+        title: 'Requirement Analysis',
         description:
-          'Identify key business processes and assess automation potential.',
+          'Understand client needs and define the scope for custom software.',
       },
       {
-        title: 'Design',
+        title: 'Frontend and Backend Design',
         description:
-          'Create tailored automation workflows based on business needs.',
+          'Design intuitive UI/UX and architect scalable backend systems.',
       },
       {
-        title: 'Deployment',
+        title: 'Development and Testing',
         description:
-          'Implement and test automated processes for seamless integration.',
+          'Build and test the solution using cutting-edge technologies and frameworks.',
       },
       {
-        title: 'Optimization',
-        description: 'Continuously enhance workflows for optimal performance.',
+        title: 'Integration and Deployment',
+        description:
+          'Integrate with third-party systems and deploy to your chosen environment.',
+      },
+      {
+        title: 'Ongoing Support',
+        description:
+          'Maintain, update, and enhance software for evolving business needs.',
       },
     ],
-    casestudy: {
-      title: 'Global Manufacturer Boosts Efficiency by 60% with BPA',
-      description:
-        'Learn how a major manufacturer automated production workflows, reducing errors and increasing efficiency.',
-      link: '/case-studies/bpa-efficiency',
-    },
     faq: [
       {
-        question: 'What processes are best suited for BPA?',
+        question: 'What technologies do you use for frontend development?',
         answer:
-          'Repetitive, rule-based, and high-volume tasks are ideal for Business Process Automation.',
+          'We specialize in ReactJS, Angular, and other modern frameworks to create dynamic and responsive user interfaces.',
       },
       {
-        question: 'How long does BPA implementation take?',
+        question: 'Do you handle both frontend and backend development?',
         answer:
-          'Implementation timelines vary based on process complexity but typically range from a few weeks to a few months.',
-      },
-    ],
-    relatedServices: [
-      { title: 'RPA Implementation', link: '/services/rpa-implementation' },
-      { title: 'Workflow Automation', link: '/services/workflow-automation' },
-      {
-        title: 'Data Integration Services',
-        link: '/services/data-integration',
-      },
-    ],
-  },
-
-  {
-    title: 'Robotic Process Automation (RPA)',
-    icon: 'robot',
-    description:
-      'Automate repetitive tasks with our intelligent RPA solutions to drive operational efficiency.',
-    heroImage: '/service2.jpg',
-    features: [
-      'Bot design and development',
-      'Process automation consulting',
-      'System integration and deployment',
-      'Ongoing maintenance and support',
-    ],
-    benefits: [
-      {
-        title: 'Faster Task Completion',
-        desc: 'Achieve faster processing with automated task execution.',
+          'Yes, our full-stack development expertise ensures seamless integration between frontend and backend systems.',
       },
       {
-        title: 'Reduced Errors',
-        desc: 'Eliminate manual errors through rule-based automation.',
-      },
-      {
-        title: 'Scalability and Flexibility',
-        desc: 'Scale automation as your business grows.',
-      },
-      {
-        title: 'Increased Employee Satisfaction',
-        desc: 'Free employees from mundane tasks to focus on strategic activities.',
-      },
-    ],
-    process: [
-      {
-        title: 'Process Analysis',
-        description:
-          'Identify automation-ready processes and assess feasibility.',
-      },
-      {
-        title: 'Bot Development',
-        description: 'Design and develop bots tailored to specific tasks.',
-      },
-      {
-        title: 'Deployment and Integration',
-        description: 'Deploy bots and integrate them into existing systems.',
-      },
-      {
-        title: 'Support and Optimization',
-        description: 'Continuously monitor and enhance bot performance.',
-      },
-    ],
-    casestudy: {
-      title: 'Leading Bank Automates Loan Processing with RPA',
-      description:
-        'Discover how a top financial institution reduced loan processing time by automating routine tasks.',
-      link: '/case-studies/rpa-banking',
-    },
-    faq: [
-      {
-        question: 'What tasks can RPA automate?',
+        question: 'Can you integrate with our existing systems?',
         answer:
-          'RPA is ideal for tasks such as data entry, data validation, and report generation.',
+          'Absolutely, we specialize in building solutions that integrate with your existing systems, databases, and APIs.',
       },
-      {
-        question: 'Is RPA secure?',
-        answer:
-          'Yes, RPA solutions are built with security features to ensure data privacy and compliance.',
-      },
-    ],
-    relatedServices: [
-      { title: 'Business Process Automation', link: '/services/bpa' },
-      { title: 'AI and Machine Learning', link: '/services/ai-ml' },
-      { title: 'Data Analytics Services', link: '/services/data-analytics' },
-    ],
-  },
-
-  {
-    title: 'Low-Code Automation (BPM)',
-    icon: 'pie-chart',
-    description:
-      'Transform your business with low-code automation powered by BPM solutions.',
-    heroImage: '/service3.jpg',
-    features: [
-      'Drag-and-drop workflow design',
-      'Pre-built connectors and integrations',
-      'Process monitoring and optimization',
-      'Collaborative process design tools',
-    ],
-    benefits: [
-      {
-        title: 'Rapid Application Development',
-        desc: 'Create custom business applications with minimal coding.',
-      },
-      {
-        title: 'Enhanced Collaboration',
-        desc: 'Enable cross-functional teams to collaborate on process design.',
-      },
-      {
-        title: 'Greater Agility',
-        desc: 'Adapt quickly to changing business requirements.',
-      },
-      {
-        title: 'Improved Customer Experience',
-        desc: 'Deliver faster, more responsive services to customers.',
-      },
-    ],
-    process: [
-      {
-        title: 'Requirement Gathering',
-        description:
-          'Define business requirements and desired process outcomes.',
-      },
-      {
-        title: 'App Development',
-        description: 'Build and deploy applications with low-code tools.',
-      },
-      {
-        title: 'Integration',
-        description: 'Connect with existing enterprise systems.',
-      },
-      {
-        title: 'Continuous Improvement',
-        description: 'Monitor and optimize processes for better performance.',
-      },
-    ],
-    casestudy: {
-      title: 'Healthcare Provider Enhances Patient Services with BPM',
-      description:
-        'Learn how a healthcare organization improved patient care through low-code process automation.',
-      link: '/case-studies/bpm-healthcare',
-    },
-    faq: [
-      {
-        question: 'What is low-code automation?',
-        answer:
-          'Low-code automation enables business process automation with minimal coding using visual tools.',
-      },
-      {
-        question: 'Who can use low-code platforms?',
-        answer:
-          'Both IT professionals and business users can build solutions with low-code platforms.',
-      },
-    ],
-    relatedServices: [
-      { title: 'Workflow Automation', link: '/services/workflow' },
-      { title: 'App Development', link: '/services/app-dev' },
-      { title: 'Data Integration', link: '/services/data-integration' },
     ],
   },
 ];
