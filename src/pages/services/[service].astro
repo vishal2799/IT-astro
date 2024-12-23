@@ -210,11 +210,10 @@ const { serviceData, relatedServices } = Astro.props;
     <section class='section-padding px-4 bg-gray-50'>
       <div class='container mx-auto max-w-3xl text-center'>
         <h2 class='text-3xl md:text-4xl font-bold mb-6'>
-          Ready to Migrate to the Cloud?
+          {serviceData.cta.title}
         </h2>
         <p class='text-xl text-gray-600 mb-8'>
-          Let our experts guide you through a seamless cloud migration process.
-          Get in touch today for a free consultation.
+          {serviceData.cta.description}
         </p>
         <a
           href='/contact-us'
