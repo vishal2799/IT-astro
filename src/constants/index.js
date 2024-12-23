@@ -962,6 +962,71 @@ const solutions = [
       },
     ],
   },
+  {
+    name: 'Customer-Centric Platforms',
+    tagline: 'Deliver Exceptional Customer Experiences with Tailored Solutions',
+    description:
+      'Empower your business with e-commerce platforms and data analytics dashboards that prioritize customer satisfaction and drive engagement.',
+    heroImage: '/breadcrumb1.jpg',
+    overview: `In today’s competitive landscape, businesses need platforms that not only meet customer expectations but exceed them.<br><br>
+    Our Customer-Centric Platforms are designed to provide seamless and engaging user experiences. We develop robust e-commerce platforms using modern frameworks like React, Node.js, and Astro, ensuring fast, secure, and scalable solutions. These platforms are equipped with advanced features such as personalized recommendations, streamlined checkouts, and mobile responsiveness to maximize customer satisfaction and retention.<br><br>
+    Additionally, our expertise in building data analytics dashboards with tools like Power BI and Tableau enables businesses to gain actionable insights into customer behavior, preferences, and trends. These dashboards transform raw data into visual stories, empowering you to make informed decisions that enhance your products and services.<br><br>
+    By combining cutting-edge technology with a deep understanding of customer needs, we help businesses foster stronger connections and achieve sustainable growth.`,
+    process: [
+      {
+        title: 'Platform Development',
+        description:
+          'Build responsive e-commerce platforms or custom dashboards tailored to business needs.',
+      },
+      {
+        title: 'Data Integration',
+        description:
+          'Integrate customer data sources to ensure unified analytics and personalized experiences.',
+      },
+      {
+        title: 'Launch & Optimization',
+        description:
+          'Deploy the platform with thorough testing and continuously improve based on customer feedback.',
+      },
+    ],
+    features: [
+      {
+        title: 'Responsive E-Commerce Platforms',
+        description:
+          'Develop feature-rich e-commerce sites optimized for all devices and customer journeys.',
+        icon: 'bag-check', // Bootstrap icon
+      },
+      {
+        title: 'Powerful Data Dashboards',
+        description:
+          'Create interactive dashboards with Power BI or Tableau for actionable customer insights.',
+        icon: 'graph-up', // Bootstrap icon
+      },
+      {
+        title: 'Personalization at Scale',
+        description:
+          'Enable personalized recommendations and targeted experiences based on customer data.',
+        icon: 'stars', // Bootstrap icon
+      },
+    ],
+    faq: [
+      {
+        question: 'Can the platforms handle high traffic?',
+        answer:
+          'Yes, we design scalable platforms that maintain performance during peak traffic.',
+      },
+      {
+        question: 'Do you offer integration with payment gateways?',
+        answer:
+          'Absolutely. We support integration with leading payment gateways for secure and seamless transactions.',
+      },
+      {
+        question: 'Are the analytics dashboards customizable?',
+        answer:
+          'Yes, our dashboards are fully customizable to match your business goals and metrics.',
+      },
+    ],
+  },
 
   // {
   //   name: 'HRFlow',
