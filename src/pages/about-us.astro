@@ -4,6 +4,7 @@ import MainLayout from '../layouts/MainLayout.astro';
 import CTA from '../components/CTA.astro';
 import ValueCard from '../components/ValueCard.astro';
 import AchievementCard from '../components/AchievementCard.astro';
+import AboutBreadcrumbImage from '../assets/images/AboutBreadcrumb.jpg';
 
 const companyValues = [
   {
@@ -66,8 +67,8 @@ const achievements = [
       class='relative h-[50vh] min-h-[400px] flex items-center justify-center'
     >
       <Image
-        src='/breadcrumb2.jpg'
-        alt='About TechNova'
+        src={AboutBreadcrumbImage}
+        alt='About Alicorn Solutions'
         width={1920}
         height={1080}
         class='absolute inset-0 w-full h-full object-cover'
