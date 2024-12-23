@@ -289,7 +289,7 @@ const services = [
     icon: 'gear',
     description:
       'Empowering businesses with tailor-made software solutions using modern technologies for frontend, backend, and full-stack development.',
-    heroImage: '/service21.jpg',
+    heroImage: '/servicecsd.jpg',
     overview:
       'Our Custom Software Development services are designed to help businesses overcome unique challenges and unlock new opportunities. Whether you need a dynamic frontend to deliver engaging user experiences, a robust backend to handle complex data and operations, or a comprehensive full-stack solution that brings everything together, we’ve got you covered. <br><br> We specialize in cutting-edge technologies like ReactJS and Angular for frontend development, Node.js, .NET, and Java for backend systems, and full-stack expertise for seamless, end-to-end integration. From startups looking for agile solutions to enterprises requiring scalable and secure platforms, we adapt to your needs and deliver exceptional results. <br><br> Our team’s deep understanding of UI/UX design ensures that your software is intuitive and user-friendly, while our cloud integration services, including Azure, AWS, and Google Cloud, ensure scalability and performance. Whether it’s custom applications, enterprise-grade systems, or cross-platform solutions, we build software that not only meets your requirements but also drives growth and innovation for your business.',
     features: [
@@ -443,7 +443,7 @@ const services = [
     icon: 'automation',
     description:
       'Drive efficiency and innovation with our comprehensive business automation solutions powered by the latest technologies.',
-    heroImage: '/service21.jpg',
+    heroImage: '/servicebas.jpg',
     overview:
       "Transform your business operations with our comprehensive Business Automation Solutions. By leveraging cutting-edge platforms such as Power Platform (Power Apps, Power Automate, Power BI), Robotic Process Automation (RPA) tools like UiPath and Automation Anywhere, and Business Process Management (BPM) frameworks such as K2 and Nintex, we enable your organization to achieve unprecedented efficiency and agility.<br><br>Our tailored solutions empower businesses to automate repetitive tasks, streamline workflows, and gain actionable insights from data, driving operational excellence and fostering innovation. Whether you're looking to optimize resource allocation, enhance compliance, or reduce costs, our expertise ensures that every automation initiative aligns with your strategic goals.<br><br>With a focus on scalability and seamless integration, our Business Automation Solutions are designed to adapt to your unique needs, helping your organization stay competitive in an ever-evolving digital landscape.",
     features: [
@@ -523,7 +523,7 @@ const services = [
     icon: 'design',
     description:
       'Craft user-centric designs that blend aesthetics and functionality for seamless digital experiences.',
-    heroImage: '/service21.jpg',
+    heroImage: '/serviceuiux.jpg',
     overview:
       "Delight your users and elevate your digital presence with our UI/UX Design & Development services. We specialize in creating visually appealing, intuitive, and responsive designs for web and mobile platforms that prioritize user satisfaction and business goals.<br><br>Our process begins with in-depth user research and prototyping to ensure the final product aligns with your audience’s needs. With a focus on accessibility compliance and cutting-edge design trends, we deliver solutions that cater to diverse users while meeting industry standards. Whether it's building responsive websites or crafting immersive mobile applications, our team ensures that every interaction is meaningful and engaging.",
     features: [
