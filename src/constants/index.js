@@ -600,222 +600,311 @@ const services = [
 
 const technology = [
   {
-    name: 'Nintex',
-    tagline: 'Automate Processes with Ease',
+    name: 'Web & Mobile Development',
+    tagline: 'Build Exceptional Web & Mobile Experiences',
     description:
-      'Nintex offers a comprehensive process automation platform enabling businesses to streamline workflows and improve operational efficiency.',
-    icon: 'cloud',
-    image: '/service1.jpg',
-    heroImage: '/breadcrumb1.jpg',
+      'Empower your digital presence with cutting-edge technologies for responsive web and mobile app development. From sleek frontend designs to robust backend systems, we deliver comprehensive solutions tailored to your needs.',
+    overview: `Web and mobile development lies at the core of digital transformation, enabling businesses to thrive in an ever-changing marketplace. Our expertise includes advanced frontend technologies like ReactJS, Angular, Astro, and Vue.js, which help create dynamic and engaging user interfaces. <br><br> 
+      For backend development, we rely on secure and scalable platforms such as Node.js, .NET, Java, and Django, ensuring robust performance. <br><br> 
+      Whether you need full-stack solutions like MERN, LAMP, or .NET, or specialized web and mobile applications, we deliver tailored solutions designed to meet your specific goals.<br> <br> 
+      Our commitment to responsive and mobile-first design ensures that your applications deliver seamless experiences across devices, empowering your business to connect with users wherever they are.`,
+    icon: 'laptop',
+    image: '/service21.jpg',
+    heroImage: '/service21.jpg',
     features: [
       {
-        title: 'Workflow Automation',
+        title: 'Frontend Technologies',
         description:
-          'Automate business processes with drag-and-drop simplicity.',
+          'Create dynamic and engaging interfaces using ReactJS, Angular, Astro, and Vue.js.',
       },
       {
-        title: 'Document Generation',
-        description: 'Create and distribute professional documents with ease.',
-      },
-      {
-        title: 'Process Mapping',
-        description: 'Visualize and optimize business processes in real-time.',
-      },
-      {
-        title: 'Integration Capabilities',
+        title: 'Backend Expertise',
         description:
-          'Connect with various enterprise systems for seamless operations.',
+          'Build scalable and secure backend systems with Node.js, .NET, Java, and Django.',
+      },
+      {
+        title: 'Full Stack Development',
+        description:
+          'Streamline development using powerful stacks like MERN, LAMP, and .NET for end-to-end solutions.',
       },
     ],
     benefits: [
-      'Enhance productivity through automated workflows',
-      'Ensure process transparency and compliance',
-      'Reduce manual errors and operational costs',
-      'Accelerate decision-making with real-time insights',
+      'Deliver seamless user experiences with responsive designs',
+      'Leverage modern frameworks and languages for optimal performance',
+      'Achieve faster time-to-market with integrated full-stack solutions',
+      'Ensure scalability and reliability for future growth',
     ],
     useCases: [
       {
-        title: 'HR Onboarding',
-        description: 'Automate employee onboarding for faster integration.',
+        title: 'E-Commerce Platforms',
+        description:
+          'Develop feature-rich platforms for online shopping experiences.',
       },
       {
-        title: 'Customer Service',
-        description:
-          'Streamline customer request processing for improved satisfaction.',
+        title: 'Custom Mobile Apps',
+        description: 'Build native and cross-platform mobile applications.',
       },
     ],
     faq: [
       {
-        question: 'Is Nintex suitable for non-technical users?',
+        question: 'Which frontend framework should I choose for my project?',
         answer:
-          'Yes, Nintex is designed with a user-friendly interface that allows non-technical users to build workflows easily.',
+          'The choice depends on your project needs. ReactJS is ideal for interactive UIs, Angular for enterprise-grade apps, and Astro for performance-focused sites.',
       },
       {
-        question: 'Can Nintex integrate with existing systems?',
+        question: 'Can you handle both web and mobile development?',
         answer:
-          'Absolutely, Nintex supports integration with popular enterprise systems such as Salesforce, SharePoint, and more.',
-      },
-    ],
-    process: [
-      {
-        title: 'Process Discovery',
-        description: 'Identify and analyze processes suitable for automation.',
-      },
-      {
-        title: 'Design & Automation',
-        description: 'Use drag-and-drop tools to create automated workflows.',
-      },
-      {
-        title: 'Deployment & Monitoring',
-        description: 'Deploy workflows and monitor performance in real-time.',
-      },
-    ],
-  },
-  {
-    name: 'K2',
-    tagline: 'Build Business Apps Fast',
-    description:
-      'K2 provides a powerful low-code automation platform that helps organizations create scalable business applications quickly.',
-    icon: 'robot',
-    image: '/service2.jpg',
-    heroImage: '/breadcrumb2.jpg',
-    features: [
-      {
-        title: 'Visual Workflow Designer',
-        description:
-          'Design business workflows visually with drag-and-drop tools.',
-      },
-      {
-        title: 'Data Integration',
-        description: 'Integrate with various enterprise systems and databases.',
-      },
-      {
-        title: 'Mobile Accessibility',
-        description: 'Access business applications on mobile devices anytime.',
-      },
-      {
-        title: 'Advanced Analytics',
-        description: 'Generate reports and dashboards for actionable insights.',
-      },
-    ],
-    benefits: [
-      'Accelerate application development',
-      'Enhance process visibility and control',
-      'Reduce IT workload with citizen development',
-      'Optimize operational efficiency through automation',
-    ],
-    useCases: [
-      {
-        title: 'Finance Operations',
-        description: 'Automate invoice processing and financial reporting.',
-      },
-      {
-        title: 'IT Service Management',
-        description: 'Streamline IT support ticketing and issue resolution.',
-      },
-    ],
-    faq: [
-      {
-        question: 'Is K2 suitable for enterprise-level applications?',
-        answer:
-          'Yes, K2 is built to support large-scale, enterprise-level applications with extensive customization capabilities.',
-      },
-      {
-        question: 'Does K2 support cloud deployment?',
-        answer:
-          'Yes, K2 supports both on-premises and cloud deployments for flexibility and scalability.',
+          'Yes, our expertise covers both web and mobile app development, ensuring a consistent experience across platforms.',
       },
     ],
     process: [
       {
         title: 'Requirement Analysis',
         description:
-          'Define business requirements and identify automation goals.',
+          'Understand project goals and define technical requirements.',
+        image: '/service21.jpg',
       },
       {
-        title: 'Workflow Development',
+        title: 'Development & Testing',
         description:
-          'Design and build custom workflows using a low-code interface.',
+          'Develop frontend and backend systems, followed by rigorous testing.',
+        image: '/service21.jpg',
       },
       {
-        title: 'Testing & Deployment',
-        description: 'Test and deploy applications securely and efficiently.',
+        title: 'Deployment & Support',
+        description: 'Launch your application and provide ongoing maintenance.',
+        image: '/service21.jpg',
       },
     ],
+    cta: {
+      title: 'Start Your Web & Mobile Transformation Today!',
+      description:
+        'Ready to create engaging web and mobile experiences that drive results? Let’s collaborate to bring your vision to life with our cutting-edge technologies and expert team.',
+      button: {
+        text: 'Get Started',
+        link: '/contact',
+      },
+      // image: '/cta-web-development.jpg',
+    },
   },
-  {
-    name: 'UiPath',
-    tagline: 'Automate Smarter, Faster, Better',
-    description:
-      'UiPath offers a leading RPA platform that automates repetitive tasks and enhances productivity with AI-powered bots.',
-    icon: 'pie-chart',
-    image: '/service3.jpg',
-    heroImage: '/breadcrumb3.jpg',
-    features: [
-      {
-        title: 'Attended & Unattended Automation',
-        description: 'Automate tasks with or without human intervention.',
-      },
-      {
-        title: 'AI Integration',
-        description:
-          'Enhance automations with artificial intelligence and machine learning.',
-      },
-      {
-        title: 'Process Mining',
-        description:
-          'Discover and analyze business processes for better optimization.',
-      },
-      {
-        title: 'Robust Security',
-        description: 'Ensure data security with built-in compliance features.',
-      },
-    ],
-    benefits: [
-      'Boost productivity and reduce costs',
-      'Ensure process consistency and accuracy',
-      'Enable faster business growth through automation',
-      'Enhance customer experience with improved service delivery',
-    ],
-    useCases: [
-      {
-        title: 'Supply Chain Automation',
-        description: 'Optimize inventory management and logistics.',
-      },
-      {
-        title: 'Customer Support Automation',
-        description: 'Automate customer queries and support ticket management.',
-      },
-    ],
-    faq: [
-      {
-        question: 'Can UiPath handle complex workflows?',
-        answer:
-          'Yes, UiPath supports complex, enterprise-scale workflows with AI-powered automation.',
-      },
-      {
-        question: 'Is UiPath suitable for small businesses?',
-        answer:
-          'Yes, UiPath offers scalable solutions that fit businesses of all sizes.',
-      },
-    ],
-    process: [
-      {
-        title: 'Process Discovery',
-        description:
-          'Identify potential automation areas with process mining tools.',
-      },
-      {
-        title: 'Automation Development',
-        description:
-          'Design and build automation scripts using the UiPath Studio.',
-      },
-      {
-        title: 'Deployment & Maintenance',
-        description: 'Deploy bots and monitor their performance continuously.',
-      },
-    ],
-  },
+
+  // {
+  //   name: 'Nintex',
+  //   tagline: 'Automate Processes with Ease',
+  //   description:
+  //     'Nintex offers a comprehensive process automation platform enabling businesses to streamline workflows and improve operational efficiency.',
+  //   icon: 'cloud',
+  //   image: '/service1.jpg',
+  //   heroImage: '/breadcrumb1.jpg',
+  //   features: [
+  //     {
+  //       title: 'Workflow Automation',
+  //       description:
+  //         'Automate business processes with drag-and-drop simplicity.',
+  //     },
+  //     {
+  //       title: 'Document Generation',
+  //       description: 'Create and distribute professional documents with ease.',
+  //     },
+  //     {
+  //       title: 'Process Mapping',
+  //       description: 'Visualize and optimize business processes in real-time.',
+  //     },
+  //     {
+  //       title: 'Integration Capabilities',
+  //       description:
+  //         'Connect with various enterprise systems for seamless operations.',
+  //     },
+  //   ],
+  //   benefits: [
+  //     'Enhance productivity through automated workflows',
+  //     'Ensure process transparency and compliance',
+  //     'Reduce manual errors and operational costs',
+  //     'Accelerate decision-making with real-time insights',
+  //   ],
+  //   useCases: [
+  //     {
+  //       title: 'HR Onboarding',
+  //       description: 'Automate employee onboarding for faster integration.',
+  //     },
+  //     {
+  //       title: 'Customer Service',
+  //       description:
+  //         'Streamline customer request processing for improved satisfaction.',
+  //     },
+  //   ],
+  //   faq: [
+  //     {
+  //       question: 'Is Nintex suitable for non-technical users?',
+  //       answer:
+  //         'Yes, Nintex is designed with a user-friendly interface that allows non-technical users to build workflows easily.',
+  //     },
+  //     {
+  //       question: 'Can Nintex integrate with existing systems?',
+  //       answer:
+  //         'Absolutely, Nintex supports integration with popular enterprise systems such as Salesforce, SharePoint, and more.',
+  //     },
+  //   ],
+  //   process: [
+  //     {
+  //       title: 'Process Discovery',
+  //       description: 'Identify and analyze processes suitable for automation.',
+  //     },
+  //     {
+  //       title: 'Design & Automation',
+  //       description: 'Use drag-and-drop tools to create automated workflows.',
+  //     },
+  //     {
+  //       title: 'Deployment & Monitoring',
+  //       description: 'Deploy workflows and monitor performance in real-time.',
+  //     },
+  //   ],
+  // },
+  // {
+  //   name: 'K2',
+  //   tagline: 'Build Business Apps Fast',
+  //   description:
+  //     'K2 provides a powerful low-code automation platform that helps organizations create scalable business applications quickly.',
+  //   icon: 'robot',
+  //   image: '/service2.jpg',
+  //   heroImage: '/breadcrumb2.jpg',
+  //   features: [
+  //     {
+  //       title: 'Visual Workflow Designer',
+  //       description:
+  //         'Design business workflows visually with drag-and-drop tools.',
+  //     },
+  //     {
+  //       title: 'Data Integration',
+  //       description: 'Integrate with various enterprise systems and databases.',
+  //     },
+  //     {
+  //       title: 'Mobile Accessibility',
+  //       description: 'Access business applications on mobile devices anytime.',
+  //     },
+  //     {
+  //       title: 'Advanced Analytics',
+  //       description: 'Generate reports and dashboards for actionable insights.',
+  //     },
+  //   ],
+  //   benefits: [
+  //     'Accelerate application development',
+  //     'Enhance process visibility and control',
+  //     'Reduce IT workload with citizen development',
+  //     'Optimize operational efficiency through automation',
+  //   ],
+  //   useCases: [
+  //     {
+  //       title: 'Finance Operations',
+  //       description: 'Automate invoice processing and financial reporting.',
+  //     },
+  //     {
+  //       title: 'IT Service Management',
+  //       description: 'Streamline IT support ticketing and issue resolution.',
+  //     },
+  //   ],
+  //   faq: [
+  //     {
+  //       question: 'Is K2 suitable for enterprise-level applications?',
+  //       answer:
+  //         'Yes, K2 is built to support large-scale, enterprise-level applications with extensive customization capabilities.',
+  //     },
+  //     {
+  //       question: 'Does K2 support cloud deployment?',
+  //       answer:
+  //         'Yes, K2 supports both on-premises and cloud deployments for flexibility and scalability.',
+  //     },
+  //   ],
+  //   process: [
+  //     {
+  //       title: 'Requirement Analysis',
+  //       description:
+  //         'Define business requirements and identify automation goals.',
+  //     },
+  //     {
+  //       title: 'Workflow Development',
+  //       description:
+  //         'Design and build custom workflows using a low-code interface.',
+  //     },
+  //     {
+  //       title: 'Testing & Deployment',
+  //       description: 'Test and deploy applications securely and efficiently.',
+  //     },
+  //   ],
+  // },
+  // {
+  //   name: 'UiPath',
+  //   tagline: 'Automate Smarter, Faster, Better',
+  //   description:
+  //     'UiPath offers a leading RPA platform that automates repetitive tasks and enhances productivity with AI-powered bots.',
+  //   icon: 'pie-chart',
+  //   image: '/service3.jpg',
+  //   heroImage: '/breadcrumb3.jpg',
+  //   features: [
+  //     {
+  //       title: 'Attended & Unattended Automation',
+  //       description: 'Automate tasks with or without human intervention.',
+  //     },
+  //     {
+  //       title: 'AI Integration',
+  //       description:
+  //         'Enhance automations with artificial intelligence and machine learning.',
+  //     },
+  //     {
+  //       title: 'Process Mining',
+  //       description:
+  //         'Discover and analyze business processes for better optimization.',
+  //     },
+  //     {
+  //       title: 'Robust Security',
+  //       description: 'Ensure data security with built-in compliance features.',
+  //     },
+  //   ],
+  //   benefits: [
+  //     'Boost productivity and reduce costs',
+  //     'Ensure process consistency and accuracy',
+  //     'Enable faster business growth through automation',
+  //     'Enhance customer experience with improved service delivery',
+  //   ],
+  //   useCases: [
+  //     {
+  //       title: 'Supply Chain Automation',
+  //       description: 'Optimize inventory management and logistics.',
+  //     },
+  //     {
+  //       title: 'Customer Support Automation',
+  //       description: 'Automate customer queries and support ticket management.',
+  //     },
+  //   ],
+  //   faq: [
+  //     {
+  //       question: 'Can UiPath handle complex workflows?',
+  //       answer:
+  //         'Yes, UiPath supports complex, enterprise-scale workflows with AI-powered automation.',
+  //     },
+  //     {
+  //       question: 'Is UiPath suitable for small businesses?',
+  //       answer:
+  //         'Yes, UiPath offers scalable solutions that fit businesses of all sizes.',
+  //     },
+  //   ],
+  //   process: [
+  //     {
+  //       title: 'Process Discovery',
+  //       description:
+  //         'Identify potential automation areas with process mining tools.',
+  //     },
+  //     {
+  //       title: 'Automation Development',
+  //       description:
+  //         'Design and build automation scripts using the UiPath Studio.',
+  //     },
+  //     {
+  //       title: 'Deployment & Maintenance',
+  //       description: 'Deploy bots and monitor their performance continuously.',
+  //     },
+  //   ],
+  // },
 ];
 
 const solutions = [
@@ -889,6 +978,13 @@ const solutions = [
           'Yes, we provide ongoing support and optimization services to ensure your systems run smoothly.',
       },
     ],
+    cta: {
+      title: 'Embrace the Future with Digital Transformation',
+      description:
+        'Revolutionize your workflows with advanced automation, AI-driven insights, and seamless business process management. Let’s make your digital transformation journey a success.',
+      buttonText: 'Start Your Transformation',
+      buttonLink: '/contact',
+    },
   },
   {
     name: 'Enterprise Applications',
@@ -961,6 +1057,13 @@ const solutions = [
           'Timelines vary based on complexity, but typical development takes 8-16 weeks for standard applications.',
       },
     ],
+    cta: {
+      title: 'Elevate Your Business with Enterprise Applications',
+      description:
+        'Simplify operations with custom CRM, ERP, and portal solutions tailored to your unique business needs. Connect with us to unlock your organization’s full potential.',
+      buttonText: 'Get a Custom Solution',
+      buttonLink: '/contact',
+    },
   },
   {
     name: 'Customer-Centric Platforms',
@@ -1026,6 +1129,13 @@ const solutions = [
           'Yes, our dashboards are fully customizable to match your business goals and metrics.',
       },
     ],
+    cta: {
+      title: 'Create Exceptional Customer Experiences',
+      description:
+        'Enhance engagement and analytics with cutting-edge e-commerce platforms and intuitive dashboards. Partner with us to deliver value-driven customer solutions.',
+      buttonText: 'Build Your Platform',
+      buttonLink: '/contact',
+    },
   },
 
   // {

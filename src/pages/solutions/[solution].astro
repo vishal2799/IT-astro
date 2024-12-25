@@ -319,11 +319,10 @@ const { financeData, relatedSolutions } = Astro.props;
     <section class='section-padding bg-primary'>
       <div class='container mx-auto px-4 text-center'>
         <h2 class='text-3xl md:text-4xl font-bold mb-6 text-white'>
-          Ready to Optimize Your Finances?
+          {financeData.cta.title}
         </h2>
         <p class='text-xl mb-8 text-primary-100'>
-          Join thousands of businesses that have transformed their financial
-          operations with FinanceFlow.
+          {financeData.cta.description}
         </p>
         <a
           href='/contact-us'

@@ -118,6 +118,17 @@ const stats = [
       </div>
     </section>
 
+    <section class='section-padding'>
+      <div class='container mx-auto px-4'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900'
+        >
+          Overview
+        </h2>
+        <p class='text-gray-800 text-lg' set:html={techData.overview} />
+      </div>
+    </section>
+
     <!-- Stats Section -->
     <section class='section-padding bg-white'>
       <div class='container mx-auto max-w-6xl'>
@@ -238,7 +249,7 @@ const stats = [
                 </div>
                 <div class='w-full md:w-1/2'>
                   <img
-                    src='/service21.jpg'
+                    src={tech.image}
                     alt={tech.title}
                     class='rounded-lg shadow-md'
                   />
@@ -368,16 +379,15 @@ const stats = [
     <section class='section-padding px-4 bg-primary text-white'>
       <div class='container mx-auto max-w-3xl text-center'>
         <h2 class='text-3xl md:text-4xl font-bold mb-6'>
-          Ready to Automate Your Workflow?
+          {techData.cta.title}
         </h2>
         <p class='text-xl text-primary-100 mb-8'>
-          Join thousands of businesses that have transformed their operations
-          with AutoFlow.
+          {techData.cta.description}
         </p>
         <a
           href='/contact-us'
           class='inline-block bg-white text-primary font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300 text-lg'
-          >Get Started Today</a
+          >{techData.cta.button.text}</a
         >
       </div>
     </section>
