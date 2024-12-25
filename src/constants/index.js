@@ -824,7 +824,7 @@ const solutions = [
     tagline: 'Empower Your Business with Innovative Digital Solutions',
     description:
       'Leverage cutting-edge technologies to streamline operations, improve decision-making, and drive business growth with our Digital Transformation services.',
-    heroImage: '/service21.jpg',
+    heroImage: '/solutionDT.jpg',
     overview:
       'Digital Transformation is no longer a choice but a necessity for businesses aiming to remain competitive in today’s fast-paced world. Our services harness the power of industry-leading technologies such as Power Automate, RPA tools like UiPath and Automation Anywhere, and AI platforms like Azure AI and Google AI to revolutionize your operations. By automating repetitive tasks, streamlining workflows, and unlocking actionable insights from your data, we help you save time, reduce costs, and improve decision-making. Business Process Management (BPM) solutions using Nintex and K2 further ensure that your processes are optimized for maximum efficiency and compliance.  <br><br>  With our Digital Transformation services, your business can achieve a seamless blend of automation, integration, and intelligence. Whether you need to automate simple workflows or overhaul complex systems, we offer end-to-end solutions tailored to your goals. Our approach also emphasizes scalability, ensuring that as your business grows, your systems evolve to meet new demands. From enhancing operational efficiency to providing predictive analytics that drive strategic planning, we enable you to future-proof your business in an ever-evolving digital ecosystem.',
 
@@ -896,7 +896,7 @@ const solutions = [
       'Streamline Your Business Operations with Custom Enterprise Applications',
     description:
       'Harness the power of technology to build robust CRM, ERP, and enterprise portals tailored to your business needs.',
-    heroImage: '/service21.jpg',
+    heroImage: '/solutionEA.jpg',
     overview:
       'Enterprise Applications are the backbone of modern businesses, driving productivity, collaboration, and scalability. Our solutions include CRM and ERP systems built using SharePoint and Power Apps, offering centralized control over customer relationships, resource planning, and business operations.<br><br>These tools empower organizations to automate processes, manage data efficiently, and achieve greater visibility across departments. With built-in analytics and seamless reporting, your team can make data-driven decisions in real time.<br><br>Additionally, we deliver custom portals developed using advanced frameworks like React, Angular, and Astro, tailored to meet your unique requirements. Whether you need a customer-facing platform, a partner portal, or an employee collaboration tool, our portals ensure intuitive designs, responsive interfaces, and robust functionality.<br><br>By leveraging state-of-the-art technology, we ensure our enterprise applications are scalable, secure, and future-ready, enabling businesses to stay ahead in a competitive landscape.',
     process: [
@@ -967,7 +967,7 @@ const solutions = [
     tagline: 'Deliver Exceptional Customer Experiences with Tailored Solutions',
     description:
       'Empower your business with e-commerce platforms and data analytics dashboards that prioritize customer satisfaction and drive engagement.',
-    heroImage: '/breadcrumb1.jpg',
+    heroImage: '/solutionCCP.jpg',
     overview: `In today’s competitive landscape, businesses need platforms that not only meet customer expectations but exceed them.<br><br>
     Our Customer-Centric Platforms are designed to provide seamless and engaging user experiences. We develop robust e-commerce platforms using modern frameworks like React, Node.js, and Astro, ensuring fast, secure, and scalable solutions. These platforms are equipped with advanced features such as personalized recommendations, streamlined checkouts, and mobile responsiveness to maximize customer satisfaction and retention.<br><br>
     Additionally, our expertise in building data analytics dashboards with tools like Power BI and Tableau enables businesses to gain actionable insights into customer behavior, preferences, and trends. These dashboards transform raw data into visual stories, empowering you to make informed decisions that enhance your products and services.<br><br>
