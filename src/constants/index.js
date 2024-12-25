@@ -609,8 +609,8 @@ const technology = [
       Whether you need full-stack solutions like MERN, LAMP, or .NET, or specialized web and mobile applications, we deliver tailored solutions designed to meet your specific goals.<br> <br> 
       Our commitment to responsive and mobile-first design ensures that your applications deliver seamless experiences across devices, empowering your business to connect with users wherever they are.`,
     icon: 'laptop',
-    image: '/service21.jpg',
-    heroImage: '/service21.jpg',
+    image: '/tech1.jpg',
+    heroImage: '/tech1.jpg',
     features: [
       {
         title: 'Frontend Technologies',
@@ -663,17 +663,20 @@ const technology = [
         description:
           'Understand project goals and define technical requirements.',
         image: '/service21.jpg',
+        icon: 'robot',
       },
       {
         title: 'Development & Testing',
         description:
           'Develop frontend and backend systems, followed by rigorous testing.',
         image: '/service21.jpg',
+        icon: 'robot',
       },
       {
         title: 'Deployment & Support',
         description: 'Launch your application and provide ongoing maintenance.',
         image: '/service21.jpg',
+        icon: 'robot',
       },
     ],
     cta: {
@@ -687,209 +690,209 @@ const technology = [
       // image: '/cta-web-development.jpg',
     },
   },
-  {
-    name: 'Enterprise Tools & Platforms',
-    tagline: 'Streamline Your Business with Powerful Enterprise Tools',
-    description:
-      'Our Enterprise Tools & Platforms help businesses automate processes, manage data, and optimize workflows. With platforms like Microsoft Power Platform and SharePoint, and BPM tools such as K2, Nintex, and Pega, we provide end-to-end solutions that integrate seamlessly with your enterprise systems.',
-    icon: 'building',
-    image: '/service21.jpg',
-    heroImage: '/service21.jpg',
-    overview: `Our Enterprise Tools & Platforms provide businesses with powerful solutions to manage operations, automate processes, and foster collaboration. Microsoft Power Platform allows organizations to create custom applications, automate workflows, and gain deep insights from their data, all with minimal coding. <br> <br>
-  Power Apps helps users build apps tailored to specific business needs, Power Automate automates workflows to save time and reduce manual effort, and Power BI offers rich data analytics capabilities to drive informed decision-making. <br> <br>
-  SharePoint serves as the backbone of collaboration, offering businesses a secure platform for document management, intranet, and team collaboration. SharePoint integrates seamlessly with other Microsoft tools, enhancing productivity across departments. <br> <br> 
-  SQL Server enables organizations to manage and store large volumes of data efficiently. It ensures high performance, scalability, and security while providing powerful reporting and analytics tools.<br> <br>
-  On the BPM side, tools like Nintex, K2, and Pega help businesses automate end-to-end workflows, from simple tasks to complex business processes. These platforms support document generation, approval workflows, and enterprise-wide automation, allowing for seamless integration with other enterprise systems. <br><br>
-  With these solutions, businesses can significantly reduce manual errors, improve operational efficiency, and ensure compliance with industry regulations. Whether you're looking to streamline HR processes, automate document approvals, or implement a custom CRM, our Enterprise Tools & Platforms deliver flexible and scalable solutions that align with your business goals. <br><br> 
-  Our team of experts ensures smooth integration, ongoing support, and training, helping businesses unlock the full potential of these enterprise tools. With the right combination of tools, businesses can accelerate transformation, optimize workflows, and stay ahead of the competition.`,
+  // {
+  //   name: 'Enterprise Tools & Platforms',
+  //   tagline: 'Streamline Your Business with Powerful Enterprise Tools',
+  //   description:
+  //     'Our Enterprise Tools & Platforms help businesses automate processes, manage data, and optimize workflows. With platforms like Microsoft Power Platform and SharePoint, and BPM tools such as K2, Nintex, and Pega, we provide end-to-end solutions that integrate seamlessly with your enterprise systems.',
+  //   icon: 'building',
+  //   image: '/service21.jpg',
+  //   heroImage: '/service21.jpg',
+  //   overview: `Our Enterprise Tools & Platforms provide businesses with powerful solutions to manage operations, automate processes, and foster collaboration. Microsoft Power Platform allows organizations to create custom applications, automate workflows, and gain deep insights from their data, all with minimal coding. <br> <br>
+  // Power Apps helps users build apps tailored to specific business needs, Power Automate automates workflows to save time and reduce manual effort, and Power BI offers rich data analytics capabilities to drive informed decision-making. <br> <br>
+  // SharePoint serves as the backbone of collaboration, offering businesses a secure platform for document management, intranet, and team collaboration. SharePoint integrates seamlessly with other Microsoft tools, enhancing productivity across departments. <br> <br>
+  // SQL Server enables organizations to manage and store large volumes of data efficiently. It ensures high performance, scalability, and security while providing powerful reporting and analytics tools.<br> <br>
+  // On the BPM side, tools like Nintex, K2, and Pega help businesses automate end-to-end workflows, from simple tasks to complex business processes. These platforms support document generation, approval workflows, and enterprise-wide automation, allowing for seamless integration with other enterprise systems. <br><br>
+  // With these solutions, businesses can significantly reduce manual errors, improve operational efficiency, and ensure compliance with industry regulations. Whether you're looking to streamline HR processes, automate document approvals, or implement a custom CRM, our Enterprise Tools & Platforms deliver flexible and scalable solutions that align with your business goals. <br><br>
+  // Our team of experts ensures smooth integration, ongoing support, and training, helping businesses unlock the full potential of these enterprise tools. With the right combination of tools, businesses can accelerate transformation, optimize workflows, and stay ahead of the competition.`,
 
-    features: [
-      {
-        title: 'Low-Code App Development',
-        description:
-          'Power Platform allows you to develop custom applications quickly with minimal coding.',
-        image: '/service21.jpg',
-      },
-      {
-        title: 'Automated Workflows',
-        description:
-          'Automate repetitive tasks and business processes using Power Automate or Nintex.',
-        image: '/service21.jpg',
-      },
-      {
-        title: 'Data Management & Collaboration',
-        description:
-          'Store, manage, and collaborate on data using SharePoint and SQL Server.',
-        image: '/service21.jpg',
-      },
-    ],
-    benefits: [
-      'Empower employees to create custom solutions without extensive coding knowledge',
-      'Streamline business processes and reduce manual errors',
-      'Improve collaboration and data sharing across teams and departments',
-      'Ensure data security and compliance with enterprise-grade platforms',
-    ],
-    useCases: [
-      {
-        title: 'Customer Relationship Management (CRM)',
-        description:
-          'Build a custom CRM system using Power Apps and SharePoint to manage customer interactions and data.',
-      },
-      {
-        title: 'Automated Document Approvals',
-        description:
-          'Automate document approval workflows using Nintex or K2 to increase efficiency and compliance.',
-      },
-    ],
-    faq: [
-      {
-        question: 'What is Power Platform?',
-        answer:
-          'Power Platform is a suite of tools that allows businesses to build apps, automate workflows, and analyze data without needing extensive coding skills.',
-      },
-      {
-        question: 'How does SharePoint improve collaboration?',
-        answer:
-          'SharePoint allows teams to share documents, collaborate on projects, and manage content from a centralized platform, improving productivity.',
-      },
-    ],
-    process: [
-      {
-        title: 'Needs Assessment & Planning',
-        description:
-          'We assess your business needs and plan the appropriate solution using the right enterprise tools.',
-        image: '/service21.jpg',
-      },
-      {
-        title: 'Implementation & Customization',
-        description:
-          'We implement and customize solutions such as Power Apps, SharePoint, or Nintex to meet your specific requirements.',
-        image: '/service21.jpg',
-      },
-      {
-        title: 'Training & Support',
-        description:
-          'We provide comprehensive training and ongoing support to ensure seamless adoption of the new tools.',
-        image: '/service21.jpg',
-      },
-    ],
-    cta: {
-      title: 'Transform Your Business with Enterprise Tools',
-      description:
-        'Leverage the power of Microsoft Power Platform, SharePoint, and BPM tools to streamline your business operations. Contact us today to get started!',
-      button: {
-        text: 'Get Started',
-        link: '/contact',
-      },
-    },
-  },
-  {
-    name: 'Automation & Testing',
-    tagline: 'Streamline and Optimize Testing Processes',
-    description:
-      'Our Automation & Testing solutions provide businesses with the tools to enhance software quality, streamline testing processes, and improve the reliability of applications. Whether you’re automating repetitive tasks or optimizing manual test processes, our tools offer robust capabilities that save time and ensure the consistency of test results.',
-    icon: 'tools',
-    image: '/service21.jpg',
-    heroImage: '/service21.jpg',
-    overview: `In today’s fast-paced digital world, automation and testing play a crucial role in ensuring that software and applications perform optimally. Our solutions offer a comprehensive suite of tools designed to automate testing procedures, reducing manual effort, speeding up the development lifecycle, and enhancing overall quality. <br> <br>
-      QA Automation tools like Selenium, TestNG, and JUnit help businesses create automated test scripts that can be executed across various platforms and environments. These tools allow testing teams to run large volumes of tests quickly and consistently, identifying bugs and issues early in the development cycle. By automating repetitive testing tasks, businesses can improve test coverage, reduce errors, and ensure that every update meets the necessary quality standards.<br> <br> 
-      Robotic Process Automation (RPA) with UiPath and Automation Anywhere brings further value by automating complex business processes and repetitive tasks, such as data entry, invoicing, and customer service inquiries. This frees up human resources for more strategic work and reduces the likelihood of errors that arise from manual interventions. <br> <br> 
-      Our testing solutions support integration across multiple systems, ensuring that all applications, from web to mobile, maintain their quality across different platforms. Whether you're looking to automate functional testing, performance testing, or load testing, our solutions are scalable and adaptable to meet the needs of your specific project. <br> <br>
-      With strong integration capabilities, businesses can embed automated tests into their CI/CD pipelines, ensuring that every code change is tested before deployment, significantly reducing the risk of defects and improving release cycles. <br> <br>
-      Implementing automation and testing not only accelerates development cycles but also enhances software performance, leading to higher user satisfaction and a competitive edge in the market.`,
-    features: [
-      {
-        title: 'Automated Functional Testing',
-        description:
-          'Test critical functionalities of applications with automation to ensure reliability and performance.',
-      },
-      {
-        title: 'Load & Stress Testing',
-        description:
-          'Simulate real-world traffic and ensure applications can handle high volumes of users or transactions.',
-      },
-      {
-        title: 'Integration Testing',
-        description:
-          'Automate testing of system integrations and ensure smooth interoperability between systems.',
-      },
-      {
-        title: 'RPA for Process Automation',
-        description:
-          'Automate routine tasks such as data entry, approvals, and report generation using RPA.',
-      },
-    ],
-    benefits: [
-      'Increase testing efficiency and reduce time to market',
-      'Ensure software quality through continuous, automated testing',
-      'Identify defects early and reduce the cost of fixing issues',
-      'Enable rapid release cycles with automated regression tests',
-      'Enhance operational efficiency by automating business processes',
-    ],
-    useCases: [
-      {
-        title: 'E-commerce Testing',
-        description:
-          'Automate testing of product catalogs, checkout flows, and user interactions to ensure a seamless customer experience.',
-      },
-      {
-        title: 'Finance Industry',
-        description:
-          'Test transaction systems, regulatory compliance, and risk assessment tools for critical accuracy and performance.',
-      },
-      {
-        title: 'Healthcare Applications',
-        description:
-          'Automate tests for patient records, appointment systems, and medical data to ensure privacy and accuracy.',
-      },
-    ],
-    faq: [
-      {
-        question: 'What types of testing can be automated?',
-        answer:
-          'Automation can be applied to functional, regression, load, stress, and performance testing, among others.',
-      },
-      {
-        question: 'How does RPA improve business processes?',
-        answer:
-          'RPA automates repetitive, manual tasks, reducing human errors and allowing employees to focus on higher-value work.',
-      },
-      {
-        question: 'Can these tools integrate with my existing CI/CD pipeline?',
-        answer:
-          'Yes, our tools support integration with popular CI/CD tools like Jenkins, GitLab, and Azure DevOps to automate the testing process.',
-      },
-    ],
-    process: [
-      {
-        title: 'Test Design & Planning',
-        description:
-          'Define the testing scope and design automated test cases based on business requirements.',
-        image: '/service21.jpg',
-      },
-      {
-        title: 'Automation Setup & Execution',
-        description:
-          'Set up the testing framework and execute automated tests across various environments.',
-        image: '/service21.jpg',
-      },
-      {
-        title: 'Continuous Monitoring & Reporting',
-        description:
-          'Monitor automated tests in real-time and generate detailed reports on test results.',
-        image: '/service21.jpg',
-      },
-    ],
-    cta: {
-      title: 'Ready to Automate Your Testing?',
-      description:
-        'Leverage the power of automated testing and RPA to improve software quality and streamline business processes. Let us help you accelerate your time to market with our cutting-edge tools.',
-      button: {
-        text: 'Get Started',
-        link: '/contact',
-      },
-    },
-  },
+  //   features: [
+  //     {
+  //       title: 'Low-Code App Development',
+  //       description:
+  //         'Power Platform allows you to develop custom applications quickly with minimal coding.',
+  //       image: '/service21.jpg',
+  //     },
+  //     {
+  //       title: 'Automated Workflows',
+  //       description:
+  //         'Automate repetitive tasks and business processes using Power Automate or Nintex.',
+  //       image: '/service21.jpg',
+  //     },
+  //     {
+  //       title: 'Data Management & Collaboration',
+  //       description:
+  //         'Store, manage, and collaborate on data using SharePoint and SQL Server.',
+  //       image: '/service21.jpg',
+  //     },
+  //   ],
+  //   benefits: [
+  //     'Empower employees to create custom solutions without extensive coding knowledge',
+  //     'Streamline business processes and reduce manual errors',
+  //     'Improve collaboration and data sharing across teams and departments',
+  //     'Ensure data security and compliance with enterprise-grade platforms',
+  //   ],
+  //   useCases: [
+  //     {
+  //       title: 'Customer Relationship Management (CRM)',
+  //       description:
+  //         'Build a custom CRM system using Power Apps and SharePoint to manage customer interactions and data.',
+  //     },
+  //     {
+  //       title: 'Automated Document Approvals',
+  //       description:
+  //         'Automate document approval workflows using Nintex or K2 to increase efficiency and compliance.',
+  //     },
+  //   ],
+  //   faq: [
+  //     {
+  //       question: 'What is Power Platform?',
+  //       answer:
+  //         'Power Platform is a suite of tools that allows businesses to build apps, automate workflows, and analyze data without needing extensive coding skills.',
+  //     },
+  //     {
+  //       question: 'How does SharePoint improve collaboration?',
+  //       answer:
+  //         'SharePoint allows teams to share documents, collaborate on projects, and manage content from a centralized platform, improving productivity.',
+  //     },
+  //   ],
+  //   process: [
+  //     {
+  //       title: 'Needs Assessment & Planning',
+  //       description:
+  //         'We assess your business needs and plan the appropriate solution using the right enterprise tools.',
+  //       image: '/service21.jpg',
+  //     },
+  //     {
+  //       title: 'Implementation & Customization',
+  //       description:
+  //         'We implement and customize solutions such as Power Apps, SharePoint, or Nintex to meet your specific requirements.',
+  //       image: '/service21.jpg',
+  //     },
+  //     {
+  //       title: 'Training & Support',
+  //       description:
+  //         'We provide comprehensive training and ongoing support to ensure seamless adoption of the new tools.',
+  //       image: '/service21.jpg',
+  //     },
+  //   ],
+  //   cta: {
+  //     title: 'Transform Your Business with Enterprise Tools',
+  //     description:
+  //       'Leverage the power of Microsoft Power Platform, SharePoint, and BPM tools to streamline your business operations. Contact us today to get started!',
+  //     button: {
+  //       text: 'Get Started',
+  //       link: '/contact',
+  //     },
+  //   },
+  // },
+  // {
+  //   name: 'Automation & Testing',
+  //   tagline: 'Streamline and Optimize Testing Processes',
+  //   description:
+  //     'Our Automation & Testing solutions provide businesses with the tools to enhance software quality, streamline testing processes, and improve the reliability of applications. Whether you’re automating repetitive tasks or optimizing manual test processes, our tools offer robust capabilities that save time and ensure the consistency of test results.',
+  //   icon: 'tools',
+  //   image: '/tech2.jpg',
+  //   heroImage: '/tech2.jpg',
+  //   overview: `In today’s fast-paced digital world, automation and testing play a crucial role in ensuring that software and applications perform optimally. Our solutions offer a comprehensive suite of tools designed to automate testing procedures, reducing manual effort, speeding up the development lifecycle, and enhancing overall quality. <br> <br>
+  //     QA Automation tools like Selenium, TestNG, and JUnit help businesses create automated test scripts that can be executed across various platforms and environments. These tools allow testing teams to run large volumes of tests quickly and consistently, identifying bugs and issues early in the development cycle. By automating repetitive testing tasks, businesses can improve test coverage, reduce errors, and ensure that every update meets the necessary quality standards.<br> <br>
+  //     Robotic Process Automation (RPA) with UiPath and Automation Anywhere brings further value by automating complex business processes and repetitive tasks, such as data entry, invoicing, and customer service inquiries. This frees up human resources for more strategic work and reduces the likelihood of errors that arise from manual interventions. <br> <br>
+  //     Our testing solutions support integration across multiple systems, ensuring that all applications, from web to mobile, maintain their quality across different platforms. Whether you're looking to automate functional testing, performance testing, or load testing, our solutions are scalable and adaptable to meet the needs of your specific project. <br> <br>
+  //     With strong integration capabilities, businesses can embed automated tests into their CI/CD pipelines, ensuring that every code change is tested before deployment, significantly reducing the risk of defects and improving release cycles. <br> <br>
+  //     Implementing automation and testing not only accelerates development cycles but also enhances software performance, leading to higher user satisfaction and a competitive edge in the market.`,
+  //   features: [
+  //     {
+  //       title: 'Automated Functional Testing',
+  //       description:
+  //         'Test critical functionalities of applications with automation to ensure reliability and performance.',
+  //     },
+  //     {
+  //       title: 'Load & Stress Testing',
+  //       description:
+  //         'Simulate real-world traffic and ensure applications can handle high volumes of users or transactions.',
+  //     },
+  //     {
+  //       title: 'Integration Testing',
+  //       description:
+  //         'Automate testing of system integrations and ensure smooth interoperability between systems.',
+  //     },
+  //     {
+  //       title: 'RPA for Process Automation',
+  //       description:
+  //         'Automate routine tasks such as data entry, approvals, and report generation using RPA.',
+  //     },
+  //   ],
+  //   benefits: [
+  //     'Increase testing efficiency and reduce time to market',
+  //     'Ensure software quality through continuous, automated testing',
+  //     'Identify defects early and reduce the cost of fixing issues',
+  //     'Enable rapid release cycles with automated regression tests',
+  //     'Enhance operational efficiency by automating business processes',
+  //   ],
+  //   useCases: [
+  //     {
+  //       title: 'E-commerce Testing',
+  //       description:
+  //         'Automate testing of product catalogs, checkout flows, and user interactions to ensure a seamless customer experience.',
+  //     },
+  //     {
+  //       title: 'Finance Industry',
+  //       description:
+  //         'Test transaction systems, regulatory compliance, and risk assessment tools for critical accuracy and performance.',
+  //     },
+  //     {
+  //       title: 'Healthcare Applications',
+  //       description:
+  //         'Automate tests for patient records, appointment systems, and medical data to ensure privacy and accuracy.',
+  //     },
+  //   ],
+  //   faq: [
+  //     {
+  //       question: 'What types of testing can be automated?',
+  //       answer:
+  //         'Automation can be applied to functional, regression, load, stress, and performance testing, among others.',
+  //     },
+  //     {
+  //       question: 'How does RPA improve business processes?',
+  //       answer:
+  //         'RPA automates repetitive, manual tasks, reducing human errors and allowing employees to focus on higher-value work.',
+  //     },
+  //     {
+  //       question: 'Can these tools integrate with my existing CI/CD pipeline?',
+  //       answer:
+  //         'Yes, our tools support integration with popular CI/CD tools like Jenkins, GitLab, and Azure DevOps to automate the testing process.',
+  //     },
+  //   ],
+  //   process: [
+  //     {
+  //       title: 'Test Design & Planning',
+  //       description:
+  //         'Define the testing scope and design automated test cases based on business requirements.',
+  //       image: '/service21.jpg',
+  //     },
+  //     {
+  //       title: 'Automation Setup & Execution',
+  //       description:
+  //         'Set up the testing framework and execute automated tests across various environments.',
+  //       image: '/service21.jpg',
+  //     },
+  //     {
+  //       title: 'Continuous Monitoring & Reporting',
+  //       description:
+  //         'Monitor automated tests in real-time and generate detailed reports on test results.',
+  //       image: '/service21.jpg',
+  //     },
+  //   ],
+  //   cta: {
+  //     title: 'Ready to Automate Your Testing?',
+  //     description:
+  //       'Leverage the power of automated testing and RPA to improve software quality and streamline business processes. Let us help you accelerate your time to market with our cutting-edge tools.',
+  //     button: {
+  //       text: 'Get Started',
+  //       link: '/contact',
+  //     },
+  //   },
+  // },
 
   // {
   //   name: 'Nintex',

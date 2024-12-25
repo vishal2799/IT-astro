@@ -1,4 +1,5 @@
 ---
+import HowItWorks from '../../components/HowItWorks.astro';
 import { technology } from '../../constants';
 import MainLayout from '../../layouts/MainLayout.astro';
 
@@ -226,7 +227,8 @@ const stats = [
     </section>
 
     <!-- How It Works Section -->
-    <section class='section-padding px-4 bg-gray-50'>
+    <HowItWorks steps={techData.process} />
+    <!-- <section class='section-padding px-4 bg-gray-50'>
       <div class='container mx-auto max-w-4xl'>
         <h2
           class='text-3xl md:text-4xl text-gray-900 font-bold text-center mb-16'
@@ -259,7 +261,7 @@ const stats = [
           }
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Testimonials Section -->
     <section class='section-padding px-4 bg-primary text-white'>
