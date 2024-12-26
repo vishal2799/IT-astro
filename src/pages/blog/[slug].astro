@@ -54,11 +54,11 @@ export async function getStaticPaths() {
 
   return posts.map((post) => ({
     params: { slug: post.slug },
-    props: { ...post, content: addTailwindStyles(post.content) },
+    props: { post: { ...post, content: addTailwindStyles(post.content) } },
   }));
 }
 
-const { title, image, excerpt, author, date, category, content } = Astro.props;
+const { post } = Astro.props;
 
 const relatedPosts = [
   {
@@ -82,13 +82,13 @@ const relatedPosts = [
 ];
 ---
 
-<MainLayout title={`${title} | TechNova Blog`} description={excerpt}>
+<MainLayout title={`${post.title} | TechNova Blog`} description={post.excerpt}>
   <main class='bg-gray-50 min-h-screen'>
     <!-- Hero Section -->
     <section class='relative section-padding px-4'>
       <Image
-        src={image}
-        alt={title}
+        src={post.image}
+        alt={post.title}
         width={1920}
         height={1080}
         class='absolute inset-0 w-full h-full object-cover'
@@ -100,9 +100,9 @@ const relatedPosts = [
       <div
         class='relative z-10 container mx-auto max-w-4xl text-center text-white'
       >
-        <h1 class='text-4xl md:text-5xl font-bold mb-6'>{title}</h1>
-        <p class='text-xl mb-4'>{date} | {category}</p>
-        <p class='text-lg'>By {author.name}</p>
+        <h1 class='text-4xl md:text-5xl font-bold mb-6'>{post.title}</h1>
+        <p class='text-xl mb-4'>{post.date} | {post.category}</p>
+        <p class='text-lg'>By {post.author.name}</p>
       </div>
     </section>
 
@@ -110,14 +110,14 @@ const relatedPosts = [
     <section class='section-padding px-4'>
       <div class='container mx-auto max-w-4xl'>
         <article class='bg-white rounded-lg shadow-md p-8 mb-12'>
-          <div class='prose prose-lg max-w-none' set:html={content} />
+          <div class='prose prose-lg max-w-none' set:html={post.content} />
         </article>
 
         <div
           class='flex flex-col md:flex-row justify-between items-start md:items-center space-y-8 md:space-y-0 mb-12'
         >
           <!-- <AuthorCard author={post.author} /> -->
-          <ShareButtons title={title} url={Astro.url} />
+          <ShareButtons title={post.title} url={Astro.url} />
         </div>
 
         <RelatedPosts posts={relatedPosts} />
