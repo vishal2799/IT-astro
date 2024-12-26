@@ -1,23 +1,16 @@
 ---
-const { quote, author, position, image } = Astro.props;
+const { quote, author, position } = Astro.props;
 ---
 
 <div
   class='bg-white rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-xl'
 >
   <div class='flex items-center mb-4'>
-    <!-- <Image
-      src={image}
-      alt={author}
-      width={64}
-      height={64}
-      class='w-16 h-16 rounded-full mr-4 object-cover'
-    /> -->
-    <img
-      src={image}
-      alt={author}
-      class='w-16 h-16 rounded-full mr-4 object-cover'
-    />
+    <div
+      class='w-12 h-12 rounded-full mr-4 flex items-center justify-center bg-primary text-white font-bold text-xl'
+    >
+      {author.charAt(0).toUpperCase()}
+    </div>
     <div>
       <p class='font-semibold text-gray-900'>{author}</p>
       <p class='text-gray-600 text-sm'>{position}</p>

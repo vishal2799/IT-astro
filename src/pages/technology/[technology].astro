@@ -1,6 +1,6 @@
 ---
 import HowItWorks from '../../components/HowItWorks.astro';
-import { technology } from '../../constants';
+import { technology, testimonials } from '../../constants';
 import MainLayout from '../../layouts/MainLayout.astro';
 
 export async function getStaticPaths() {
@@ -54,32 +54,11 @@ const pricing = [
   },
 ];
 
-const testimonials = [
-  {
-    name: 'Sarah Johnson',
-    role: 'CTO, TechCorp',
-    quote:
-      "AutoFlow has revolutionized our internal processes. We've seen a 40% increase in productivity since implementation.",
-  },
-  {
-    name: 'Michael Chen',
-    role: 'Operations Manager, GlobalLogistics',
-    quote:
-      'The AI-powered decision making in AutoFlow has significantly reduced our error rates and improved customer satisfaction.',
-  },
-  {
-    name: 'Emily Rodriguez',
-    role: 'HR Director, InnovateNow',
-    quote:
-      "Our HR team now focuses on strategic initiatives instead of paperwork, thanks to AutoFlow's automation capabilities.",
-  },
-];
-
 const stats = [
-  { value: '500+', label: 'Enterprise Clients' },
-  { value: '1M+', label: 'Processes Automated' },
-  { value: '98%', label: 'Client Satisfaction' },
-  { value: '$100M+', label: 'Client Savings' },
+  { value: '100%', label: 'Positive Feedback' },
+  { value: '24/7', label: 'Support Availability' },
+  { value: 'Tailored', label: 'Solutions Provided' },
+  { value: '100%', label: 'Commitment to Excellence' },
 ];
 ---
 
@@ -175,7 +154,7 @@ const stats = [
         <h2
           class='text-3xl md:text-4xl font-bold text-gray-900 text-center mb-16'
         >
-          Benefits of AutoFlow
+          Benefits of {techData.name}
         </h2>
         <ul class='space-y-6'>
           {
@@ -269,13 +248,13 @@ const stats = [
         <h2 class='text-3xl md:text-4xl font-bold text-center mb-16'>
           What Our Clients Say
         </h2>
-        <div class='grid gap-8 md:grid-cols-3'>
+        <div class='grid gap-8 md:grid-cols-2'>
           {
             testimonials.map((testimonial) => (
               <div class='bg-primary p-6 rounded-lg'>
                 <p class='text-lg mb-4'>"{testimonial.quote}"</p>
-                <p class='font-semibold'>{testimonial.name}</p>
-                <p class='text-primary-100'>{testimonial.role}</p>
+                <p class='font-semibold'>{testimonial.author}</p>
+                <p class='text-primary-100'>{testimonial.position}</p>
               </div>
             ))
           }

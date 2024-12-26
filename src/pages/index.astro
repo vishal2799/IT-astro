@@ -5,138 +5,12 @@ import TechCard from '../components/TechCard.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import TestimonialCard from '../components/TestimonialCard.astro';
 import CTA from '../components/CTA.astro';
-import { posts, projects, services } from '../constants';
+import { posts, projects, services, testimonials } from '../constants';
 import { technology } from '../constants';
 import { Image } from 'astro:assets';
 import BlogPostCard from '../components/BlogPostCard.astro';
 import HomeHeroImage from '../assets/images/HomeHero.jpg';
 import HomeAboutImage from '../assets/images/HomeAbout.jpg';
-
-// const services = [
-//   {
-//     title: 'Cloud Migration',
-//     description:
-//       'Seamlessly transition your business to the cloud with our expert migration services.',
-//     icon: 'cloud',
-//     link: '/services/cloud-migration',
-//   },
-//   {
-//     title: 'Data Analytics',
-//     description:
-//       'Unlock the power of your data with our advanced analytics solutions.',
-//     icon: 'pie-chart',
-//     link: '/services/data-analytics',
-//   },
-//   {
-//     title: 'Cybersecurity',
-//     description:
-//       'Protect your digital assets with our comprehensive security solutions.',
-//     icon: 'shield-check',
-//     link: '/services/cybersecurity',
-//   },
-// ];
-
-// const technologies = [
-//   {
-//     name: 'AutoFlow',
-//     tagline: 'Streamline Your Workflow',
-//     description:
-//       'Cutting-edge RPA platform for automating repetitive tasks and boosting productivity.',
-//     image: '/images/autoflow.jpg',
-//     icon: 'robot',
-//     link: '/technologies/autoflow',
-//   },
-//   {
-//     name: 'DataSense',
-//     tagline: 'Unlock Data Insights',
-//     description:
-//       'Advanced data analytics and visualization platform for informed decision-making.',
-//     image: '/images/datasense.jpg',
-//     icon: 'pie-chart',
-//     link: '/technologies/datasense',
-//   },
-//   {
-//     name: 'CloudGuard',
-//     tagline: 'Secure Cloud Assets',
-//     description:
-//       'Comprehensive cloud security solution to protect your data and applications.',
-//     image: '/images/cloudguard.jpg',
-//     icon: 'cloud',
-//     link: '/technologies/cloudguard',
-//   },
-// ];
-
-// const projects = [
-//   {
-//     title: 'Global E-commerce Platform Overhaul',
-//     category: 'E-commerce',
-//     description:
-//       'Redesigned and optimized a major e-commerce platform, resulting in a 40% increase in conversion rates.',
-//     image: '/images/ecommerce-project.jpg',
-//     client: 'MegaShop Inc.',
-//     duration: '8 months',
-//     technologies: ['React', 'Node.js', 'MongoDB', 'AWS'],
-//     slug: 'global-ecommerce-platform-overhaul',
-//   },
-//   {
-//     title: 'AI-Powered Financial Forecasting Tool',
-//     category: 'FinTech',
-//     description:
-//       'Developed an AI-driven financial forecasting tool that increased prediction accuracy by 30%.',
-//     image: '/images/fintech-project.jpg',
-//     client: 'InvestSmart LLC',
-//     duration: '6 months',
-//     technologies: ['Python', 'TensorFlow', 'AWS', 'React'],
-//     slug: 'ai-powered-financial-forecasting-tool',
-//   },
-// ];
-
-const testimonials = [
-  {
-    quote:
-      "Alicorn's expertise in cloud migration has transformed our IT infrastructure. We've seen significant improvements in efficiency and cost-savings.",
-    author: 'John Smith',
-    position: 'CTO, Global Enterprises Inc.',
-    image: '/images/testimonial-1.jpg',
-  },
-  {
-    quote:
-      "The AI-powered analytics solution provided by Alicorn Solutions has given us unprecedented insights into our business operations. It's been a game-changer for us.",
-    author: 'Sarah Johnson',
-    position: 'Head of Analytics, DataDriven Co.',
-    image: '/images/testimonial-2.jpg',
-  },
-];
-
-// const blogPosts = [
-//   {
-//     title: 'The Future of Cloud Computing: Trends to Watch',
-//     excerpt:
-//       'Explore the emerging trends in cloud computing that are shaping the future of IT infrastructure.',
-//     image: '/service1.jpg',
-//     date: 'May 15, 2023',
-//     author: 'Jane Doe',
-//     slug: 'future-of-cloud-computing',
-//   },
-//   {
-//     title: 'Cybersecurity Best Practices for Remote Work',
-//     excerpt:
-//       'Learn essential cybersecurity measures to protect your business in the era of remote work.',
-//     image: '/service2.jpg',
-//     date: 'June 2, 2023',
-//     author: 'John Smith',
-//     slug: 'cybersecurity-best-practices-remote-work',
-//   },
-//   {
-//     title: 'Leveraging AI for Business Intelligence',
-//     excerpt:
-//       'Discover how artificial intelligence is revolutionizing business intelligence and decision-making processes.',
-//     image: '/service3.jpg',
-//     date: 'June 20, 2023',
-//     author: 'Emily Chen',
-//     slug: 'leveraging-ai-business-intelligence',
-//   },
-// ];
 ---
 
 <MainLayout
@@ -368,7 +242,6 @@ const testimonials = [
                 quote={testimonial.quote}
                 author={testimonial.author}
                 position={testimonial.position}
-                image='/service21.jpg'
               />
             ))
           }

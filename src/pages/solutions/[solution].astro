@@ -1,6 +1,6 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
-import { solutions } from '../../constants';
+import { solutions, testimonials } from '../../constants';
 import { Icon } from 'astro-icon/components';
 // const iconMap = {
 //   'chart-line': `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />`,
@@ -9,25 +9,10 @@ import { Icon } from 'astro-icon/components';
 //   'chart-square-bar': `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />`,
 // };
 const stats = [
-  { value: '99.9%', label: 'Accuracy Rate' },
-  { value: '50%', label: 'Time Saved' },
-  { value: '30%', label: 'Cost Reduction' },
-  { value: '24/7', label: 'Monitoring' },
-];
-
-const testimonials = [
-  {
-    quote:
-      "Alicorn Solutions has revolutionized our financial operations. We've cut costs and improved our decision-making process significantly.",
-    author: 'Emily Chen',
-    position: 'CFO, TechCorp Inc.',
-  },
-  {
-    quote:
-      'The real-time analytics and automated reporting have given us unprecedented insights into our financial health.',
-    author: 'Michael Johnson',
-    position: 'Finance Director, Global Innovations',
-  },
+  { value: '100%', label: 'Positive Feedback' },
+  { value: '24/7', label: 'Support Availability' },
+  { value: 'Tailored', label: 'Solutions Provided' },
+  { value: '100%', label: 'Commitment to Excellence' },
 ];
 
 export async function getStaticPaths() {

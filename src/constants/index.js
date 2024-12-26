@@ -1770,4 +1770,19 @@ const posts = [
   },
 ];
 
-export { services, technology, solutions, projects, posts };
+const testimonials = [
+  {
+    quote:
+      'Alicorn Solutions has been a trusted partner in driving our success. Their professionalism and expertise have made a remarkable impact on our business.',
+    author: 'Silke Schreiber',
+    position: 'Product Owner, Düsseldorf Digitalagentur GmbH',
+  },
+  {
+    quote:
+      'Working with Alicorn Solutions has been an exceptional experience. Their dedication to delivering top-notch solutions has exceeded our expectations.',
+    author: 'Daniel Köhnen',
+    position: 'Senior Department Manager, METRO.digital',
+  },
+];
+
+export { services, technology, solutions, projects, posts, testimonials };
