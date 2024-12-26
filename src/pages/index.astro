@@ -5,7 +5,7 @@ import TechCard from '../components/TechCard.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import TestimonialCard from '../components/TestimonialCard.astro';
 import CTA from '../components/CTA.astro';
-import { projects, services } from '../constants';
+import { posts, projects, services } from '../constants';
 import { technology } from '../constants';
 import { Image } from 'astro:assets';
 import BlogPostCard from '../components/BlogPostCard.astro';
@@ -108,35 +108,35 @@ const testimonials = [
   },
 ];
 
-const blogPosts = [
-  {
-    title: 'The Future of Cloud Computing: Trends to Watch',
-    excerpt:
-      'Explore the emerging trends in cloud computing that are shaping the future of IT infrastructure.',
-    image: '/service1.jpg',
-    date: 'May 15, 2023',
-    author: 'Jane Doe',
-    slug: 'future-of-cloud-computing',
-  },
-  {
-    title: 'Cybersecurity Best Practices for Remote Work',
-    excerpt:
-      'Learn essential cybersecurity measures to protect your business in the era of remote work.',
-    image: '/service2.jpg',
-    date: 'June 2, 2023',
-    author: 'John Smith',
-    slug: 'cybersecurity-best-practices-remote-work',
-  },
-  {
-    title: 'Leveraging AI for Business Intelligence',
-    excerpt:
-      'Discover how artificial intelligence is revolutionizing business intelligence and decision-making processes.',
-    image: '/service3.jpg',
-    date: 'June 20, 2023',
-    author: 'Emily Chen',
-    slug: 'leveraging-ai-business-intelligence',
-  },
-];
+// const blogPosts = [
+//   {
+//     title: 'The Future of Cloud Computing: Trends to Watch',
+//     excerpt:
+//       'Explore the emerging trends in cloud computing that are shaping the future of IT infrastructure.',
+//     image: '/service1.jpg',
+//     date: 'May 15, 2023',
+//     author: 'Jane Doe',
+//     slug: 'future-of-cloud-computing',
+//   },
+//   {
+//     title: 'Cybersecurity Best Practices for Remote Work',
+//     excerpt:
+//       'Learn essential cybersecurity measures to protect your business in the era of remote work.',
+//     image: '/service2.jpg',
+//     date: 'June 2, 2023',
+//     author: 'John Smith',
+//     slug: 'cybersecurity-best-practices-remote-work',
+//   },
+//   {
+//     title: 'Leveraging AI for Business Intelligence',
+//     excerpt:
+//       'Discover how artificial intelligence is revolutionizing business intelligence and decision-making processes.',
+//     image: '/service3.jpg',
+//     date: 'June 20, 2023',
+//     author: 'Emily Chen',
+//     slug: 'leveraging-ai-business-intelligence',
+//   },
+// ];
 ---
 
 <MainLayout
@@ -331,7 +331,7 @@ const blogPosts = [
         </h2>
         <div class='grid grid-cols-1 md:grid-cols-3 gap-8'>
           {
-            blogPosts.map((post) => (
+            posts.map((post) => (
               <BlogPostCard
                 title={post.title}
                 excerpt={post.excerpt}

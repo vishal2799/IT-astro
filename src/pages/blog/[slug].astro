@@ -4,55 +4,61 @@ import MainLayout from '../../layouts/MainLayout.astro';
 import AuthorCard from '../../components/AuthorCard.astro';
 import RelatedPosts from '../../components/RelatedPosts.astro';
 import ShareButtons from '../../components/ShareButtons.astro';
+import { posts } from '../../constants';
 
 export async function getStaticPaths() {
-  // In a real application, you would fetch this data from a CMS or API
-  const posts = [
-    {
-      title: 'The Future of Cloud Computing: Trends to Watch',
-      content: `
-        <p>Cloud computing has revolutionized the way businesses operate, offering unprecedented scalability, flexibility, and cost-efficiency. As we look to the future, several emerging trends are set to shape the landscape of cloud computing. In this article, we'll explore these trends and their potential impact on businesses and technology.</p>
-
-        <h2>1. Edge Computing Integration</h2>
-        <p>Edge computing is becoming increasingly important as IoT devices proliferate and the need for real-time data processing grows. The integration of edge computing with cloud services will enable faster data processing and reduced latency, particularly beneficial for applications in autonomous vehicles, smart cities, and industrial IoT.</p>
-
-        <h2>2. Artificial Intelligence and Machine Learning as a Service</h2>
-        <p>AI and ML capabilities are becoming more accessible through cloud platforms. This democratization of AI will allow businesses of all sizes to leverage advanced analytics and intelligent automation without significant upfront investments in hardware and expertise.</p>
-
-        <h2>3. Multi-cloud and Hybrid Cloud Strategies</h2>
-        <p>Organizations are increasingly adopting multi-cloud and hybrid cloud approaches to optimize performance, cost, and compliance. This trend will drive the need for better cloud management tools and strategies to ensure seamless integration and operation across different cloud environments.</p>
-
-        <h2>4. Serverless Computing</h2>
-        <p>Serverless architectures are gaining traction, allowing developers to focus on writing code without worrying about infrastructure management. This trend will continue to grow, enabling more efficient resource utilization and faster development cycles.</p>
-
-        <h2>5. Enhanced Security Measures</h2>
-        <p>As cloud adoption increases, so does the need for robust security measures. We can expect to see advancements in cloud security, including AI-powered threat detection, quantum-resistant encryption, and zero-trust security models.</p>
-
-        <h2>Conclusion</h2>
-        <p>The future of cloud computing is bright and full of possibilities. By staying informed about these trends, businesses can position themselves to take full advantage of the cloud's evolving capabilities, driving innovation and maintaining a competitive edge in the digital landscape.</p>
-      `,
-      excerpt:
-        'Explore the emerging trends in cloud computing that are shaping the future of IT infrastructure.',
-      image: '/service1.jpg',
-      date: 'May 15, 2023',
-      author: {
-        name: 'Jane Doe',
-        bio: 'Jane is a cloud computing expert with over 10 years of experience in the field. She specializes in helping businesses optimize their cloud strategies.',
-        avatar: '/service21.jpg',
-      },
-      slug: 'future-of-cloud-computing',
-      category: 'Cloud Computing',
-    },
-    // Add more blog posts here...
-  ];
+  function addTailwindStyles(html: string) {
+    return (
+      html
+        // Paragraphs
+        .replace(/<p>/g, '<p class="leading-relaxed text-gray-700 mb-4">')
+        // Headings
+        .replace(/<h1>/g, '<h1 class="text-3xl font-bold text-gray-900 mb-6">')
+        .replace(
+          /<h2>/g,
+          '<h2 class="text-xl font-semibold text-gray-900 mb-4">'
+        )
+        .replace(
+          /<h3>/g,
+          '<h3 class="text-lg font-semibold text-gray-800 mb-3">'
+        )
+        .replace(
+          /<h4>/g,
+          '<h4 class="text-base font-medium text-gray-700 mb-2">'
+        )
+        // Unordered Lists
+        .replace(/<ul>/g, '<ul class="list-disc pl-5 mb-4">')
+        // Ordered Lists
+        .replace(/<ol>/g, '<ol class="list-decimal pl-5 mb-4">')
+        // List Items
+        .replace(/<li>/g, '<li class="mb-2">')
+        // Blockquotes
+        .replace(
+          /<blockquote>/g,
+          '<blockquote class="border-l-4 border-gray-300 pl-4 italic text-gray-600 mb-4">'
+        )
+        // Images
+        .replace(/<img /g, '<img class="rounded-lg shadow-md mb-4" ')
+        // Links
+        .replace(/<a /g, '<a class="text-blue-500 hover:underline" ')
+        // Code blocks
+        .replace(
+          /<pre>/g,
+          '<pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-4">'
+        )
+        .replace(/<code>/g, '<code class="font-mono text-sm text-gray-700">')
+        // Horizontal rule
+        .replace(/<hr>/g, '<hr class="border-t border-gray-300 my-6">')
+    );
+  }
 
   return posts.map((post) => ({
     params: { slug: post.slug },
-    props: { post },
+    props: { ...post, content: addTailwindStyles(post.content) },
   }));
 }
 
-const { post } = Astro.props;
+const { title, image, excerpt, author, date, category, content } = Astro.props;
 
 const relatedPosts = [
   {
@@ -76,13 +82,13 @@ const relatedPosts = [
 ];
 ---
 
-<MainLayout title={`${post.title} | TechNova Blog`} description={post.excerpt}>
+<MainLayout title={`${title} | TechNova Blog`} description={excerpt}>
   <main class='bg-gray-50 min-h-screen'>
     <!-- Hero Section -->
     <section class='relative section-padding px-4'>
       <Image
-        src={post.image}
-        alt={post.title}
+        src={image}
+        alt={title}
         width={1920}
         height={1080}
         class='absolute inset-0 w-full h-full object-cover'
@@ -94,9 +100,9 @@ const relatedPosts = [
       <div
         class='relative z-10 container mx-auto max-w-4xl text-center text-white'
       >
-        <h1 class='text-4xl md:text-5xl font-bold mb-6'>{post.title}</h1>
-        <p class='text-xl mb-4'>{post.date} | {post.category}</p>
-        <p class='text-lg'>By {post.author.name}</p>
+        <h1 class='text-4xl md:text-5xl font-bold mb-6'>{title}</h1>
+        <p class='text-xl mb-4'>{date} | {category}</p>
+        <p class='text-lg'>By {author.name}</p>
       </div>
     </section>
 
@@ -104,14 +110,14 @@ const relatedPosts = [
     <section class='section-padding px-4'>
       <div class='container mx-auto max-w-4xl'>
         <article class='bg-white rounded-lg shadow-md p-8 mb-12'>
-          <div class='prose prose-lg max-w-none' set:html={post.content} />
+          <div class='prose prose-lg max-w-none' set:html={content} />
         </article>
 
         <div
           class='flex flex-col md:flex-row justify-between items-start md:items-center space-y-8 md:space-y-0 mb-12'
         >
           <!-- <AuthorCard author={post.author} /> -->
-          <ShareButtons title={post.title} url={Astro.url} />
+          <ShareButtons title={title} url={Astro.url} />
         </div>
 
         <RelatedPosts posts={relatedPosts} />

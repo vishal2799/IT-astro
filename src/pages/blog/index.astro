@@ -2,6 +2,7 @@
 import MainLayout from '../../layouts/MainLayout.astro';
 import BlogPostCard from '../../components/BlogPostCard.astro';
 import Pagination from '../../components/Pagination.astro';
+import { posts } from '../../constants';
 
 // In a real application, you would fetch this data from a CMS or API
 const allPosts = [
@@ -64,8 +65,8 @@ const allPosts = [
 // Pagination
 const postsPerPage = 5;
 const currentPage = 1; // In a real app, this would be determined by the URL or query parameter
-const totalPages = Math.ceil(allPosts.length / postsPerPage);
-const paginatedPosts = allPosts.slice(0, postsPerPage);
+const totalPages = Math.ceil(posts.length / postsPerPage);
+const paginatedPosts = posts.slice(0, postsPerPage);
 ---
 
 <MainLayout
