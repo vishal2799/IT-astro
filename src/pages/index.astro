@@ -205,16 +205,18 @@ import HomeAboutImage from '../assets/images/HomeAbout.jpg';
         </h2>
         <div class='grid grid-cols-1 md:grid-cols-3 gap-8'>
           {
-            posts.map((post) => (
-              <BlogPostCard
-                title={post.title}
-                excerpt={post.excerpt}
-                image={post.image}
-                date={post.date}
-                author={post.author}
-                slug={post.slug}
-              />
-            ))
+            posts
+              .slice(0, 3)
+              .map((post) => (
+                <BlogPostCard
+                  title={post.title}
+                  excerpt={post.excerpt}
+                  image={post.image}
+                  date={post.date}
+                  author={post.author}
+                  slug={post.slug}
+                />
+              ))
           }
         </div>
         <div class='text-center mt-12'>
