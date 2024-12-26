@@ -6,6 +6,58 @@ import RelatedPosts from '../../components/RelatedPosts.astro';
 import ShareButtons from '../../components/ShareButtons.astro';
 import { posts } from '../../constants';
 
+// export async function getStaticPaths() {
+//   function addTailwindStyles(html: string) {
+//     return (
+//       html
+//         // Paragraphs
+//         .replace(/<p>/g, '<p class="leading-relaxed text-gray-700 mb-4">')
+//         // Headings
+//         .replace(/<h1>/g, '<h1 class="text-3xl font-bold text-gray-900 mb-6">')
+//         .replace(
+//           /<h2>/g,
+//           '<h2 class="text-xl font-semibold text-gray-900 mb-4">'
+//         )
+//         .replace(
+//           /<h3>/g,
+//           '<h3 class="text-lg font-semibold text-gray-800 mb-3">'
+//         )
+//         .replace(
+//           /<h4>/g,
+//           '<h4 class="text-base font-medium text-gray-700 mb-2">'
+//         )
+//         // Unordered Lists
+//         .replace(/<ul>/g, '<ul class="list-disc pl-5 mb-4">')
+//         // Ordered Lists
+//         .replace(/<ol>/g, '<ol class="list-decimal pl-5 mb-4">')
+//         // List Items
+//         .replace(/<li>/g, '<li class="mb-2">')
+//         // Blockquotes
+//         .replace(
+//           /<blockquote>/g,
+//           '<blockquote class="border-l-4 border-gray-300 pl-4 italic text-gray-600 mb-4">'
+//         )
+//         // Images
+//         .replace(/<img /g, '<img class="rounded-lg shadow-md mb-4" ')
+//         // Links
+//         .replace(/<a /g, '<a class="text-blue-500 hover:underline" ')
+//         // Code blocks
+//         .replace(
+//           /<pre>/g,
+//           '<pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-4">'
+//         )
+//         .replace(/<code>/g, '<code class="font-mono text-sm text-gray-700">')
+//         // Horizontal rule
+//         .replace(/<hr>/g, '<hr class="border-t border-gray-300 my-6">')
+//     );
+//   }
+
+//   return posts.map((post) => ({
+//     params: { slug: post.slug },
+//     props: { post: { ...post, content: addTailwindStyles(post.content) } },
+//   }));
+// }
+
 export async function getStaticPaths() {
   function addTailwindStyles(html: string) {
     return (
@@ -52,34 +104,40 @@ export async function getStaticPaths() {
     );
   }
 
-  return posts.map((post) => ({
-    params: { slug: post.slug },
-    props: { post: { ...post, content: addTailwindStyles(post.content) } },
-  }));
+  return posts.map((post) => {
+    const relatedPosts = posts.filter((p) => p.slug !== post.slug).slice(0, 3);
+    return {
+      params: { slug: post.slug },
+      props: {
+        post: { ...post, content: addTailwindStyles(post.content) },
+        relatedPosts,
+      },
+    };
+  });
 }
 
-const { post } = Astro.props;
+const { post, relatedPosts } = Astro.props;
 
-const relatedPosts = [
-  {
-    title: 'Cybersecurity Best Practices for Remote Work',
-    excerpt:
-      'Learn essential cybersecurity measures to protect your business in the era of remote work.',
-    image: '/service2.jpg',
-    date: 'June 2, 2023',
-    author: 'John Smith',
-    slug: 'cybersecurity-best-practices-remote-work',
-  },
-  {
-    title: 'Leveraging AI for Business Intelligence',
-    excerpt:
-      'Discover how artificial intelligence is revolutionizing business intelligence and decision-making processes.',
-    image: '/service3.jpg',
-    date: 'June 20, 2023',
-    author: 'Emily Chen',
-    slug: 'leveraging-ai-business-intelligence',
-  },
-];
+// const relatedPosts = [
+//   {
+//     title: 'Cybersecurity Best Practices for Remote Work',
+//     excerpt:
+//       'Learn essential cybersecurity measures to protect your business in the era of remote work.',
+//     image: '/service2.jpg',
+//     date: 'June 2, 2023',
+//     author: 'John Smith',
+//     slug: 'cybersecurity-best-practices-remote-work',
+//   },
+//   {
+//     title: 'Leveraging AI for Business Intelligence',
+//     excerpt:
+//       'Discover how artificial intelligence is revolutionizing business intelligence and decision-making processes.',
+//     image: '/service3.jpg',
+//     date: 'June 20, 2023',
+//     author: 'Emily Chen',
+//     slug: 'leveraging-ai-business-intelligence',
+//   },
+// ];
 ---
 
 <MainLayout title={`${post.title} | TechNova Blog`} description={post.excerpt}>
