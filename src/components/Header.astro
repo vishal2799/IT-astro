@@ -87,28 +87,28 @@ const navItems = [
         >
           <a
             href='/about-us'
-            class='text-sm font-medium text-black-200 hover:text-primary transition-colors duration-300 flex items-center'
+            class='text-sm font-medium text-gray-900 hover:text-primary transition-colors duration-300 flex items-center'
             >About Us</a
           >
           <a
             href='/contact-us'
-            class='text-sm font-medium text-black-200 hover:text-primary transition-colors duration-300 flex items-center'
+            class='text-sm font-medium text-gray-900 hover:text-primary transition-colors duration-300 flex items-center'
             >Contact Us</a
           >
           <a
             href='/blog'
-            class='text-sm font-medium text-black-200 hover:text-primary transition-colors duration-300 flex items-center'
+            class='text-sm font-medium text-gray-900 hover:text-primary transition-colors duration-300 flex items-center'
             >Blog</a
           >
           <a
             href='https://www.linkedin.com/company/alicorn-solutions/'
             target='_blank'
-            class='text-xl font-medium text-textPrimary hover:text-primary transition-colors duration-300 flex items-center'
+            class='text-xl font-medium text-gray-900 hover:text-primary transition-colors duration-300 flex items-center'
             ><Icon name='linkedin' /></a
           >
           <a
             href='mailto:info@alicornsolutions.com'
-            class='text-xl font-medium text-textPrimary hover:text-primary transition-colors duration-300 flex items-center'
+            class='text-xl font-medium text-gray-900 hover:text-primary transition-colors duration-300 flex items-center'
             ><Icon name='envelope' /></a
           >
         </nav>
@@ -118,7 +118,7 @@ const navItems = [
               <div class='relative group'>
                 <a
                   href={item.href}
-                  class='text-sm font-medium text-black-200 hover:text-primary transition-colors duration-300 flex items-center'
+                  class='text-sm font-medium text-gray-900 hover:text-primary transition-colors duration-300 flex items-center'
                 >
                   {item.label}
                   {item.megaMenu && (
@@ -205,7 +205,7 @@ const navItems = [
           }
           <a
             href='tel:+491771346136'
-            class='inline-flex items-center px-6 py-3 text-white bg-primary/90 text-background rounded-3xl hover:bg-primary transition-colors duration-300'
+            class='inline-flex items-center px-6 py-3 text-white bg-primary/90 rounded-3xl hover:bg-primary transition-colors duration-300'
           >
             <Icon name='telephone' class='mr-3 text-lg sm:text-xl' /> +49 177 1346136
           </a>
@@ -213,7 +213,7 @@ const navItems = [
       </div>
       <button
         id='mobileMenuToggle'
-        class='lg:hidden text-black-200 hover:text-primary transition-colors duration-300 focus:outline-none'
+        class='lg:hidden text-gray-900 hover:text-primary transition-colors duration-300 focus:outline-none'
         aria-label='Toggle mobile menu'
       >
         <svg
@@ -243,7 +243,7 @@ const navItems = [
         navItems.map((item) => (
           <div>
             <button
-              class='w-full text-left text-sm font-medium text-black-200 hover:text-primary transition-colors duration-300 flex items-center justify-between focus:outline-none'
+              class='w-full text-left text-sm font-medium text-gray-900 hover:text-primary transition-colors duration-300 flex items-center justify-between focus:outline-none'
               aria-expanded='false'
             >
               <a href={item.href}>{item.label}</a>
