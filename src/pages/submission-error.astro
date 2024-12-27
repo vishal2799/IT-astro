@@ -1,0 +1,50 @@
+---
+import { Icon } from 'astro-icon/components';
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout
+  title='Submission Error | Alicorn Solutions'
+  description='We encountered an error while submitting your form. Please try again or contact us directly.'
+>
+  <main
+    class='bg-primary-50 section-padding flex items-center justify-center px-4 sm:px-6 lg:px-8'
+  >
+    <div class='max-w-md w-full space-y-8 text-center'>
+      <div class='inline-block'>
+        <div
+          class='flex items-center justify-center h-24 w-24 rounded-full bg-red-100 mx-auto'
+        >
+          <Icon name='exclamation-circle' class='h-12 w-12 text-red-600' />
+        </div>
+      </div>
+      <h1 class='mt-6 text-3xl font-extrabold text-gray-900 sm:text-4xl'>
+        Oops! Something went wrong
+      </h1>
+      <p class='mt-2 text-sm text-gray-600 sm:text-base'>
+        We encountered an error while submitting your form. Don't worry, your
+        message is important to us. Please try again or contact us directly.
+      </p>
+      <div class='mt-8 space-y-4'>
+        <a
+          href='/contact-us'
+          class='w-full flex items-center justify-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition duration-150 ease-in-out'
+        >
+          Try Again
+        </a>
+        <a
+          href='mailto:info@alicornsolutions.com'
+          class='w-full flex items-center justify-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-primary bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition duration-150 ease-in-out'
+        >
+          Email Us Directly
+        </a>
+      </div>
+      <p class='mt-4 text-sm text-gray-500'>
+        If the problem persists, please contact our support team at <a
+          href='tel:+491771346136'
+          class='text-primary hover:text-primary-dark'>+49 177 1346136</a
+        >.
+      </p>
+    </div>
+  </main>
+</MainLayout>
