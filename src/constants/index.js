@@ -1617,7 +1617,7 @@ const projects = [
     category: 'E-commerce',
     description:
       'Redesigned and optimized a major e-commerce platform, resulting in a 40% increase in conversion rates and improved user experience.',
-    image: '/service1.jpg',
+    image: '/blog1.webp',
     client: 'MegaShop Inc.',
     duration: '8 months',
     technologies: ['React', 'Node.js', 'MongoDB', 'AWS'],
