@@ -289,7 +289,7 @@ const services = [
     icon: 'gear',
     description:
       'Empowering businesses with tailor-made software solutions using modern technologies for frontend, backend, and full-stack development.',
-    heroImage: '/servicecsd.webp',
+    heroImage: '/service1.webp',
     overview:
       'Our Custom Software Development services are designed to help businesses overcome unique challenges and unlock new opportunities. Whether you need a dynamic frontend to deliver engaging user experiences, a robust backend to handle complex data and operations, or a comprehensive full-stack solution that brings everything together, we’ve got you covered. <br><br> We specialize in cutting-edge technologies like ReactJS and Angular for frontend development, Node.js, .NET, and Java for backend systems, and full-stack expertise for seamless, end-to-end integration. From startups looking for agile solutions to enterprises requiring scalable and secure platforms, we adapt to your needs and deliver exceptional results. <br><br> Our team’s deep understanding of UI/UX design ensures that your software is intuitive and user-friendly, while our cloud integration services, including Azure, AWS, and Google Cloud, ensure scalability and performance. Whether it’s custom applications, enterprise-grade systems, or cross-platform solutions, we build software that not only meets your requirements but also drives growth and innovation for your business.',
     features: [
@@ -443,7 +443,7 @@ const services = [
     icon: 'robot',
     description:
       'Drive efficiency and innovation with our comprehensive business automation solutions powered by the latest technologies.',
-    heroImage: '/servicebas.webp',
+    heroImage: '/service2.webp',
     overview:
       "Transform your business operations with our comprehensive Business Automation Solutions. By leveraging cutting-edge platforms such as Power Platform (Power Apps, Power Automate, Power BI), Robotic Process Automation (RPA) tools like UiPath and Automation Anywhere, and Business Process Management (BPM) frameworks such as K2 and Nintex, we enable your organization to achieve unprecedented efficiency and agility.<br><br>Our tailored solutions empower businesses to automate repetitive tasks, streamline workflows, and gain actionable insights from data, driving operational excellence and fostering innovation. Whether you're looking to optimize resource allocation, enhance compliance, or reduce costs, our expertise ensures that every automation initiative aligns with your strategic goals.<br><br>With a focus on scalability and seamless integration, our Business Automation Solutions are designed to adapt to your unique needs, helping your organization stay competitive in an ever-evolving digital landscape.",
     features: [
@@ -523,7 +523,7 @@ const services = [
     icon: 'palette',
     description:
       'Craft user-centric designs that blend aesthetics and functionality for seamless digital experiences.',
-    heroImage: '/serviceuiux.webp',
+    heroImage: '/service3.webp',
     overview:
       "Delight your users and elevate your digital presence with our UI/UX Design & Development services. We specialize in creating visually appealing, intuitive, and responsive designs for web and mobile platforms that prioritize user satisfaction and business goals.<br><br>Our process begins with in-depth user research and prototyping to ensure the final product aligns with your audience’s needs. With a focus on accessibility compliance and cutting-edge design trends, we deliver solutions that cater to diverse users while meeting industry standards. Whether it's building responsive websites or crafting immersive mobile applications, our team ensures that every interaction is meaningful and engaging.",
     features: [
@@ -1116,7 +1116,7 @@ const solutions = [
     tagline: 'Empower Your Business with Innovative Digital Solutions',
     description:
       'Leverage cutting-edge technologies to streamline operations, improve decision-making, and drive business growth with our Digital Transformation services.',
-    heroImage: '/solutionDT.webp',
+    heroImage: '/solution1.webp',
     overview:
       'Digital Transformation is no longer a choice but a necessity for businesses aiming to remain competitive in today’s fast-paced world. Our services harness the power of industry-leading technologies such as Power Automate, RPA tools like UiPath and Automation Anywhere, and AI platforms like Azure AI and Google AI to revolutionize your operations. By automating repetitive tasks, streamlining workflows, and unlocking actionable insights from your data, we help you save time, reduce costs, and improve decision-making. Business Process Management (BPM) solutions using Nintex and K2 further ensure that your processes are optimized for maximum efficiency and compliance.  <br><br>  With our Digital Transformation services, your business can achieve a seamless blend of automation, integration, and intelligence. Whether you need to automate simple workflows or overhaul complex systems, we offer end-to-end solutions tailored to your goals. Our approach also emphasizes scalability, ensuring that as your business grows, your systems evolve to meet new demands. From enhancing operational efficiency to providing predictive analytics that drive strategic planning, we enable you to future-proof your business in an ever-evolving digital ecosystem.',
 
@@ -1195,7 +1195,7 @@ const solutions = [
       'Streamline Your Business Operations with Custom Enterprise Applications',
     description:
       'Harness the power of technology to build robust CRM, ERP, and enterprise portals tailored to your business needs.',
-    heroImage: '/solutionEA.webp',
+    heroImage: '/solution2.webp',
     overview:
       'Enterprise Applications are the backbone of modern businesses, driving productivity, collaboration, and scalability. Our solutions include CRM and ERP systems built using SharePoint and Power Apps, offering centralized control over customer relationships, resource planning, and business operations.<br><br>These tools empower organizations to automate processes, manage data efficiently, and achieve greater visibility across departments. With built-in analytics and seamless reporting, your team can make data-driven decisions in real time.<br><br>Additionally, we deliver custom portals developed using advanced frameworks like React, Angular, and Astro, tailored to meet your unique requirements. Whether you need a customer-facing platform, a partner portal, or an employee collaboration tool, our portals ensure intuitive designs, responsive interfaces, and robust functionality.<br><br>By leveraging state-of-the-art technology, we ensure our enterprise applications are scalable, secure, and future-ready, enabling businesses to stay ahead in a competitive landscape.',
     process: [
@@ -1273,7 +1273,7 @@ const solutions = [
     tagline: 'Deliver Exceptional Customer Experiences with Tailored Solutions',
     description:
       'Empower your business with e-commerce platforms and data analytics dashboards that prioritize customer satisfaction and drive engagement.',
-    heroImage: '/solutionCCP.webp',
+    heroImage: '/solution3.webp',
     overview: `In today’s competitive landscape, businesses need platforms that not only meet customer expectations but exceed them.<br><br>
     Our Customer-Centric Platforms are designed to provide seamless and engaging user experiences. We develop robust e-commerce platforms using modern frameworks like React, Node.js, and Astro, ensuring fast, secure, and scalable solutions. These platforms are equipped with advanced features such as personalized recommendations, streamlined checkouts, and mobile responsiveness to maximize customer satisfaction and retention.<br><br>
     Additionally, our expertise in building data analytics dashboards with tools like Power BI and Tableau enables businesses to gain actionable insights into customer behavior, preferences, and trends. These dashboards transform raw data into visual stories, empowering you to make informed decisions that enhance your products and services.<br><br>
