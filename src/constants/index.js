@@ -1695,7 +1695,7 @@ const posts = [
 `,
     excerpt:
       'In today’s competitive digital landscape, UI/UX design is crucial for creating engaging and seamless user experiences. This article explores the latest trends in UI/UX design and how businesses can adopt user-centered principles to enhance engagement and drive success.',
-    image: '/blog1.jpg',
+    image: '/blog1.webp',
     date: 'Dec 25, 2024',
     author: {
       name: 'Tarun Parashar',
@@ -1758,7 +1758,7 @@ const posts = [
     `,
     excerpt:
       'Explore how BPM tools can optimize business processes, improve efficiency, and drive growth. Learn the key features, benefits, and best practices for leveraging BPM tools in your organization.',
-    image: '/blog2.jpg',
+    image: '/blog2.webp',
     date: 'December 26, 2024',
     author: {
       name: 'Tarun Parashar',
@@ -1822,12 +1822,12 @@ const posts = [
     `,
     excerpt:
       'Discover how RPA is transforming business operations by automating repetitive tasks. Learn about its benefits, use cases, and best practices for successful implementation.',
-    image: '/blog3.jpg',
+    image: '/blog3.webp',
     date: 'December 26, 2024',
     author: {
       name: 'Tarun Parashar',
       bio: 'Tarun is a technology enthusiast and RPA specialist who helps businesses streamline their processes and embrace automation for operational excellence.',
-      avatar: '/blog3.jpg',
+      avatar: '/avatar.png',
     },
     slug: 'harnessing-rpa-for-business-efficiency',
     category: 'Robotic Process Automation',
@@ -1888,12 +1888,12 @@ const posts = [
     `,
     excerpt:
       'Explore how AI is transforming industries, driving innovation, and reshaping business operations. Learn about AI technologies, benefits, and challenges in this insightful article.',
-    image: '/blog4.jpg',
+    image: '/blog4.webp',
     date: 'December 26, 2024',
     author: {
       name: 'Tarun Parashar',
       bio: 'Tarun is an AI enthusiast and technology consultant with expertise in helping businesses integrate AI solutions for operational efficiency and growth.',
-      avatar: '/blog4.jpg',
+      avatar: '/avatar.png',
     },
     slug: 'unlocking-the-potential-of-ai',
     category: 'Artificial Intelligence',
@@ -1955,12 +1955,12 @@ const posts = [
     `,
     excerpt:
       'Discover how low code/no code platforms are transforming business operations, driving innovation, and enabling non-technical users to build custom solutions. Learn about the benefits, use cases, and popular platforms in this insightful article.',
-    image: '/blog5.jpg',
+    image: '/blog5.webp',
     date: 'December 26, 2024',
     author: {
       name: 'Tarun Parashar',
       bio: 'Tarun is a digital transformation consultant with a passion for enabling businesses to adopt modern technologies such as low code/no code platforms for accelerated growth.',
-      avatar: '/blog5.jpg',
+      avatar: '/avatar.png',
     },
     slug: 'the-power-of-low-code-no-code',
     category: 'Digital Transformation',
