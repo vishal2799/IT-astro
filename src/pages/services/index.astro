@@ -3,6 +3,7 @@ import { services } from '../../constants';
 import MainLayout from '../../layouts/MainLayout.astro';
 import ServicesBreadcrumbImage from '../../assets/images/ServicesBreadcrumb.webp';
 import { Image } from 'astro:assets';
+import CTA from '../../components/CTA.astro';
 // const services = [
 //   {
 //     title: 'Cloud Migration Services',
@@ -136,22 +137,11 @@ import { Image } from 'astro:assets';
     </section>
 
     <!-- CTA Section -->
-    <section class='section-padding px-4 bg-primary text-white'>
-      <div class='container mx-auto max-w-4xl text-center'>
-        <h2 class='text-3xl md:text-4xl font-bold mb-6'>
-          Ready to Transform Your Business?
-        </h2>
-        <p class='text-xl mb-8'>
-          Our team of experts is here to help you navigate the complex world of
-          IT and drive your business forward.
-        </p>
-        <a
-          href='/contact-us'
-          class='inline-block bg-white text-primary font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300'
-        >
-          Get in Touch
-        </a>
-      </div>
-    </section>
+    <CTA
+      title='Ready to Transform Your Business?'
+      description='Our team of experts is here to help you navigate the complex world of IT and drive your business forward.'
+      buttonText='Get in Touch'
+      buttonLink='/contact-us'
+    />
   </div>
 </MainLayout>
