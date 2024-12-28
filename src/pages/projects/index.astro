@@ -4,6 +4,7 @@ import ProjectCard from '../../components/ProjectCard.astro';
 import { projects } from '../../constants';
 import ProjectBreadcrumbImage from '../../assets/images/ProjectBreadcrumb.webp';
 import { Image } from 'astro:assets';
+import CTA from '../../components/CTA.astro';
 // const projects = [
 //   {
 //     title: 'Global E-commerce Platform Overhaul',
@@ -73,11 +74,6 @@ import { Image } from 'astro:assets';
         height={1080}
         class='absolute inset-0 w-full h-full object-cover'
       />
-      <!-- <img
-        src='/breadcrumb1.jpg'
-        alt='TechNova Projects'
-        class='absolute inset-0 w-full h-full object-cover'
-      /> -->
       <div class='absolute inset-0 bg-black opacity-50'></div>
       <div class='relative z-10 text-center text-white px-4'>
         <h1 class='text-4xl md:text-6xl font-bold mb-4'>Our Projects</h1>
@@ -110,22 +106,11 @@ import { Image } from 'astro:assets';
     </section>
 
     <!-- CTA Section -->
-    <section class='section-padding px-4 bg-primary text-white'>
-      <div class='container mx-auto max-w-3xl text-center'>
-        <h2 class='text-3xl md:text-4xl font-bold mb-6'>
-          Ready to Start Your Project?
-        </h2>
-        <p class='text-xl text-primary-100 mb-8'>
-          Let's discuss how we can bring your ideas to life and drive your
-          business forward.
-        </p>
-        <a
-          href='/contact-us'
-          class='inline-block bg-white text-primary font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300 text-lg'
-        >
-          Get in Touch
-        </a>
-      </div>
-    </section>
+    <CTA
+      title='Ready to Start Your Project?'
+      description='Lets discuss how we can bring your ideas to life and drive your business forward.'
+      buttonText='Get in Touch'
+      buttonLink='/contact-us'
+    />
   </main>
 </MainLayout>
