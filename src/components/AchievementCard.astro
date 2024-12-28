@@ -10,10 +10,22 @@ interface Props {
 const { title, value, icon } = Astro.props;
 ---
 
-<div
-  class='bg-white rounded-lg shadow-md p-4 md:p-6 text-center transition-all duration-300 hover:shadow-xl'
+<section
+  role='region'
+  aria-labelledby='achievement-title'
+  class='bg-white rounded-lg shadow-md p-4 md:p-6 text-center transition-all duration-300 hover:shadow-xl focus-within:ring-2 focus-within:ring-primary focus-within:outline-none'
 >
-  <Icon name={icon} class='w-12 h-12 text-primary mx-auto mb-4' />
-  <h3 class='text-lg md:text-2xl font-bold text-gray-900 mb-2'>{value}</h3>
+  <span class='sr-only'>{title} icon</span>
+  <Icon
+    name={icon}
+    class='w-12 h-12 text-primary mx-auto mb-4'
+    aria-hidden='true'
+  />
+  <h3
+    id='achievement-title'
+    class='text-lg md:text-2xl font-bold text-gray-900 mb-2'
+  >
+    {value}
+  </h3>
   <p class='text-gray-600'>{title}</p>
-</div>
+</section>

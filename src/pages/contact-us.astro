@@ -34,14 +34,21 @@ const contactInfo = {
     <section
       class='relative h-[40vh] min-h-[300px] flex items-center justify-center'
     >
+      <!-- Background Image -->
       <Image
         src={ContactBreadcrumbImage}
         alt='Contact Alicorn Solutions'
         width={1920}
         height={1080}
         class='absolute inset-0 w-full h-full object-cover'
+        loading='lazy'
+        decoding='async'
       />
+
+      <!-- Overlay -->
       <div class='absolute inset-0 bg-primary opacity-70'></div>
+
+      <!-- Content -->
       <div class='relative z-10 text-center text-white px-4'>
         <h1 class='text-4xl md:text-6xl font-bold mb-4'>Contact Us</h1>
         <p class='text-xl md:text-2xl mb-8'>
@@ -67,18 +74,25 @@ const contactInfo = {
     <!-- Map Section -->
     <section class='section-padding px-4 bg-gray-50'>
       <div class='container mx-auto max-w-6xl'>
+        <!-- Heading -->
         <h2 class='text-3xl font-bold text-center mb-12 text-gray-900'>
           Our Location
         </h2>
-        <div class='aspect-w-16 aspect-h-9'>
+
+        <!-- Map Container -->
+        <div
+          class='aspect-w-16 aspect-h-9 relative overflow-hidden rounded-lg shadow-md'
+        >
           <iframe
             src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2499.868780390317!2d6.8318177115232785!3d51.20306953277313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b8cb91a9f036d9%3A0x5ff311b94e592b48!2sEllerbittweg%206%2C%2040229%20D%C3%BCsseldorf%2C%20Germany!5e0!3m2!1sen!2sin!4v1734934454211!5m2!1sen!2sin'
             width='100%'
             height='450'
+            class='w-full h-full'
             style='border:0;'
             allowfullscreen=''
             loading='lazy'
-            referrerpolicy='no-referrer-when-downgrade'></iframe>
+            referrerpolicy='no-referrer-when-downgrade'
+            aria-label='Google Map showing the location of our office'></iframe>
         </div>
       </div>
     </section>
