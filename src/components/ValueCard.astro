@@ -12,10 +12,12 @@ const { title, description, icon } = Astro.props;
 
 <div
   class='bg-white rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-xl'
+  role='region'
+  aria-labelledby={title}
 >
   <div class='flex items-center mb-4'>
     <div class='bg-primary/10 p-3 rounded-full mr-4'>
-      <Icon name={icon} class='w-6 h-6 text-primary' />
+      <Icon name={icon} class='w-6 h-6 text-primary' aria-hidden='true' />
     </div>
     <h3 class='text-xl font-semibold text-gray-900'>{title}</h3>
   </div>

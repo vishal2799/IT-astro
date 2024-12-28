@@ -2,12 +2,13 @@
 import { Icon } from 'astro-icon/components';
 
 interface Props {
+  id: number;
   title: string;
   value: string;
   icon: string;
 }
 
-const { title, value, icon } = Astro.props;
+const { id, title, value, icon } = Astro.props;
 ---
 
 <section
@@ -22,7 +23,7 @@ const { title, value, icon } = Astro.props;
     aria-hidden='true'
   />
   <h3
-    id='achievement-title'
+    id=`achievement-title-${id}`
     class='text-lg md:text-2xl font-bold text-gray-900 mb-2'
   >
     {value}
