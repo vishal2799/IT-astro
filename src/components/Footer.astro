@@ -6,7 +6,10 @@ const currentYear = new Date().getFullYear();
 
 const serviceLinks = services.map((service) => ({
   label: service.title,
-  href: `/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`,
+  href: `/services/${service.title
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w-]/g, '')}`,
 }));
 
 const techLinks = technology.map((tech) => ({
