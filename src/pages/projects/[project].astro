@@ -5,7 +5,12 @@ import { projects, testimonials } from '../../constants';
 export async function getStaticPaths() {
   return projects.map((project) => {
     return {
-      params: { project: project.title.toLowerCase().replace(/\s+/g, '-') },
+      params: {
+        project: project.title
+          .toLowerCase()
+          .replace(/\s+/g, '-')
+          .replace(/[^\w-]/g, ''),
+      },
       props: { project },
     };
   });

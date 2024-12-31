@@ -1613,24 +1613,24 @@ const solutions = [
 
 const projects = [
   {
-    title: 'Global E-commerce Platform Overhaul',
-    category: 'E-commerce',
+    title: 'Paperlite: Future-Ready Practice Management Tool',
+    category: 'Practice Management',
     description:
-      'Redesigned and optimized a major e-commerce platform, resulting in a 40% increase in conversion rates and improved user experience.',
-    image: '/blog1.webp',
-    client: 'MegaShop Inc.',
-    duration: '8 months',
-    technologies: ['React', 'Node.js', 'MongoDB', 'AWS'],
-    slug: 'global-ecommerce-platform-overhaul',
+      'An advanced practice management tool designed for Chartered Accountants (CAs) and Certified Public Accountants (CPAs). Its flexible architecture ensures it can be customized to meet the needs of other professionals, such as lawyers, with minimal modifications.',
+    image: '/project1.webp', // Placeholder, can be updated later.
+    client: 'JHS Associates LLP',
+    duration: '8+ months (ongoing)',
+    technologies: ['SharePoint', 'Power BI', 'Microsoft Outlook Integration'],
+    slug: 'paperlite-practice-management-tool',
     challenge:
-      'The clients existing e-commerce platform was outdated, slow, and unable to handle increasing traffic. They needed a complete overhaul to improve performance, user experience, and conversion rates.',
+      'Inefficient manual processes and scattered workflows for CAs and CPAs led to difficulties in managing tasks, client relationships, and accessing real-time analytics. The client also wanted a scalable solution that could cater to other professions, such as lawyers, with minimal effort.',
     solution:
-      'We redesigned the entire platform using modern technologies, implemented a microservices architecture for better scalability, and optimized the user journey based on extensive user research and A/B testing.',
+      'Built a modular platform offering CRM, task tracking, client database management, and automated workflows. Power BI dashboards provided real-time insights, while dynamic templates and recurring task automation streamlined operations. The design allows for quick adaptation to legal practices with features like case management and legal document templates.',
     results: [
-      '40% increase in conversion rates',
-      '60% improvement in page load times',
-      '25% reduction in cart abandonment',
-      '50% increase in mobile sales',
+      'Streamlined task and client management for CAs and CPAs',
+      'Real-time insights enabled better operational decisions',
+      'Significant time savings with automated workflows',
+      'Future-proof design to expand into legal practice management',
     ],
   },
 ];
@@ -1698,7 +1698,7 @@ const posts = [
     image: '/blog1.webp',
     date: 'Dec 25, 2024',
     author: {
-      name: 'Tarun Parashar',
+      name: 'Ekta Agrawal',
       bio: 'Jane is a cloud computing expert with over 10 years of experience in the field. She specializes in helping businesses optimize their cloud strategies.',
       avatar: '/avatar.png',
     },
@@ -1825,7 +1825,7 @@ const posts = [
     image: '/blog3.webp',
     date: 'December 26, 2024',
     author: {
-      name: 'Tarun Parashar',
+      name: 'Ekta Agrawal',
       bio: 'Tarun is a technology enthusiast and RPA specialist who helps businesses streamline their processes and embrace automation for operational excellence.',
       avatar: '/avatar.png',
     },
