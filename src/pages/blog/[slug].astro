@@ -70,6 +70,7 @@ const { post, relatedPosts } = Astro.props;
 <MainLayout
   title={`${post.title} | Alicorn Solutions Blog`}
   description={post.excerpt}
+  canonicalUrl=`https://alicornsolutions.com/blog/${post.slug}`
 >
   <main class='bg-gray-50 min-h-screen'>
     <!-- Hero Section -->

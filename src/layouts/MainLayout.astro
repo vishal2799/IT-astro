@@ -6,7 +6,11 @@ import '@fontsource/poppins/600.css';
 import '@fontsource/poppins/700.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-const { title, description } = Astro.props;
+const {
+  title,
+  description,
+  canonicalUrl = 'https://alicornsolutions.com/',
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -32,6 +36,8 @@ const { title, description } = Astro.props;
       content='Ch2pRecH9_Sm3C5qJl3GSTyC7jVxLcrRnRHbMOX-Nqg'
     />
     <link rel='sitemap' href='/sitemap-index.xml' />
+    <!-- Add Canonical Tag -->
+    <link rel='canonical' href={canonicalUrl} />
   </head>
   <body class='font-poppins'>
     <Header />

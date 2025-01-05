@@ -32,6 +32,7 @@ const { financeData, relatedSolutions } = Astro.props;
 <MainLayout
   title={`${financeData.name} | Alicorn Solutions`}
   description={financeData.description}
+  canonicalUrl=`https://alicornsolutions.com/solutions/${financeData.name.toLowerCase().replace(/\s+/g, '-')}`
 >
   <main class='bg-white'>
     <!-- Hero Section -->

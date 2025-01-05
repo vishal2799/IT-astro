@@ -25,6 +25,10 @@ const { serviceData, relatedServices } = Astro.props;
 <MainLayout
   title={`${serviceData.title} | Alicorn Solutions`}
   description={serviceData.description}
+  canonicalUrl=`https://alicornsolutions.com/services/${serviceData.title
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w-]/g, '')}`
 >
   <div class='bg-gradient-to-b from-primary-50 to-white'>
     <!-- Hero Section -->

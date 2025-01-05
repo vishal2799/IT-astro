@@ -21,6 +21,7 @@ const { project } = Astro.props;
 <MainLayout
   title={`${project.title} | Alicorn Solutions`}
   description={project.description}
+  canonicalUrl=`https://alicornsolutions.com/projects/${project.title.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '')}`
 >
   <main class='bg-white'>
     <!-- Hero Section -->
