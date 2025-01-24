@@ -1971,14 +1971,14 @@ const testimonials = [
   {
     quote:
       'Alicorn Solutions has been a trusted partner in driving our success. Their professionalism and expertise have made a remarkable impact on our business.',
-    author: 'Silke Schreiber',
-    position: 'Product Owner, Düsseldorf Digitalagentur GmbH',
+    author: 'Lee Phillips',
+    position: 'Digital Data Lead, Twinings Ovaltine',
   },
   {
     quote:
       'Working with Alicorn Solutions has been an exceptional experience. Their dedication to delivering top-notch solutions has exceeded our expectations.',
-    author: 'Daniel Köhnen',
-    position: 'Senior Department Manager, METRO.digital',
+    author: 'Julien Lerolle',
+    position: 'Finance Director, Johnson & Johnson',
   },
 ];
 
