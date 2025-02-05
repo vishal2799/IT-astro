@@ -18,27 +18,27 @@ const { address, email, phone, socialMedia } = Astro.props;
 <div class='bg-white rounded-lg shadow-md p-8 h-full'>
   <h2 class='text-2xl font-bold mb-6 text-gray-900'>Contact Information</h2>
 
-  <!-- Address Section -->
   <div class='space-y-6'>
+    <!-- Address Section -->
     <div class='flex items-start'>
       <Icon
         name='geo-alt'
-        class='w-8 h-8 text-primary mr-4 mt-1'
+        class='text-primary w-6 h-6 flex-shrink-0 mr-4'
         aria-hidden='true'
       />
-      <p class='text-gray-700'>{address}</p>
+      <p class='text-sm text-gray-700 break-words'>{address}</p>
     </div>
 
     <!-- Email Section -->
-    <div class='flex items-center'>
+    <div class='flex items-start'>
       <Icon
         name='envelope'
-        class='w-6 h-6 text-primary mr-4'
+        class='w-6 h-6 text-primary flex-shrink-0 mr-4'
         aria-hidden='true'
       />
       <a
         href={`mailto:${email}`}
-        class='text-gray-700 hover:text-primary transition duration-300'
+        class='text-gray-700 transition duration-300 hover:text-primary'
         aria-label={`Email us at ${email}`}
       >
         {email}
@@ -46,11 +46,15 @@ const { address, email, phone, socialMedia } = Astro.props;
     </div>
 
     <!-- Phone Section -->
-    <div class='flex items-center'>
-      <Icon name='phone' class='w-6 h-6 text-primary mr-4' aria-hidden='true' />
+    <div class='flex items-start'>
+      <Icon
+        name='phone'
+        class='w-6 h-6 text-primary flex-shrink-0 mr-4'
+        aria-hidden='true'
+      />
       <a
         href={`tel:${phone}`}
-        class='text-gray-700 hover:text-primary transition duration-300'
+        class='text-gray-700 transition duration-300 hover:text-primary'
         aria-label={`Call us at ${phone}`}
       >
         {phone}
