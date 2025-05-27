@@ -1,0 +1,187 @@
+---
+import { solutions } from '../../constants';
+import MainLayout from '../../layouts/MainLayout.astro';
+
+// const solutions = [
+//   {
+//     name: 'FinanceFlow',
+//     tagline: 'Streamline Your Financial Operations',
+//     description:
+//       'Advanced fintech solution for optimizing financial processes, enhancing security, and making data-driven decisions.',
+//     image: '/images/finance-solution.jpg',
+//     link: '/solutions/finance-flow',
+//   },
+//   {
+//     name: 'CloudMigrate',
+//     tagline: 'Seamless Cloud Transition',
+//     description:
+//       'Expert cloud migration services to help businesses move their infrastructure and applications to the cloud efficiently.',
+//     image: '/images/cloud-solution.jpg',
+//     link: '/solutions/cloud-migrate',
+//   },
+//   {
+//     name: 'SecureShield',
+//     tagline: 'Robust Cybersecurity Protection',
+//     description:
+//       'Comprehensive cybersecurity solutions to safeguard your digital assets and protect against evolving threats.',
+//     image: '/images/security-solution.jpg',
+//     link: '/solutions/secure-shield',
+//   },
+//   {
+//     name: 'DataInsight',
+//     tagline: 'Unlock the Power of Your Data',
+//     description:
+//       'Advanced data analytics and visualization tools to help you make informed business decisions.',
+//     image: '/images/data-solution.jpg',
+//     link: '/solutions/data-insight',
+//   },
+// ];
+
+const commonFeatures = [
+  'Personalized Solutions',
+  'Reliable and Secure Systems',
+  'Streamlined Workflows',
+  'Clear Insights and Reports',
+  'User-Friendly Interfaces',
+  'Dedicated Customer Support',
+];
+
+const stats = [
+  { value: '100%', label: 'Positive Feedback' },
+  { value: '24/7', label: 'Support Availability' },
+  { value: 'Tailored', label: 'Solutions Provided' },
+  { value: '100%', label: 'Commitment to Excellence' },
+];
+---
+
+<MainLayout
+  title='Our Solutions | Alicorn Solutions'
+  description='Explore our range of innovative IT solutions designed to transform your business.'
+  canonicalUrl='https://alicornsolutions.com/solutions'
+>
+  <main class='bg-white'>
+    <!-- Hero Section -->
+    <section class='bg-primary-50 py-20'>
+      <div class='container mx-auto px-4'>
+        <div class='text-center'>
+          <h1 class='text-4xl md:text-5xl font-bold mb-6 text-gray-900'>
+            Innovative Solutions for Your Business
+          </h1>
+          <p class='text-xl md:text-2xl mb-8 text-gray-700 max-w-3xl mx-auto'>
+            Discover our range of cutting-edge IT solutions designed to drive
+            growth, efficiency, and innovation in your organization.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solutions Grid -->
+    <section class='section-padding'>
+      <div class='container mx-auto px-4'>
+        <div class='grid grid-cols-1 md:grid-cols-2 gap-12'>
+          {
+            solutions.map((solution) => (
+              <div class='bg-white p-8 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition duration-300'>
+                {/* <Image
+                  src='/service21.jpg'
+                  alt={solution.name}
+                  width={400}
+                  height={225}
+                  class='rounded-lg mb-6'
+                /> */}
+                <img
+                  src={solution.heroImage}
+                  alt={solution.name}
+                  class='rounded-lg mb-6'
+                />
+                <h2 class='text-2xl font-bold mb-2 text-gray-900'>
+                  {solution.name}
+                </h2>
+                <p class='text-lg font-semibold mb-4 text-primary'>
+                  {solution.tagline}
+                </p>
+                <p class='text-gray-600 mb-6'>{solution.description}</p>
+                <a
+                  href={`/solutions/${solution.name.toLowerCase().replace(/\s+/g, '-')}`}
+                  class='inline-block bg-primary hover:bg-primary/90 text-white font-bold py-2 px-6 rounded-lg transition duration-300'
+                >
+                  Learn More
+                </a>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Common Features Section -->
+    <section class='section-padding bg-gray-50'>
+      <div class='container mx-auto px-4'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900'
+        >
+          Key Features Across Our Solutions
+        </h2>
+        <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          {
+            commonFeatures.map((feature) => (
+              <div class='flex items-center bg-white p-6 rounded-lg shadow-md'>
+                <svg
+                  class='w-6 h-6 text-primary mr-4'
+                  fill='none'
+                  stroke='currentColor'
+                  viewBox='0 0 24 24'
+                  xmlns='http://www.w3.org/2000/svg'
+                >
+                  <path
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    stroke-width='2'
+                    d='M5 13l4 4L19 7'
+                  />
+                </svg>
+                <span class='text-lg text-gray-800'>{feature}</span>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class='section-padding bg-primary text-white'>
+      <div class='container mx-auto px-4'>
+        <div class='grid grid-cols-2 md:grid-cols-4 gap-8 text-center'>
+          {
+            stats.map((stat) => (
+              <div>
+                <p class='text-4xl font-bold mb-2'>{stat.value}</p>
+                <p class='text-xl'>{stat.label}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class='section-padding bg-primary-50'>
+      <div class='container mx-auto px-4 text-center'>
+        <h2 class='text-3xl md:text-4xl font-bold mb-6 text-gray-900'>
+          Ready to Transform Your Business?
+        </h2>
+        <p class='text-xl mb-8 text-gray-600 max-w-3xl mx-auto'>
+          Our team of experts is ready to help you implement the perfect
+          solution for your business needs. Get in touch today for a
+          personalized consultation.
+        </p>
+        <a
+          href='/contact-us'
+          class='bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-lg transition duration-300 inline-block'
+        >
+          Schedule a Consultation
+        </a>
+      </div>
+    </section>
+  </main>
+</MainLayout>

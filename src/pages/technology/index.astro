@@ -1,0 +1,274 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import TechCard from '../../components/TechCard.astro';
+import { technology } from '../../constants';
+import TechnologyBreadcrumbImage from '../../assets/images/TechnologyBreadcrumb.webp';
+import TechnologyIntegrationImage from '../../assets/images/TechnologyIntegration.webp';
+import { Image } from 'astro:assets';
+import CTA from '../../components/CTA.astro';
+// const technologies = [
+//   {
+//     name: 'AutoFlow',
+//     tagline: 'Streamline Your Workflow with Intelligent Automation',
+//     description:
+//       'Cutting-edge Robotic Process Automation (RPA) platform for automating repetitive tasks and boosting productivity.',
+//     image: '/service21.jpg',
+//     link: '/technologies/autoflow',
+//     icon: 'robot',
+//   },
+//   {
+//     name: 'DataSense',
+//     tagline: 'Unlock the Power of Your Data',
+//     description:
+//       'Advanced data analytics and visualization platform for making informed business decisions.',
+//     image: '/service21.jpg',
+//     link: '/technologies/datasense',
+//     icon: 'pie-chart',
+//   },
+//   {
+//     name: 'CloudGuard',
+//     tagline: 'Secure Your Digital Assets in the Cloud',
+//     description:
+//       'Comprehensive cloud security solution to protect your data and applications in multi-cloud environments.',
+//     image: '/service21.jpg',
+//     link: '/technologies/cloudguard',
+//     icon: 'cloud',
+//   },
+//   {
+//     name: 'AIAssist',
+//     tagline: 'Enhance Decision-Making with Artificial Intelligence',
+//     description:
+//       'AI-powered platform for predictive analytics, natural language processing, and intelligent automation.',
+//     image: '/service21.jpg',
+//     link: '/technologies/aiassist',
+//     icon: 'robot',
+//   },
+// ];
+
+const commonFeatures = [
+  'Modern and Intuitive Design',
+  'Easy Integration with Tools',
+  'Flexible and Scalable Solutions',
+  'Actionable Real-time Insights',
+  'Robust Security Standards',
+  'Reliable Technical Support',
+];
+
+const stats = [
+  { value: '100%', label: 'Positive Feedback' },
+  { value: '24/7', label: 'Support Availability' },
+  { value: 'Tailored', label: 'Solutions Provided' },
+  { value: '100%', label: 'Commitment to Excellence' },
+];
+---
+
+<MainLayout
+  title='Our Technologies | Alicorn Solutions'
+  description='Explore our cutting-edge technologies designed to transform your business operations and drive innovation.'
+  canonicalUrl='https://alicornsolutions.com/technology'
+>
+  <main class='bg-gradient-to-b from-gray-100 to-white'>
+    <!-- Hero Section -->
+    <section
+      class='relative h-[50vh] min-h-[400px] flex items-center justify-center'
+    >
+      <Image
+        src={TechnologyBreadcrumbImage}
+        alt='Tech solutions powering business growth'
+        width={1920}
+        height={1080}
+        class='absolute inset-0 w-full h-full object-cover'
+      />
+      <div class='absolute inset-0 bg-black opacity-50'></div>
+      <div class='relative z-10 text-center text-white px-4'>
+        <h1 class='text-4xl md:text-6xl font-bold mb-4'>Our Technologies</h1>
+        <p class='text-xl md:text-2xl mb-8'>
+          Empowering Your Business with Cutting-Edge Solutions
+        </p>
+        <a
+          href='#technologies'
+          class='bg-primary/90 hover:bg-primary focus:ring-4 focus:ring-primary/50 text-white font-bold py-3 px-8 rounded-full transition duration-300 text-lg'
+        >
+          Explore Our Tech Stack
+        </a>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class='section-padding bg-white px-4 lg:px-0'>
+      <div class='container mx-auto max-w-6xl'>
+        <div class='grid grid-cols-2 md:grid-cols-4 gap-8 text-center'>
+          {
+            stats.length === 0 ? (
+              <p>No stats available</p>
+            ) : (
+              stats.map((stat) => (
+                <div class='bg-gray-50 p-6 rounded-lg shadow-md hover:bg-primary/10 hover:shadow-xl transition-all duration-300'>
+                  <p class='text-2xl sm:text-3xl md:text-4xl font-semibold text-primary mb-2'>
+                    {stat.value}
+                  </p>
+                  <p class='text-gray-600'>{stat.label}</p>
+                </div>
+              ))
+            )
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id='technologies' class='section-padding px-4'>
+      <div class='container mx-auto max-w-6xl'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900'
+        >
+          Our Technology Stack
+        </h2>
+        <div class='grid grid-cols-1 md:grid-cols-2 gap-12'>
+          {
+            technology.map((tech) => (
+              <TechCard
+                name={tech.name}
+                tagline={tech.tagline}
+                description={tech.description}
+                image={tech.image}
+                icon={tech.icon}
+              />
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Common Features Section -->
+    <section class='section-padding px-4 bg-primary-50'>
+      <div class='container mx-auto max-w-4xl'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-gray-900 text-center mb-16'
+        >
+          Common Features Across Our Technologies
+        </h2>
+        <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8'>
+          {
+            commonFeatures.length === 0 ? (
+              <p>No features available</p>
+            ) : (
+              commonFeatures.map((feature) => (
+                <div class='flex items-start bg-white p-6 rounded-lg shadow-md hover:bg-primary/10 hover:shadow-xl transition-all duration-300'>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    class='h-8 w-8 text-primary mt-1 mr-4'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    stroke='currentColor'
+                  >
+                    <path
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      stroke-width='2'
+                      d='M5 13l4 4L19 7'
+                    />
+                  </svg>
+                  <p class='text-lg md:text-xl text-gray-800'>{feature}</p>
+                </div>
+              ))
+            )
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Integration Section -->
+    <section class='section-padding px-4'>
+      <div class='container mx-auto max-w-4xl'>
+        <h2
+          class='text-3xl md:text-4xl text-gray-900 font-bold text-center mb-16'
+        >
+          Simple and Flexible Integration
+        </h2>
+        <div class='flex flex-col md:flex-row items-center gap-8'>
+          <div class='w-full md:w-1/2'>
+            <h3 class='text-2xl font-semibold text-gray-800 mb-4'>
+              Bring Your Tools Together Effortlessly
+            </h3>
+            <p class='text-gray-700 mb-4'>
+              We make it easy to connect and unify your tools and systems.
+              Whether you're a startup or scaling up, our technology ensures a
+              smooth transition to a more connected and efficient workflow.
+            </p>
+            <ul class='space-y-2'>
+              <li
+                class='flex items-center hover:bg-primary/10 transition-all duration-300'
+              >
+                <svg
+                  class='w-5 h-5 text-primary mr-3'
+                  fill='currentColor'
+                  viewBox='0 0 20 20'
+                >
+                  <path
+                    fill-rule='evenodd'
+                    d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
+                    clip-rule='evenodd'></path>
+                </svg>
+                Simple setup process
+              </li>
+              <li
+                class='flex items-center hover:bg-primary/10 transition-all duration-300'
+              >
+                <svg
+                  class='w-5 h-5 text-primary mr-3'
+                  fill='currentColor'
+                  viewBox='0 0 20 20'
+                >
+                  <path
+                    fill-rule='evenodd'
+                    d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
+                    clip-rule='evenodd'></path>
+                </svg>
+                Seamless compatibility
+              </li>
+              <li
+                class='flex items-center hover:bg-primary/10 transition-all duration-300'
+              >
+                <svg
+                  class='w-5 h-5 text-primary mr-3'
+                  fill='currentColor'
+                  viewBox='0 0 20 20'
+                >
+                  <path
+                    fill-rule='evenodd'
+                    d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
+                    clip-rule='evenodd'></path>
+                </svg>
+                Expert support at every step
+              </li>
+            </ul>
+            <a
+              href='/contact-us'
+              class='inline-block mt-8 px-6 py-3 bg-primary text-white font-semibold rounded-lg shadow-md hover:bg-primary-dark transition-all duration-300'
+            >
+              Get Started Now
+            </a>
+          </div>
+          <div class='w-full md:w-1/2'>
+            <Image
+              src={TechnologyIntegrationImage}
+              alt='Technology Integration Made Simple'
+              width={500}
+              height={300}
+              class='rounded-lg shadow-md w-full'
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <CTA
+      title='Ready to Transform Your Business?'
+      description='Discover how our cutting-edge technologies can drive innovation and efficiency in your organization.'
+      buttonText='Schedule a Demo'
+      buttonLink='/contact-us'
+    />
+  </main>
+</MainLayout>

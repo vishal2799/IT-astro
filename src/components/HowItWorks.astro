@@ -1,0 +1,57 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Step {
+  title: string;
+  description: string;
+  icon: string;
+}
+
+interface Props {
+  steps: Step[];
+}
+
+const { steps } = Astro.props;
+---
+
+<section class='py-20 bg-gray-50'>
+  <div class='container mx-auto px-4'>
+    <h2 class='text-3xl md:text-4xl font-bold text-center mb-12'>
+      How It Works
+    </h2>
+    <div class='max-w-4xl mx-auto'>
+      {
+        steps.map((step, index) => (
+          <div class='flex flex-col md:flex-row items-center mb-12 last:mb-0'>
+            <div class='flex-shrink-0 w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold mb-4 md:mb-0 md:mr-6'>
+              {index + 1}
+            </div>
+            <div class='flex-grow md:ml-6'>
+              <div class='bg-white rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-lg'>
+                <div class='flex items-center mb-4'>
+                  <div class='bg-primary/10 p-3 rounded-full mr-4'>
+                    <Icon name={step.icon} class='w-6 h-6 text-primary' />
+                  </div>
+                  <h3 class='text-xl font-semibold'>{step.title}</h3>
+                </div>
+                <p class='text-gray-600'>{step.description}</p>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  @media (min-width: 768px) {
+    .container > div > div:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    .container > div > div:nth-child(even) .flex-grow {
+      margin-left: 0;
+      margin-right: 1.5rem;
+    }
+  }
+</style>

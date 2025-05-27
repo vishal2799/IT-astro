@@ -1,0 +1,70 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+
+const recentPages = [
+  { title: 'Home', url: '/' },
+  { title: 'Services', url: '/services' },
+  { title: 'About Us', url: '/about' },
+  { title: 'Contact', url: '/contact' },
+];
+---
+
+<MainLayout
+  title='404: Page Not Found | Alicorn Solutions'
+  description="The page you're looking for doesn't exist. Let's get you back on track."
+>
+  <main
+    class='min-h-[75vh] bg-primary-50 flex items-center justify-center px-4 sm:px-6 lg:px-8'
+  >
+    <div class='max-w-md w-full space-y-8'>
+      <div class='text-center'>
+        <h1 class='text-9xl font-extrabold text-primary'>404</h1>
+        <h2 class='mt-2 text-3xl font-bold text-gray-900'>
+          Oops! Page not foundd
+        </h2>
+        <p class='mt-2 text-sm text-gray-500'>
+          The page you're looking for doesn't exist or has been moved.
+        </p>
+      </div>
+
+      <div class='mt-8'>
+        <a
+          href='/'
+          class='w-full flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition duration-150 ease-in-out'
+        >
+          Go back home
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            class='h-5 w-5 ml-2'
+            viewBox='0 0 20 20'
+            fill='currentColor'
+            aria-hidden='true'
+          >
+            <path
+              fill-rule='evenodd'
+              d='M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z'
+              clip-rule='evenodd'></path>
+          </svg>
+        </a>
+      </div>
+
+      <!-- <div class='mt-8'>
+        <h3 class='text-sm font-medium text-gray-900'>
+          You might be looking for:
+        </h3>
+        <div class='mt-4 grid grid-cols-2 gap-4'>
+          {
+            recentPages.map((page) => (
+              <a
+                href={page.url}
+                class='text-base font-medium text-primary hover:text-primary-dark transition duration-150 ease-in-out'
+              >
+                {page.title}
+              </a>
+            ))
+          }
+        </div>
+      </div> -->
+    </div>
+  </main>
+</MainLayout>

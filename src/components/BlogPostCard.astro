@@ -1,0 +1,64 @@
+---
+import { Image } from 'astro:assets';
+
+// interface Props {
+//   title: string;
+//   excerpt: string;
+//   image: string;
+//   date: string;
+//   author: { name: string };
+//   slug: string;
+// }
+
+const { title, excerpt, image, date, author, slug } = Astro.props;
+---
+
+<article
+  class='bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl focus-within:ring-2 focus-within:ring-primary focus-within:outline-none'
+>
+  <a href={`/blog/${slug}`} class='block focus:outline-none'>
+    <Image
+      src={image}
+      alt={`Image for blog post: ${title}`}
+      width={400}
+      height={225}
+      class='w-full h-48 object-cover'
+      loading={'lazy'}
+    />
+  </a>
+  <div class='p-6'>
+    <h3 class='text-xl font-bold mb-2 text-gray-900'>
+      <a
+        href={`/blog/${slug}`}
+        class='hover:text-primary transition-colors duration-300 focus:outline-none'
+      >
+        {title}
+      </a>
+    </h3>
+    <p class='text-gray-600 mb-4'>{excerpt}</p>
+    <div class='flex justify-between items-center text-sm text-gray-500'>
+      <time datetime={date}>{new Date(date).toLocaleDateString()}</time>
+      <span>By {author.name}</span>
+    </div>
+    <a
+      href={`/blog/${slug}`}
+      class='inline-block mt-4 text-primary font-semibold hover:text-primary-700 transition-colors duration-300 focus:outline-none'
+    >
+      Read More
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        class='h-5 w-5 inline-block ml-1'
+        fill='none'
+        viewBox='0 0 24 24'
+        stroke='currentColor'
+        aria-hidden='true'
+      >
+        <path
+          stroke-linecap='round'
+          stroke-linejoin='round'
+          stroke-width='2'
+          d='M17 8l4 4m0 0l-4 4m4-4H3'></path>
+      </svg>
+    </a>
+  </div>
+</article>

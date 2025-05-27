@@ -1,0 +1,120 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import { projects, testimonials } from '../../constants';
+
+export async function getStaticPaths() {
+  return projects.map((project) => {
+    return {
+      params: {
+        project: project.title
+          .toLowerCase()
+          .replace(/\s+/g, '-')
+          .replace(/[^\w-]/g, ''),
+      },
+      props: { project },
+    };
+  });
+}
+const { project } = Astro.props;
+---
+
+<MainLayout
+  title={`${project.title} | Alicorn Solutions`}
+  description={project.description}
+  canonicalUrl=`https://alicornsolutions.com/projects/${project.title.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '')}`
+>
+  <main class='bg-white'>
+    <!-- Hero Section -->
+    <section
+      class='relative h-[50vh] min-h-[400px] flex items-center justify-center'
+    >
+      <!-- <Image
+        src={project.image}
+        alt={project.title}
+        width={1920}
+        height={1080}
+        class='absolute inset-0 w-full h-full object-cover'
+      /> -->
+      <img
+        src={project.image}
+        alt='Alicorn Solutions Projects'
+        class='absolute inset-0 w-full h-full object-cover'
+      />
+      <div class='absolute inset-0 bg-black opacity-60'></div>
+      <div class='relative z-10 text-center text-white px-4'>
+        <h1 class='text-4xl md:text-6xl font-bold mb-4'>{project.title}</h1>
+        <p class='text-xl md:text-2xl mb-4'>{project.category}</p>
+        <div class='flex flex-wrap justify-center gap-2'>
+          {
+            project.technologies.map((tech) => (
+              <span class='bg-primary text-white px-3 py-1 rounded-full text-sm'>
+                {tech}
+              </span>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Details -->
+    <section class='section-padding px-4'>
+      <div class='container mx-auto max-w-4xl'>
+        <div class='grid md:grid-cols-2 gap-12 mb-12'>
+          <div>
+            <h2 class='text-2xl font-bold mb-4'>Project Overview</h2>
+            <p class='text-gray-700 mb-4'>{project.description}</p>
+            <div class='space-y-2'>
+              <p><strong>Client:</strong> {project.client}</p>
+              <p><strong>Duration:</strong> {project.duration}</p>
+            </div>
+          </div>
+          <div>
+            <h2 class='text-2xl font-bold mb-4'>The Challenge</h2>
+            <p class='text-gray-700'>{project.challenge}</p>
+          </div>
+        </div>
+        <div class='mb-12'>
+          <h2 class='text-2xl font-bold mb-4'>Our Solution</h2>
+          <p class='text-gray-700'>{project.solution}</p>
+        </div>
+        <div class='mb-12'>
+          <h2 class='text-2xl font-bold mb-4'>Results</h2>
+          <ul class='list-disc list-inside space-y-2 text-gray-700'>
+            {project.results.map((result) => <li>{result}</li>)}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class='section-padding px-4 bg-gray-50'>
+      <div class='container mx-auto max-w-4xl text-center'>
+        <h2 class='text-3xl font-bold mb-8'>Client Testimonial</h2>
+        <blockquote class='text-xl italic text-gray-700 mb-4'>
+          "{testimonials[0].quote}"
+        </blockquote>
+        <p class='font-semibold'>{testimonials[0].author}</p>
+        <p class='text-gray-500'>{testimonials[0].position}</p>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class='section-padding px-4 bg-primary text-white'>
+      <div class='container mx-auto max-w-3xl text-center'>
+        <h2 class='text-3xl md:text-4xl font-bold mb-6'>
+          Ready to Start Your Project?
+        </h2>
+        <p class='text-xl text-primary-100 mb-8'>
+          Let's discuss how we can bring your ideas to life and drive your
+          business forward.
+        </p>
+        <a
+          href='/contact-us'
+          class='inline-block bg-white text-primary font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300 text-lg'
+        >
+          Get in Touch
+        </a>
+      </div>
+    </section>
+  </main>
+</MainLayout>

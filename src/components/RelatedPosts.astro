@@ -1,0 +1,36 @@
+---
+import BlogPostCard from './BlogPostCard.astro';
+
+// interface Post {
+//   title: string;
+//   excerpt: string;
+//   image: string;
+//   date: string;
+//   author: string;
+//   slug: string;
+// }
+
+// interface Props {
+//   posts: Post[];
+// }
+
+const { posts } = Astro.props;
+---
+
+<div class='mt-16'>
+  <h2 class='text-3xl font-bold mb-8'>Related Posts</h2>
+  <div class='grid grid-cols-1 md:grid-cols-2 gap-8'>
+    {
+      posts.map((post: any) => (
+        <BlogPostCard
+          title={post.title}
+          excerpt={post.excerpt}
+          image={post.image}
+          date={post.date}
+          author={post.author}
+          slug={post.slug}
+        />
+      ))
+    }
+  </div>
+</div>

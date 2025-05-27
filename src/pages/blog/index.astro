@@ -1,0 +1,119 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import BlogPostCard from '../../components/BlogPostCard.astro';
+import Pagination from '../../components/Pagination.astro';
+import { posts } from '../../constants';
+
+// In a real application, you would fetch this data from a CMS or API
+const allPosts = [
+  {
+    title: 'The Future of Cloud Computing: Trends to Watch',
+    excerpt:
+      'Explore the emerging trends in cloud computing that are shaping the future of IT infrastructure.',
+    image: '/service1.jpg',
+    date: 'May 15, 2023',
+    author: 'Jane Doe',
+    slug: 'future-of-cloud-computing',
+  },
+  {
+    title: 'Cybersecurity Best Practices for Remote Work',
+    excerpt:
+      'Learn essential cybersecurity measures to protect your business in the era of remote work.',
+    image: '/service2.jpg',
+    date: 'June 2, 2023',
+    author: 'John Smith',
+    slug: 'cybersecurity-best-practices-remote-work',
+  },
+  {
+    title: 'Leveraging AI for Business Intelligence',
+    excerpt:
+      'Discover how artificial intelligence is revolutionizing business intelligence and decision-making processes.',
+    image: '/service3.jpg',
+    date: 'June 20, 2023',
+    author: 'Emily Chen',
+    slug: 'leveraging-ai-business-intelligence',
+  },
+  {
+    title: 'The Rise of Edge Computing in IoT',
+    excerpt:
+      'Understand how edge computing is transforming IoT applications and improving data processing efficiency.',
+    image: '/service4.jpg',
+    date: 'July 5, 2023',
+    author: 'Michael Johnson',
+    slug: 'rise-of-edge-computing-iot',
+  },
+  {
+    title: '5G Technology: Revolutionizing Connectivity',
+    excerpt:
+      'Explore the potential of 5G technology and its impact on various industries and everyday life.',
+    image: '/service1.jpg',
+    date: 'July 18, 2023',
+    author: 'Sarah Williams',
+    slug: '5g-technology-revolutionizing-connectivity',
+  },
+  {
+    title: 'Blockchain Beyond Cryptocurrency',
+    excerpt:
+      'Discover the diverse applications of blockchain technology across different sectors.',
+    image: '/service2.jpg',
+    date: 'August 3, 2023',
+    author: 'David Lee',
+    slug: 'blockchain-beyond-cryptocurrency',
+  },
+];
+
+// Pagination
+const postsPerPage = 5;
+const currentPage = 1; // In a real app, this would be determined by the URL or query parameter
+const totalPages = Math.ceil(posts.length / postsPerPage);
+const paginatedPosts = posts.slice(0, postsPerPage);
+---
+
+<MainLayout
+  title='Alicorn Solutions Blog - Latest Insights and Tech Trends'
+  description='Stay updated with the latest in technology, low-code/no-code, bpm tools, cloud computing, cybersecurity, and more on the Alicorn Solutions blog.'
+  canonicalUrl='https://alicornsolutions.com/blog'
+>
+  <main class='bg-primary-50 min-h-screen'>
+    <!-- Hero Section -->
+    <section class='relative py-20 px-4'>
+      <div
+        class='absolute inset-0 bg-gradient-to-r from-primary to-secondary-500 opacity-90'
+      >
+      </div>
+      <div
+        class='relative z-10 container mx-auto max-w-4xl text-center text-white'
+      >
+        <h1 class='text-4xl md:text-5xl font-bold mb-6'>Alicorn Blog</h1>
+        <p class='text-xl md:text-2xl mb-8'>
+          Stay updated with the latest insights and trends in technology
+        </p>
+      </div>
+    </section>
+
+    <!-- Blog Posts -->
+    <section class='section-padding px-4'>
+      <div class='container mx-auto max-w-6xl'>
+        <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          {
+            paginatedPosts.map((post) => (
+              <BlogPostCard
+                title={post.title}
+                excerpt={post.excerpt}
+                image={post.image}
+                date={post.date}
+                author={post.author}
+                slug={post.slug}
+              />
+            ))
+          }
+        </div>
+
+        <!-- Pagination -->
+        <!-- <div class="mt-12">
+          <Pagination currentPage={currentPage} totalPages={totalPages} />
+        </div> -->
+      </div>
+    </section>
+  </main>
+</MainLayout>

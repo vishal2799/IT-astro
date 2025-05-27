@@ -1,0 +1,165 @@
+---
+import { Icon } from 'astro-icon/components';
+import { services, solutions, technology } from '../constants';
+
+const currentYear = new Date().getFullYear();
+
+const serviceLinks = services.map((service) => ({
+  label: service.title,
+  href: `/services/${service.title
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w-]/g, '')}`,
+}));
+
+const techLinks = technology.map((tech) => ({
+  label: tech.name,
+  href: `/technology/${tech.name.toLowerCase().replace(/\s+/g, '-')}`,
+}));
+
+const solLinks = solutions.map((sol) => ({
+  label: sol.name,
+  href: `/solutions/${sol.name.toLowerCase().replace(/\s+/g, '-')}`,
+}));
+
+const sections = [
+  {
+    title: 'Services',
+    links: serviceLinks,
+  },
+  {
+    title: 'Technology',
+    links: techLinks,
+  },
+  {
+    title: 'Solutions',
+    links: solLinks,
+  },
+  {
+    title: 'Company',
+    links: [
+      { href: '/about-us', label: 'About Us' },
+      { href: '/contact-us', label: 'Contact Us' },
+      { href: '/blog', label: 'Blog' },
+      { href: '/projects', label: 'Projects' },
+    ],
+  },
+];
+
+const socialLinks = [
+  {
+    href: 'https://www.linkedin.com/company/alicorn-solutions/',
+    icon: 'linkedin',
+    label: 'LinkedIn',
+  },
+  {
+    href: 'mailto:info@alicornsolutions.com',
+    icon: 'envelope',
+    label: 'Mail',
+  },
+];
+---
+
+<footer class='bg-white text-gray-800 py-12 px-4 sm:px-6 lg:px-8'>
+  <div class='max-w-7xl mx-auto'>
+    <!-- Footer Sections -->
+    <div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-12'>
+      <!-- Contact Us Section -->
+      <div class='space-y-4'>
+        <h2 class='text-2xl font-bold text-primary'>Contact Us</h2>
+        <address class='text-sm not-italic space-y-2'>
+          <p>
+            Kumar Cerebrum Complex, B4, Cybage Tower Rd, Marigold complex,
+            Kalyani Nagar, Pune, Maharashtra 411014
+          </p>
+          <p>
+            <a
+              href='tel:+919711356947'
+              class='text-gray-800 hover:text-primary transition-colors duration-300'
+            >
+              +91 97113 56947
+            </a>
+          </p>
+          <p>
+            <a
+              href='mailto:info@alicornsolutions.com'
+              class='text-gray-800 hover:text-primary transition-colors duration-300'
+            >
+              info@alicornsolutions.com
+            </a>
+          </p>
+        </address>
+      </div>
+
+      <!-- Links Sections -->
+      {
+        sections.map((section) => (
+          <div class='space-y-4'>
+            <h2 class='text-2xl font-bold text-primary'>{section.title}</h2>
+            <ul class='space-y-2'>
+              {section.links.map((link) => (
+                <li>
+                  <a
+                    href={link.href}
+                    class='text-gray-800 hover:text-primary transition-colors duration-300'
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+
+    <!-- Social Links and Search (Optional) -->
+    <div
+      class='flex flex-col lg:flex-row justify-between items-center mb-12 space-y-6 lg:space-y-0'
+    >
+      <ul class='flex space-x-6'>
+        {
+          socialLinks.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                class='text-gray-700 hover:text-primary transition-colors duration-300'
+                aria-label={link.label}
+              >
+                <Icon name={link.icon} size={28} />
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <!-- Copyright Section -->
+    <div class='text-center text-sm text-gray-700'>
+      <p>&copy; {currentYear} Alicorn Solutions. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  footer {
+    animation: fadeIn 0.5s ease-out;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    footer {
+      animation: none;
+    }
+  }
+</style>

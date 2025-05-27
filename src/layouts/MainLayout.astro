@@ -1,0 +1,49 @@
+---
+import '../styles/global.css';
+import '@fontsource/poppins/400.css';
+import '@fontsource/poppins/500.css';
+import '@fontsource/poppins/600.css';
+import '@fontsource/poppins/700.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+const {
+  title,
+  description,
+  canonicalUrl = 'https://alicornsolutions.com/',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/png' href='/favicon-96x96.png' sizes='96x96' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <link rel='shortcut icon' href='/favicon.ico' />
+    <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
+    <meta name='apple-mobile-web-app-title' content='AlicornSolutions' />
+    <link rel='manifest' href='/site.webmanifest' />
+
+    <meta property='og:type' content='website' />
+    <meta property='og:title' content={title} />
+    <meta property='og:description' content={description} />
+    <meta name='generator' content={Astro.generator} />
+    <title>{title}</title>
+    <meta name='description' content={description} />
+    <meta
+      name='google-site-verification'
+      content='Ch2pRecH9_Sm3C5qJl3GSTyC7jVxLcrRnRHbMOX-Nqg'
+    />
+    <link rel='sitemap' href='/sitemap-index.xml' />
+    <!-- Add Canonical Tag -->
+    <link rel='canonical' href={canonicalUrl} />
+  </head>
+  <body class='font-poppins'>
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

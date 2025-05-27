@@ -1,0 +1,24 @@
+---
+const { title, description, buttonText, buttonLink } = Astro.props;
+---
+
+<section class='section-padding px-4 bg-primary text-white'>
+  <div class='container mx-auto max-w-3xl text-center'>
+    <!-- Title -->
+    <h2 class='text-3xl md:text-4xl font-bold mb-6'>
+      {title}
+    </h2>
+    <!-- Description -->
+    <p class='text-xl text-primary-100 mb-8'>
+      {description}
+    </p>
+    <!-- Call-to-Action Button -->
+    <a
+      href={buttonLink}
+      class='inline-block bg-white text-primary hover:bg-gray-100 hover:text-primary-600 font-bold py-3 px-8 rounded-full transition duration-300 text-lg focus:ring-4 focus:ring-primary-100 focus:outline-none'
+      aria-label={`Learn more about ${title}`}
+    >
+      {buttonText}
+    </a>
+  </div>
+</section>

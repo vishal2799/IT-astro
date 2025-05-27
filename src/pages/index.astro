@@ -1,0 +1,268 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import TechCard from '../components/TechCard.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import TestimonialCard from '../components/TestimonialCard.astro';
+import CTA from '../components/CTA.astro';
+import {
+  posts,
+  projects,
+  services,
+  testimonials,
+  technology,
+} from '../constants';
+import { Image } from 'astro:assets';
+import BlogPostCard from '../components/BlogPostCard.astro';
+import HomeHeroImage from '../assets/images/HomeHero.webp';
+import HomeAboutImage from '../assets/images/HomeAbout.webp';
+//favicon, image optimize webp, font local, seo, thank you, error page, testing, form integrate
+---
+
+<MainLayout
+  title='Alicorn Solutions - Innovative Solutions for Your Business'
+  description='Alicorn Solutions offers cutting-edge IT services including low-code/no-code, software development, cloud migration, data analytics, and cybersecurity solutions to drive your business forward.'
+>
+  <main>
+    <!-- Hero Section -->
+    <section
+      class='relative h-[70vh] min-h-[500px] flex items-center justify-center'
+    >
+      <Image
+        src={HomeHeroImage}
+        alt='Alicorn Solutions'
+        width={1920}
+        height={1080}
+        class='absolute inset-0 w-full h-full object-cover'
+      />
+      <!-- <img
+        src='/service21.jpg'
+        alt='Alicorn Solutions'
+        class='absolute inset-0 w-full h-full object-cover'
+      /> -->
+      <div
+        class='absolute inset-0 bg-gradient-to-r from-primary/80 to-primary-dark/80'
+      >
+      </div>
+      <div class='relative z-10 text-center text-white px-4 max-w-4xl mx-auto'>
+        <h1 class='text-4xl md:text-6xl font-bold mb-6'>
+          Innovative IT Solutions for the Digital Age
+        </h1>
+        <p class='text-xl md:text-2xl mb-8'>
+          Empowering businesses with cutting-edge technology to drive growth and
+          efficiency
+        </p>
+        <div class='flex flex-wrap justify-center gap-4'>
+          <a
+            href='/services'
+            class='bg-white/90 text-primary hover:bg-white font-bold py-3 px-8 rounded-full transition duration-300 text-lg'
+            >Our Services</a
+          >
+          <a
+            href='/contact-us'
+            class='bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition duration-300 text-lg'
+            >Get in Touch</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class='section-padding px-4'>
+      <div class='container mx-auto max-w-6xl'>
+        <div class='flex flex-col md:flex-row items-center gap-12'>
+          <div class='md:w-1/2'>
+            <h2 class='text-3xl md:text-4xl font-bold mb-6 text-gray-900'>
+              About Alicorn Solutions
+            </h2>
+            <p class='text-lg text-gray-700 mb-6'>
+              Alicorn Solutions is a leading IT services company dedicated to
+              empowering businesses through innovative technology solutions.
+              With years of proven expertise, we've helped numerous
+              organizations across various industries transform their digital
+              landscape and achieve their goals.
+            </p>
+            <p class='text-lg text-gray-700 mb-6'>
+              Our team of expert consultants and developers are passionate about
+              staying at the forefront of technological advancements, ensuring
+              that our clients always have access to the most cutting-edge
+              solutions.
+            </p>
+            <a
+              href='/about-us'
+              class='inline-block bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full transition duration-300 text-lg'
+              >Learn More About Us</a
+            >
+          </div>
+          <div class='md:w-1/2'>
+            <Image
+              src={HomeAboutImage}
+              alt='About Alicorn Solutions'
+              width={600}
+              height={400}
+              class='rounded-lg shadow-xl'
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class='section-padding px-4 bg-gray-50'>
+      <div class='container mx-auto max-w-6xl'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900'
+        >
+          Our Services
+        </h2>
+        <div class='grid grid-cols-1 md:grid-cols-3 gap-8'>
+          {
+            services.map((service) => (
+              <ServiceCard
+                title={service.title}
+                description={service.description}
+                icon={service.icon}
+              />
+            ))
+          }
+        </div>
+        <div class='text-center mt-12'>
+          <a
+            href='/services'
+            class='inline-block bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full transition duration-300 text-lg'
+            >View All Services</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Technologies -->
+    <section class='section-padding px-4'>
+      <div class='container mx-auto max-w-6xl'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900'
+        >
+          Our Technologies
+        </h2>
+        <div class='grid grid-cols-1 md:grid-cols-3 gap-8'>
+          {
+            technology.map((tech) => (
+              <TechCard
+                name={tech.name}
+                tagline={tech.tagline}
+                description={tech.description}
+                image={tech.image}
+                icon={tech.icon}
+              />
+            ))
+          }
+        </div>
+        <div class='text-center mt-12'>
+          <a
+            href='/technology'
+            class='inline-block bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full transition duration-300 text-lg'
+            >Explore Our Tech Stack</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Projects -->
+    <section class='section-padding px-4 bg-gray-50'>
+      <div class='container mx-auto max-w-6xl'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900'
+        >
+          Recent Projects
+        </h2>
+        <div class='grid grid-cols-1 md:grid-cols-2 gap-12'>
+          {
+            projects.map((project) => (
+              <ProjectCard
+                title={project.title}
+                category={project.category}
+                description={project.description}
+                image={project.image}
+                client={project.client}
+                duration={project.duration}
+                technologies={project.technologies}
+                slug={project.slug}
+              />
+            ))
+          }
+        </div>
+        <div class='text-center mt-12'>
+          <a
+            href='/projects'
+            class='inline-block bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full transition duration-300 text-lg'
+            >View All Projects</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class='section-padding px-4'>
+      <div class='container mx-auto max-w-6xl'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900'
+        >
+          Latest Insights
+        </h2>
+        <div class='grid grid-cols-1 md:grid-cols-3 gap-8'>
+          {
+            posts
+              .slice(0, 3)
+              .map((post) => (
+                <BlogPostCard
+                  title={post.title}
+                  excerpt={post.excerpt}
+                  image={post.image}
+                  date={post.date}
+                  author={post.author}
+                  slug={post.slug}
+                />
+              ))
+          }
+        </div>
+        <div class='text-center mt-12'>
+          <a
+            href='/blog'
+            class='inline-block bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full transition duration-300 text-lg'
+            >Read More Articles</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class='section-padding px-4 bg-primary-50'>
+      <div class='container mx-auto max-w-4xl'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900'
+        >
+          What Our Clients Say
+        </h2>
+        <div class='grid md:grid-cols-2 gap-8'>
+          {
+            testimonials.map((testimonial) => (
+              <TestimonialCard
+                quote={testimonial.quote}
+                author={testimonial.author}
+                position={testimonial.position}
+              />
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <CTA
+      title='Ready to Transform Your Business?'
+      description="Let's discuss how our innovative IT solutions can drive your business forward."
+      buttonText='Get Started'
+      buttonLink='/contact-us'
+    />
+  </main>
+</MainLayout>

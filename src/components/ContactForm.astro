@@ -1,0 +1,110 @@
+---
+const FORMSPARK_URL = import.meta.env.FORM_URL;
+const APP_URL = import.meta.env.APP_URL;
+---
+
+<div class='bg-white rounded-lg shadow-md p-8'>
+  <h2 class='text-2xl font-bold mb-6 text-gray-900'>Send Us a Message</h2>
+  <form
+    action={FORMSPARK_URL}
+    id='contact-form'
+    method='POST'
+    class='space-y-6'
+    aria-labelledby='form-heading'
+  >
+    <input type='hidden' name='_redirect' value={`${APP_URL}/thank-you`} />
+    <input type='hidden' name='_append' value='false' />
+
+    <!-- Name Field -->
+    <div>
+      <label
+        for='name'
+        class='block text-sm font-medium text-gray-700 mb-1'
+        id='name-label'
+      >
+        Name <span class='text-red-500'>*</span>
+      </label>
+      <input
+        type='text'
+        id='name'
+        name='name'
+        required
+        placeholder='Your full name'
+        class='w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary'
+        aria-required='true'
+        aria-describedby='name-label'
+      />
+    </div>
+
+    <!-- Email Field -->
+    <div>
+      <label
+        for='email'
+        class='block text-sm font-medium text-gray-700 mb-1'
+        id='email-label'
+      >
+        Email <span class='text-red-500'>*</span>
+      </label>
+      <input
+        type='email'
+        id='email'
+        name='email'
+        required
+        placeholder='you@example.com'
+        class='w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary'
+        aria-required='true'
+        aria-describedby='email-label'
+      />
+    </div>
+
+    <!-- Phone Field -->
+    <div>
+      <label
+        for='phone'
+        class='block text-sm font-medium text-gray-700 mb-1'
+        id='phone-label'
+      >
+        Phone (optional)
+      </label>
+      <input
+        type='tel'
+        id='phone'
+        name='phone'
+        placeholder='Your phone number'
+        class='w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary'
+        aria-describedby='phone-label'
+      />
+    </div>
+
+    <!-- Message Field -->
+    <div>
+      <label
+        for='message'
+        class='block text-sm font-medium text-gray-700 mb-1'
+        id='message-label'
+      >
+        Message <span class='text-red-500'>*</span>
+      </label>
+      <textarea
+        id='message'
+        name='message'
+        rows='4'
+        required
+        placeholder='Write your message here...'
+        class='w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary'
+        aria-required='true'
+        aria-describedby='message-label'></textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <div>
+      <button
+        type='submit'
+        class='w-full bg-primary text-white font-bold py-3 px-4 rounded-md hover:bg-primary-700 transition duration-300 focus:ring-2 focus:ring-primary focus:ring-offset-2'
+        aria-label='Send your message'
+      >
+        Send Message
+      </button>
+    </div>
+  </form>
+</div>

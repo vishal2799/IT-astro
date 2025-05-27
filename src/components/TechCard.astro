@@ -1,0 +1,44 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const { name, tagline, description, image, icon } = Astro.props;
+---
+
+<div
+  class='bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl group'
+>
+  <div class='relative'>
+    <img src={image} alt={name} class='w-full h-48 object-cover' />
+    <div
+      class='absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6'
+    >
+      <h3 class='text-2xl font-bold text-white mb-2'>{name}</h3>
+    </div>
+    <div class='absolute top-4 right-4 bg-primary text-white p-2 rounded-full'>
+      <Icon name={icon} class='w-6 h-6' />
+    </div>
+  </div>
+  <div class='p-6'>
+    <p class='text-lg font-semibold text-primary mb-3'>{tagline}</p>
+    <p class='text-gray-600 mb-4'>{description}</p>
+    <a
+      href={`/technology/${name.toLowerCase().replace(/\s+/g, '-')}`}
+      class='inline-flex items-center text-primary font-semibold hover:text-primary-dark transition-colors duration-300'
+    >
+      Learn More
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        class='h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform duration-300'
+        fill='none'
+        viewBox='0 0 24 24'
+        stroke='currentColor'
+      >
+        <path
+          stroke-linecap='round'
+          stroke-linejoin='round'
+          stroke-width='2'
+          d='M17 8l4 4m0 0l-4 4m4-4H3'></path>
+      </svg>
+    </a>
+  </div>
+</div>

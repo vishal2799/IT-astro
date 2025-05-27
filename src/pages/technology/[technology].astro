@@ -1,0 +1,483 @@
+---
+import HowItWorks from '../../components/HowItWorks.astro';
+import { technology, testimonials } from '../../constants';
+import MainLayout from '../../layouts/MainLayout.astro';
+
+export async function getStaticPaths() {
+  return technology.map((tech) => {
+    const relatedTechnology = technology
+      .filter((t) => t.name !== tech.name)
+      .slice(0, 3);
+    return {
+      params: { technology: tech.name.toLowerCase().replace(/\s+/g, '-') },
+      props: { techData: tech, relatedTechnology },
+    };
+  });
+}
+const { techData, relatedTechnology } = Astro.props;
+
+const pricing = [
+  {
+    plan: 'Starter',
+    price: '$499/month',
+    features: [
+      'Up to 5 users',
+      '20 automated processes',
+      '8/5 support',
+      'Basic analytics',
+      'Community forum access',
+    ],
+  },
+  {
+    plan: 'Professional',
+    price: '$999/month',
+    features: [
+      'Up to 20 users',
+      'Unlimited processes',
+      '24/7 support',
+      'Advanced analytics',
+      'AI capabilities',
+      'Priority queue for automations',
+    ],
+  },
+  {
+    plan: 'Enterprise',
+    price: 'Custom',
+    features: [
+      'Unlimited users',
+      'Dedicated account manager',
+      'On-premise deployment option',
+      'Custom integrations',
+      'Advanced security features',
+      'Tailored training programs',
+    ],
+  },
+];
+
+const stats = [
+  { value: '100%', label: 'Positive Feedback' },
+  { value: '24/7', label: 'Support Availability' },
+  { value: 'Tailored', label: 'Solutions Provided' },
+  { value: '100%', label: 'Commitment to Excellence' },
+];
+---
+
+<MainLayout
+  title={`${techData.name} | Alicorn Solutions`}
+  description={techData.description}
+  canonicalUrl=`https://alicornsolutions.com/technology/${techData.name.toLowerCase().replace(/\s+/g, '-')}`
+>
+  <div class='bg-gradient-to-b from-primary-50 to-white'>
+    <!-- Hero Section -->
+    <section
+      class='relative h-[55vh] min-h-[400px] flex items-center justify-center'
+    >
+      <!-- <Image
+        src='/service21.jpg'
+        alt={techData.name}
+        width={1920}
+        height={1080}
+        class='absolute inset-0 w-full h-full object-cover'
+      /> -->
+      <img
+        src={techData.heroImage}
+        alt={techData.name}
+        class='absolute inset-0 w-full h-full object-cover'
+      />
+      <div class='absolute inset-0 bg-primary opacity-70'></div>
+      <div class='relative z-10 text-center text-white px-4'>
+        <h1 class='text-4xl md:text-6xl font-bold mb-4'>{techData.name}</h1>
+        <p class='text-xl md:text-2xl mb-8'>{techData.tagline}</p>
+        <!-- <p class='text-lg md:text-xl max-w-3xl mx-auto mb-8'>
+          {techData.description}
+        </p> -->
+        <a
+          href='/contact-us'
+          class='bg-white text-primary hover:bg-white/90 font-bold py-3 px-8 rounded-full transition duration-300 text-lg'
+          >Get Started</a
+        >
+      </div>
+    </section>
+
+    <section class='section-padding'>
+      <div class='container mx-auto px-4'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900'
+        >
+          Overview
+        </h2>
+        <p class='text-gray-800 text-lg' set:html={techData.overview} />
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class='section-padding bg-white'>
+      <div class='container mx-auto max-w-6xl'>
+        <div class='grid grid-cols-2 md:grid-cols-4 gap-8 text-center'>
+          {
+            stats.map((stat) => (
+              <div>
+                <p class='text-4xl font-bold text-primary'>{stat.value}</p>
+                <p class='text-gray-600'>{stat.label}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class='section-padding px-4'>
+      <div class='container mx-auto max-w-6xl'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900'
+        >
+          Key Features
+        </h2>
+        <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12'>
+          {
+            techData.features.map((feature) => (
+              <div class='bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300'>
+                <h3 class='text-xl font-semibold mb-4 text-gray-800'>
+                  {feature.title}
+                </h3>
+                <p class='text-gray-700'>{feature.description}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class='section-padding px-4 bg-white'>
+      <div class='container mx-auto max-w-4xl'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-gray-900 text-center mb-16'
+        >
+          Benefits of {techData.name}
+        </h2>
+        <ul class='space-y-6'>
+          {
+            techData.benefits.map((benefit) => (
+              <li class='flex items-start'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  class='h-6 w-6 text-primary mt-1 mr-4'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  stroke='currentColor'
+                >
+                  <path
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    stroke-width='2'
+                    d='M5 13l4 4L19 7'
+                  />
+                </svg>
+                <p class='text-lg text-gray-800'>{benefit}</p>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class='section-padding px-4'>
+      <div class='container mx-auto max-w-6xl'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-gray-900 text-center mb-16'
+        >
+          Use Cases
+        </h2>
+        <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12'>
+          {
+            techData.useCases.map((useCase) => (
+              <div class='bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300'>
+                <h3 class='text-xl font-semibold text-gray-800 mb-4'>
+                  {useCase.title}
+                </h3>
+                <p class='text-gray-700'>{useCase.description}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <HowItWorks steps={techData.process} />
+    <!-- <section class='section-padding px-4 bg-gray-50'>
+      <div class='container mx-auto max-w-4xl'>
+        <h2
+          class='text-3xl md:text-4xl text-gray-900 font-bold text-center mb-16'
+        >
+          How {techData.name} Works
+        </h2>
+        <div class='space-y-12'>
+          {
+            techData.process.map((tech, index) => (
+              <div
+                class={`flex flex-col ${
+                  index % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'
+                } items-center gap-8`}
+              >
+                <div class='w-full md:w-1/2'>
+                  <h3 class='text-2xl font-semibold text-gray-800 mb-4'>
+                    {index + 1}. {tech.title}
+                  </h3>
+                  <p class='text-gray-700'>{tech.description}</p>
+                </div>
+                <div class='w-full md:w-1/2'>
+                  <img
+                    src={tech.image}
+                    alt={tech.title}
+                    class='rounded-lg shadow-md'
+                  />
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Testimonials Section -->
+    <section class='section-padding px-4 bg-primary text-white'>
+      <div class='container mx-auto max-w-4xl'>
+        <h2 class='text-3xl md:text-4xl font-bold text-center mb-16'>
+          What Our Clients Say
+        </h2>
+        <div class='grid gap-8 md:grid-cols-2'>
+          {
+            testimonials.map((testimonial) => (
+              <div class='bg-primary p-6 rounded-lg'>
+                <p class='text-lg mb-4'>"{testimonial.quote}"</p>
+                <p class='font-semibold'>{testimonial.author}</p>
+                <p class='text-primary-100'>{testimonial.position}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <!-- <section class='py-20 px-4 bg-gray-50'>
+      <div class='container mx-auto max-w-6xl'>
+        <h2
+          class='text-3xl md:text-4xl font-bold text-gray-900 text-center mb-16'
+        >
+          Pricing Plans
+        </h2>
+        <div class='grid grid-cols-1 md:grid-cols-3 gap-8'>
+          {
+            techData.pricing.map((plan) => (
+              <div class='bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 flex flex-col'>
+                <h3 class='text-2xl font-bold text-gray-800 mb-4'>
+                  {plan.plan}
+                </h3>
+                <p class='text-3xl font-bold text-primary mb-6'>{plan.price}</p>
+                <ul class='space-y-2 mb-8 flex-grow'>
+                  {plan.features.map((feature) => (
+                    <li class='flex items-center text-gray-700'>
+                      <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        class='h-5 w-5 text-green-500 mr-2'
+                        viewBox='0 0 20 20'
+                        fill='currentColor'
+                      >
+                        <path
+                          fill-rule='evenodd'
+                          d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
+                          clip-rule='evenodd'
+                        />
+                      </svg>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href='#contact'
+                  class='bg-primary/90 text-white hover:bg-primary font-bold py-2 px-4 rounded-full transition duration-300 text-center'
+                >
+                  Get Started
+                </a>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section> -->
+
+    <!-- FAQ Section -->
+    <section class='section-padding px-4'>
+      <div class='container mx-auto max-w-4xl'>
+        <h2
+          class='text-3xl md:text-4xl text-gray-900 font-bold text-center mb-16'
+        >
+          Frequently Asked Questions
+        </h2>
+        <div class='space-y-4' id='faq-container'>
+          {
+            techData.faq.map((item, index) => (
+              <div class='bg-white rounded-lg shadow-md overflow-hidden'>
+                <button
+                  class='faq-question w-full text-left p-6 focus:outline-none'
+                  data-index={index}
+                >
+                  <div class='flex justify-between items-center'>
+                    <h3 class='text-xl text-gray-800 font-semibold'>
+                      {item.question}
+                    </h3>
+                    <svg
+                      xmlns='http://www.w3.org/2000/svg'
+                      class='h-6 w-6 text-primary transform transition-transform duration-300'
+                      fill='none'
+                      viewBox='0 0 24 24'
+                      stroke='currentColor'
+                    >
+                      <path
+                        stroke-linecap='round'
+                        stroke-linejoin='round'
+                        stroke-width='2'
+                        d='M19 9l-7 7-7-7'
+                      />
+                    </svg>
+                  </div>
+                </button>
+                <div class='faq-answer hidden p-6 pt-0'>
+                  <p class='text-textPrimary'>{item.answer}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class='section-padding px-4 bg-primary text-white'>
+      <div class='container mx-auto max-w-3xl text-center'>
+        <h2 class='text-3xl md:text-4xl font-bold mb-6'>
+          {techData.cta.title}
+        </h2>
+        <p class='text-xl text-primary-100 mb-8'>
+          {techData.cta.description}
+        </p>
+        <a
+          href='/contact-us'
+          class='inline-block bg-white text-primary font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300 text-lg'
+          >{techData.cta.button.text}</a
+        >
+      </div>
+    </section>
+
+    {
+      relatedTechnology && relatedTechnology.length > 0 && (
+        <section class='section-padding px-4 bg-primary-50'>
+          <div class='container mx-auto max-w-6xl'>
+            <h2 class='text-3xl md:text-4xl font-bold text-gray-900 text-center mb-16'>
+              Related Technology
+            </h2>
+            <div class='grid grid-cols-1 md:grid-cols-3 gap-8'>
+              {relatedTechnology.map((tech) => (
+                <a
+                  href={`/technology/${tech.name.toLowerCase().replace(/\s+/g, '-')}`}
+                  class='block group'
+                >
+                  <div class='bg-white p-6 rounded-lg shadow-md transition duration-300 group-hover:shadow-xl'>
+                    <h3 class='text-xl text-gray-800 font-semibold mb-2 group-hover:text-primary transition duration-300'>
+                      {tech.name}
+                    </h3>
+                    <p class='text-gray-700 mb-4'>
+                      Learn more about our {tech.tagline.toLowerCase()}{' '}
+                      technology and how they can benefit your business.
+                    </p>
+                    <span class='text-primary font-medium group-hover:text-primary/90 transition duration-300'>
+                      Explore
+                      <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        class='h-5 w-5 inline-block ml-2 transform group-hover:translate-x-1 transition duration-300'
+                        fill='none'
+                        viewBox='0 0 24 24'
+                        stroke='currentColor'
+                      >
+                        <path
+                          stroke-linecap='round'
+                          stroke-linejoin='round'
+                          stroke-width='2'
+                          d='M17 8l4 4m0 0l-4 4m4-4H3'
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      )
+    }
+
+    <!-- Contact Form Section -->
+    <!-- <section id="contact" class="py-20 px-4">
+      <div class="container mx-auto max-w-3xl">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Contact Us</h2>
+        <form class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+              <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-purple-500 focus:border-purple-500" required>
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+              <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-purple-500 focus:border-purple-500" required>
+            </div>
+          </div>
+          <div>
+            <label for="company" class="block text-sm font-medium text-gray-700 mb-1">Company</label>
+            <input type="text" id="company" name="company" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-purple-500 focus:border-purple-500">
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-purple-500 focus:border-purple-500" required></textarea>
+          </div>
+          <div>
+            <button type="submit" class="w-full bg-purple-600 text-white font-bold py-3 px-4 rounded-md hover:bg-purple-700 transition duration-300">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </section> -->
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const faqContainer = document.getElementById('faq-container');
+
+      faqContainer!.addEventListener('click', (e: any) => {
+        const question = e.target.closest('.faq-question');
+        if (question) {
+          const index = question.dataset.index;
+          const answer = question.nextElementSibling;
+          const icon = question.querySelector('svg');
+
+          answer.classList.toggle('hidden');
+          icon.classList.toggle('rotate-180');
+
+          // Close other open questions
+          const allAnswers = faqContainer!.querySelectorAll('.faq-answer');
+          const allIcons = faqContainer!.querySelectorAll('.faq-question svg');
+
+          allAnswers.forEach((item, idx) => {
+            if (idx !== parseInt(index) && !item.classList.contains('hidden')) {
+              item.classList.add('hidden');
+              allIcons[idx].classList.remove('rotate-180');
+            }
+          });
+        }
+      });
+    });
+  </script>
+</MainLayout>
