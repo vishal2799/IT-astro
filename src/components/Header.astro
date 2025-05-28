@@ -40,7 +40,10 @@ const serviceCol1 = services.map((service, index) => ({
 const serviceCol2 = services.slice(0, 2).map((service, index) => ({
   label: service.title,
   desc: service.description,
-  href: `/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`,
+  href: `/services/${service.title
+    .toLowerCase()
+    .replace(/\s+/g, '-') // Replace spaces with hyphens
+    .replace(/[^\w-]/g, '')}`,
   image: service.heroImage,
 }));
 

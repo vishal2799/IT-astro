@@ -55,7 +55,7 @@ import HomeAboutImage from '../assets/images/HomeAbout.webp';
         <div class='flex flex-wrap justify-center gap-4'>
           <a
             href='/services'
-            class='bg-white/90 text-primary hover:bg-white font-bold py-3 px-8 rounded-full transition duration-300 text-lg'
+            class='bg-white text-primary hover:bg-white hover:text-primary-400 font-bold py-3 px-8 rounded-full transition duration-300 text-lg'
             >Our Services</a
           >
           <a
@@ -117,7 +117,7 @@ import HomeAboutImage from '../assets/images/HomeAbout.webp';
         </h2>
         <div class='grid grid-cols-1 md:grid-cols-3 gap-8'>
           {
-            services.map((service) => (
+            services.slice(0, 3).map((service) => (
               <ServiceCard
                 title={service.title}
                 description={service.description}
@@ -146,7 +146,7 @@ import HomeAboutImage from '../assets/images/HomeAbout.webp';
         </h2>
         <div class='grid grid-cols-1 md:grid-cols-3 gap-8'>
           {
-            technology.map((tech) => (
+            technology.slice(0,3).map((tech) => (
               <TechCard
                 name={tech.name}
                 tagline={tech.tagline}
