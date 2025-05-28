@@ -492,7 +492,100 @@ Our team of experts ensures smooth integration, ongoing support, and training, h
 ];
 
 const technology = [
-  {
+{
+  name: 'UIUX Design',
+  tagline: 'Design Experiences That Users Love',
+  description:
+    'Create beautiful, user-friendly interfaces with seamless user journeys. Our UI/UX design services turn ideas into engaging and intuitive digital experiences.',
+  overview: `Great design is not just about how it looks — it's about how it works. We create wireframes, prototypes, and high-fidelity mockups that align with your brand and make your users feel at home.<br><br>
+    From web apps to mobile apps and SaaS platforms, we follow a user-centric approach to design. Tools like Figma, Adobe XD, and Sketch help us build interactive prototypes, while our research process ensures accessibility and usability at every step.<br><br>
+    We collaborate closely with your team to validate ideas and iterate fast, ensuring your product looks stunning and feels effortless to use.`,
+  icon: 'palette',
+  image: '/tech1.webp',
+  heroImage: '/tech1.webp',
+  features: [
+    {
+      title: 'Wireframing & Prototyping',
+      description:
+        'Build fast interactive prototypes using Figma, Adobe XD, and Sketch.',
+    },
+    {
+      title: 'Visual Design & Branding',
+      description:
+        'Craft visually compelling interfaces that reflect your brand identity.',
+    },
+    {
+      title: 'User Research & Testing',
+      description:
+        'Understand user behavior with testing, heatmaps, and usability sessions.',
+    },
+    {
+      title: 'Responsive & Accessible Design',
+      description:
+        'Design interfaces that work seamlessly across devices and follow accessibility standards (WCAG).',
+    },
+  ],
+  benefits: [
+    'Boost user satisfaction and engagement',
+    'Improve retention with intuitive interfaces',
+    'Reduce development rework with validated designs',
+    'Ensure consistency across platforms and devices',
+  ],
+  useCases: [
+    {
+      title: 'Startup MVP Design',
+      description: 'Quickly prototype and validate ideas before development.',
+    },
+    {
+      title: 'SaaS Platform UX Overhaul',
+      description: 'Redesign dashboards and workflows for better productivity.',
+    },
+  ],
+  faq: [
+    {
+      question: 'Do you use Figma or other tools?',
+      answer:
+        'Yes, we primarily use Figma for design collaboration, along with Adobe XD, Sketch, and InVision as needed.',
+    },
+    {
+      question: 'Do you follow design systems?',
+      answer:
+        'Absolutely — we build or use design systems like Material UI, Bootstrap, or custom libraries for scalability and consistency.',
+    },
+  ],
+  process: [
+    {
+      title: 'User Research',
+      description: 'Understand your audience, goals, and challenges.',
+      icon: 'people',
+    },
+    {
+      title: 'Wireframing',
+      description: 'Sketch low-fidelity layouts and user flows.',
+      icon: 'easel2',
+    },
+    {
+      title: 'Visual Design',
+      description: 'Create high-fidelity screens and design systems.',
+      icon: 'pencil',
+    },
+    {
+      title: 'Handoff & Support',
+      description: 'Deliver assets to developers and assist with implementation.',
+      icon: 'code-slash',
+    },
+  ],
+  cta: {
+    title: 'Let’s Design Something Beautiful!',
+    description:
+      'From apps to websites — let us craft pixel-perfect, user-friendly designs your customers will love.',
+    button: {
+      text: 'Let’s Talk',
+      link: '/contact',
+    },
+  },
+},
+{
   name: 'Frontend Development',
   tagline: 'Craft Stunning and Responsive User Interfaces',
   description:
@@ -502,8 +595,8 @@ const technology = [
     Our focus on responsive and mobile-first design ensures your applications look and perform flawlessly on all devices.<br><br>
     Whether you need single-page applications (SPAs), progressive web apps (PWAs), or static websites, we create frontend solutions that are scalable, maintainable, and aligned with your business objectives.`,
   icon: 'code-slash',
-  image: '/tech1.webp',
-  heroImage: '/tech1.webp',
+  image: '/tech2.webp',
+  heroImage: '/tech2.webp',
   features: [
     {
       title: 'Popular Frameworks & Libraries',
@@ -603,8 +696,8 @@ const technology = [
     Our solutions include RESTful APIs, GraphQL endpoints, microservices architecture, and serverless computing with AWS Lambda or Azure Functions.<br><br>
     With a focus on security, scalability, and maintainability, we deliver backend systems that integrate smoothly with frontend and mobile apps, ensuring fast response times and data integrity across your digital ecosystem.`,
   icon: 'server',
-  image: '/tech2.webp',
-  heroImage: '/tech2.webp',
+  image: '/tech3.webp',
+  heroImage: '/tech3.webp',
   features: [
     {
       title: 'Popular Backend Frameworks',
@@ -691,6 +784,99 @@ const technology = [
   },
 },
 {
+  name: 'CMS & eCommerce Development',
+  tagline: 'Manage Content and Sell Online with Powerful CMS & eCommerce Solutions',
+  description:
+    'Launch scalable content and commerce platforms using WordPress, Shopify, WooCommerce, and headless CMS solutions.',
+  overview: `We help you build content-driven websites and online stores that are fast, secure, and easy to manage. From WordPress-powered blogs and business websites to feature-rich Shopify or WooCommerce stores — we’ve got you covered.<br><br>
+    Need full control? We also build custom CMS solutions or integrate headless CMS like Strapi, Contentful, or Sanity with frontend frameworks like Next.js or Nuxt.js.<br><br>
+    For eCommerce, we deliver fully optimized stores with secure payments, inventory management, user accounts, discount engines, and more.`,
+  icon: 'bag-check',
+  image: '/tech4.webp',
+  heroImage: '/tech4.webp',
+  features: [
+    {
+      title: 'CMS Platforms',
+      description:
+        'WordPress, Webflow, Ghost, and custom-built CMS with admin panels tailored to your business.',
+    },
+    {
+      title: 'eCommerce Platforms',
+      description:
+        'Shopify, WooCommerce, Magento, and custom carts with secure payment gateways.',
+    },
+    {
+      title: 'Headless CMS',
+      description:
+        'Integrate headless CMS like Strapi, Sanity, or Contentful with Jamstack sites.',
+    },
+    {
+      title: 'SEO & Performance Optimization',
+      description:
+        'Optimized for Google, fast page loads, mobile performance, and accessibility.',
+    },
+  ],
+  benefits: [
+    'Launch faster with proven platforms and themes',
+    'Easy content management for non-technical teams',
+    'Secure and reliable eCommerce with payment integration',
+    'Customizable and scalable for future growth',
+  ],
+  useCases: [
+    {
+      title: 'Online Store',
+      description: 'Launch a full-featured eCommerce store with inventory, payments, and order tracking.',
+    },
+    {
+      title: 'Company Website with CMS',
+      description: 'Manage blog posts, pages, and team members through a no-code dashboard.',
+    },
+  ],
+  faq: [
+    {
+      question: 'Should I choose Shopify or WooCommerce?',
+      answer:
+        'Shopify is ideal for easy setup and hosting, while WooCommerce offers more customization and control over hosting.',
+    },
+    {
+      question: 'Can I use CMS with a modern frontend?',
+      answer:
+        'Yes, headless CMS can be paired with React, Next.js, or Nuxt for modern, fast websites.',
+    },
+  ],
+  process: [
+    {
+      title: 'Discovery & Planning',
+      description: 'Define goals, platform, and required features.',
+      icon: 'files',
+    },
+    {
+      title: 'Design & Setup',
+      description: 'Set up CMS or eCommerce platform with branding and layout.',
+      icon: 'gear',
+    },
+    {
+      title: 'Customization & Integration',
+      description: 'Add plugins, custom features, and connect APIs or CRMs.',
+      icon: 'puzzle',
+    },
+    {
+      title: 'Launch & Support',
+      description: 'Deploy and provide training and support post-launch.',
+      icon: 'rocket',
+    },
+  ],
+  cta: {
+    title: 'Start Selling or Publishing Online with Ease!',
+    description:
+      'From content sites to full-featured online stores — we build scalable CMS and eCommerce solutions that grow with your business.',
+    button: {
+      text: 'Let’s Build',
+      link: '/contact',
+    },
+  },
+},
+{
   name: 'Mobile App Development',
   tagline: 'Create Engaging Native and Cross-Platform Mobile Apps',
   description:
@@ -699,8 +885,8 @@ const technology = [
     We focus on user-centric design, smooth performance, and seamless integration with backend services. Whether it’s an e-commerce app, social platform, or enterprise mobile solution, we deliver apps that delight users and drive engagement.<br><br>
     Our mobile-first approach ensures apps are optimized for various screen sizes and hardware capabilities, delivering the best experience on smartphones and tablets.`,
   icon: 'phone',
-  image: '/tech3.webp',
-  heroImage: '/tech3.webp',
+  image: '/tech5.webp',
+  heroImage: '/tech5.webp',
   features: [
     {
       title: 'Native App Development',
@@ -795,8 +981,8 @@ const technology = [
     We utilize integrated stacks like MERN (MongoDB, Express, React, Node.js), MEAN (MongoDB, Express, Angular, Node.js), and LAMP (Linux, Apache, MySQL, PHP) to streamline development and accelerate time to market.<br><br>
     By managing the entire technology stack, we ensure your applications are scalable, maintainable, and provide smooth user experiences from the client interface to the server logic and database management.`,
   icon: 'layers',
-  image: '/tech1.webp',
-  heroImage: '/tech1.webp',
+  image: '/tech6.webp',
+  heroImage: '/tech6.webp',
   features: [
     {
       title: 'Integrated Frontend & Backend',
@@ -886,6 +1072,96 @@ const technology = [
     // image: '/cta-fullstack-development.jpg',
   },
 },
+{
+  name: 'Cloud Development',
+  tagline: 'Leverage the Power of the Cloud for Scalable and Secure Solutions',
+  description:
+    'Move your applications and infrastructure to the cloud with expert solutions in AWS, Azure, and Google Cloud. We help you scale effortlessly while ensuring performance and cost efficiency.',
+  overview: `Cloud development allows businesses to scale applications, reduce infrastructure costs, and enhance availability. We specialize in AWS, Microsoft Azure, and Google Cloud Platform (GCP) — building cloud-native applications, migrating legacy systems, and managing scalable infrastructure.<br><br>
+    Our services include serverless architecture (AWS Lambda, Azure Functions), DevOps automation (CI/CD with GitHub Actions, Azure DevOps, Jenkins), containerization (Docker, Kubernetes), and managed databases (RDS, Firestore, CosmosDB).<br><br>
+    Whether you're launching a new product or modernizing an existing one, we ensure your cloud setup is secure, scalable, and future-ready.`,
+  icon: 'cloud',
+  image: '/tech7.webp',
+  heroImage: '/tech7.webp',
+  features: [
+    {
+      title: 'Multi-Cloud Expertise',
+      description: 'AWS, Azure, and GCP deployments for high availability and global reach.',
+    },
+    {
+      title: 'Serverless & Microservices',
+      description: 'Build event-driven, cost-effective systems with minimal operational overhead.',
+    },
+    {
+      title: 'CI/CD & DevOps Automation',
+      description: 'Automate builds, tests, and deployments using modern DevOps pipelines.',
+    },
+    {
+      title: 'Cloud Security & Monitoring',
+      description: 'Ensure security with IAM, encryption, and real-time monitoring tools.',
+    },
+  ],
+  benefits: [
+    'Scale apps automatically based on user demand',
+    'Reduce infrastructure maintenance and costs',
+    'Improve security and disaster recovery',
+    'Speed up development with managed services',
+  ],
+  useCases: [
+    {
+      title: 'Scalable SaaS Platforms',
+      description: 'Host and scale SaaS products globally using cloud-native services.',
+    },
+    {
+      title: 'Cloud Migration',
+      description: 'Migrate existing apps and databases to the cloud securely.',
+    },
+  ],
+  faq: [
+    {
+      question: 'Which cloud platform should I choose?',
+      answer:
+        'It depends on your requirements — AWS is highly flexible, Azure integrates well with Microsoft products, and GCP excels in analytics and AI.',
+    },
+    {
+      question: 'Is cloud development secure?',
+      answer:
+        'Yes, we follow best practices for cloud security including encryption, access controls, and compliance.',
+    },
+  ],
+  process: [
+    {
+      title: 'Cloud Architecture Planning',
+      description: 'Design scalable and secure cloud architecture.',
+      icon: 'diagram-3',
+    },
+    {
+      title: 'Development & Migration',
+      description: 'Develop new cloud apps or migrate existing infrastructure.',
+      icon: 'cloud-upload',
+    },
+    {
+      title: 'Testing & Optimization',
+      description: 'Ensure performance and cost-efficiency with continuous testing.',
+      icon: 'speedometer',
+    },
+    {
+      title: 'Monitoring & Scaling',
+      description: 'Implement monitoring tools and auto-scaling systems.',
+      icon: 'graph-up-arrow',
+    },
+  ],
+  cta: {
+    title: 'Ready to Take Your Business to the Cloud?',
+    description:
+      'Let us help you design, develop, and scale secure cloud-native solutions that meet your goals.',
+    button: {
+      text: 'Talk to Us',
+      link: '/contact',
+    },
+  },
+}
+
   // {
   //   name: 'Web & Mobile Development',
   //   tagline: 'Build Exceptional Web & Mobile Experiences',
