@@ -22,7 +22,7 @@ const solCol1 = solutions.map((sol, index) => ({
   href: `/solutions/${sol.name.toLowerCase().replace(/\s+/g, '-')}`,
 }));
 
-const solCol2 = solutions.slice(0, 2).map((sol, index) => ({
+const solCol2 = solutions.map((sol, index) => ({
   label: sol.name,
   desc: sol.tagline,
   href: `/solutions/${sol.name.toLowerCase().replace(/\s+/g, '-')}`,
@@ -37,7 +37,7 @@ const serviceCol1 = services.map((service, index) => ({
     .replace(/[^\w-]/g, '')}`,
 }));
 
-const serviceCol2 = services.slice(0, 2).map((service, index) => ({
+const serviceCol2 = services.map((service, index) => ({
   label: service.title,
   desc: service.description,
   href: `/services/${service.title
@@ -154,7 +154,7 @@ const navItems = [
                                       {subItem.label}
                                     </a>
                                     <p class='text-black-300 text-base leading-relaxed'>
-                                      {subItem.desc}
+                                      {subItem.desc.length > 100 ? subItem.desc.slice(0, 100) + '...' : subItem.desc}
                                     </p>
                                   </div>
                                   <a
@@ -170,7 +170,7 @@ const navItems = [
                                   </a>
                                 </div>
                               ))}
-                              <MegaMenuCTA />
+                              {/* <MegaMenuCTA /> */}
                             </div>
                           </div>
                         </div>
@@ -185,7 +185,8 @@ const navItems = [
             href='tel:+919711356947'
             class='inline-flex items-center px-6 py-3 text-white bg-primary/90 rounded-3xl hover:bg-primary transition-colors duration-300'
           >
-            <Icon name='telephone' class='mr-3 text-lg sm:text-xl' /> Schedule A Meeting
+           <!-- <Icon name='telephone' class='mr-3 text-lg sm:text-xl' />  -->
+           Schedule A Meeting
           </a>
         </nav>
       <!-- <div class='flex flex-col'>
@@ -379,8 +380,8 @@ const navItems = [
         ))
       }
       <div>
-        <nav class='flex flex-col space-y-5 border-t py-4'>
-          <a
+        <nav class='flex flex-col border-t pt-4'>
+          <!-- <a
             href='/about-us'
             class='text-sm font-medium text-gray-800 hover:text-primary transition-colors duration-300'
             >About Us</a
@@ -393,8 +394,8 @@ const navItems = [
           <a
             href='/blog'
             class='text-sm font-medium text-gray-800 hover:text-primary transition-colors duration-300'
-            >Blog</a
-          >
+            >Case Studies</a
+          > -->
           <div class='flex gap-6'>
             <a
               href='https://www.linkedin.com/company/alicorn-solutions/'
@@ -414,7 +415,8 @@ const navItems = [
         href='tel:+919711356947'
         class='inline-flex items-center px-6 py-3 bg-primary/90 text-white rounded-3xl hover:bg-primary transition-colors duration-300'
       >
-        <Icon name='telephone' class='mr-3 text-lg sm:text-xl' />+91 97113 56947
+        <!-- <Icon name='telephone' class='mr-3 text-lg sm:text-xl' /> -->
+        Schedule A Meeting
       </a>
     </nav>
   </div>
