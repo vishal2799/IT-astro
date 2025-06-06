@@ -500,6 +500,7 @@ const technology = [
   overview: `Great design is not just about how it looks — it's about how it works. We create wireframes, prototypes, and high-fidelity mockups that align with your brand and make your users feel at home.<br><br>
     From web apps to mobile apps and SaaS platforms, we follow a user-centric approach to design. Tools like Figma, Adobe XD, and Sketch help us build interactive prototypes, while our research process ensures accessibility and usability at every step.<br><br>
     We collaborate closely with your team to validate ideas and iterate fast, ensuring your product looks stunning and feels effortless to use.`,
+    technologies: ['Figma', 'Adobe XD', 'Sketch', 'InVision', 'Zeplin', 'Framer'],
   icon: 'palette',
   image: '/tech1.webp',
   heroImage: '/tech1.webp',
@@ -594,6 +595,7 @@ const technology = [
     We leverage modern tools like TypeScript for type safety, Tailwind CSS and Bootstrap for responsive styling, and Next.js or Nuxt.js for server-side rendering and static site generation.<br><br>
     Our focus on responsive and mobile-first design ensures your applications look and perform flawlessly on all devices.<br><br>
     Whether you need single-page applications (SPAs), progressive web apps (PWAs), or static websites, we create frontend solutions that are scalable, maintainable, and aligned with your business objectives.`,
+  technologies: ['ReactJS', 'Angular', 'VueJS'],
   icon: 'code-slash',
   image: '/tech2.webp',
   heroImage: '/tech2.webp',
@@ -695,6 +697,7 @@ const technology = [
   overview: `Backend development forms the backbone of any application, managing data, user authentication, business logic, and integrations. We specialize in popular backend frameworks and platforms like Node.js with Express, .NET Core, Java Spring Boot, Python Django and Flask, Ruby on Rails, and PHP Laravel.<br><br>
     Our solutions include RESTful APIs, GraphQL endpoints, microservices architecture, and serverless computing with AWS Lambda or Azure Functions.<br><br>
     With a focus on security, scalability, and maintainability, we deliver backend systems that integrate smoothly with frontend and mobile apps, ensuring fast response times and data integrity across your digital ecosystem.`,
+    technologies: ['Node.js', '.NET', 'Java', 'Django', 'Express.js', 'Spring Boot'],
   icon: 'server',
   image: '/tech3.webp',
   heroImage: '/tech3.webp',
@@ -791,6 +794,7 @@ const technology = [
   overview: `We help you build content-driven websites and online stores that are fast, secure, and easy to manage. From WordPress-powered blogs and business websites to feature-rich Shopify or WooCommerce stores — we’ve got you covered.<br><br>
     Need full control? We also build custom CMS solutions or integrate headless CMS like Strapi, Contentful, or Sanity with frontend frameworks like Next.js or Nuxt.js.<br><br>
     For eCommerce, we deliver fully optimized stores with secure payments, inventory management, user accounts, discount engines, and more.`,
+    technologies: ['WordPress', 'Shopify', 'WooCommerce', 'Magento', 'Contentful', 'Strapi', 'Sanity'],
   icon: 'bag-check',
   image: '/tech4.webp',
   heroImage: '/tech4.webp',
@@ -884,6 +888,7 @@ const technology = [
   overview: `Mobile apps have become essential for business growth and customer engagement. Our mobile development expertise includes native platforms like Swift for iOS and Kotlin for Android, as well as cross-platform frameworks such as React Native, Flutter, and Xamarin.<br><br>
     We focus on user-centric design, smooth performance, and seamless integration with backend services. Whether it’s an e-commerce app, social platform, or enterprise mobile solution, we deliver apps that delight users and drive engagement.<br><br>
     Our mobile-first approach ensures apps are optimized for various screen sizes and hardware capabilities, delivering the best experience on smartphones and tablets.`,
+    technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Ionic', 'Xamarin'],
   icon: 'phone',
   image: '/tech5.webp',
   heroImage: '/tech5.webp',
@@ -980,6 +985,7 @@ const technology = [
   overview: `Full stack development combines the power of both frontend and backend to build comprehensive, seamless web applications. Our full stack expertise covers modern frontend frameworks like ReactJS, Angular, and Vue.js, alongside backend technologies such as Node.js, .NET Core, Django, and Spring Boot.<br><br>
     We utilize integrated stacks like MERN (MongoDB, Express, React, Node.js), MEAN (MongoDB, Express, Angular, Node.js), and LAMP (Linux, Apache, MySQL, PHP) to streamline development and accelerate time to market.<br><br>
     By managing the entire technology stack, we ensure your applications are scalable, maintainable, and provide smooth user experiences from the client interface to the server logic and database management.`,
+    technologies: ['MERN Stack', 'MEAN Stack', 'LAMP Stack', '.NET Stack', 'T3 Stack', 'JAMstack'],
   icon: 'layers',
   image: '/tech6.webp',
   heroImage: '/tech6.webp',
@@ -1080,6 +1086,7 @@ const technology = [
   overview: `Cloud development allows businesses to scale applications, reduce infrastructure costs, and enhance availability. We specialize in AWS, Microsoft Azure, and Google Cloud Platform (GCP) — building cloud-native applications, migrating legacy systems, and managing scalable infrastructure.<br><br>
     Our services include serverless architecture (AWS Lambda, Azure Functions), DevOps automation (CI/CD with GitHub Actions, Azure DevOps, Jenkins), containerization (Docker, Kubernetes), and managed databases (RDS, Firestore, CosmosDB).<br><br>
     Whether you're launching a new product or modernizing an existing one, we ensure your cloud setup is secure, scalable, and future-ready.`,
+    technologies: ['AWS', 'Azure', 'Google Cloud', 'Docker', 'Kubernetes', 'Firebase', 'Lambda'],
   icon: 'cloud',
   image: '/tech7.webp',
   heroImage: '/tech7.webp',

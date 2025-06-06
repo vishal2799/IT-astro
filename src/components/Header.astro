@@ -8,6 +8,7 @@ import { services, solutions, technology } from '../constants';
 const techCol1 = technology.map((tech, index) => ({
   label: tech.name,
   href: `/technology/${tech.name.toLowerCase().replace(/\s+/g, '-')}`,
+  id: tech.name
 }));
 
 const techCol2 = technology.slice(0, 2).map((tech, index) => ({
@@ -61,8 +62,19 @@ const navItems = [
     label: 'Technology',
     href: '/technology',
     megaMenu: {
-      column1: techCol1,
-      column2: techCol2,
+      column1: [
+        {
+          label: 'Frontend',
+          href: '/technology/frontend',
+          id: 'frontend',
+        },
+        {
+          label: 'Backend',
+          href: '/technology/backend',
+          id: 'backend',
+        },
+      ],
+      column2: [],
     },
   },
   {
@@ -113,9 +125,9 @@ const navItems = [
                         <div class='flex gap-6'>
                           {/* First Column - Categories */}
                           <div class='border-r border-slate-300 max-h-[70vh] overflow-y-auto w-3/12'>
-                            <ul>
-                              {item.megaMenu.column1.map((subItem) => (
-                                <li class='group hover:bg-primary-100'>
+                            <ul id={item.label === 'Technology' ? 'tech-col1' : undefined}>
+                              {item.megaMenu.column1.map((subItem:any) => (
+                                <li class='group hover:bg-primary-100' data-id={item.label === 'Technology' ? subItem.id : undefined}>
                                   <a
                                     href={subItem.href}
                                     class='block p-5 text-primary hover:text-gray-900 transition-colors duration-200'
@@ -129,8 +141,9 @@ const navItems = [
 
                           {/* Second Column - Featured Content */}
                           <div class='max-h-[70vh] overflow-y-auto w-9/12 p-5'>
-                            <div class='grid grid-cols-3 gap-5'>
-                              {item.megaMenu.column2.map((subItem: any) => (
+                            <div class='grid grid-cols-3 gap-5'  id={item.label === 'Technology' ? 'tech-col2' : undefined}>
+                              
+                             {item.label !== 'Technology' && item.megaMenu.column2.map((subItem: any) => (
                                 <div class='bg-white shadow-lg p-5 group'>
                                   <div class='flex justify-center items-center overflow-hidden h-[100px] bg-primary-100 rounded-sm mb-4'>
                                     {/* <Image
@@ -423,6 +436,103 @@ const navItems = [
 </header>
 
 <script>
+  const techCol2 = {
+    frontend: [
+      {
+        label: 'ReactJS',
+        href: '/technology/react',
+        desc: 'Build dynamic UIs with React.',
+        image: '/icons/react.png',
+      },
+      {
+        label: 'VueJS',
+        href: '/technology/vue',
+        desc: 'Progressive frontend development with Vue.',
+        image: '/icons/vue.png',
+      },
+    ],
+    backend: [
+      {
+        label: 'Node.js',
+        href: '/technology/node',
+        desc: 'Event-driven backend services with Node.',
+        image: '/icons/node.png',
+      },
+    ],
+  };
+
+  const col1Items = document.querySelectorAll('#tech-col1 li[data-id]');
+  const col2Container = document.querySelector('#tech-col2');
+
+  // ✅ On hover of individual column1 items
+  col1Items.forEach((item:any) => {
+    item.addEventListener('mouseenter', () => {
+      const id = item.dataset.id;
+      const content = techCol2[id] || [];
+
+      col2Container!.innerHTML = content
+        .map(
+          (tech:any) => `
+          <div class="bg-white shadow-lg p-5 group">
+            <div class="flex justify-center items-center overflow-hidden h-[100px] bg-primary-100 rounded-sm mb-4">
+              <img src="${tech.image}" alt="${tech.label}" class="object-contain" />
+            </div>
+            <div class="mb-4">
+              <a href="${tech.href}" class="inline-block mb-2 text-primary text-xl font-bold hover:text-secondary transition-colors">${tech.label}</a>
+              <p class="text-black-300 text-base leading-relaxed">
+                ${tech.desc.length > 100 ? tech.desc.slice(0, 100) + '...' : tech.desc}
+              </p>
+            </div>
+            <a href="${tech.href}" class="flex items-center uppercase text-primary font-medium hover:text-secondary transition-colors">
+              Find Out More
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        `
+        )
+        .join('');
+    });
+  });
+
+  // ✅ Set default content on first hover over "Technology"
+  let initialized = false;
+
+  const techGroup = document.querySelector('a[href="/technology"]')?.closest('.group');
+  if (techGroup) {
+    techGroup.addEventListener('mouseenter', () => {
+      if (!initialized) {
+        const defaultItems = techCol2['frontend'] || [];
+        col2Container!.innerHTML = defaultItems
+          .map(
+            (tech) => `
+            <div class="bg-white shadow-lg p-5 group">
+              <div class="flex justify-center items-center overflow-hidden h-[100px] bg-primary-100 rounded-sm mb-4">
+                <img src="${tech.image}" alt="${tech.label}" class="object-contain" />
+              </div>
+              <div class="mb-4">
+                <a href="${tech.href}" class="inline-block mb-2 text-primary text-xl font-bold hover:text-secondary transition-colors">${tech.label}</a>
+                <p class="text-black-300 text-base leading-relaxed">
+                  ${tech.desc.length > 100 ? tech.desc.slice(0, 100) + '...' : tech.desc}
+                </p>
+              </div>
+              <a href="${tech.href}" class="flex items-center uppercase text-primary font-medium hover:text-secondary transition-colors">
+                Find Out More
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          `
+          )
+          .join('');
+        initialized = true;
+      }
+    });
+  }
+
+
   const mobileMenuToggle = document.getElementById('mobileMenuToggle');
   const mobileMenu = document.getElementById('mobileMenu');
   const dropdownButtons = document.querySelectorAll('#mobileMenu button');
