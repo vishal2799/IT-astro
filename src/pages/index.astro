@@ -177,7 +177,7 @@ import HomeAboutImage from '../assets/images/HomeAbout.webp';
         </h2>
         <div class='grid grid-cols-1 md:grid-cols-2 gap-12'>
           {
-            projects.map((project) => (
+            projects.slice(0,2).map((project) => (
               <ProjectCard
                 title={project.title}
                 category={project.category}

@@ -1759,7 +1759,7 @@ const projects = [
     category: 'Practice Management',
     description:
       'An advanced practice management tool designed for Chartered Accountants (CAs) and Certified Public Accountants (CPAs). Its flexible architecture ensures it can be customized to meet the needs of other professionals, such as lawyers, with minimal modifications.',
-    image: '/project1.webp', // Placeholder, can be updated later.
+    image: '/project1.webp',
     client: 'JHS Associates LLP',
     duration: '8+ months (ongoing)',
     technologies: ['SharePoint', 'Power BI', 'Microsoft Outlook Integration'],
@@ -1775,6 +1775,155 @@ const projects = [
       'Future-proof design to expand into legal practice management',
     ],
   },
+  {
+  title: 'Customer Complaint Management App for Nama Supply',
+  category: 'Internal Tool – Workflow Automation',
+  description:
+    'A complaint resolution system powered by K2 Nintex that streamlines customer service workflows through automated approvals, real-time data integrations, and multi-channel notifications.',
+  image: '/project8.jpg',
+  client: 'Nama Supply',
+  duration: '5+ months (ongoing)',
+  technologies: ['K2 Nintex', 'SQL UserUM', 'Orion API', 'SMS Gateway'],
+  slug: 'customer-complaint-management-app',
+  challenge:
+    'Nama Supply faced delays and inefficiencies in handling customer complaints, with manual approvals and lack of integration between systems leading to slow resolution and poor customer communication.',
+  solution:
+    'Designed and implemented a robust complaint management system using K2 Nintex. The solution includes a 4-level dynamic approval flow, integration with SQL UserUM for user validation, and real-time billing data retrieval via Orion API. Customers receive automated SMS updates at each stage, improving transparency and reducing resolution time.',
+  results: [
+    'Reduced complaint resolution time by over 40%',
+    'Integrated user validation and billing data in real-time',
+    'Enabled automated notifications to customers via SMS',
+    'Improved operational efficiency with scalable approval workflows',
+  ],
+}
+,
+  {
+  title: 'AuraLegal: Modern Legal Firm Website',
+  category: 'Website Development',
+  description:
+    'A clean, SEO-optimized website designed for a legal consultancy firm. Built to establish credibility, showcase expertise, and streamline client inquiries through a structured and responsive layout.',
+  image: '/project2.jpg',
+  client: 'AuraLegal LLP',
+  duration: '3 weeks',
+  technologies: ['Next.js', 'Tailwind CSS', 'Framer Motion'],
+  slug: 'auralegal-law-firm-website',
+  challenge:
+    'The law firm lacked a strong digital presence and needed a professional platform to highlight its services, display team profiles, and enable client inquiries while maintaining a modern brand image.',
+  solution:
+    'Developed a fully responsive, fast-loading website using Next.js and Tailwind CSS. Integrated service listings, lawyer profiles, case study highlights, and a custom contact form. Added subtle animations using Framer Motion to enhance the user experience.',
+  results: [
+    'Enhanced online presence and trust with potential clients',
+    'Improved SEO ranking through server-side rendering',
+    'Streamlined client inquiries via structured contact form',
+    'Professional look aligned with the firms brand identity',
+  ],
+},
+{
+  title: 'ThreadCart: WooCommerce Clothing Store',
+  category: 'E-Commerce Website',
+  description:
+    'An elegant online store crafted for a clothing brand, offering smooth shopping experiences, category filtering, and secure checkout with modern design aesthetics.',
+  image: '/project3.jpg',
+  client: 'ThreadCart Apparel',
+  duration: '1 month',
+  technologies: ['WordPress', 'WooCommerce', 'Elementor'],
+  slug: 'threadcart-clothing-ecommerce',
+  challenge:
+    'The client needed a complete eCommerce platform for their growing fashion label, with customizable product displays, user-friendly shopping flows, and mobile responsiveness.',
+  solution:
+    'Developed a WooCommerce-based website using WordPress and Elementor. Included product categorization, discount coupon functionality, customer review sections, wishlist feature, and full mobile optimization.',
+  results: [
+    'Launched full-scale eCommerce store within 30 days',
+    'Increased product visibility through category filters',
+    'Boosted conversions with a fast, intuitive checkout experience',
+    'Fully mobile-optimized for modern shoppers',
+  ],
+},
+{
+  title: 'NestEdge Interiors: Portfolio Website for Designers',
+  category: 'Website Development',
+  description:
+    'A visually immersive website for an interior design firm to showcase projects, share service details, and attract new clients with a highly curated brand presence.',
+  image: '/project4.jpg',
+  client: 'NestEdge Interiors',
+  duration: '3 weeks',
+  technologies: ['Next.js', 'Tailwind CSS', 'Lightbox Gallery'],
+  slug: 'nestedge-interior-design-website',
+  challenge:
+    'The firm wanted a clean and sophisticated platform to display their portfolio, engage potential clients, and improve visibility for their local services.',
+  solution:
+    'Built a performance-optimized website using Next.js, featuring interactive image galleries, project filters, and mobile-friendly layouts. Contact form and service descriptions were included to support lead generation.',
+  results: [
+    'Professional showcase of 15+ interior design projects',
+    'Improved client engagement via intuitive navigation',
+    'Faster page loads and SEO boost through SSR',
+    'Brand-aligned layout with emphasis on visual storytelling',
+  ],
+},
+{
+  title: 'DecoDwell: Home Decor Online Store',
+  category: 'E-Commerce Website',
+  description:
+    'An eCommerce platform for handcrafted home decor, built to support product discovery, smooth shopping flow, and easy inventory management through WordPress and WooCommerce.',
+  image: '/project5.jpg',
+  client: 'DecoDwell Home Studio',
+  duration: '1.5 months',
+  technologies: ['WordPress', 'WooCommerce', 'Elementor'],
+  slug: 'decodwell-home-decor-ecommerce',
+  challenge:
+    'The client needed a platform to showcase and sell handcrafted home decor items, with a strong focus on design aesthetics and easy product management.',
+  solution:
+    'Created a WordPress WooCommerce store using Elementor for design flexibility. Implemented product filters, customer reviews, wishlists, and promotional banners. Optimized layouts for mobile and integrated secure payment gateways.',
+  results: [
+    'Smooth eCommerce experience with high user retention',
+    'Easy inventory and order management via WooCommerce',
+    'Increased conversions through aesthetic product layouts',
+    'Fully responsive and scalable for future product lines',
+  ],
+},
+{
+  title: 'PayNest: Unified BBPS + AEPS Payment Platform',
+  category: 'Mobile App – Finance & Utilities',
+  description:
+    'A mobile-first solution that combines Bharat Bill Payment System (BBPS) features with Aadhaar Enabled Payment System (AEPS) to enable bill payments, recharges, and basic banking services for underserved communities.',
+  image: '/project6.jpg',
+  client: 'FinLink Micro Services',
+  duration: '3 months',
+  technologies: ['React Native', 'Firebase', 'UPI & AEPS API Integration'],
+  slug: 'paynest-bbps-aeps-utility-app',
+  challenge:
+    'The client needed a low-code solution to provide digital utility payments, mobile recharges, and AEPS-based services in semi-urban and rural areas where traditional banking infrastructure was lacking.',
+  solution:
+    'Developed a mobile application with integrated BBPS and AEPS APIs, enabling bill payments, cash withdrawal, balance inquiry, and recharges. Secure biometric authentication and multilingual support were added to enhance accessibility.',
+  results: [
+    'Enabled over 500 users to access essential banking and payment services',
+    'Reduced dependency on physical bank branches',
+    'Integrated AEPS for real-time Aadhaar-based transactions',
+    'Built with offline-first features for low-connectivity areas',
+  ],
+},
+{
+  title: 'FitSphere: Personal & Gym Workout Companion',
+  category: 'Mobile App – Health & Fitness',
+  description:
+    'A modern fitness app designed for individuals and gym trainers to track workouts, monitor progress, and manage personalized routines with calendar-based planning and visual insights.',
+  image: '/project7.jpg',
+  client: 'IronLab Fitness Studio',
+  duration: '1.5 months',
+  technologies: ['React Native', 'Redux', 'Firebase'],
+  slug: 'fitsphere-gym-workout-app',
+  challenge:
+    'The gym lacked a digital tool for trainers to assign routines and for members to track daily workouts and progress. They also wanted a white-label version for future studio partnerships.',
+  solution:
+    'Built a cross-platform fitness app with login for trainers and members, workout logging, visual charts, and push notifications. Included routine templates, progress tracking, and schedule reminders.',
+  results: [
+    'Improved client engagement and workout consistency',
+    'Trainers can assign and monitor routines in real time',
+    'Enabled data-driven fitness tracking with clean UI',
+    'Designed to scale across multiple gym branches',
+  ],
+}
+
 ];
 
 const posts = [
