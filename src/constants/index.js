@@ -1802,8 +1802,91 @@ const projects = [
     'Enabled automated notifications to customers via SMS',
     'Improved operational efficiency with scalable approval workflows',
   ],
-}
-,
+},
+{
+  title: 'PayNest: Unified BBPS + AEPS Platform (Web, Mobile, Admin)',
+  category: 'Fintech Suite – Mobile, Web & Admin',
+  description:
+    'PayNest is a full-stack digital finance platform offering BBPS utility payments and AEPS banking services through mobile and web apps. Designed for both users and agents, it includes a robust admin portal for transaction monitoring, agent management, and real-time support.',
+  image: '/project6.jpg',
+  client: 'FinLink Micro Services',
+  duration: '5+ months (ongoing)',
+  technologies: ['React Native', 'ReactJS', 'Node.js', 'MongoDB', 'BBPS & AEPS APIs'],
+  slug: 'paynest-unified-fintech-suite',
+  challenge:
+    'The client aimed to digitize utility payments and basic banking for rural and semi-urban users while enabling agents to operate via both mobile and web. They also needed a backend system to manage transactions, monitor fraud, and handle commissions.',
+  solution:
+    'Developed a cross-platform ecosystem with a React Native mobile app for users, a ReactJS web portal for agents, and a secure admin dashboard. Integrated BBPS for bill payments, AEPS for Aadhaar banking, real-time APIs, and SMS alerts. Admins can monitor activity, handle refunds, and manage agent performance with role-based access.',
+  results: [
+    'Over 5,000 monthly transactions handled across platforms',
+    '300+ agents onboarded through the web portal',
+    'Resolution time for failed transactions reduced by 60%',
+    'Future-ready architecture for UPI, micro-loans, and multi-lingual support',
+  ],
+},
+{
+  title: 'FitSphere: Personal & Gym Workout Companion',
+  category: 'Mobile App – Health & Fitness',
+  description:
+    'A modern fitness app designed for individuals and gym trainers to track workouts, monitor progress, and manage personalized routines with calendar-based planning and visual insights.',
+  image: '/project7.jpg',
+  client: 'IronLab Fitness Studio',
+  duration: '1.5 months',
+  technologies: ['React Native', 'Redux', 'Firebase'],
+  slug: 'fitsphere-gym-workout-app',
+  challenge:
+    'The gym lacked a digital tool for trainers to assign routines and for members to track daily workouts and progress. They also wanted a white-label version for future studio partnerships.',
+  solution:
+    'Built a cross-platform fitness app with login for trainers and members, workout logging, visual charts, and push notifications. Included routine templates, progress tracking, and schedule reminders.',
+  results: [
+    'Improved client engagement and workout consistency',
+    'Trainers can assign and monitor routines in real time',
+    'Enabled data-driven fitness tracking with clean UI',
+    'Designed to scale across multiple gym branches',
+  ],
+},
+{
+  title: 'Revenue360: Unified Transaction & Revenue Management Platform',
+  category: 'Business Process Automation – Power Platform',
+  description:
+    'A centralized solution designed to streamline client transaction tracking and revenue analysis using Power Platform. Combines a custom PowerApps interface, SharePoint backend, Power BI dashboards, and Power Automate flows into a single-window experience.',
+  image: '/project9.jpg',
+  client: 'Internal Team Use / Case Study',
+  duration: '1.5 months',
+  technologies: ['PowerApps (Canvas App)', 'SharePoint', 'Power BI', 'Power Automate'],
+  slug: 'revenue360-client-transaction-tracker',
+  challenge:
+    'Managing client transactions and revenue processes across multiple tools caused data silos, delays in updates, and lack of real-time insights for stakeholders.',
+  solution:
+    'Built a responsive Canvas App for data input and access across devices. SharePoint was used as the secure and collaborative data source. Power BI visualized revenue and transaction patterns with category-level breakdowns. Power Automate triggered dataset refreshes directly from the app, enabling live analytics inside the app itself.',
+  results: [
+    'Created a true single-window interface to manage and monitor revenue flow',
+    'Enabled real-time Power BI updates without leaving the app',
+    'Improved collaboration through SharePoint-based data structure',
+    'Reduced reporting delays and improved decision-making for stakeholders',
+  ],
+},
+{
+  title: 'Wanderwise: Travel Agency Website',
+  category: 'Website – Informational',
+  description:
+    'A visually rich, mobile-optimized website for a travel agency, designed to showcase curated destinations, tour packages, and engage potential clients through impactful storytelling and intuitive design.',
+  image: '/project10.jpg',
+  client: 'Wanderwise Travels',
+  duration: '2 weeks',
+  technologies: ['Next.js', 'Tailwind CSS', 'Framer Motion'],
+  slug: 'wanderwise-travel-agency-website',
+  challenge:
+    'The agency needed a modern digital presence that reflected their brand identity, attracted leads, and presented travel offerings in a visually compelling format.',
+  solution:
+    'Developed a fast, SEO-friendly website with featured destination sections, travel inspiration blogs, photo galleries, and a sleek contact form. Animations powered by Framer Motion added a smooth user experience, while Tailwind CSS ensured clean, scalable styling.',
+  results: [
+    'Boosted client inquiries through improved brand presentation',
+    'Mobile-first responsive layout helped capture users on the go',
+    'Reduced bounce rate and improved engagement time',
+    'Created a flexible base for future additions like blogs or itineraries',
+  ],
+},
   {
   title: 'AuraLegal: Modern Legal Firm Website',
   category: 'Website Development',
@@ -1888,49 +1971,6 @@ const projects = [
     'Fully responsive and scalable for future product lines',
   ],
 },
-{
-  title: 'PayNest: Unified BBPS + AEPS Payment Platform',
-  category: 'Mobile App – Finance & Utilities',
-  description:
-    'A mobile-first solution that combines Bharat Bill Payment System (BBPS) features with Aadhaar Enabled Payment System (AEPS) to enable bill payments, recharges, and basic banking services for underserved communities.',
-  image: '/project6.jpg',
-  client: 'FinLink Micro Services',
-  duration: '3 months',
-  technologies: ['React Native', 'Firebase', 'UPI & AEPS API Integration'],
-  slug: 'paynest-bbps-aeps-utility-app',
-  challenge:
-    'The client needed a low-code solution to provide digital utility payments, mobile recharges, and AEPS-based services in semi-urban and rural areas where traditional banking infrastructure was lacking.',
-  solution:
-    'Developed a mobile application with integrated BBPS and AEPS APIs, enabling bill payments, cash withdrawal, balance inquiry, and recharges. Secure biometric authentication and multilingual support were added to enhance accessibility.',
-  results: [
-    'Enabled over 500 users to access essential banking and payment services',
-    'Reduced dependency on physical bank branches',
-    'Integrated AEPS for real-time Aadhaar-based transactions',
-    'Built with offline-first features for low-connectivity areas',
-  ],
-},
-{
-  title: 'FitSphere: Personal & Gym Workout Companion',
-  category: 'Mobile App – Health & Fitness',
-  description:
-    'A modern fitness app designed for individuals and gym trainers to track workouts, monitor progress, and manage personalized routines with calendar-based planning and visual insights.',
-  image: '/project7.jpg',
-  client: 'IronLab Fitness Studio',
-  duration: '1.5 months',
-  technologies: ['React Native', 'Redux', 'Firebase'],
-  slug: 'fitsphere-gym-workout-app',
-  challenge:
-    'The gym lacked a digital tool for trainers to assign routines and for members to track daily workouts and progress. They also wanted a white-label version for future studio partnerships.',
-  solution:
-    'Built a cross-platform fitness app with login for trainers and members, workout logging, visual charts, and push notifications. Included routine templates, progress tracking, and schedule reminders.',
-  results: [
-    'Improved client engagement and workout consistency',
-    'Trainers can assign and monitor routines in real time',
-    'Enabled data-driven fitness tracking with clean UI',
-    'Designed to scale across multiple gym branches',
-  ],
-}
-
 ];
 
 const posts = [
