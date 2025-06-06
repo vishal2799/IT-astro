@@ -54,91 +54,76 @@ import CTA from '../../components/CTA.astro';
   description='Explore our range of IT services designed to transform your business.'
   canonicalUrl='https://alicornsolutions.com/services'
 >
-  <div class='bg-gradient-to-b from-primary-50 to-white'>
+ <div class="bg-gradient-to-b from-primary-50 to-white">
     <!-- Hero Section -->
-    <section
-      class='relative h-[40vh] min-h-[300px] flex items-center justify-center'
-    >
+    <section class="relative h-[40vh] min-h-[300px] flex items-center justify-center">
       <Image
         src={ServicesBreadcrumbImage}
-        alt='Alicorn Solutions Services'
+        alt="Alicorn Solutions Services"
         width={1920}
         height={1080}
-        class='absolute inset-0 w-full h-full object-cover'
+        class="absolute inset-0 w-full h-full object-cover"
       />
-      <!-- <img
-        src='/breadcrumb2.jpg'
-        alt='TechNova IT Services'
-        class='absolute inset-0 w-full h-full object-cover'
-      /> -->
-      <div class='absolute inset-0 bg-black opacity-60'></div>
-      <div class='relative z-10 text-center text-white px-4'>
-        <h1 class='text-4xl md:text-6xl font-bold mb-6'>Our Services</h1>
-        <p class='text-xl md:text-2xl max-w-3xl mx-auto'>
+      <div class="absolute inset-0 bg-black opacity-60"></div>
+      <div class="relative z-10 text-center text-white px-4">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6" data-aos="fade-up">Our Services</h1>
+        <p class="text-xl md:text-2xl max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
           Transforming businesses with cutting-edge IT solutions
         </p>
       </div>
     </section>
 
     <!-- Services Grid -->
-    <section class='section-padding px-4'>
-      <div class='container mx-auto max-w-6xl'>
-        <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-          {
-            services.map((service) => (
-              <a
-                href={`/services/${service.title
-                  .toLowerCase()
-                  .replace(/\s+/g, '-') // Replace spaces with hyphens
-                  .replace(/[^\w-]/g, '')}`}
-                class='group'
-              >
-                <div class='bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 group-hover:shadow-xl'>
-                  <Image
-                    src={service.heroImage}
-                    alt={service.title}
-                    width={400}
-                    height={250}
-                    class='w-full h-48 object-cover'
-                    loading='lazy'
-                  />
-                  <div class='p-6'>
-                    <h3 class='text-xl font-semibold mb-2 group-hover:text-primary transition-colors duration-300'>
-                      {service.title}
-                    </h3>
-                    <p class='text-gray-600 mb-4'>{service.description}</p>
-                    <span class='text-primary font-medium group-hover:text-primary/90 transition-colors duration-300 flex items-center'>
-                      Learn More
-                      <svg
-                        xmlns='http://www.w3.org/2000/svg'
-                        class='h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300'
-                        fill='none'
-                        viewBox='0 0 24 24'
-                        stroke='currentColor'
-                      >
-                        <path
-                          stroke-linecap='round'
-                          stroke-linejoin='round'
-                          stroke-width='2'
-                          d='M17 8l4 4m0 0l-4 4m4-4H3'
-                        />
-                      </svg>
-                    </span>
-                  </div>
+    <section class="section-padding px-4">
+      <div class="container mx-auto max-w-6xl">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <a
+              href={`/services/${service.title.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '')}`}
+              class="group"
+              data-aos="zoom-in-up"
+              data-aos-delay={index * 100}
+            >
+              <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 group-hover:shadow-xl">
+                <Image
+                  src={service.heroImage}
+                  alt={service.title}
+                  width={400}
+                  height={250}
+                  class="w-full h-48 object-cover"
+                  loading="lazy"
+                />
+                <div class="p-6">
+                  <h3 class="text-xl font-semibold mb-2 group-hover:text-primary transition-colors duration-300">
+                    {service.title}
+                  </h3>
+                  <p class="text-gray-600 mb-4">{service.description}</p>
+                  <span class="text-primary font-medium group-hover:text-primary/90 transition-colors duration-300 flex items-center">
+                    Learn More
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </span>
                 </div>
-              </a>
-            ))
-          }
+              </div>
+            </a>
+          ))}
         </div>
       </div>
     </section>
 
     <!-- CTA Section -->
     <CTA
-      title='Ready to Transform Your Business?'
-      description='Our team of experts is here to help you navigate the complex world of IT and drive your business forward.'
-      buttonText='Get in Touch'
-      buttonLink='/contact-us'
+      title="Ready to Transform Your Business?"
+      description="Our team of experts is here to help you navigate the complex world of IT and drive your business forward."
+      buttonText="Get in Touch"
+      buttonLink="/contact-us"
     />
   </div>
 </MainLayout>

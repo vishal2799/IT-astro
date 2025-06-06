@@ -6,6 +6,8 @@ import '@fontsource/poppins/600.css';
 import '@fontsource/poppins/700.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import "aos/dist/aos.css"; // AOS styles
+
 const {
   title,
   description,
@@ -45,5 +47,13 @@ const {
       <slot />
     </main>
     <Footer />
+
+      <script>
+    import { aosInit } from "../js/aos";
+
+    // runs on initial page load
+    aosInit();
+  </script>
+   
   </body>
 </html>
