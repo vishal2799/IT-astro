@@ -1825,24 +1825,24 @@ const projects = [
   ],
 },
 {
-  title: 'FitSphere: Personal & Gym Workout Companion',
-  category: 'Mobile App – Health & Fitness',
+  title: 'FitLife: Native Fitness & Workout App',
+  category: 'Mobile App (Native iOS & Android)',
   description:
-    'A modern fitness app designed for individuals and gym trainers to track workouts, monitor progress, and manage personalized routines with calendar-based planning and visual insights.',
+    'FitLife is a dedicated native fitness and workout app, developed separately for iOS and Android platforms. It helps users plan workouts, track progress, and stay motivated through personalized plans, daily tracking, and integrated push notifications.',
   image: '/project7.jpg',
-  client: 'IronLab Fitness Studio',
-  duration: '1.5 months',
-  technologies: ['React Native', 'Redux', 'Firebase'],
-  slug: 'fitsphere-gym-workout-app',
+  client: 'FitLife Solutions',
+  duration: '4+ months',
+  technologies: ['Swift (iOS)', 'Kotlin (Android)', 'Firebase', 'Xcode', 'Android Studio'],
+  slug: 'fitlife-native-fitness-app',
   challenge:
-    'The gym lacked a digital tool for trainers to assign routines and for members to track daily workouts and progress. They also wanted a white-label version for future studio partnerships.',
+    'The client wanted a truly native mobile experience, ensuring best-in-class performance and smooth integration with device features such as HealthKit and Google Fit. They required offline capability, real-time data sync, and consistent UI aligned with each platform’s design language.',
   solution:
-    'Built a cross-platform fitness app with login for trainers and members, workout logging, visual charts, and push notifications. Included routine templates, progress tracking, and schedule reminders.',
+    'Developed fully native apps using Swift for iOS and Kotlin for Android, leveraging platform-specific SDKs and design guidelines. Integrated Firebase for secure authentication and real-time data syncing. Implemented HealthKit (iOS) and Google Fit (Android) integration for holistic fitness tracking, along with offline workout access and personalized push notifications.',
   results: [
-    'Improved client engagement and workout consistency',
-    'Trainers can assign and monitor routines in real time',
-    'Enabled data-driven fitness tracking with clean UI',
-    'Designed to scale across multiple gym branches',
+    'Achieved high user satisfaction through a fluid native experience',
+    'Improved engagement with push notifications and gamified achievements',
+    'Offline workouts ensured usability without connectivity',
+    'Integrated seamlessly with HealthKit and Google Fit for accurate tracking'
   ],
 },
 {
