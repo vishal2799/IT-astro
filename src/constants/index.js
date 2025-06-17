@@ -1971,6 +1971,90 @@ const projects = [
     'Fully responsive and scalable for future product lines',
   ],
 },
+{
+  title: 'AgencyPro: WordPress Responsive Landing Page',
+  category: 'Landing Page (WordPress)',
+  description:
+    'AgencyPro is a clean, modern WordPress landing page developed for BrightEdge Solutions — a creative agency looking to showcase their services, team, and expertise with a sleek, responsive online presence. The landing page is designed to drive inquiries and build trust with potential clients.',
+  image: '/project12.jpg',
+  client: 'BrightEdge Solutions',
+  duration: '1 month',
+  technologies: ['WordPress', 'Elementor', 'Custom CSS'],
+  slug: 'agencypro-wordpress-landing-page',
+  challenge:
+    'BrightEdge Solutions needed a versatile landing page that would clearly present their services and company highlights while staying easy to update without technical help. The page had to be fully responsive and optimized for conversions.',
+  solution:
+    'Designed the landing page in Figma and built it on WordPress using Elementor for flexible drag-and-drop editing. Added custom CSS for precise styling tweaks. Included well-structured sections for service overviews, company achievements, team members, client testimonials, and an integrated contact form. Prioritized SEO best practices and fast page load times.',
+  results: [
+    'Delivered a polished, conversion-focused landing page',
+    'Ensured seamless responsiveness on all devices',
+    'Empowered the agency team to edit content easily with Elementor',
+    'Improved online visibility and increased customer inquiries'
+  ],
+},
+{
+  title: 'HavenStay: Home Rentals Agency Website Design',
+  category: 'Website (WordPress)',
+  description:
+    'HavenStay is a modern WordPress website designed and developed for a boutique home rentals agency. The site showcases available properties, highlights agency services, and provides an easy way for potential clients to inquire about rentals — all within a clean, trustworthy design.',
+  image: '/project13.jpg',
+  client: 'HavenStay Rentals',
+  duration: '2 months',
+  technologies: ['WordPress', 'Elementor', 'Custom CSS'],
+  slug: 'havenstay-home-rentals-website',
+  challenge:
+    'HavenStay Rentals needed a website that would build trust with homeowners and renters alike. The goal was to present property listings attractively while keeping the site simple to update as new listings became available, all without using complex booking systems.',
+  solution:
+    'Designed a fresh, user-friendly layout in Figma, then built the site on WordPress using Elementor for flexible content editing. Developed custom listing sections, service pages, and a contact form for rental inquiries. Added subtle animations and clear calls-to-action to increase engagement. Optimized the site for fast loading and mobile responsiveness.',
+  results: [
+    'Launched a professional, easy-to-manage WordPress website',
+    'Created a trustworthy online presence to attract homeowners and renters',
+    'Enabled the agency team to update listings and content without coding',
+    'Improved lead generation through clear CTAs and contact options'
+  ],
+},
+{
+  title: 'PeopleCore: HR Management Admin Portal',
+  category: 'Web Application (.NET)',
+  description:
+    'PeopleCore is a robust HR management portal developed for a mid-sized organization to streamline all key HR processes. Built with ASP.NET Core MVC and SQL Server, the platform provides a centralized solution for employee onboarding, leave management, performance tracking, and internal communication, all within an intuitive, responsive interface.',
+  image: '/project14.jpg',
+  client: 'Synergen Solutions Inc.',
+  duration: '4 months',
+  technologies: ['ASP.NET Core MVC', 'SQL Server', 'REST API'],
+  slug: 'peoplecore-hr-admin-portal',
+  challenge:
+    'The client needed a unified intranet portal to replace multiple disconnected HR tools. They wanted secure role-based access for HR admins and employees, centralized records, and real-time performance tracking, all while ensuring an excellent user experience on desktop and mobile.',
+  solution:
+    'Designed a modern HR admin dashboard UI in Figma, then implemented it using ASP.NET Core MVC with SQL Server as the backend. Developed custom modules for onboarding, leave requests, appraisals, and announcements. Created secure REST APIs for future mobile app integration. Implemented granular user permissions for HR managers, team leads, and employees.',
+  results: [
+    'Centralized all HR processes in a single, easy-to-use portal',
+    'Improved employee experience and HR team efficiency',
+    'Reduced paperwork and manual tracking through automation',
+    'Enabled seamless future mobile app integration via REST APIs'
+  ],
+},
+{
+  title: 'DineFlow: Restaurant Operations Automation with Power Platform',
+  category: 'Power Platform Solution',
+  description:
+    'DineFlow is a custom-built restaurant operations solution leveraging Power Apps, Power Automate, SharePoint, and Power BI. Designed for a multi-branch restaurant chain, it centralizes food order tracking, menu updates, customer feedback management, and payment monitoring, all within a unified low-code platform.',
+  image: '/project15.jpg',
+  client: 'Urban Eats Group',
+  duration: '3 months',
+  technologies: ['Power Apps', 'Power Automate', 'SharePoint', 'Power BI'],
+  slug: 'dineflow-restaurant-operations-platform',
+  challenge:
+    'The client relied on spreadsheets and disconnected tools to manage daily orders, update menus, collect reviews, and track payments — leading to data silos and delays. They needed an agile, scalable solution without investing in custom app development.',
+  solution:
+    'Designed a clear admin dashboard in Figma and built a Power Apps Canvas App for branch managers to handle food orders, update menus, and view customer feedback in real-time. Automated order workflows and approval chains using Power Automate. Stored all menu and order data securely in SharePoint. Integrated Power BI dashboards to analyze sales, payment trends, and customer satisfaction KPIs.',
+  results: [
+    'Consolidated operations into a single low-code app, accessible on mobile and desktop',
+    'Accelerated order handling and menu updates by over 60%',
+    'Enabled real-time feedback monitoring to improve service quality',
+    'Delivered actionable sales and payment analytics through integrated Power BI dashboards'
+  ],
+}
 ];
 
 const posts = [
