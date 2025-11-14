@@ -1,0 +1,62 @@
+---
+// src/layouts/JobLayout.astro
+import MainLayout from './MainLayout.astro';
+
+const fm = Astro.props.frontmatter ?? {};
+const title = fm.title ?? 'Job';
+const description = fm.description ?? '';
+const location = fm.location ?? '';
+const type = fm.type ?? '';
+const department = fm.department ?? '';
+const postedAt = fm.postedAt ?? '';
+const applyUrl = fm.applyUrl ?? '';
+const canonical = `https://alicornsolutions.com${Astro.url.pathname}`;
+
+// JSON-LD for JobPosting (basic)
+const ld = {
+  "@context": "https://schema.org/",
+  "@type": "JobPosting",
+  "title": title,
+  "datePosted": postedAt || undefined,
+  "employmentType": (type || undefined),
+  "hiringOrganization": {
+    "name": "Alicorn Solutions"
+  },
+  "jobLocation": {
+    "address": {
+      "addressLocality": location || "Remote",
+      "addressCountry": "IN"
+    }
+  },
+  "description": fm.excerpt ?? undefined
+};
+---
+<MainLayout title={`${title} | Alicorn Solutions`} description={description || `${title} — ${location}`} canonicalUrl={canonical}>
+  <main class="bg-white">
+    <div class="container mx-auto max-w-4xl py-12 px-4">
+      <a href="/jobs" class="text-sm text-slate-600 hover:underline">&larr; Back to careers</a>
+
+      <header class="mt-4 mb-4">
+        <h1 class="text-3xl font-bold">{title}</h1>
+        <p class="text-sm text-gray-500 mt-1">{department ? `${department} • ` : ''}{location || '—'} • {type || ''}</p>
+      </header>
+
+      <div class="mt-6">
+        <a
+          href={applyUrl || '#apply'}
+          class="inline-block px-5 py-2 border rounded-md hover:bg-gray-50 text-sm"
+          aria-label={`Apply for ${title}`}
+        >
+          {applyUrl ? 'Apply Now' : 'Contact'}
+        </a>
+      </div>
+
+      <!-- Render the full markdown content here. Astro will inject rendered HTML into the slot -->
+      <article class="prose prose-slate mt-8 job-markup">
+        <slot />
+      </article>
+    </div>
+  </main>
+
+  <script type="application/ld+json">{JSON.stringify(ld)}</script>
+</MainLayout>

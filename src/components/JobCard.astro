@@ -1,0 +1,25 @@
+---
+const { job } = Astro.props;
+// job: { slug, frontmatter }
+const fm = job.frontmatter ?? {};
+const excerpt = (fm.excerpt ?? '') || (job.previewText ?? '');
+const url = `/jobs/${job.slug}`;
+---
+<article data-job={`${fm.title} ${fm.location ?? ''} ${(fm.tags ?? []).join(' ')}`} class="border rounded-lg p-5 hover:shadow-md transition">
+  <a href={url} class="block">
+    <div class="flex justify-between items-start">
+      <div>
+        <h3 class="text-xl font-semibold">{fm.title}</h3>
+        <p class="text-sm text-gray-500">{fm.department ?? ''} • {fm.location ?? '—'}</p>
+      </div>
+      <div class="text-sm text-gray-700">{fm.type ?? ''}</div>
+    </div>
+
+    <p class="mt-3 text-sm line-clamp-3 text-gray-700">{excerpt}{excerpt.length >= 200 ? '...' : ''}</p>
+
+    <div class="mt-4 flex items-center justify-between text-xs text-gray-500">
+      <span>Posted: {fm.postedAt ?? '—'}</span>
+      <span>{(fm.tags ?? []).slice(0,3).join(' • ')}</span>
+    </div>
+  </a>
+</article>

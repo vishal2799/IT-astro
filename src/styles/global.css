@@ -31,3 +31,26 @@
 .underline-animation:hover::after {
   width: 100%;
 }
+
+/* Restore list markers only inside markdown content (prose) */
+.job-markup ul,
+.job-markup ol {
+  list-style: revert;        /* restore browser default marker style */
+  padding-left: 1.25rem;     /* indentation for lists */
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Ensure marker color is visible and inherits text color */
+.job-markup li::marker {
+  color: currentColor;
+  opacity: 1;
+  font-weight: 500;
+}
+
+/* Small improvements for headings and spacing inside job pages */
+.job-markup h1,
+.job-markup h2,
+.job-markup h3 {
+  scroll-margin-top: 6rem;
+}

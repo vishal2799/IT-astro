@@ -1,0 +1,65 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import JobCard from '../../components/JobCard.astro';
+
+// Glob all markdown pages in the current folder (jobs). This will return modules like:
+// { './frontend-engineer.md': { frontmatter: {...}, default: [Component], ... } }
+const modules = import.meta.glob('./*.md', { eager: true });
+
+// Convert modules map to array of job objects
+const jobs = Object.entries(modules)
+  .map(([filePath, mod]) => {
+    const slug = filePath.replace('./', '').replace('.md', '');
+    const frontmatter = (mod as any).frontmatter ?? {};
+    // Create a preview text if not provided
+    const previewText = frontmatter.excerpt ?? (
+      // If the module exposes `body` or `raw`, you can try to get a snippet. Fallback to empty.
+      ((mod as any).raw ?? '').replace(/\n+/g, ' ').slice(0, 220)
+    );
+    return { slug, frontmatter, previewText };
+  })
+  // Optionally filter drafts if you used `draft: true` in frontmatter:
+  .filter(j => !j.frontmatter?.draft)
+  // Sort by postedAt descending
+  .sort((a, b) => (b.frontmatter?.postedAt ?? '').localeCompare(a.frontmatter?.postedAt ?? ''));
+
+---
+<MainLayout
+  title="Careers | Alicorn Solutions"
+  description="Open positions at Alicorn Solutions"
+  canonicalUrl="https://alicornsolutions.com/jobs"
+>
+  <main class="bg-gradient-to-b from-gray-100 to-white">
+    <section class="relative h-[28vh] min-h-[180px] flex items-center justify-center">
+      <div class="relative z-10 text-center text-white px-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-3">Careers</h1>
+        <p class="text-lg md:text-xl">Join our team — help build products that matter.</p>
+      </div>
+    </section>
+
+    <section class="section-padding px-4">
+      <div class="container mx-auto max-w-6xl">
+        <div class="mb-6">
+          <input id="job-search" placeholder="Search roles, tags or locations" class="w-full border p-3 rounded" />
+        </div>
+
+        <div id="jobs-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {jobs.map(job => (
+            <JobCard job={{ slug: job.slug, frontmatter: job.frontmatter, previewText: job.previewText }} />
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+</MainLayout>
+
+<script>
+  const input = document.getElementById('job-search');
+  input?.addEventListener('input', (e) => {
+    const q = e.target.value.toLowerCase().trim();
+    document.querySelectorAll('[data-job]').forEach(card => {
+      const text = card.dataset.job.toLowerCase();
+      card.style.display = text.includes(q) ? '' : 'none';
+    });
+  });
+</script>

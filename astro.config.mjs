@@ -7,8 +7,10 @@ import icon from 'astro-icon';
 
 import sitemap from '@astrojs/sitemap';
 
+import mdx from '@astrojs/mdx';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://alicornsolutions.com',
-  integrations: [tailwind(), icon(), sitemap()],
+  integrations: [tailwind(), icon(), sitemap(), mdx()],
 });
