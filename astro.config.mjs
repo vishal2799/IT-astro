@@ -1,7 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 
-import tailwind from '@astrojs/tailwind';
+import tailwindcss from "@tailwindcss/vite";
 
 import icon from 'astro-icon';
 
@@ -12,5 +12,8 @@ import mdx from '@astrojs/mdx';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://alicornsolutions.com',
-  integrations: [tailwind(), icon(), sitemap(), mdx()],
+  integrations: [icon(), sitemap(), mdx()],
+  vite: {
+    plugins: [/** @type {any} */ (tailwindcss())]
+  }
 });
