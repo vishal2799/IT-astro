@@ -1762,14 +1762,14 @@ const solutions = [
 
 const projects = [
   {
-    title: 'Paperlite: Future-Ready Practice Management Tool',
+    title: 'LiteCloud: Future-Ready Practice Management Tool',
     category: 'Practice Management',
     description:
       'An advanced practice management tool designed for Chartered Accountants (CAs) and Certified Public Accountants (CPAs). Its flexible architecture ensures it can be customized to meet the needs of other professionals, such as lawyers, with minimal modifications.',
     image: '/project1.webp',
     client: 'JHS Associates LLP',
     duration: '8+ months (ongoing)',
-    technologies: ['SharePoint', 'Power BI', 'Microsoft Outlook Integration'],
+    technologies: ['SharePoint', 'Power BI', 'Microsoft Outlook Integration', 'React'],
     slug: 'paperlite-practice-management-tool',
     challenge:
       'Inefficient manual processes and scattered workflows for CAs and CPAs led to difficulties in managing tasks, client relationships, and accessing real-time analytics. The client also wanted a scalable solution that could cater to other professions, such as lawyers, with minimal effort.',
@@ -2392,13 +2392,13 @@ const posts = [
 const testimonials = [
   {
     quote:
-      'Alicorn Solutions has been a trusted partner in driving our success. Their professionalism and expertise have made a remarkable impact on our business.',
+      'Alicorn Infotech has been a trusted partner in driving our success. Their professionalism and expertise have made a remarkable impact on our business.',
     author: 'Lee Phillips',
     position: 'Digital Data Lead, Twinings Ovaltine',
   },
   {
     quote:
-      'Working with Alicorn Solutions has been an exceptional experience. Their dedication to delivering top-notch solutions has exceeded our expectations.',
+      'Working with Alicorn Infotech has been an exceptional experience. Their dedication to delivering top-notch solutions has exceeded our expectations.',
     author: 'Julien Lerolle',
     position: 'Finance Director, Johnson & Johnson',
   },

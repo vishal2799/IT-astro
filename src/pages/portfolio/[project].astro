@@ -19,9 +19,9 @@ const { project } = Astro.props;
 ---
 
 <MainLayout
-  title={`${project.title} | Alicorn Solutions`}
+  title={`${project.title} | Alicorn Infotech`}
   description={project.description}
-  canonicalUrl=`https://alicornsolutions.com/projects/${project.title.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '')}`
+  canonicalUrl=`https://alicorninfotech.com/projects/${project.title.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '')}`
 >
   <main class='bg-white'>
     <!-- Hero Section -->
@@ -37,7 +37,7 @@ const { project } = Astro.props;
       /> -->
       <img
         src={project.image}
-        alt='Alicorn Solutions Projects'
+        alt='Alicorn Infotech Projects'
         class='absolute inset-0 w-full h-full object-cover'
       />
       <div class='absolute inset-0 bg-black opacity-60'></div>

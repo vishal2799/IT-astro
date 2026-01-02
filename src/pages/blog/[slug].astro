@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import MainLayout from '../../layouts/MainLayout.astro';
-import AuthorCard from '../../components/AuthorCard.astro';
+// import AuthorCard from '../../components/AuthorCard.astro';
 import RelatedPosts from '../../components/RelatedPosts.astro';
 import ShareButtons from '../../components/ShareButtons.astro';
 import { posts } from '../../constants';
@@ -68,9 +68,9 @@ const { post, relatedPosts } = Astro.props;
 ---
 
 <MainLayout
-  title={`${post.title} | Alicorn Solutions Blog`}
+  title={`${post.title} | Alicorn Infotech Blog`}
   description={post.excerpt}
-  canonicalUrl=`https://alicornsolutions.com/blog/${post.slug}`
+  canonicalUrl=`https://alicorninfotech.com/blog/${post.slug}`
 >
   <main class='bg-gray-50 min-h-screen'>
     <!-- Hero Section -->

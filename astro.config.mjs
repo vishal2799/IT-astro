@@ -9,6 +9,6 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://alicornsolutions.com',
+  site: 'https://alicorninfotech.com',
   integrations: [tailwind(), icon(), sitemap()],
 });
