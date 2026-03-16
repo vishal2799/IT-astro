@@ -20,8 +20,8 @@ import HomeAboutImage from '../assets/images/HomeAbout.webp';
 ---
 
 <MainLayout
-  title='Alicorn Infotech - Innovative Solutions for Your Business'
-  description='Alicorn Infotech offers cutting-edge IT services including low-code/no-code, software development, cloud migration, data analytics, and cybersecurity solutions to drive your business forward.'
+  title='Alicorn Infotech — Software Development, AI Integration & Automation for Startups'
+  description='Alicorn Infotech is a software development team in Pune, India. We build web and mobile products, integrate AI, automate workflows and run QA for startups and growing businesses in the US, UK, Australia and India.'
 >
   <main>
     <!-- Hero Section -->
@@ -46,23 +46,51 @@ import HomeAboutImage from '../assets/images/HomeAbout.webp';
       </div>
       <div class='relative z-10 text-center text-white px-4 max-w-4xl mx-auto'>
         <h1 class='text-4xl md:text-6xl font-bold mb-6'>
-          Innovative IT Solutions for the Digital Age
+          Your dedicated tech team — without the big firm price tag.
         </h1>
         <p class='text-xl md:text-2xl mb-8'>
-          Empowering businesses with cutting-edge technology to drive growth and
-          efficiency
+          We build software, automate processes and run QA for growing startups. A focused team in Pune. Clients in the US, UK, Australia and India.
         </p>
         <div class='flex flex-wrap justify-center gap-4'>
           <a
-            href='/services'
+            href='/portfolio'
             class='bg-white text-primary hover:bg-white hover:text-primary-400 font-bold py-3 px-8 rounded-full transition duration-300 text-lg'
-            >Our Services</a
+            >See Our Work</a
           >
           <a
-            href='/contact-us'
+            href='https://calendly.com/alicorninfotech'
+            target='_blank'
+            rel='noopener noreferrer'
             class='bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition duration-300 text-lg'
-            >Get in Touch</a
+            >Book a Free Call</a
           >
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class='bg-white border-b border-gray-100 py-6 px-4'>
+      <div class='container mx-auto max-w-5xl'>
+        <div class='flex flex-wrap justify-center items-center gap-8 md:gap-16 text-center'>
+          <div>
+            <span class='text-3xl font-bold text-primary'>14+</span>
+            <p class='text-sm text-gray-500 mt-1'>Projects Delivered</p>
+          </div>
+          <div class='hidden sm:block w-px h-10 bg-gray-200'></div>
+          <div>
+            <span class='text-3xl font-bold text-primary'>5+</span>
+            <p class='text-sm text-gray-500 mt-1'>Years in Operation</p>
+          </div>
+          <div class='hidden sm:block w-px h-10 bg-gray-200'></div>
+          <div>
+            <span class='text-3xl font-bold text-primary'>4</span>
+            <p class='text-sm text-gray-500 mt-1'>Countries: US, UK, AUS, India</p>
+          </div>
+          <div class='hidden sm:block w-px h-10 bg-gray-200'></div>
+          <div>
+            <span class='text-3xl font-bold text-primary'>100%</span>
+            <p class='text-sm text-gray-500 mt-1'>On-Time Delivery</p>
+          </div>
         </div>
       </div>
     </section>
@@ -76,17 +104,10 @@ import HomeAboutImage from '../assets/images/HomeAbout.webp';
               About Alicorn Infotech
             </h2>
             <p class='text-lg text-gray-700 mb-6'>
-              Alicorn Infotech is a leading IT services company dedicated to
-              empowering businesses through innovative technology solutions.
-              With years of proven expertise, we've helped numerous
-              organizations across various industries transform their digital
-              landscape and achieve their goals.
+              Alicorn Infotech is a software development team based in Pune, India. We work with startups and growing businesses across the US, UK, Australia and India — building web and mobile products, integrating AI, automating manual processes, and running QA.
             </p>
             <p class='text-lg text-gray-700 mb-6'>
-              Our team of expert consultants and developers are passionate about
-              staying at the forefront of technological advancements, ensuring
-              that our clients always have access to the most cutting-edge
-              solutions.
+              Our team is small by design. The co-founders are involved in every project — which means the people you speak to are the same people building your product. No account managers. No handoffs to junior developers.
             </p>
             <a
               href='/about-us'
@@ -237,19 +258,20 @@ import HomeAboutImage from '../assets/images/HomeAbout.webp';
 
     <!-- Testimonials -->
     <section class='section-padding px-4 bg-primary-50'>
-      <div class='container mx-auto max-w-4xl'>
+      <div class='container mx-auto max-w-6xl'>
         <h2
           class='text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900'
         >
           What Our Clients Say
         </h2>
-        <div class='grid md:grid-cols-2 gap-8'>
+        <div class='grid md:grid-cols-3 gap-8'>
           {
             testimonials.map((testimonial) => (
               <TestimonialCard
                 quote={testimonial.quote}
                 author={testimonial.author}
                 position={testimonial.position}
+                company={testimonial.company}
               />
             ))
           }

@@ -96,6 +96,45 @@ const APP_URL = import.meta.env.APP_URL;
         aria-describedby='message-label'></textarea>
     </div>
 
+    <!-- Service Type -->
+    <div>
+      <label for='service' class='block text-sm font-medium text-gray-700 mb-1'>
+        What do you need help with? <span class='text-gray-400'>(optional)</span>
+      </label>
+      <select
+        id='service'
+        name='service'
+        class='w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary bg-white'
+      >
+        <option value=''>Select a service...</option>
+        <option value='Custom Software Development'>Custom Software Development</option>
+        <option value='Business Automation'>Business Automation / Power Platform</option>
+        <option value='AI Integration'>AI Integration</option>
+        <option value='QA & Testing'>QA &amp; Testing</option>
+        <option value='Mobile App'>Mobile App Development</option>
+        <option value='Web Development'>Web Development</option>
+        <option value='Not sure'>Not sure yet</option>
+      </select>
+    </div>
+
+    <!-- Budget -->
+    <div>
+      <label for='budget' class='block text-sm font-medium text-gray-700 mb-1'>
+        Rough project budget <span class='text-gray-400'>(optional)</span>
+      </label>
+      <select
+        id='budget'
+        name='budget'
+        class='w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary bg-white'
+      >
+        <option value=''>Select a range...</option>
+        <option value='Under $5K'>Under $5,000</option>
+        <option value='$5K-$15K'>$5,000 – $15,000</option>
+        <option value='$15K-$50K'>$15,000 – $50,000</option>
+        <option value='$50K+'>$50,000+</option>
+      </select>
+    </div>
+
     <!-- Submit Button -->
     <div>
       <button
@@ -105,6 +144,8 @@ const APP_URL = import.meta.env.APP_URL;
       >
         Send Message
       </button>
+      <p class='text-sm text-gray-500 mt-3 text-center'>
+        We respond to all enquiries within 24 hours, Monday to Friday (IST). For urgent requests, email
+        <a href='mailto:contact@alicorninfotech.com' class='text-primary hover:underline'>contact@alicorninfotech.com</a> directly.
+      </p>
     </div>
-  </form>
-</div>

@@ -1,1182 +1,1340 @@
-
 const services = [
   {
-    title: 'Custom Software Development',
-    icon: 'gear',
+    title: "Custom Software Development",
+    icon: "gear",
     description:
-      'Empowering businesses with tailor-made software solutions using modern technologies for frontend, backend, and full-stack development.',
-    heroImage: '/service1.webp',
+      "We build web and mobile applications from scratch — or take over an existing codebase. React, Node.js, .NET, React Native. Fixed-scope or ongoing engagements.",
+    heroImage: "/service1.webp",
     overview:
-      'Our Custom Software Development services are designed to help businesses overcome unique challenges and unlock new opportunities. Whether you need a dynamic frontend to deliver engaging user experiences, a robust backend to handle complex data and operations, or a comprehensive full-stack solution that brings everything together, we’ve got you covered. <br><br> We specialize in cutting-edge technologies like ReactJS and Angular for frontend development, Node.js, .NET, and Java for backend systems, and full-stack expertise for seamless, end-to-end integration. From startups looking for agile solutions to enterprises requiring scalable and secure platforms, we adapt to your needs and deliver exceptional results. <br><br> Our team’s deep understanding of UI/UX design ensures that your software is intuitive and user-friendly, while our cloud integration services, including Azure, AWS, and Google Cloud, ensure scalability and performance. Whether it’s custom applications, enterprise-grade systems, or cross-platform solutions, we build software that not only meets your requirements but also drives growth and innovation for your business.',
+      "Our Custom Software Development services are designed to help businesses overcome unique challenges and unlock new opportunities. Whether you need a dynamic frontend to deliver engaging user experiences, a robust backend to handle complex data and operations, or a comprehensive full-stack solution that brings everything together, we’ve got you covered. <br><br> We specialize in cutting-edge technologies like ReactJS and Angular for frontend development, Node.js, .NET, and Java for backend systems, and full-stack expertise for seamless, end-to-end integration. From startups looking for agile solutions to enterprises requiring scalable and secure platforms, we adapt to your needs and deliver exceptional results. <br><br> Our team’s deep understanding of UI/UX design ensures that your software is intuitive and user-friendly, while our cloud integration services, including Azure, AWS, and Google Cloud, ensure scalability and performance. Whether it’s custom applications, enterprise-grade systems, or cross-platform solutions, we build software that not only meets your requirements but also drives growth and innovation for your business.",
     features: [
-      'Frontend development with ReactJS, Angular, and modern UI/UX frameworks',
-      'Backend solutions using Node.js, Java, .NET, and other robust technologies',
-      'Full-stack development for seamless end-to-end solutions',
-      'Integration with cloud platforms like Azure, AWS, and Google Cloud',
+      "Frontend development with ReactJS, Angular, and modern UI/UX frameworks",
+      "Backend solutions using Node.js, Java, .NET, and other robust technologies",
+      "Full-stack development for seamless end-to-end solutions",
+      "Integration with cloud platforms like Azure, AWS, and Google Cloud",
     ],
     benefits: [
       {
-        title: 'User-Centric Frontend',
-        desc: 'Deliver engaging experiences with intuitive and responsive interfaces.',
+        title: "User-Centric Frontend",
+        desc: "Deliver engaging experiences with intuitive and responsive interfaces.",
       },
       {
-        title: 'Scalable Backend Systems',
-        desc: 'Ensure robust data processing, storage, and API integration for your applications.',
+        title: "Scalable Backend Systems",
+        desc: "Ensure robust data processing, storage, and API integration for your applications.",
       },
       {
-        title: 'Comprehensive Full-Stack Solutions',
-        desc: 'Achieve seamless communication between frontend and backend for optimal performance.',
+        title: "Comprehensive Full-Stack Solutions",
+        desc: "Achieve seamless communication between frontend and backend for optimal performance.",
       },
       {
-        title: 'Faster Time-to-Market',
-        desc: 'Leverage our expertise and efficient processes to deploy solutions quickly.',
+        title: "Faster Time-to-Market",
+        desc: "Leverage our expertise and efficient processes to deploy solutions quickly.",
       },
     ],
     process: [
       {
-        title: 'Requirement Analysis',
+        title: "Requirement Analysis",
         description:
-          'Understand client needs and define the scope for custom software.',
+          "Understand client needs and define the scope for custom software.",
       },
       {
-        title: 'Frontend and Backend Design',
+        title: "Frontend and Backend Design",
         description:
-          'Design intuitive UI/UX and architect scalable backend systems.',
+          "Design intuitive UI/UX and architect scalable backend systems.",
       },
       {
-        title: 'Development and Testing',
+        title: "Development and Testing",
         description:
-          'Build and test the solution using cutting-edge technologies and frameworks.',
+          "Build and test the solution using cutting-edge technologies and frameworks.",
       },
       {
-        title: 'Integration and Deployment',
+        title: "Integration and Deployment",
         description:
-          'Integrate with third-party systems and deploy to your chosen environment.',
+          "Integrate with third-party systems and deploy to your chosen environment.",
       },
       {
-        title: 'Ongoing Support',
+        title: "Ongoing Support",
         description:
-          'Maintain, update, and enhance software for evolving business needs.',
+          "Maintain, update, and enhance software for evolving business needs.",
       },
     ],
     faq: [
       {
-        question: 'What technologies do you use for frontend development?',
+        question: "What technologies do you use for frontend development?",
         answer:
-          'We specialize in ReactJS, Angular, and other modern frameworks to create dynamic and responsive user interfaces.',
+          "We specialize in ReactJS, Angular, and other modern frameworks to create dynamic and responsive user interfaces.",
       },
       {
-        question: 'Do you handle both frontend and backend development?',
+        question: "Do you handle both frontend and backend development?",
         answer:
-          'Yes, our full-stack development expertise ensures seamless integration between frontend and backend systems.',
+          "Yes, our full-stack development expertise ensures seamless integration between frontend and backend systems.",
       },
       {
-        question: 'Can you integrate with our existing systems?',
+        question: "Can you integrate with our existing systems?",
         answer:
-          'Absolutely, we specialize in building solutions that integrate with your existing systems, databases, and APIs.',
+          "Absolutely, we specialize in building solutions that integrate with your existing systems, databases, and APIs.",
       },
     ],
     cta: {
-      title: 'Let’s Build the Future of Your Business Together',
+      title: "Let’s Build the Future of Your Business Together",
       description:
-        'Ready to transform your ideas into powerful, custom software solutions? Partner with us to create innovative, scalable, and user-focused applications tailored to your business needs. Contact us today to get started on your next big project!',
+        "Ready to transform your ideas into powerful, custom software solutions? Partner with us to create innovative, scalable, and user-focused applications tailored to your business needs. Contact us today to get started on your next big project!",
     },
   },
   {
-    title: 'Business Automation Solutions',
-    icon: 'robot',
+    title: "Business Automation Solutions",
+    icon: "robot",
     description:
-      'Drive efficiency and innovation with our comprehensive business automation solutions powered by the latest technologies.',
-    heroImage: '/service2.webp',
+      "We automate manual business processes using Power Platform (Power Apps, Power Automate, Power BI), RPA tools (UiPath, Automation Anywhere), and BPM frameworks (K2, Nintex). Real results: Nama Supply reduced complaint resolution time by 40%.",
+    heroImage: "/service2.webp",
     overview:
       "Transform your business operations with our comprehensive Business Automation Solutions. By leveraging cutting-edge platforms such as Power Platform (Power Apps, Power Automate, Power BI), Robotic Process Automation (RPA) tools like UiPath and Automation Anywhere, and Business Process Management (BPM) frameworks such as K2 and Nintex, we enable your organization to achieve unprecedented efficiency and agility.<br><br>Our tailored solutions empower businesses to automate repetitive tasks, streamline workflows, and gain actionable insights from data, driving operational excellence and fostering innovation. Whether you're looking to optimize resource allocation, enhance compliance, or reduce costs, our expertise ensures that every automation initiative aligns with your strategic goals.<br><br>With a focus on scalability and seamless integration, our Business Automation Solutions are designed to adapt to your unique needs, helping your organization stay competitive in an ever-evolving digital landscape.",
     features: [
-      'End-to-end workflow automation using Power Automate',
-      'Custom business applications with Power Apps',
-      'Insightful data analytics and visualization with Power BI',
-      'RPA implementation using UiPath and Automation Anywhere',
-      'Process modeling and optimization with K2 and Nintex',
+      "End-to-end workflow automation using Power Automate",
+      "Custom business applications with Power Apps",
+      "Insightful data analytics and visualization with Power BI",
+      "RPA implementation using UiPath and Automation Anywhere",
+      "Process modeling and optimization with K2 and Nintex",
     ],
     benefits: [
       {
-        title: 'Streamlined Operations',
-        desc: 'Eliminate inefficiencies and focus on value-driven tasks with automated workflows.',
+        title: "Streamlined Operations",
+        desc: "Eliminate inefficiencies and focus on value-driven tasks with automated workflows.",
       },
       {
-        title: 'Enhanced Decision-Making',
-        desc: 'Leverage real-time insights and analytics to drive informed business decisions.',
+        title: "Enhanced Decision-Making",
+        desc: "Leverage real-time insights and analytics to drive informed business decisions.",
       },
       {
-        title: 'Cost Savings',
-        desc: 'Reduce operational expenses by automating repetitive tasks and optimizing resource allocation.',
+        title: "Cost Savings",
+        desc: "Reduce operational expenses by automating repetitive tasks and optimizing resource allocation.",
       },
       {
-        title: 'Scalability and Flexibility',
-        desc: 'Easily scale your automation efforts to meet evolving business requirements.',
+        title: "Scalability and Flexibility",
+        desc: "Easily scale your automation efforts to meet evolving business requirements.",
       },
     ],
     process: [
       {
-        title: 'Discovery and Analysis',
+        title: "Discovery and Analysis",
         description:
-          'Assess business processes to identify automation opportunities and define goals.',
+          "Assess business processes to identify automation opportunities and define goals.",
       },
       {
-        title: 'Solution Design',
+        title: "Solution Design",
         description:
-          'Develop tailored automation solutions using the right combination of tools and technologies.',
+          "Develop tailored automation solutions using the right combination of tools and technologies.",
       },
       {
-        title: 'Implementation',
+        title: "Implementation",
         description:
-          'Deploy automation workflows and integrate them seamlessly with your existing systems.',
+          "Deploy automation workflows and integrate them seamlessly with your existing systems.",
       },
       {
-        title: 'Optimization and Support',
+        title: "Optimization and Support",
         description:
-          'Continuously monitor and refine automation processes to maximize efficiency.',
+          "Continuously monitor and refine automation processes to maximize efficiency.",
       },
     ],
     faq: [
       {
         question:
-          'What is the Power Platform, and how can it help my business?',
+          "What is the Power Platform, and how can it help my business?",
         answer:
-          'The Power Platform includes Power Apps for app development, Power Automate for workflow automation, and Power BI for data visualization, enabling businesses to streamline operations and improve decision-making.',
+          "The Power Platform includes Power Apps for app development, Power Automate for workflow automation, and Power BI for data visualization, enabling businesses to streamline operations and improve decision-making.",
       },
       {
-        question: 'How is RPA different from traditional automation?',
+        question: "How is RPA different from traditional automation?",
         answer:
-          'RPA uses software bots to mimic human actions, automating repetitive and rule-based tasks without altering existing systems.',
+          "RPA uses software bots to mimic human actions, automating repetitive and rule-based tasks without altering existing systems.",
       },
       {
         question:
-          'Can BPM tools like K2 and Nintex integrate with my existing systems?',
+          "Can BPM tools like K2 and Nintex integrate with my existing systems?",
         answer:
-          'Yes, BPM tools are designed to integrate seamlessly with various enterprise systems, providing a cohesive and optimized workflow.',
+          "Yes, BPM tools are designed to integrate seamlessly with various enterprise systems, providing a cohesive and optimized workflow.",
       },
     ],
     cta: {
-      title: 'Elevate Your Business with Automation',
+      title: "Elevate Your Business with Automation",
       description:
-        'Partner with us to unlock the full potential of business automation. Let’s streamline your processes, enhance productivity, and drive growth. Contact us now!',
+        "Partner with us to unlock the full potential of business automation. Let’s streamline your processes, enhance productivity, and drive growth. Contact us now!",
     },
   },
   {
-    title: 'UI/UX Design & Development',
-    icon: 'palette',
+    title: "UI/UX Design & Development",
+    icon: "palette",
     description:
-      'Craft user-centric designs that blend aesthetics and functionality for seamless digital experiences.',
-    heroImage: '/service3.webp',
+      "We design and prototype web and mobile interfaces using Figma — from wireframe to high-fidelity screens. User research, accessibility compliance, and handoff-ready assets included.",
+    heroImage: "/service3.webp",
     overview:
       "Delight your users and elevate your digital presence with our UI/UX Design & Development services. We specialize in creating visually appealing, intuitive, and responsive designs for web and mobile platforms that prioritize user satisfaction and business goals.<br><br>Our process begins with in-depth user research and prototyping to ensure the final product aligns with your audience’s needs. With a focus on accessibility compliance and cutting-edge design trends, we deliver solutions that cater to diverse users while meeting industry standards. Whether it's building responsive websites or crafting immersive mobile applications, our team ensures that every interaction is meaningful and engaging.",
     features: [
-      'Comprehensive user research and journey mapping',
-      'Interactive prototyping and wireframing',
-      'Responsive designs optimized for web and mobile',
-      'Accessibility compliance for inclusive user experiences',
-      'Creative, modern, and brand-aligned UI designs',
+      "Comprehensive user research and journey mapping",
+      "Interactive prototyping and wireframing",
+      "Responsive designs optimized for web and mobile",
+      "Accessibility compliance for inclusive user experiences",
+      "Creative, modern, and brand-aligned UI designs",
     ],
     benefits: [
       {
-        title: 'Enhanced User Satisfaction',
-        desc: 'Deliver intuitive and delightful experiences that keep users engaged and loyal.',
+        title: "Enhanced User Satisfaction",
+        desc: "Deliver intuitive and delightful experiences that keep users engaged and loyal.",
       },
       {
-        title: 'Increased Conversion Rates',
-        desc: 'Optimize user journeys to drive actions and achieve your business objectives.',
+        title: "Increased Conversion Rates",
+        desc: "Optimize user journeys to drive actions and achieve your business objectives.",
       },
       {
-        title: 'Future-Proof Designs',
-        desc: 'Leverage responsive and scalable designs to adapt to evolving user behaviors.',
+        title: "Future-Proof Designs",
+        desc: "Leverage responsive and scalable designs to adapt to evolving user behaviors.",
       },
       {
-        title: 'Inclusive Accessibility',
-        desc: 'Ensure compliance with accessibility standards to reach a broader audience.',
+        title: "Inclusive Accessibility",
+        desc: "Ensure compliance with accessibility standards to reach a broader audience.",
       },
     ],
     process: [
       {
-        title: 'Research and Analysis',
+        title: "Research and Analysis",
         description:
-          'Understand user needs, preferences, and pain points through detailed research.',
+          "Understand user needs, preferences, and pain points through detailed research.",
       },
       {
-        title: 'Wireframing and Prototyping',
+        title: "Wireframing and Prototyping",
         description:
-          'Create interactive prototypes to visualize and test the user journey.',
+          "Create interactive prototypes to visualize and test the user journey.",
       },
       {
-        title: 'Design and Development',
+        title: "Design and Development",
         description:
-          'Craft responsive, visually appealing designs and integrate them seamlessly with development.',
+          "Craft responsive, visually appealing designs and integrate them seamlessly with development.",
       },
       {
-        title: 'Testing and Refinement',
+        title: "Testing and Refinement",
         description:
-          'Conduct usability testing and incorporate feedback to deliver the best user experience.',
+          "Conduct usability testing and incorporate feedback to deliver the best user experience.",
       },
     ],
     faq: [
       {
-        question: 'What is the importance of user research in UI/UX design?',
+        question: "What is the importance of user research in UI/UX design?",
         answer:
           "User research helps understand the target audience's needs, preferences, and behaviors, ensuring that the design aligns with their expectations.",
       },
       {
-        question: 'How do you ensure accessibility in your designs?',
+        question: "How do you ensure accessibility in your designs?",
         answer:
-          'We adhere to WCAG standards, incorporating features like text alternatives, keyboard navigation, and proper color contrast to make designs inclusive for all users.',
+          "We adhere to WCAG standards, incorporating features like text alternatives, keyboard navigation, and proper color contrast to make designs inclusive for all users.",
       },
       {
-        question: 'Can you redesign an existing website or app?',
+        question: "Can you redesign an existing website or app?",
         answer:
-          'Yes, we specialize in enhancing existing designs by identifying pain points and optimizing the user experience.',
+          "Yes, we specialize in enhancing existing designs by identifying pain points and optimizing the user experience.",
       },
     ],
     cta: {
-      title: 'Transform Your Digital Experience with UI/UX Excellence',
+      title: "Transform Your Digital Experience with UI/UX Excellence",
       description:
-        'Partner with us to create user-friendly, aesthetically pleasing designs that captivate your audience. Contact us today to discuss your UI/UX needs!',
+        "Partner with us to create user-friendly, aesthetically pleasing designs that captivate your audience. Contact us today to discuss your UI/UX needs!",
     },
   },
-   {
-  title: 'Automation & Testing',
-  subtitle: 'Streamline and Optimize Testing Processes',
-  description:
-    'Our Automation & Testing solutions provide businesses with the tools to enhance software quality, streamline testing processes, and improve the reliability of applications. Whether you’re automating repetitive tasks or optimizing manual test processes, our tools offer robust capabilities that save time and ensure the consistency of test results.',
-  icon: 'tools',
-  image: '/tech3.webp',
-  heroImage: '/tech3.webp',
-  overview: `In today’s fast-paced digital world, automation and testing play a crucial role in ensuring that software and applications perform optimally. Our solutions offer a comprehensive suite of tools designed to automate testing procedures, reducing manual effort, speeding up the development lifecycle, and enhancing overall quality. <br><br>
+  {
+    title: "Automation & Testing",
+    subtitle: "Streamline and Optimize Testing Processes",
+    description:
+      "We build automated test suites using Selenium, TestNG and JUnit, and integrate them into your CI/CD pipeline (Jenkins, Azure DevOps, GitLab). QA for web, mobile and API — functional, regression, load and performance testing. We have used these tools on real client projects including Nama Supply.",
+    icon: "tools",
+    image: "/tech3.webp",
+    heroImage: "/tech3.webp",
+    overview: `In today’s fast-paced digital world, automation and testing play a crucial role in ensuring that software and applications perform optimally. Our solutions offer a comprehensive suite of tools designed to automate testing procedures, reducing manual effort, speeding up the development lifecycle, and enhancing overall quality. <br><br>
     QA Automation tools like Selenium, TestNG, and JUnit help businesses create automated test scripts that can be executed across various platforms and environments. These tools allow testing teams to run large volumes of tests quickly and consistently, identifying bugs and issues early in the development cycle. By automating repetitive testing tasks, businesses can improve test coverage, reduce errors, and ensure that every update meets the necessary quality standards.<br><br>
     Robotic Process Automation (RPA) with UiPath and Automation Anywhere brings further value by automating complex business processes and repetitive tasks, such as data entry, invoicing, and customer service inquiries. This frees up human resources for more strategic work and reduces the likelihood of errors that arise from manual interventions.<br><br>
     Our testing solutions support integration across multiple systems, ensuring that all applications, from web to mobile, maintain their quality across different platforms. Whether you're looking to automate functional testing, performance testing, or load testing, our solutions are scalable and adaptable to meet the needs of your specific project.<br><br>
     With strong integration capabilities, businesses can embed automated tests into their CI/CD pipelines, ensuring that every code change is tested before deployment, significantly reducing the risk of defects and improving release cycles.<br><br>
     Implementing automation and testing not only accelerates development cycles but also enhances software performance, leading to higher user satisfaction and a competitive edge in the market.`,
-  
-  features: [
-    'Test critical functionalities of applications with automation to ensure reliability and performance.',
-    'Simulate real-world traffic and ensure applications can handle high volumes of users or transactions.',
-    'Automate testing of system integrations and ensure smooth interoperability between systems.',
-    'Automate routine tasks such as data entry, approvals, and report generation using RPA.'
-  ],
-  
-  benefits: [
-    {
-      title: 'Increased Efficiency',
-      desc: 'Increase testing efficiency and reduce time to market.',
-    },
-    {
-      title: 'Continuous Quality',
-      desc: 'Ensure software quality through continuous, automated testing.',
-    },
-    {
-      title: 'Early Defect Detection',
-      desc: 'Identify defects early and reduce the cost of fixing issues.',
-    },
-    {
-      title: 'Rapid Release Cycles',
-      desc: 'Enable rapid release cycles with automated regression tests.',
-    },
-    {
-      title: 'Operational Efficiency',
-      desc: 'Enhance operational efficiency by automating business processes.',
-    },
-  ],
-  
-  useCases: [
-    {
-      title: 'E-commerce Testing',
-      desc: 'Automate testing of product catalogs, checkout flows, and user interactions to ensure a seamless customer experience.',
-    },
-    {
-      title: 'Finance Industry',
-      desc: 'Test transaction systems, regulatory compliance, and risk assessment tools for critical accuracy and performance.',
-    },
-    {
-      title: 'Healthcare Applications',
-      desc: 'Automate tests for patient records, appointment systems, and medical data to ensure privacy and accuracy.',
-    },
-  ],
-  
-  faq: [
-    {
-      question: 'What types of testing can be automated?',
-      answer: 'Automation can be applied to functional, regression, load, stress, and performance testing, among others.',
-    },
-    {
-      question: 'How does RPA improve business processes?',
-      answer: 'RPA automates repetitive, manual tasks, reducing human errors and allowing employees to focus on higher-value work.',
-    },
-    {
-      question: 'Can these tools integrate with my existing CI/CD pipeline?',
-      answer: 'Yes, our tools support integration with popular CI/CD tools like Jenkins, GitLab, and Azure DevOps to automate the testing process.',
-    },
-  ],
-  
-  process: [
-    {
-      title: 'Test Design & Planning',
-      description: 'Define the testing scope and design automated test cases based on business requirements.',
-    },
-    {
-      title: 'Automation Setup & Execution',
-      description: 'Set up the testing framework and execute automated tests across various environments.',
-    },
-    {
-      title: 'Continuous Monitoring & Reporting',
-      description: 'Monitor automated tests in real-time and generate detailed reports on test results.',
-    },
-  ],
-  
-  cta: {
-    title: 'Ready to Automate Your Testing?',
-    description:
-      'Leverage the power of automated testing and RPA to improve software quality and streamline business processes. Let us help you accelerate your time to market with our cutting-edge tools.',
-    button: {
-      text: 'Get Started',
-      link: '/contact',
+
+    features: [
+      "Test critical functionalities of applications with automation to ensure reliability and performance.",
+      "Simulate real-world traffic and ensure applications can handle high volumes of users or transactions.",
+      "Automate testing of system integrations and ensure smooth interoperability between systems.",
+      "Automate routine tasks such as data entry, approvals, and report generation using RPA.",
+    ],
+
+    benefits: [
+      {
+        title: "Increased Efficiency",
+        desc: "Increase testing efficiency and reduce time to market.",
+      },
+      {
+        title: "Continuous Quality",
+        desc: "Ensure software quality through continuous, automated testing.",
+      },
+      {
+        title: "Early Defect Detection",
+        desc: "Identify defects early and reduce the cost of fixing issues.",
+      },
+      {
+        title: "Rapid Release Cycles",
+        desc: "Enable rapid release cycles with automated regression tests.",
+      },
+      {
+        title: "Operational Efficiency",
+        desc: "Enhance operational efficiency by automating business processes.",
+      },
+    ],
+
+    useCases: [
+      {
+        title: "E-commerce Testing",
+        desc: "Automate testing of product catalogs, checkout flows, and user interactions to ensure a seamless customer experience.",
+      },
+      {
+        title: "Finance Industry",
+        desc: "Test transaction systems, regulatory compliance, and risk assessment tools for critical accuracy and performance.",
+      },
+      {
+        title: "Healthcare Applications",
+        desc: "Automate tests for patient records, appointment systems, and medical data to ensure privacy and accuracy.",
+      },
+    ],
+
+    faq: [
+      {
+        question: "What types of testing can be automated?",
+        answer:
+          "Automation can be applied to functional, regression, load, stress, and performance testing, among others.",
+      },
+      {
+        question: "How does RPA improve business processes?",
+        answer:
+          "RPA automates repetitive, manual tasks, reducing human errors and allowing employees to focus on higher-value work.",
+      },
+      {
+        question: "Can these tools integrate with my existing CI/CD pipeline?",
+        answer:
+          "Yes, our tools support integration with popular CI/CD tools like Jenkins, GitLab, and Azure DevOps to automate the testing process.",
+      },
+    ],
+
+    process: [
+      {
+        title: "Test Design & Planning",
+        description:
+          "Define the testing scope and design automated test cases based on business requirements.",
+      },
+      {
+        title: "Automation Setup & Execution",
+        description:
+          "Set up the testing framework and execute automated tests across various environments.",
+      },
+      {
+        title: "Continuous Monitoring & Reporting",
+        description:
+          "Monitor automated tests in real-time and generate detailed reports on test results.",
+      },
+    ],
+
+    cta: {
+      title: "Ready to Automate Your Testing?",
+      description:
+        "Leverage the power of automated testing and RPA to improve software quality and streamline business processes. Let us help you accelerate your time to market with our cutting-edge tools.",
+      button: {
+        text: "Get Started",
+        link: "/contact",
+      },
     },
   },
-},
   {
-  title: 'Web & Mobile Development',
-  icon: 'laptop',
-  description:
-    'Empowering your digital presence through responsive web and mobile app development using modern frontend, backend, and full-stack technologies.',
-  heroImage: '/tech1.webp',
-  overview:
-    'Web and mobile development lies at the core of digital transformation, enabling businesses to thrive in a dynamic and evolving digital landscape. We deliver end-to-end solutions tailored to your goals—whether it’s sleek web interfaces, high-performance mobile apps, or integrated full-stack systems. <br><br> Our frontend capabilities include ReactJS, Angular, Astro, and Vue.js for building engaging and responsive UIs. For the backend, we specialize in robust and scalable platforms such as Node.js, .NET, Java, and Django. <br><br> We also offer full-stack solutions with popular stacks like MERN, LAMP, and .NET. Our mobile expertise spans both native and cross-platform development, ensuring your app performs seamlessly across devices. Whether you’re launching an e-commerce platform or a custom mobile app, we’re equipped to bring your digital vision to life.',
-  features: [
-    'Frontend development with ReactJS, Angular, Astro, and Vue.js',
-    'Backend solutions using Node.js, .NET, Java, and Django',
-    'Full-stack development with MERN, LAMP, and .NET stacks',
-    'Responsive design for seamless experiences across web and mobile',
-  ],
-  benefits: [
-    {
-      title: 'Seamless User Experiences',
-      desc: 'Deliver responsive and intuitive designs that adapt across devices.',
-    },
-    {
-      title: 'Modern Technology Stack',
-      desc: 'Utilize cutting-edge frameworks and tools for frontend and backend systems.',
-    },
-    {
-      title: 'Faster Time-to-Market',
-      desc: 'Accelerate development with integrated full-stack capabilities.',
-    },
-    {
-      title: 'Scalability for Growth',
-      desc: 'Ensure your applications are built to handle increasing demands over time.',
-    },
-  ],
-  process: [
-    {
-      title: 'Requirement Analysis',
-      description:
-        'Understand project goals and define clear, actionable technical requirements.',
-    },
-    {
-      title: 'Development & Testing',
-      description:
-        'Build responsive frontend and secure backend systems, followed by rigorous QA.',
-    },
-    {
-      title: 'Deployment & Support',
-      description:
-        'Launch your web or mobile app and ensure ongoing support and optimization.',
-    },
-  ],
-  faq: [
-    {
-      question: 'Which frontend framework should I choose for my project?',
-      answer:
-        'ReactJS is great for dynamic UIs, Angular suits enterprise apps, Astro is optimized for performance, and Vue.js offers simplicity and flexibility.',
-    },
-    {
-      question: 'Can you handle both web and mobile development?',
-      answer:
-        'Yes, we build responsive web apps and both native and cross-platform mobile apps for a unified digital experience.',
-    },
-  ],
-  cta: {
-    title: 'Start Your Web & Mobile Transformation Today!',
+    title: "Web & Mobile Development",
+    icon: "laptop",
     description:
-      'Ready to build powerful web and mobile applications that drive real results? Partner with us to craft engaging, scalable, and future-ready digital solutions.',
+      "We build responsive web apps and cross-platform mobile apps from scratch. React, Angular, Node.js, .NET, React Native, Flutter. From a simple marketing site to a full SaaS platform — fixed-scope or ongoing.",
+    heroImage: "/tech1.webp",
+    overview:
+      "Web and mobile development lies at the core of digital transformation, enabling businesses to thrive in a dynamic and evolving digital landscape. We deliver end-to-end solutions tailored to your goals—whether it’s sleek web interfaces, high-performance mobile apps, or integrated full-stack systems. <br><br> Our frontend capabilities include ReactJS, Angular, Astro, and Vue.js for building engaging and responsive UIs. For the backend, we specialize in robust and scalable platforms such as Node.js, .NET, Java, and Django. <br><br> We also offer full-stack solutions with popular stacks like MERN, LAMP, and .NET. Our mobile expertise spans both native and cross-platform development, ensuring your app performs seamlessly across devices. Whether you’re launching an e-commerce platform or a custom mobile app, we’re equipped to bring your digital vision to life.",
+    features: [
+      "Frontend development with ReactJS, Angular, Astro, and Vue.js",
+      "Backend solutions using Node.js, .NET, Java, and Django",
+      "Full-stack development with MERN, LAMP, and .NET stacks",
+      "Responsive design for seamless experiences across web and mobile",
+    ],
+    benefits: [
+      {
+        title: "Seamless User Experiences",
+        desc: "Deliver responsive and intuitive designs that adapt across devices.",
+      },
+      {
+        title: "Modern Technology Stack",
+        desc: "Utilize cutting-edge frameworks and tools for frontend and backend systems.",
+      },
+      {
+        title: "Faster Time-to-Market",
+        desc: "Accelerate development with integrated full-stack capabilities.",
+      },
+      {
+        title: "Scalability for Growth",
+        desc: "Ensure your applications are built to handle increasing demands over time.",
+      },
+    ],
+    process: [
+      {
+        title: "Requirement Analysis",
+        description:
+          "Understand project goals and define clear, actionable technical requirements.",
+      },
+      {
+        title: "Development & Testing",
+        description:
+          "Build responsive frontend and secure backend systems, followed by rigorous QA.",
+      },
+      {
+        title: "Deployment & Support",
+        description:
+          "Launch your web or mobile app and ensure ongoing support and optimization.",
+      },
+    ],
+    faq: [
+      {
+        question: "Which frontend framework should I choose for my project?",
+        answer:
+          "ReactJS is great for dynamic UIs, Angular suits enterprise apps, Astro is optimized for performance, and Vue.js offers simplicity and flexibility.",
+      },
+      {
+        question: "Can you handle both web and mobile development?",
+        answer:
+          "Yes, we build responsive web apps and both native and cross-platform mobile apps for a unified digital experience.",
+      },
+    ],
+    cta: {
+      title: "Start Your Web & Mobile Transformation Today!",
+      description:
+        "Ready to build powerful web and mobile applications that drive real results? Partner with us to craft engaging, scalable, and future-ready digital solutions.",
+    },
   },
-},
-{
-  title: 'Enterprise Tools & Platforms',
-  icon: 'building',
-  description:
-    'Our Enterprise Tools & Platforms help businesses automate processes, manage data, and optimize workflows. With platforms like Microsoft Power Platform and SharePoint, and BPM tools such as K2, Nintex, and Pega, we provide end-to-end solutions that integrate seamlessly with your enterprise systems.',
-  heroImage: '/tech2.webp',
-  overview: `Our Enterprise Tools & Platforms provide businesses with powerful solutions to manage operations, automate processes, and foster collaboration. Microsoft Power Platform allows organizations to create custom applications, automate workflows, and gain deep insights from their data, all with minimal coding. <br><br>
+  {
+    title: "Enterprise Tools & Platforms",
+    icon: "building",
+    description:
+      "We implement and customise Microsoft Power Platform (Power Apps, Power Automate, Power BI), SharePoint and BPM tools (K2, Nintex, Pega) for enterprise clients. We have delivered SharePoint-based solutions running in production for 8+ months.",
+    heroImage: "/tech2.webp",
+    overview: `Our Enterprise Tools & Platforms provide businesses with powerful solutions to manage operations, automate processes, and foster collaboration. Microsoft Power Platform allows organizations to create custom applications, automate workflows, and gain deep insights from their data, all with minimal coding. <br><br>
 Power Apps helps users build apps tailored to specific business needs, Power Automate automates workflows to save time and reduce manual effort, and Power BI offers rich data analytics capabilities to drive informed decision-making. <br><br>
 SharePoint serves as the backbone of collaboration, offering businesses a secure platform for document management, intranet, and team collaboration. SharePoint integrates seamlessly with other Microsoft tools, enhancing productivity across departments. <br><br>
 SQL Server enables organizations to manage and store large volumes of data efficiently. It ensures high performance, scalability, and security while providing powerful reporting and analytics tools.<br><br>
 On the BPM side, tools like Nintex, K2, and Pega help businesses automate end-to-end workflows, from simple tasks to complex business processes. These platforms support document generation, approval workflows, and enterprise-wide automation, allowing for seamless integration with other enterprise systems. <br><br>
 With these solutions, businesses can significantly reduce manual errors, improve operational efficiency, and ensure compliance with industry regulations. Whether you're looking to streamline HR processes, automate document approvals, or implement a custom CRM, our Enterprise Tools & Platforms deliver flexible and scalable solutions that align with your business goals. <br><br>
 Our team of experts ensures smooth integration, ongoing support, and training, helping businesses unlock the full potential of these enterprise tools. With the right combination of tools, businesses can accelerate transformation, optimize workflows, and stay ahead of the competition.`,
-  
-  features: [
-    'Low-Code App Development with Power Platform for rapid application development',
-    'Automated Workflows using Power Automate, Nintex, and K2 to reduce manual tasks',
-    'Data Management & Collaboration leveraging SharePoint and SQL Server for secure and efficient operations',
-  ],
 
-  benefits: [
-  {
-    title: 'Empowered Employees',
-    desc: 'Enable employees to create custom solutions without extensive coding knowledge.',
-  },
-  {
-    title: 'Streamlined Processes',
-    desc: 'Reduce manual errors and optimize business workflows.',
-  },
-  {
-    title: 'Enhanced Collaboration',
-    desc: 'Improve data sharing and teamwork across departments.',
-  },
-  {
-    title: 'Enterprise-Grade Security',
-    desc: 'Ensure data security and compliance with robust platforms.',
-  },
-],
+    features: [
+      "Low-Code App Development with Power Platform for rapid application development",
+      "Automated Workflows using Power Automate, Nintex, and K2 to reduce manual tasks",
+      "Data Management & Collaboration leveraging SharePoint and SQL Server for secure and efficient operations",
+    ],
 
+    benefits: [
+      {
+        title: "Empowered Employees",
+        desc: "Enable employees to create custom solutions without extensive coding knowledge.",
+      },
+      {
+        title: "Streamlined Processes",
+        desc: "Reduce manual errors and optimize business workflows.",
+      },
+      {
+        title: "Enhanced Collaboration",
+        desc: "Improve data sharing and teamwork across departments.",
+      },
+      {
+        title: "Enterprise-Grade Security",
+        desc: "Ensure data security and compliance with robust platforms.",
+      },
+    ],
 
-  process: [
-    {
-      title: 'Needs Assessment & Planning',
+    process: [
+      {
+        title: "Needs Assessment & Planning",
+        description:
+          "We assess your business needs and plan the appropriate solution using the right enterprise tools.",
+      },
+      {
+        title: "Implementation & Customization",
+        description:
+          "We implement and customize solutions such as Power Apps, SharePoint, or Nintex to meet your specific requirements.",
+      },
+      {
+        title: "Training & Support",
+        description:
+          "We provide comprehensive training and ongoing support to ensure seamless adoption of the new tools.",
+      },
+    ],
+
+    faq: [
+      {
+        question: "What is Power Platform?",
+        answer:
+          "Power Platform is a suite of tools that allows businesses to build apps, automate workflows, and analyze data without needing extensive coding skills.",
+      },
+      {
+        question: "How does SharePoint improve collaboration?",
+        answer:
+          "SharePoint allows teams to share documents, collaborate on projects, and manage content from a centralized platform, improving productivity.",
+      },
+    ],
+
+    cta: {
+      title: "Transform Your Business with Enterprise Tools",
       description:
-        'We assess your business needs and plan the appropriate solution using the right enterprise tools.',
+        "Leverage the power of Microsoft Power Platform, SharePoint, and BPM tools to streamline your business operations. Contact us today to get started!",
+      // Optional button part, if you want to keep it:
+      button: {
+        text: "Get Started",
+        link: "/contact",
+      },
     },
-    {
-      title: 'Implementation & Customization',
-      description:
-        'We implement and customize solutions such as Power Apps, SharePoint, or Nintex to meet your specific requirements.',
-    },
-    {
-      title: 'Training & Support',
-      description:
-        'We provide comprehensive training and ongoing support to ensure seamless adoption of the new tools.',
-    },
-  ],
-
-  faq: [
-    {
-      question: 'What is Power Platform?',
-      answer:
-        'Power Platform is a suite of tools that allows businesses to build apps, automate workflows, and analyze data without needing extensive coding skills.',
-    },
-    {
-      question: 'How does SharePoint improve collaboration?',
-      answer:
-        'SharePoint allows teams to share documents, collaborate on projects, and manage content from a centralized platform, improving productivity.',
-    },
-  ],
-
-  cta: {
-    title: 'Transform Your Business with Enterprise Tools',
+  },
+  {
+    title: "AI Integration",
+    icon: "robot",
     description:
-      'Leverage the power of Microsoft Power Platform, SharePoint, and BPM tools to streamline your business operations. Contact us today to get started!',
-    // Optional button part, if you want to keep it:
-    button: {
-      text: 'Get Started',
-      link: '/contact',
+      "We integrate AI into your existing products and workflows — chatbots, document intelligence, process automation with LLMs, and AI-powered APIs. Practical AI that solves real business problems, not demos.",
+    heroImage: "/service2.webp",
+    overview:
+      "AI is no longer a future technology — your competitors are already using it to cut manual work, speed up decisions and build smarter products. The question is not whether to adopt it, but where to start and how to do it properly.<br><br>We help startups and growing businesses integrate AI into what they already have. That might mean adding an LLM-powered chatbot to your SaaS product, building a document processing pipeline that replaces hours of manual review, connecting OpenAI or Azure AI to your existing backend, or using AI to automate a specific business workflow end-to-end.<br><br>We work with OpenAI, Azure OpenAI Service, Anthropic's Claude API, Google Gemini, and Hugging Face models. We are pragmatic about tooling — we recommend what actually fits your budget, timeline and technical context, not whatever is newest.<br><br>Every engagement starts with a short scoping call where we map the problem to the right AI approach and give you an honest estimate of what is achievable in your timeframe.",
+    features: [
+      "LLM-powered chatbots and assistants built into your product",
+      "Document intelligence: extract, classify and summarise unstructured data",
+      "AI workflow automation — replace manual steps with AI-driven pipelines",
+      "OpenAI, Azure OpenAI, Claude and Gemini API integration",
+      "RAG (retrieval-augmented generation) for knowledge base Q&A",
+      "AI features added to existing web and mobile applications",
+    ],
+    benefits: [
+      {
+        title: "Reduce manual work immediately",
+        desc: "Identify the highest-volume manual tasks in your workflow and automate them with AI — often within 4–8 weeks.",
+      },
+      {
+        title: "Add AI to what you already have",
+        desc: "We integrate with your existing stack. No need to rebuild your product from scratch.",
+      },
+      {
+        title: "Practical, not experimental",
+        desc: "We scope AI projects by business outcome — not by what is technically interesting. Every feature has a clear purpose.",
+      },
+      {
+        title: "Fixed-scope delivery",
+        desc: "We deliver AI features in defined sprints with clear deliverables, so you know exactly what you are getting and when.",
+      },
+    ],
+    process: [
+      {
+        title: "Discovery Call",
+        description:
+          "We map your current workflow, identify where AI can add the most value, and propose the right tooling and approach.",
+      },
+      {
+        title: "Scoped Prototype",
+        description:
+          "We build a working proof-of-concept in 1–2 weeks so you can see the AI in action before committing to full development.",
+      },
+      {
+        title: "Integration & Testing",
+        description:
+          "We integrate the AI feature into your product or workflow, test it thoroughly, and iterate based on your feedback.",
+      },
+      {
+        title: "Handover & Support",
+        description:
+          "We document everything, train your team, and offer ongoing support as your AI use cases expand.",
+      },
+    ],
+    faq: [
+      {
+        question: "Do I need to already have a technical team?",
+        answer:
+          "No. We work directly with founders and product managers, and handle all the technical implementation ourselves.",
+      },
+      {
+        question: "How long does an AI integration project take?",
+        answer:
+          "A focused integration — for example, adding an AI chatbot or document processing feature — typically takes 3–6 weeks from scoping to delivery.",
+      },
+      {
+        question: "Which AI models do you work with?",
+        answer:
+          "OpenAI (GPT-4o, GPT-4), Azure OpenAI Service, Anthropic Claude, Google Gemini, and open-source models via Hugging Face. We recommend the right model for your use case and budget.",
+      },
+      {
+        question:
+          "Can you add AI to my existing product without rebuilding it?",
+        answer:
+          "Yes — most of our AI integrations are additive. We connect AI capabilities to your existing backend via API, without requiring a rewrite.",
+      },
+    ],
+    cta: {
+      title: "Ready to add AI to your product or workflow?",
+      description:
+        "Book a free 30-minute call and we will map out exactly what AI can do for your specific situation — no jargon, no sales pitch.",
     },
   },
-},
 ];
 
 const technology = [
-{
-  name: 'UIUX Design',
-  tagline: 'Design Experiences That Users Love',
-  description:
-    'Create beautiful, user-friendly interfaces with seamless user journeys. Our UI/UX design services turn ideas into engaging and intuitive digital experiences.',
-  overview: `Great design is not just about how it looks — it's about how it works. We create wireframes, prototypes, and high-fidelity mockups that align with your brand and make your users feel at home.<br><br>
+  {
+    name: "UIUX Design",
+    tagline: "Design Experiences That Users Love",
+    description:
+      "Create beautiful, user-friendly interfaces with seamless user journeys. Our UI/UX design services turn ideas into engaging and intuitive digital experiences.",
+    overview: `Great design is not just about how it looks — it's about how it works. We create wireframes, prototypes, and high-fidelity mockups that align with your brand and make your users feel at home.<br><br>
     From web apps to mobile apps and SaaS platforms, we follow a user-centric approach to design. Tools like Figma, Adobe XD, and Sketch help us build interactive prototypes, while our research process ensures accessibility and usability at every step.<br><br>
     We collaborate closely with your team to validate ideas and iterate fast, ensuring your product looks stunning and feels effortless to use.`,
-    technologies: ['Figma', 'Adobe XD', 'Sketch', 'InVision', 'Zeplin', 'Framer'],
-  icon: 'palette',
-  image: '/tech1.webp',
-  heroImage: '/tech1.webp',
-  features: [
-    {
-      title: 'Wireframing & Prototyping',
+    technologies: [
+      "Figma",
+      "Adobe XD",
+      "Sketch",
+      "InVision",
+      "Zeplin",
+      "Framer",
+    ],
+    icon: "palette",
+    image: "/tech1.webp",
+    heroImage: "/tech1.webp",
+    features: [
+      {
+        title: "Wireframing & Prototyping",
+        description:
+          "Build fast interactive prototypes using Figma, Adobe XD, and Sketch.",
+      },
+      {
+        title: "Visual Design & Branding",
+        description:
+          "Craft visually compelling interfaces that reflect your brand identity.",
+      },
+      {
+        title: "User Research & Testing",
+        description:
+          "Understand user behavior with testing, heatmaps, and usability sessions.",
+      },
+      {
+        title: "Responsive & Accessible Design",
+        description:
+          "Design interfaces that work seamlessly across devices and follow accessibility standards (WCAG).",
+      },
+    ],
+    benefits: [
+      "Boost user satisfaction and engagement",
+      "Improve retention with intuitive interfaces",
+      "Reduce development rework with validated designs",
+      "Ensure consistency across platforms and devices",
+    ],
+    useCases: [
+      {
+        title: "Startup MVP Design",
+        description: "Quickly prototype and validate ideas before development.",
+      },
+      {
+        title: "SaaS Platform UX Overhaul",
+        description:
+          "Redesign dashboards and workflows for better productivity.",
+      },
+    ],
+    faq: [
+      {
+        question: "Do you use Figma or other tools?",
+        answer:
+          "Yes, we primarily use Figma for design collaboration, along with Adobe XD, Sketch, and InVision as needed.",
+      },
+      {
+        question: "Do you follow design systems?",
+        answer:
+          "Absolutely — we build or use design systems like Material UI, Bootstrap, or custom libraries for scalability and consistency.",
+      },
+    ],
+    process: [
+      {
+        title: "User Research",
+        description: "Understand your audience, goals, and challenges.",
+        icon: "people",
+      },
+      {
+        title: "Wireframing",
+        description: "Sketch low-fidelity layouts and user flows.",
+        icon: "easel2",
+      },
+      {
+        title: "Visual Design",
+        description: "Create high-fidelity screens and design systems.",
+        icon: "pencil",
+      },
+      {
+        title: "Handoff & Support",
+        description:
+          "Deliver assets to developers and assist with implementation.",
+        icon: "code-slash",
+      },
+    ],
+    cta: {
+      title: "Let’s Design Something Beautiful!",
       description:
-        'Build fast interactive prototypes using Figma, Adobe XD, and Sketch.',
-    },
-    {
-      title: 'Visual Design & Branding',
-      description:
-        'Craft visually compelling interfaces that reflect your brand identity.',
-    },
-    {
-      title: 'User Research & Testing',
-      description:
-        'Understand user behavior with testing, heatmaps, and usability sessions.',
-    },
-    {
-      title: 'Responsive & Accessible Design',
-      description:
-        'Design interfaces that work seamlessly across devices and follow accessibility standards (WCAG).',
-    },
-  ],
-  benefits: [
-    'Boost user satisfaction and engagement',
-    'Improve retention with intuitive interfaces',
-    'Reduce development rework with validated designs',
-    'Ensure consistency across platforms and devices',
-  ],
-  useCases: [
-    {
-      title: 'Startup MVP Design',
-      description: 'Quickly prototype and validate ideas before development.',
-    },
-    {
-      title: 'SaaS Platform UX Overhaul',
-      description: 'Redesign dashboards and workflows for better productivity.',
-    },
-  ],
-  faq: [
-    {
-      question: 'Do you use Figma or other tools?',
-      answer:
-        'Yes, we primarily use Figma for design collaboration, along with Adobe XD, Sketch, and InVision as needed.',
-    },
-    {
-      question: 'Do you follow design systems?',
-      answer:
-        'Absolutely — we build or use design systems like Material UI, Bootstrap, or custom libraries for scalability and consistency.',
-    },
-  ],
-  process: [
-    {
-      title: 'User Research',
-      description: 'Understand your audience, goals, and challenges.',
-      icon: 'people',
-    },
-    {
-      title: 'Wireframing',
-      description: 'Sketch low-fidelity layouts and user flows.',
-      icon: 'easel2',
-    },
-    {
-      title: 'Visual Design',
-      description: 'Create high-fidelity screens and design systems.',
-      icon: 'pencil',
-    },
-    {
-      title: 'Handoff & Support',
-      description: 'Deliver assets to developers and assist with implementation.',
-      icon: 'code-slash',
-    },
-  ],
-  cta: {
-    title: 'Let’s Design Something Beautiful!',
-    description:
-      'From apps to websites — let us craft pixel-perfect, user-friendly designs your customers will love.',
-    button: {
-      text: 'Let’s Talk',
-      link: '/contact',
+        "From apps to websites — let us craft pixel-perfect, user-friendly designs your customers will love.",
+      button: {
+        text: "Let’s Talk",
+        link: "/contact",
+      },
     },
   },
-},
-{
-  name: 'Frontend Development',
-  tagline: 'Craft Stunning and Responsive User Interfaces',
-  description:
-    'Bring your ideas to life with modern frontend technologies that deliver fast, accessible, and visually engaging user experiences. We specialize in creating responsive, intuitive interfaces tailored to your brand and audience.',
-  overview: `Frontend development is the gateway to your digital presence, shaping how users interact with your applications. Our expertise includes industry-leading frontend frameworks and libraries such as ReactJS, Angular, Vue.js, Svelte, and Astro, enabling highly interactive, modular, and performant web applications.<br><br>
+  {
+    name: "Frontend Development",
+    tagline: "Craft Stunning and Responsive User Interfaces",
+    description:
+      "Bring your ideas to life with modern frontend technologies that deliver fast, accessible, and visually engaging user experiences. We specialize in creating responsive, intuitive interfaces tailored to your brand and audience.",
+    overview: `Frontend development is the gateway to your digital presence, shaping how users interact with your applications. Our expertise includes industry-leading frontend frameworks and libraries such as ReactJS, Angular, Vue.js, Svelte, and Astro, enabling highly interactive, modular, and performant web applications.<br><br>
     We leverage modern tools like TypeScript for type safety, Tailwind CSS and Bootstrap for responsive styling, and Next.js or Nuxt.js for server-side rendering and static site generation.<br><br>
     Our focus on responsive and mobile-first design ensures your applications look and perform flawlessly on all devices.<br><br>
     Whether you need single-page applications (SPAs), progressive web apps (PWAs), or static websites, we create frontend solutions that are scalable, maintainable, and aligned with your business objectives.`,
-  technologies: ['ReactJS', 'Angular', 'VueJS'],
-  icon: 'code-slash',
-  image: '/tech2.webp',
-  heroImage: '/tech2.webp',
-  features: [
-    {
-      title: 'Popular Frameworks & Libraries',
+    technologies: ["ReactJS", "Angular", "VueJS"],
+    icon: "code-slash",
+    image: "/tech2.webp",
+    heroImage: "/tech2.webp",
+    features: [
+      {
+        title: "Popular Frameworks & Libraries",
+        description:
+          "Expertise in ReactJS, Angular, Vue.js, Svelte, Astro, and more to build flexible and dynamic user interfaces.",
+      },
+      {
+        title: "Styling & UI Frameworks",
+        description:
+          "Utilize Tailwind CSS, Bootstrap, Material UI, and Chakra UI for responsive and accessible design.",
+      },
+      {
+        title: "State Management & Tooling",
+        description:
+          "Implement state management with Redux, MobX, Pinia, or Context API, and use TypeScript for robust code.",
+      },
+      {
+        title: "Performance & SEO",
+        description:
+          "Build optimized applications with Next.js, Nuxt.js, and modern build tools for fast load times and better SEO.",
+      },
+    ],
+    benefits: [
+      "Deliver visually appealing and intuitive interfaces",
+      "Improve user engagement with fast and responsive apps",
+      "Reduce development time using reusable components and frameworks",
+      "Enhance accessibility and SEO for broader reach",
+    ],
+    useCases: [
+      {
+        title: "Single Page Applications (SPAs)",
+        description:
+          "Develop fast, fluid, and interactive web apps with smooth navigation.",
+      },
+      {
+        title: "Progressive Web Apps (PWAs)",
+        description:
+          "Create reliable, installable apps that offer native-like experiences on the web.",
+      },
+      {
+        title: "Static Sites & Jamstack",
+        description:
+          "Build high-performance static websites using Astro, Next.js, or Nuxt.js with modern APIs.",
+      },
+    ],
+    faq: [
+      {
+        question: "Which frontend framework is best for my project?",
+        answer:
+          "The choice depends on your needs: ReactJS offers flexibility and a large ecosystem; Angular is suited for enterprise applications; Vue.js is lightweight and easy to integrate; Svelte provides highly optimized compiled output.",
+      },
+      {
+        question: "How do you ensure the app works on all devices?",
+        answer:
+          "We use responsive design techniques, CSS frameworks like Tailwind and Bootstrap, and thorough cross-browser and device testing to guarantee consistent performance.",
+      },
+    ],
+    process: [
+      {
+        title: "Design & Prototyping",
+        description: "Create wireframes and prototypes to visualize the UI/UX.",
+        icon: "palette",
+      },
+      {
+        title: "Development",
+        description:
+          "Implement the design using modern frontend technologies and best practices.",
+        icon: "code-slash",
+      },
+      {
+        title: "Testing & Optimization",
+        description:
+          "Conduct usability testing, fix bugs, and optimize for performance and accessibility.",
+        icon: "bug",
+      },
+      {
+        title: "Deployment & Maintenance",
+        description:
+          "Deploy to production and provide ongoing support for updates and improvements.",
+        icon: "rocket",
+      },
+    ],
+    cta: {
+      title: "Elevate Your User Experience with Expert Frontend Development!",
       description:
-        'Expertise in ReactJS, Angular, Vue.js, Svelte, Astro, and more to build flexible and dynamic user interfaces.',
+        "Ready to captivate your audience with stunning interfaces? Partner with us to build responsive, performant, and engaging frontend applications that stand out.",
+      button: {
+        text: "Get Started",
+        link: "/contact",
+      },
+      // image: '/cta-frontend-development.jpg',
     },
-    {
-      title: 'Styling & UI Frameworks',
-      description:
-        'Utilize Tailwind CSS, Bootstrap, Material UI, and Chakra UI for responsive and accessible design.',
-    },
-    {
-      title: 'State Management & Tooling',
-      description:
-        'Implement state management with Redux, MobX, Pinia, or Context API, and use TypeScript for robust code.',
-    },
-    {
-      title: 'Performance & SEO',
-      description:
-        'Build optimized applications with Next.js, Nuxt.js, and modern build tools for fast load times and better SEO.',
-    },
-  ],
-  benefits: [
-    'Deliver visually appealing and intuitive interfaces',
-    'Improve user engagement with fast and responsive apps',
-    'Reduce development time using reusable components and frameworks',
-    'Enhance accessibility and SEO for broader reach',
-  ],
-  useCases: [
-    {
-      title: 'Single Page Applications (SPAs)',
-      description: 'Develop fast, fluid, and interactive web apps with smooth navigation.',
-    },
-    {
-      title: 'Progressive Web Apps (PWAs)',
-      description:
-        'Create reliable, installable apps that offer native-like experiences on the web.',
-    },
-    {
-      title: 'Static Sites & Jamstack',
-      description:
-        'Build high-performance static websites using Astro, Next.js, or Nuxt.js with modern APIs.',
-    },
-  ],
-  faq: [
-    {
-      question: 'Which frontend framework is best for my project?',
-      answer:
-        'The choice depends on your needs: ReactJS offers flexibility and a large ecosystem; Angular is suited for enterprise applications; Vue.js is lightweight and easy to integrate; Svelte provides highly optimized compiled output.',
-    },
-    {
-      question: 'How do you ensure the app works on all devices?',
-      answer:
-        'We use responsive design techniques, CSS frameworks like Tailwind and Bootstrap, and thorough cross-browser and device testing to guarantee consistent performance.',
-    },
-  ],
-  process: [
-    {
-      title: 'Design & Prototyping',
-      description: 'Create wireframes and prototypes to visualize the UI/UX.',
-      icon: 'palette',
-    },
-    {
-      title: 'Development',
-      description: 'Implement the design using modern frontend technologies and best practices.',
-      icon: 'code-slash',
-    },
-    {
-      title: 'Testing & Optimization',
-      description:
-        'Conduct usability testing, fix bugs, and optimize for performance and accessibility.',
-      icon: 'bug',
-    },
-    {
-      title: 'Deployment & Maintenance',
-      description: 'Deploy to production and provide ongoing support for updates and improvements.',
-      icon: 'rocket',
-    },
-  ],
-  cta: {
-    title: 'Elevate Your User Experience with Expert Frontend Development!',
-    description:
-      'Ready to captivate your audience with stunning interfaces? Partner with us to build responsive, performant, and engaging frontend applications that stand out.',
-    button: {
-      text: 'Get Started',
-      link: '/contact',
-    },
-    // image: '/cta-frontend-development.jpg',
   },
-},
-{
-  name: 'Backend Development',
-  tagline: 'Power Your Applications with Robust Backend Systems',
-  description:
-    'Build scalable, secure, and high-performance backend systems that power your applications and handle data seamlessly. Our backend expertise ensures reliability and efficiency for your business needs.',
-  overview: `Backend development forms the backbone of any application, managing data, user authentication, business logic, and integrations. We specialize in popular backend frameworks and platforms like Node.js with Express, .NET Core, Java Spring Boot, Python Django and Flask, Ruby on Rails, and PHP Laravel.<br><br>
+  {
+    name: "Backend Development",
+    tagline: "Power Your Applications with Robust Backend Systems",
+    description:
+      "Build scalable, secure, and high-performance backend systems that power your applications and handle data seamlessly. Our backend expertise ensures reliability and efficiency for your business needs.",
+    overview: `Backend development forms the backbone of any application, managing data, user authentication, business logic, and integrations. We specialize in popular backend frameworks and platforms like Node.js with Express, .NET Core, Java Spring Boot, Python Django and Flask, Ruby on Rails, and PHP Laravel.<br><br>
     Our solutions include RESTful APIs, GraphQL endpoints, microservices architecture, and serverless computing with AWS Lambda or Azure Functions.<br><br>
     With a focus on security, scalability, and maintainability, we deliver backend systems that integrate smoothly with frontend and mobile apps, ensuring fast response times and data integrity across your digital ecosystem.`,
-    technologies: ['Node.js', '.NET', 'Java', 'Django', 'Express.js', 'Spring Boot'],
-  icon: 'server',
-  image: '/tech3.webp',
-  heroImage: '/tech3.webp',
-  features: [
-    {
-      title: 'Popular Backend Frameworks',
+    technologies: [
+      "Node.js",
+      ".NET",
+      "Java",
+      "Django",
+      "Express.js",
+      "Spring Boot",
+    ],
+    icon: "server",
+    image: "/tech3.webp",
+    heroImage: "/tech3.webp",
+    features: [
+      {
+        title: "Popular Backend Frameworks",
+        description:
+          "Expertise in Node.js (Express, NestJS), .NET Core, Java Spring Boot, Python Django & Flask, Ruby on Rails, and PHP Laravel.",
+      },
+      {
+        title: "API Development",
+        description:
+          "Build RESTful and GraphQL APIs for efficient data communication and integration.",
+      },
+      {
+        title: "Microservices & Serverless",
+        description:
+          "Design scalable microservices and deploy serverless functions on AWS Lambda, Azure Functions, or Google Cloud.",
+      },
+      {
+        title: "Database Management",
+        description:
+          "Work with SQL (MySQL, PostgreSQL, MSSQL) and NoSQL (MongoDB, Redis, Cassandra) databases for optimized data storage.",
+      },
+    ],
+    benefits: [
+      "Ensure data security and privacy compliance",
+      "Scale backend services to handle increasing traffic",
+      "Integrate smoothly with various frontend and mobile clients",
+      "Reduce time to market with reusable backend components",
+    ],
+    useCases: [
+      {
+        title: "E-Commerce Backend Systems",
+        description:
+          "Manage product catalogs, user authentication, payments, and order processing.",
+      },
+      {
+        title: "Enterprise APIs",
+        description:
+          "Create secure and scalable APIs for business applications and third-party integrations.",
+      },
+    ],
+    faq: [
+      {
+        question: "Which backend technology should I use?",
+        answer:
+          "Choice depends on your project requirements and team expertise. Node.js is great for real-time apps, Java for enterprise solutions, Python for rapid development, and .NET for Windows ecosystem integrations.",
+      },
+      {
+        question: "How do you ensure backend security?",
+        answer:
+          "We follow best practices like authentication & authorization, input validation, encryption, and secure API design to protect your data.",
+      },
+    ],
+    process: [
+      {
+        title: "Requirement Gathering",
+        description:
+          "Understand backend workflows, data models, and integration points.",
+        icon: "clipboard",
+      },
+      {
+        title: "API & Database Design",
+        description:
+          "Design APIs and database schemas aligned with business logic.",
+        icon: "database",
+      },
+      {
+        title: "Development & Testing",
+        description:
+          "Implement backend services with unit, integration, and load testing.",
+        icon: "gear",
+      },
+      {
+        title: "Deployment & Monitoring",
+        description:
+          "Deploy backend to cloud or on-premises with monitoring and maintenance.",
+        icon: "server",
+      },
+    ],
+    cta: {
+      title: "Build a Powerful Backend that Scales with Your Business!",
       description:
-        'Expertise in Node.js (Express, NestJS), .NET Core, Java Spring Boot, Python Django & Flask, Ruby on Rails, and PHP Laravel.',
+        "Let us create secure, scalable, and efficient backend systems to power your applications seamlessly.",
+      button: {
+        text: "Get Started",
+        link: "/contact",
+      },
+      // image: '/cta-backend-development.jpg',
     },
-    {
-      title: 'API Development',
-      description:
-        'Build RESTful and GraphQL APIs for efficient data communication and integration.',
-    },
-    {
-      title: 'Microservices & Serverless',
-      description:
-        'Design scalable microservices and deploy serverless functions on AWS Lambda, Azure Functions, or Google Cloud.',
-    },
-    {
-      title: 'Database Management',
-      description:
-        'Work with SQL (MySQL, PostgreSQL, MSSQL) and NoSQL (MongoDB, Redis, Cassandra) databases for optimized data storage.',
-    },
-  ],
-  benefits: [
-    'Ensure data security and privacy compliance',
-    'Scale backend services to handle increasing traffic',
-    'Integrate smoothly with various frontend and mobile clients',
-    'Reduce time to market with reusable backend components',
-  ],
-  useCases: [
-    {
-      title: 'E-Commerce Backend Systems',
-      description: 'Manage product catalogs, user authentication, payments, and order processing.',
-    },
-    {
-      title: 'Enterprise APIs',
-      description: 'Create secure and scalable APIs for business applications and third-party integrations.',
-    },
-  ],
-  faq: [
-    {
-      question: 'Which backend technology should I use?',
-      answer:
-        'Choice depends on your project requirements and team expertise. Node.js is great for real-time apps, Java for enterprise solutions, Python for rapid development, and .NET for Windows ecosystem integrations.',
-    },
-    {
-      question: 'How do you ensure backend security?',
-      answer:
-        'We follow best practices like authentication & authorization, input validation, encryption, and secure API design to protect your data.',
-    },
-  ],
-  process: [
-    {
-      title: 'Requirement Gathering',
-      description: 'Understand backend workflows, data models, and integration points.',
-      icon: 'clipboard',
-    },
-    {
-      title: 'API & Database Design',
-      description: 'Design APIs and database schemas aligned with business logic.',
-      icon: 'database',
-    },
-    {
-      title: 'Development & Testing',
-      description:
-        'Implement backend services with unit, integration, and load testing.',
-      icon: 'gear',
-    },
-    {
-      title: 'Deployment & Monitoring',
-      description:
-        'Deploy backend to cloud or on-premises with monitoring and maintenance.',
-      icon: 'server',
-    },
-  ],
-  cta: {
-    title: 'Build a Powerful Backend that Scales with Your Business!',
-    description:
-      'Let us create secure, scalable, and efficient backend systems to power your applications seamlessly.',
-    button: {
-      text: 'Get Started',
-      link: '/contact',
-    },
-    // image: '/cta-backend-development.jpg',
   },
-},
-{
-  name: 'CMS & eCommerce Development',
-  tagline: 'Manage Content and Sell Online with Powerful CMS & eCommerce Solutions',
-  description:
-    'Launch scalable content and commerce platforms using WordPress, Shopify, WooCommerce, and headless CMS solutions.',
-  overview: `We help you build content-driven websites and online stores that are fast, secure, and easy to manage. From WordPress-powered blogs and business websites to feature-rich Shopify or WooCommerce stores — we’ve got you covered.<br><br>
+  {
+    name: "CMS & eCommerce Development",
+    tagline:
+      "Manage Content and Sell Online with Powerful CMS & eCommerce Solutions",
+    description:
+      "Launch scalable content and commerce platforms using WordPress, Shopify, WooCommerce, and headless CMS solutions.",
+    overview: `We help you build content-driven websites and online stores that are fast, secure, and easy to manage. From WordPress-powered blogs and business websites to feature-rich Shopify or WooCommerce stores — we’ve got you covered.<br><br>
     Need full control? We also build custom CMS solutions or integrate headless CMS like Strapi, Contentful, or Sanity with frontend frameworks like Next.js or Nuxt.js.<br><br>
     For eCommerce, we deliver fully optimized stores with secure payments, inventory management, user accounts, discount engines, and more.`,
-    technologies: ['WordPress', 'Shopify', 'WooCommerce', 'Magento', 'Contentful', 'Strapi', 'Sanity'],
-  icon: 'bag-check',
-  image: '/tech4.webp',
-  heroImage: '/tech4.webp',
-  features: [
-    {
-      title: 'CMS Platforms',
+    technologies: [
+      "WordPress",
+      "Shopify",
+      "WooCommerce",
+      "Magento",
+      "Contentful",
+      "Strapi",
+      "Sanity",
+    ],
+    icon: "bag-check",
+    image: "/tech4.webp",
+    heroImage: "/tech4.webp",
+    features: [
+      {
+        title: "CMS Platforms",
+        description:
+          "WordPress, Webflow, Ghost, and custom-built CMS with admin panels tailored to your business.",
+      },
+      {
+        title: "eCommerce Platforms",
+        description:
+          "Shopify, WooCommerce, Magento, and custom carts with secure payment gateways.",
+      },
+      {
+        title: "Headless CMS",
+        description:
+          "Integrate headless CMS like Strapi, Sanity, or Contentful with Jamstack sites.",
+      },
+      {
+        title: "SEO & Performance Optimization",
+        description:
+          "Optimized for Google, fast page loads, mobile performance, and accessibility.",
+      },
+    ],
+    benefits: [
+      "Launch faster with proven platforms and themes",
+      "Easy content management for non-technical teams",
+      "Secure and reliable eCommerce with payment integration",
+      "Customizable and scalable for future growth",
+    ],
+    useCases: [
+      {
+        title: "Online Store",
+        description:
+          "Launch a full-featured eCommerce store with inventory, payments, and order tracking.",
+      },
+      {
+        title: "Company Website with CMS",
+        description:
+          "Manage blog posts, pages, and team members through a no-code dashboard.",
+      },
+    ],
+    faq: [
+      {
+        question: "Should I choose Shopify or WooCommerce?",
+        answer:
+          "Shopify is ideal for easy setup and hosting, while WooCommerce offers more customization and control over hosting.",
+      },
+      {
+        question: "Can I use CMS with a modern frontend?",
+        answer:
+          "Yes, headless CMS can be paired with React, Next.js, or Nuxt for modern, fast websites.",
+      },
+    ],
+    process: [
+      {
+        title: "Discovery & Planning",
+        description: "Define goals, platform, and required features.",
+        icon: "files",
+      },
+      {
+        title: "Design & Setup",
+        description:
+          "Set up CMS or eCommerce platform with branding and layout.",
+        icon: "gear",
+      },
+      {
+        title: "Customization & Integration",
+        description: "Add plugins, custom features, and connect APIs or CRMs.",
+        icon: "puzzle",
+      },
+      {
+        title: "Launch & Support",
+        description: "Deploy and provide training and support post-launch.",
+        icon: "rocket",
+      },
+    ],
+    cta: {
+      title: "Start Selling or Publishing Online with Ease!",
       description:
-        'WordPress, Webflow, Ghost, and custom-built CMS with admin panels tailored to your business.',
-    },
-    {
-      title: 'eCommerce Platforms',
-      description:
-        'Shopify, WooCommerce, Magento, and custom carts with secure payment gateways.',
-    },
-    {
-      title: 'Headless CMS',
-      description:
-        'Integrate headless CMS like Strapi, Sanity, or Contentful with Jamstack sites.',
-    },
-    {
-      title: 'SEO & Performance Optimization',
-      description:
-        'Optimized for Google, fast page loads, mobile performance, and accessibility.',
-    },
-  ],
-  benefits: [
-    'Launch faster with proven platforms and themes',
-    'Easy content management for non-technical teams',
-    'Secure and reliable eCommerce with payment integration',
-    'Customizable and scalable for future growth',
-  ],
-  useCases: [
-    {
-      title: 'Online Store',
-      description: 'Launch a full-featured eCommerce store with inventory, payments, and order tracking.',
-    },
-    {
-      title: 'Company Website with CMS',
-      description: 'Manage blog posts, pages, and team members through a no-code dashboard.',
-    },
-  ],
-  faq: [
-    {
-      question: 'Should I choose Shopify or WooCommerce?',
-      answer:
-        'Shopify is ideal for easy setup and hosting, while WooCommerce offers more customization and control over hosting.',
-    },
-    {
-      question: 'Can I use CMS with a modern frontend?',
-      answer:
-        'Yes, headless CMS can be paired with React, Next.js, or Nuxt for modern, fast websites.',
-    },
-  ],
-  process: [
-    {
-      title: 'Discovery & Planning',
-      description: 'Define goals, platform, and required features.',
-      icon: 'files',
-    },
-    {
-      title: 'Design & Setup',
-      description: 'Set up CMS or eCommerce platform with branding and layout.',
-      icon: 'gear',
-    },
-    {
-      title: 'Customization & Integration',
-      description: 'Add plugins, custom features, and connect APIs or CRMs.',
-      icon: 'puzzle',
-    },
-    {
-      title: 'Launch & Support',
-      description: 'Deploy and provide training and support post-launch.',
-      icon: 'rocket',
-    },
-  ],
-  cta: {
-    title: 'Start Selling or Publishing Online with Ease!',
-    description:
-      'From content sites to full-featured online stores — we build scalable CMS and eCommerce solutions that grow with your business.',
-    button: {
-      text: 'Let’s Build',
-      link: '/contact',
+        "From content sites to full-featured online stores — we build scalable CMS and eCommerce solutions that grow with your business.",
+      button: {
+        text: "Let’s Build",
+        link: "/contact",
+      },
     },
   },
-},
-{
-  name: 'Mobile App Development',
-  tagline: 'Create Engaging Native and Cross-Platform Mobile Apps',
-  description:
-    'Reach your customers on their favorite devices with beautifully designed and performant mobile applications. We build native and cross-platform apps tailored to your business goals.',
-  overview: `Mobile apps have become essential for business growth and customer engagement. Our mobile development expertise includes native platforms like Swift for iOS and Kotlin for Android, as well as cross-platform frameworks such as React Native, Flutter, and Xamarin.<br><br>
+  {
+    name: "Mobile App Development",
+    tagline: "Create Engaging Native and Cross-Platform Mobile Apps",
+    description:
+      "Reach your customers on their favorite devices with beautifully designed and performant mobile applications. We build native and cross-platform apps tailored to your business goals.",
+    overview: `Mobile apps have become essential for business growth and customer engagement. Our mobile development expertise includes native platforms like Swift for iOS and Kotlin for Android, as well as cross-platform frameworks such as React Native, Flutter, and Xamarin.<br><br>
     We focus on user-centric design, smooth performance, and seamless integration with backend services. Whether it’s an e-commerce app, social platform, or enterprise mobile solution, we deliver apps that delight users and drive engagement.<br><br>
     Our mobile-first approach ensures apps are optimized for various screen sizes and hardware capabilities, delivering the best experience on smartphones and tablets.`,
-    technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Ionic', 'Xamarin'],
-  icon: 'phone',
-  image: '/tech5.webp',
-  heroImage: '/tech5.webp',
-  features: [
-    {
-      title: 'Native App Development',
+    technologies: [
+      "React Native",
+      "Flutter",
+      "Swift",
+      "Kotlin",
+      "Ionic",
+      "Xamarin",
+    ],
+    icon: "phone",
+    image: "/tech5.webp",
+    heroImage: "/tech5.webp",
+    features: [
+      {
+        title: "Native App Development",
+        description:
+          "Build high-performance apps using Swift (iOS) and Kotlin/Java (Android).",
+      },
+      {
+        title: "Cross-Platform Frameworks",
+        description:
+          "Develop cost-effective apps with React Native, Flutter, and Xamarin for simultaneous iOS and Android deployment.",
+      },
+      {
+        title: "UI/UX Design",
+        description:
+          "Design intuitive and engaging mobile interfaces focused on usability and brand identity.",
+      },
+      {
+        title: "Backend Integration",
+        description:
+          "Connect mobile apps securely to backend APIs and cloud services for real-time data syncing.",
+      },
+    ],
+    benefits: [
+      "Deliver seamless experiences with fast and responsive apps",
+      "Reduce development costs with reusable code across platforms",
+      "Leverage device capabilities like GPS, camera, push notifications",
+      "Increase user engagement and retention with smooth UI and performance",
+    ],
+    useCases: [
+      {
+        title: "E-Commerce Mobile Apps",
+        description:
+          "Enable customers to browse and purchase products on the go.",
+      },
+      {
+        title: "Social Networking Apps",
+        description:
+          "Create engaging platforms for community and content sharing.",
+      },
+    ],
+    faq: [
+      {
+        question: "Should I choose native or cross-platform development?",
+        answer:
+          "Native apps offer the best performance and platform integration, while cross-platform saves cost and time by sharing code across iOS and Android.",
+      },
+      {
+        question: "How do you ensure app performance?",
+        answer:
+          "We optimize app architecture, use native modules when needed, and conduct thorough testing on multiple devices.",
+      },
+    ],
+    process: [
+      {
+        title: "Concept & Design",
+        description: "Define app features and create user-friendly designs.",
+        icon: "lightbulb",
+      },
+      {
+        title: "Development",
+        description:
+          "Implement app functionality using chosen native or cross-platform technologies.",
+        icon: "phone",
+      },
+      {
+        title: "Testing",
+        description:
+          "Perform functional, performance, and device compatibility tests.",
+        icon: "clipboard-check",
+      },
+      {
+        title: "Launch & Maintenance",
+        description:
+          "Publish apps to app stores and provide ongoing updates and support.",
+        icon: "upload",
+      },
+    ],
+    cta: {
+      title: "Bring Your Mobile App Idea to Life!",
       description:
-        'Build high-performance apps using Swift (iOS) and Kotlin/Java (Android).',
+        "Partner with us to build high-quality native or cross-platform mobile apps that engage and retain users.",
+      button: {
+        text: "Get Started",
+        link: "/contact",
+      },
+      // image: '/cta-mobile-development.jpg',
     },
-    {
-      title: 'Cross-Platform Frameworks',
-      description:
-        'Develop cost-effective apps with React Native, Flutter, and Xamarin for simultaneous iOS and Android deployment.',
-    },
-    {
-      title: 'UI/UX Design',
-      description:
-        'Design intuitive and engaging mobile interfaces focused on usability and brand identity.',
-    },
-    {
-      title: 'Backend Integration',
-      description:
-        'Connect mobile apps securely to backend APIs and cloud services for real-time data syncing.',
-    },
-  ],
-  benefits: [
-    'Deliver seamless experiences with fast and responsive apps',
-    'Reduce development costs with reusable code across platforms',
-    'Leverage device capabilities like GPS, camera, push notifications',
-    'Increase user engagement and retention with smooth UI and performance',
-  ],
-  useCases: [
-    {
-      title: 'E-Commerce Mobile Apps',
-      description: 'Enable customers to browse and purchase products on the go.',
-    },
-    {
-      title: 'Social Networking Apps',
-      description: 'Create engaging platforms for community and content sharing.',
-    },
-  ],
-  faq: [
-    {
-      question: 'Should I choose native or cross-platform development?',
-      answer:
-        'Native apps offer the best performance and platform integration, while cross-platform saves cost and time by sharing code across iOS and Android.',
-    },
-    {
-      question: 'How do you ensure app performance?',
-      answer:
-        'We optimize app architecture, use native modules when needed, and conduct thorough testing on multiple devices.',
-    },
-  ],
-  process: [
-    {
-      title: 'Concept & Design',
-      description: 'Define app features and create user-friendly designs.',
-      icon: 'lightbulb',
-    },
-    {
-      title: 'Development',
-      description:
-        'Implement app functionality using chosen native or cross-platform technologies.',
-      icon: 'phone',
-    },
-    {
-      title: 'Testing',
-      description: 'Perform functional, performance, and device compatibility tests.',
-      icon: 'clipboard-check',
-    },
-    {
-      title: 'Launch & Maintenance',
-      description:
-        'Publish apps to app stores and provide ongoing updates and support.',
-      icon: 'upload',
-    },
-  ],
-  cta: {
-    title: 'Bring Your Mobile App Idea to Life!',
-    description:
-      'Partner with us to build high-quality native or cross-platform mobile apps that engage and retain users.',
-    button: {
-      text: 'Get Started',
-      link: '/contact',
-    },
-    // image: '/cta-mobile-development.jpg',
   },
-},
-{
-  name: 'Full Stack Development',
-  tagline: 'End-to-End Solutions from Frontend to Backend',
-  description:
-    'Deliver complete web applications with integrated frontend and backend systems. We offer full stack development services tailored to your unique requirements.',
-  overview: `Full stack development combines the power of both frontend and backend to build comprehensive, seamless web applications. Our full stack expertise covers modern frontend frameworks like ReactJS, Angular, and Vue.js, alongside backend technologies such as Node.js, .NET Core, Django, and Spring Boot.<br><br>
+  {
+    name: "Full Stack Development",
+    tagline: "End-to-End Solutions from Frontend to Backend",
+    description:
+      "Deliver complete web applications with integrated frontend and backend systems. We offer full stack development services tailored to your unique requirements.",
+    overview: `Full stack development combines the power of both frontend and backend to build comprehensive, seamless web applications. Our full stack expertise covers modern frontend frameworks like ReactJS, Angular, and Vue.js, alongside backend technologies such as Node.js, .NET Core, Django, and Spring Boot.<br><br>
     We utilize integrated stacks like MERN (MongoDB, Express, React, Node.js), MEAN (MongoDB, Express, Angular, Node.js), and LAMP (Linux, Apache, MySQL, PHP) to streamline development and accelerate time to market.<br><br>
     By managing the entire technology stack, we ensure your applications are scalable, maintainable, and provide smooth user experiences from the client interface to the server logic and database management.`,
-    technologies: ['MERN Stack', 'MEAN Stack', 'LAMP Stack', '.NET Stack', 'T3 Stack', 'JAMstack'],
-  icon: 'layers',
-  image: '/tech6.webp',
-  heroImage: '/tech6.webp',
-  features: [
-    {
-      title: 'Integrated Frontend & Backend',
+    technologies: [
+      "MERN Stack",
+      "MEAN Stack",
+      "LAMP Stack",
+      ".NET Stack",
+      "T3 Stack",
+      "JAMstack",
+    ],
+    icon: "layers",
+    image: "/tech6.webp",
+    heroImage: "/tech6.webp",
+    features: [
+      {
+        title: "Integrated Frontend & Backend",
+        description:
+          "Build seamless applications using popular frontend frameworks and robust backend platforms.",
+      },
+      {
+        title: "Modern Tech Stacks",
+        description:
+          "Expertise in MERN, MEAN, LAMP, and .NET full stack solutions for flexible and scalable apps.",
+      },
+      {
+        title: "Database & API Integration",
+        description:
+          "Design and implement efficient data storage and secure APIs connecting frontend and backend.",
+      },
+      {
+        title: "DevOps & Deployment",
+        description:
+          "Automate deployment pipelines and monitor app performance for continuous delivery.",
+      },
+    ],
+    benefits: [
+      "Simplify project management with one development team",
+      "Accelerate delivery with integrated technologies",
+      "Ensure consistent application architecture and performance",
+      "Easily scale and maintain your applications",
+    ],
+    useCases: [
+      {
+        title: "Custom Web Applications",
+        description:
+          "Create tailored business solutions from UI to data management.",
+      },
+      {
+        title: "SaaS Platforms",
+        description:
+          "Develop scalable software as a service with full stack architecture.",
+      },
+    ],
+    faq: [
+      {
+        question: "What are the advantages of full stack development?",
+        answer:
+          "Full stack development provides a holistic approach, faster delivery, easier communication, and consistent architecture across the app.",
+      },
+      {
+        question: "Can you handle both frontend and backend?",
+        answer:
+          "Yes, our team is skilled in all layers of the stack to deliver complete end-to-end solutions.",
+      },
+    ],
+    process: [
+      {
+        title: "Requirement & Architecture",
+        description:
+          "Analyze project needs and design the full technology stack architecture.",
+        icon: "diagram-3",
+      },
+      {
+        title: "Development",
+        description:
+          "Implement frontend, backend, and database components iteratively.",
+        icon: "code-slash",
+      },
+      {
+        title: "Testing & Integration",
+        description:
+          "Conduct comprehensive testing and ensure smooth integration between layers.",
+        icon: "clipboard-check",
+      },
+      {
+        title: "Deployment & Support",
+        description:
+          "Deploy applications with CI/CD pipelines and provide ongoing maintenance.",
+        icon: "cloud-upload",
+      },
+    ],
+    cta: {
+      title: "Build Your Complete Web Solution with Our Full Stack Expertise!",
       description:
-        'Build seamless applications using popular frontend frameworks and robust backend platforms.',
+        "Get end-to-end development services that cover frontend, backend, and everything in between.",
+      button: {
+        text: "Get Started",
+        link: "/contact",
+      },
+      // image: '/cta-fullstack-development.jpg',
     },
-    {
-      title: 'Modern Tech Stacks',
-      description:
-        'Expertise in MERN, MEAN, LAMP, and .NET full stack solutions for flexible and scalable apps.',
-    },
-    {
-      title: 'Database & API Integration',
-      description:
-        'Design and implement efficient data storage and secure APIs connecting frontend and backend.',
-    },
-    {
-      title: 'DevOps & Deployment',
-      description:
-        'Automate deployment pipelines and monitor app performance for continuous delivery.',
-    },
-  ],
-  benefits: [
-    'Simplify project management with one development team',
-    'Accelerate delivery with integrated technologies',
-    'Ensure consistent application architecture and performance',
-    'Easily scale and maintain your applications',
-  ],
-  useCases: [
-    {
-      title: 'Custom Web Applications',
-      description:
-        'Create tailored business solutions from UI to data management.',
-    },
-    {
-      title: 'SaaS Platforms',
-      description:
-        'Develop scalable software as a service with full stack architecture.',
-    },
-  ],
-  faq: [
-    {
-      question: 'What are the advantages of full stack development?',
-      answer:
-        'Full stack development provides a holistic approach, faster delivery, easier communication, and consistent architecture across the app.',
-    },
-    {
-      question: 'Can you handle both frontend and backend?',
-      answer:
-        'Yes, our team is skilled in all layers of the stack to deliver complete end-to-end solutions.',
-    },
-  ],
-  process: [
-    {
-      title: 'Requirement & Architecture',
-      description:
-        'Analyze project needs and design the full technology stack architecture.',
-      icon: 'diagram-3',
-    },
-    {
-      title: 'Development',
-      description:
-        'Implement frontend, backend, and database components iteratively.',
-      icon: 'code-slash',
-    },
-    {
-      title: 'Testing & Integration',
-      description:
-        'Conduct comprehensive testing and ensure smooth integration between layers.',
-      icon: 'clipboard-check',
-    },
-    {
-      title: 'Deployment & Support',
-      description:
-        'Deploy applications with CI/CD pipelines and provide ongoing maintenance.',
-      icon: 'cloud-upload',
-    },
-  ],
-  cta: {
-    title: 'Build Your Complete Web Solution with Our Full Stack Expertise!',
-    description:
-      'Get end-to-end development services that cover frontend, backend, and everything in between.',
-    button: {
-      text: 'Get Started',
-      link: '/contact',
-    },
-    // image: '/cta-fullstack-development.jpg',
   },
-},
-{
-  name: 'Cloud Development',
-  tagline: 'Leverage the Power of the Cloud for Scalable and Secure Solutions',
-  description:
-    'Move your applications and infrastructure to the cloud with expert solutions in AWS, Azure, and Google Cloud. We help you scale effortlessly while ensuring performance and cost efficiency.',
-  overview: `Cloud development allows businesses to scale applications, reduce infrastructure costs, and enhance availability. We specialize in AWS, Microsoft Azure, and Google Cloud Platform (GCP) — building cloud-native applications, migrating legacy systems, and managing scalable infrastructure.<br><br>
+  {
+    name: "Cloud Development",
+    tagline:
+      "Leverage the Power of the Cloud for Scalable and Secure Solutions",
+    description:
+      "Move your applications and infrastructure to the cloud with expert solutions in AWS, Azure, and Google Cloud. We help you scale effortlessly while ensuring performance and cost efficiency.",
+    overview: `Cloud development allows businesses to scale applications, reduce infrastructure costs, and enhance availability. We specialize in AWS, Microsoft Azure, and Google Cloud Platform (GCP) — building cloud-native applications, migrating legacy systems, and managing scalable infrastructure.<br><br>
     Our services include serverless architecture (AWS Lambda, Azure Functions), DevOps automation (CI/CD with GitHub Actions, Azure DevOps, Jenkins), containerization (Docker, Kubernetes), and managed databases (RDS, Firestore, CosmosDB).<br><br>
     Whether you're launching a new product or modernizing an existing one, we ensure your cloud setup is secure, scalable, and future-ready.`,
-    technologies: ['AWS', 'Azure', 'Google Cloud', 'Docker', 'Kubernetes', 'Firebase', 'Lambda'],
-  icon: 'cloud',
-  image: '/tech7.webp',
-  heroImage: '/tech7.webp',
-  features: [
-    {
-      title: 'Multi-Cloud Expertise',
-      description: 'AWS, Azure, and GCP deployments for high availability and global reach.',
-    },
-    {
-      title: 'Serverless & Microservices',
-      description: 'Build event-driven, cost-effective systems with minimal operational overhead.',
-    },
-    {
-      title: 'CI/CD & DevOps Automation',
-      description: 'Automate builds, tests, and deployments using modern DevOps pipelines.',
-    },
-    {
-      title: 'Cloud Security & Monitoring',
-      description: 'Ensure security with IAM, encryption, and real-time monitoring tools.',
-    },
-  ],
-  benefits: [
-    'Scale apps automatically based on user demand',
-    'Reduce infrastructure maintenance and costs',
-    'Improve security and disaster recovery',
-    'Speed up development with managed services',
-  ],
-  useCases: [
-    {
-      title: 'Scalable SaaS Platforms',
-      description: 'Host and scale SaaS products globally using cloud-native services.',
-    },
-    {
-      title: 'Cloud Migration',
-      description: 'Migrate existing apps and databases to the cloud securely.',
-    },
-  ],
-  faq: [
-    {
-      question: 'Which cloud platform should I choose?',
-      answer:
-        'It depends on your requirements — AWS is highly flexible, Azure integrates well with Microsoft products, and GCP excels in analytics and AI.',
-    },
-    {
-      question: 'Is cloud development secure?',
-      answer:
-        'Yes, we follow best practices for cloud security including encryption, access controls, and compliance.',
-    },
-  ],
-  process: [
-    {
-      title: 'Cloud Architecture Planning',
-      description: 'Design scalable and secure cloud architecture.',
-      icon: 'diagram-3',
-    },
-    {
-      title: 'Development & Migration',
-      description: 'Develop new cloud apps or migrate existing infrastructure.',
-      icon: 'cloud-upload',
-    },
-    {
-      title: 'Testing & Optimization',
-      description: 'Ensure performance and cost-efficiency with continuous testing.',
-      icon: 'speedometer',
-    },
-    {
-      title: 'Monitoring & Scaling',
-      description: 'Implement monitoring tools and auto-scaling systems.',
-      icon: 'graph-up-arrow',
-    },
-  ],
-  cta: {
-    title: 'Ready to Take Your Business to the Cloud?',
-    description:
-      'Let us help you design, develop, and scale secure cloud-native solutions that meet your goals.',
-    button: {
-      text: 'Talk to Us',
-      link: '/contact',
+    technologies: [
+      "AWS",
+      "Azure",
+      "Google Cloud",
+      "Docker",
+      "Kubernetes",
+      "Firebase",
+      "Lambda",
+    ],
+    icon: "cloud",
+    image: "/tech7.webp",
+    heroImage: "/tech7.webp",
+    features: [
+      {
+        title: "Multi-Cloud Expertise",
+        description:
+          "AWS, Azure, and GCP deployments for high availability and global reach.",
+      },
+      {
+        title: "Serverless & Microservices",
+        description:
+          "Build event-driven, cost-effective systems with minimal operational overhead.",
+      },
+      {
+        title: "CI/CD & DevOps Automation",
+        description:
+          "Automate builds, tests, and deployments using modern DevOps pipelines.",
+      },
+      {
+        title: "Cloud Security & Monitoring",
+        description:
+          "Ensure security with IAM, encryption, and real-time monitoring tools.",
+      },
+    ],
+    benefits: [
+      "Scale apps automatically based on user demand",
+      "Reduce infrastructure maintenance and costs",
+      "Improve security and disaster recovery",
+      "Speed up development with managed services",
+    ],
+    useCases: [
+      {
+        title: "Scalable SaaS Platforms",
+        description:
+          "Host and scale SaaS products globally using cloud-native services.",
+      },
+      {
+        title: "Cloud Migration",
+        description:
+          "Migrate existing apps and databases to the cloud securely.",
+      },
+    ],
+    faq: [
+      {
+        question: "Which cloud platform should I choose?",
+        answer:
+          "It depends on your requirements — AWS is highly flexible, Azure integrates well with Microsoft products, and GCP excels in analytics and AI.",
+      },
+      {
+        question: "Is cloud development secure?",
+        answer:
+          "Yes, we follow best practices for cloud security including encryption, access controls, and compliance.",
+      },
+    ],
+    process: [
+      {
+        title: "Cloud Architecture Planning",
+        description: "Design scalable and secure cloud architecture.",
+        icon: "diagram-3",
+      },
+      {
+        title: "Development & Migration",
+        description:
+          "Develop new cloud apps or migrate existing infrastructure.",
+        icon: "cloud-upload",
+      },
+      {
+        title: "Testing & Optimization",
+        description:
+          "Ensure performance and cost-efficiency with continuous testing.",
+        icon: "speedometer",
+      },
+      {
+        title: "Monitoring & Scaling",
+        description: "Implement monitoring tools and auto-scaling systems.",
+        icon: "graph-up-arrow",
+      },
+    ],
+    cta: {
+      title: "Ready to Take Your Business to the Cloud?",
+      description:
+        "Let us help you design, develop, and scale secure cloud-native solutions that meet your goals.",
+      button: {
+        text: "Talk to Us",
+        link: "/contact",
+      },
     },
   },
-}
 
   // {
   //   name: 'Web & Mobile Development',
   //   tagline: 'Build Exceptional Web & Mobile Experiences',
   //   description:
   //     'Empower your digital presence with cutting-edge technologies for responsive web and mobile app development. From sleek frontend designs to robust backend systems, we deliver comprehensive solutions tailored to your needs.',
-  //   overview: `Web and mobile development lies at the core of digital transformation, enabling businesses to thrive in an ever-changing marketplace. Our expertise includes advanced frontend technologies like ReactJS, Angular, Astro, and Vue.js, which help create dynamic and engaging user interfaces. <br><br> 
-  //     For backend development, we rely on secure and scalable platforms such as Node.js, .NET, Java, and Django, ensuring robust performance. <br><br> 
-  //     Whether you need full-stack solutions like MERN, LAMP, or .NET, or specialized web and mobile applications, we deliver tailored solutions designed to meet your specific goals.<br> <br> 
+  //   overview: `Web and mobile development lies at the core of digital transformation, enabling businesses to thrive in an ever-changing marketplace. Our expertise includes advanced frontend technologies like ReactJS, Angular, Astro, and Vue.js, which help create dynamic and engaging user interfaces. <br><br>
+  //     For backend development, we rely on secure and scalable platforms such as Node.js, .NET, Java, and Django, ensuring robust performance. <br><br>
+  //     Whether you need full-stack solutions like MERN, LAMP, or .NET, or specialized web and mobile applications, we deliver tailored solutions designed to meet your specific goals.<br> <br>
   //     Our commitment to responsive and mobile-first design ensures that your applications deliver seamless experiences across devices, empowering your business to connect with users wherever they are.`,
   //   icon: 'laptop',
   //   image: '/tech1.webp',
@@ -1261,232 +1419,232 @@ const technology = [
 
 const solutions = [
   {
-    name: 'Digital Transformation',
-    tagline: 'Empower Your Business with Innovative Digital Solutions',
+    name: "Digital Transformation",
+    tagline: "Empower Your Business with Innovative Digital Solutions",
     description:
-      'Leverage cutting-edge technologies to streamline operations, improve decision-making, and drive business growth with our Digital Transformation services.',
-    heroImage: '/solution1.webp',
+      "Leverage cutting-edge technologies to streamline operations, improve decision-making, and drive business growth with our Digital Transformation services.",
+    heroImage: "/solution1.webp",
     overview:
-      'Digital Transformation is no longer a choice but a necessity for businesses aiming to remain competitive in today’s fast-paced world. Our services harness the power of industry-leading technologies such as Power Automate, RPA tools like UiPath and Automation Anywhere, and AI platforms like Azure AI and Google AI to revolutionize your operations. By automating repetitive tasks, streamlining workflows, and unlocking actionable insights from your data, we help you save time, reduce costs, and improve decision-making. Business Process Management (BPM) solutions using Nintex and K2 further ensure that your processes are optimized for maximum efficiency and compliance.  <br><br>  With our Digital Transformation services, your business can achieve a seamless blend of automation, integration, and intelligence. Whether you need to automate simple workflows or overhaul complex systems, we offer end-to-end solutions tailored to your goals. Our approach also emphasizes scalability, ensuring that as your business grows, your systems evolve to meet new demands. From enhancing operational efficiency to providing predictive analytics that drive strategic planning, we enable you to future-proof your business in an ever-evolving digital ecosystem.',
+      "Digital Transformation is no longer a choice but a necessity for businesses aiming to remain competitive in today’s fast-paced world. Our services harness the power of industry-leading technologies such as Power Automate, RPA tools like UiPath and Automation Anywhere, and AI platforms like Azure AI and Google AI to revolutionize your operations. By automating repetitive tasks, streamlining workflows, and unlocking actionable insights from your data, we help you save time, reduce costs, and improve decision-making. Business Process Management (BPM) solutions using Nintex and K2 further ensure that your processes are optimized for maximum efficiency and compliance.  <br><br>  With our Digital Transformation services, your business can achieve a seamless blend of automation, integration, and intelligence. Whether you need to automate simple workflows or overhaul complex systems, we offer end-to-end solutions tailored to your goals. Our approach also emphasizes scalability, ensuring that as your business grows, your systems evolve to meet new demands. From enhancing operational efficiency to providing predictive analytics that drive strategic planning, we enable you to future-proof your business in an ever-evolving digital ecosystem.",
 
     process: [
       {
-        title: 'Assessment & Strategy',
+        title: "Assessment & Strategy",
         description:
-          'Analyze existing processes and craft a tailored digital transformation roadmap.',
+          "Analyze existing processes and craft a tailored digital transformation roadmap.",
       },
       {
-        title: 'Implementation',
+        title: "Implementation",
         description:
-          'Deploy workflow automation, RPA tools, and AI solutions to enhance efficiency.',
+          "Deploy workflow automation, RPA tools, and AI solutions to enhance efficiency.",
       },
       {
-        title: 'Optimization',
+        title: "Optimization",
         description:
-          'Continuously monitor and improve processes for sustained growth and scalability.',
+          "Continuously monitor and improve processes for sustained growth and scalability.",
       },
     ],
     features: [
       {
-        title: 'Workflow Automation',
+        title: "Workflow Automation",
         description:
-          'Streamline business operations using tools like Power Automate and RPA solutions.',
-        icon: 'gear',
+          "Streamline business operations using tools like Power Automate and RPA solutions.",
+        icon: "gear",
       },
       {
-        title: 'AI-Driven Insights',
+        title: "AI-Driven Insights",
         description:
-          'Harness the power of Azure AI or Google AI for predictive analytics and smarter decision-making.',
-        icon: 'robot',
+          "Harness the power of Azure AI or Google AI for predictive analytics and smarter decision-making.",
+        icon: "robot",
       },
       {
-        title: 'BPM Integration',
+        title: "BPM Integration",
         description:
-          'Enhance process efficiency with Business Process Management tools like Nintex or K2.',
-        icon: 'pie-chart',
+          "Enhance process efficiency with Business Process Management tools like Nintex or K2.",
+        icon: "pie-chart",
       },
       {
-        title: 'Scalability & Agility',
+        title: "Scalability & Agility",
         description:
-          'Enable rapid adaptation to changing business needs through flexible and scalable solutions.',
-        icon: 'globe',
+          "Enable rapid adaptation to changing business needs through flexible and scalable solutions.",
+        icon: "globe",
       },
     ],
     faq: [
       {
-        question: 'What industries benefit from Digital Transformation?',
+        question: "What industries benefit from Digital Transformation?",
         answer:
-          'Industries like retail, healthcare, manufacturing, and finance can greatly benefit by improving efficiency, customer experience, and decision-making.',
+          "Industries like retail, healthcare, manufacturing, and finance can greatly benefit by improving efficiency, customer experience, and decision-making.",
       },
       {
         question:
-          'How long does a typical Digital Transformation project take?',
+          "How long does a typical Digital Transformation project take?",
         answer:
-          'The timeline depends on the project scope, typically ranging from 6 weeks to 6 months.',
+          "The timeline depends on the project scope, typically ranging from 6 weeks to 6 months.",
       },
       {
-        question: 'Do you offer post-implementation support?',
+        question: "Do you offer post-implementation support?",
         answer:
-          'Yes, we provide ongoing support and optimization services to ensure your systems run smoothly.',
+          "Yes, we provide ongoing support and optimization services to ensure your systems run smoothly.",
       },
     ],
     cta: {
-      title: 'Embrace the Future with Digital Transformation',
+      title: "Embrace the Future with Digital Transformation",
       description:
-        'Revolutionize your workflows with advanced automation, AI-driven insights, and seamless business process management. Let’s make your digital transformation journey a success.',
-      buttonText: 'Start Your Transformation',
-      buttonLink: '/contact',
+        "Revolutionize your workflows with advanced automation, AI-driven insights, and seamless business process management. Let’s make your digital transformation journey a success.",
+      buttonText: "Start Your Transformation",
+      buttonLink: "/contact",
     },
   },
   {
-    name: 'Enterprise Applications',
+    name: "Enterprise Applications",
     tagline:
-      'Streamline Your Business Operations with Custom Enterprise Applications',
+      "Streamline Your Business Operations with Custom Enterprise Applications",
     description:
-      'Harness the power of technology to build robust CRM, ERP, and enterprise portals tailored to your business needs.',
-    heroImage: '/solution2.webp',
+      "Harness the power of technology to build robust CRM, ERP, and enterprise portals tailored to your business needs.",
+    heroImage: "/solution2.webp",
     overview:
-      'Enterprise Applications are the backbone of modern businesses, driving productivity, collaboration, and scalability. Our solutions include CRM and ERP systems built using SharePoint and Power Apps, offering centralized control over customer relationships, resource planning, and business operations.<br><br>These tools empower organizations to automate processes, manage data efficiently, and achieve greater visibility across departments. With built-in analytics and seamless reporting, your team can make data-driven decisions in real time.<br><br>Additionally, we deliver custom portals developed using advanced frameworks like React, Angular, and Astro, tailored to meet your unique requirements. Whether you need a customer-facing platform, a partner portal, or an employee collaboration tool, our portals ensure intuitive designs, responsive interfaces, and robust functionality.<br><br>By leveraging state-of-the-art technology, we ensure our enterprise applications are scalable, secure, and future-ready, enabling businesses to stay ahead in a competitive landscape.',
+      "Enterprise Applications are the backbone of modern businesses, driving productivity, collaboration, and scalability. Our solutions include CRM and ERP systems built using SharePoint and Power Apps, offering centralized control over customer relationships, resource planning, and business operations.<br><br>These tools empower organizations to automate processes, manage data efficiently, and achieve greater visibility across departments. With built-in analytics and seamless reporting, your team can make data-driven decisions in real time.<br><br>Additionally, we deliver custom portals developed using advanced frameworks like React, Angular, and Astro, tailored to meet your unique requirements. Whether you need a customer-facing platform, a partner portal, or an employee collaboration tool, our portals ensure intuitive designs, responsive interfaces, and robust functionality.<br><br>By leveraging state-of-the-art technology, we ensure our enterprise applications are scalable, secure, and future-ready, enabling businesses to stay ahead in a competitive landscape.",
     process: [
       {
-        title: 'Analysis and Planning',
+        title: "Analysis and Planning",
         description:
-          'Collaborate to identify pain points and create a roadmap for enterprise application development.',
+          "Collaborate to identify pain points and create a roadmap for enterprise application development.",
       },
       {
-        title: 'Development and Integration',
+        title: "Development and Integration",
         description:
-          'Build and integrate tailored CRM, ERP, or portal solutions using modern technologies.',
+          "Build and integrate tailored CRM, ERP, or portal solutions using modern technologies.",
       },
       {
-        title: 'Deployment and Support',
+        title: "Deployment and Support",
         description:
-          'Launch the application and provide ongoing support to ensure smooth operations.',
+          "Launch the application and provide ongoing support to ensure smooth operations.",
       },
     ],
     features: [
       {
-        title: 'Custom CRM Solutions',
+        title: "Custom CRM Solutions",
         description:
-          'Streamline customer interactions with custom-built CRMs designed for efficient data management and analytics.',
-        icon: 'person-circle',
+          "Streamline customer interactions with custom-built CRMs designed for efficient data management and analytics.",
+        icon: "person-circle",
       },
       {
-        title: 'ERP Systems',
+        title: "ERP Systems",
         description:
-          'Centralize your operations with scalable ERP systems tailored to your business processes.',
-        icon: 'server',
+          "Centralize your operations with scalable ERP systems tailored to your business processes.",
+        icon: "server",
       },
       {
-        title: 'Custom Business Portals',
+        title: "Custom Business Portals",
         description:
-          'Enable seamless collaboration and data sharing with tailored business portals for employees and partners.',
-        icon: 'door-open',
+          "Enable seamless collaboration and data sharing with tailored business portals for employees and partners.",
+        icon: "door-open",
       },
       {
-        title: 'Scalability and Flexibility',
+        title: "Scalability and Flexibility",
         description:
-          'Build applications that grow with your business, ensuring adaptability to changing needs.',
-        icon: 'rocket',
+          "Build applications that grow with your business, ensuring adaptability to changing needs.",
+        icon: "rocket",
       },
     ],
     faq: [
       {
-        question: 'Can these applications integrate with existing systems?',
+        question: "Can these applications integrate with existing systems?",
         answer:
-          'Yes, we ensure seamless integration with existing infrastructure, including legacy systems and third-party tools.',
+          "Yes, we ensure seamless integration with existing infrastructure, including legacy systems and third-party tools.",
       },
       {
         question:
-          'What industries benefit the most from enterprise applications?',
+          "What industries benefit the most from enterprise applications?",
         answer:
-          'Enterprise applications are versatile and cater to industries like retail, healthcare, manufacturing, and professional services.',
+          "Enterprise applications are versatile and cater to industries like retail, healthcare, manufacturing, and professional services.",
       },
       {
         question:
-          'How long does it take to develop a custom enterprise application?',
+          "How long does it take to develop a custom enterprise application?",
         answer:
-          'Timelines vary based on complexity, but typical development takes 8-16 weeks for standard applications.',
+          "Timelines vary based on complexity, but typical development takes 8-16 weeks for standard applications.",
       },
     ],
     cta: {
-      title: 'Elevate Your Business with Enterprise Applications',
+      title: "Elevate Your Business with Enterprise Applications",
       description:
-        'Simplify operations with custom CRM, ERP, and portal solutions tailored to your unique business needs. Connect with us to unlock your organization’s full potential.',
-      buttonText: 'Get a Custom Solution',
-      buttonLink: '/contact',
+        "Simplify operations with custom CRM, ERP, and portal solutions tailored to your unique business needs. Connect with us to unlock your organization’s full potential.",
+      buttonText: "Get a Custom Solution",
+      buttonLink: "/contact",
     },
   },
   {
-    name: 'Customer-Centric Platforms',
-    tagline: 'Deliver Exceptional Customer Experiences with Tailored Solutions',
+    name: "Customer-Centric Platforms",
+    tagline: "Deliver Exceptional Customer Experiences with Tailored Solutions",
     description:
-      'Empower your business with e-commerce platforms and data analytics dashboards that prioritize customer satisfaction and drive engagement.',
-    heroImage: '/solution3.webp',
+      "Empower your business with e-commerce platforms and data analytics dashboards that prioritize customer satisfaction and drive engagement.",
+    heroImage: "/solution3.webp",
     overview: `In today’s competitive landscape, businesses need platforms that not only meet customer expectations but exceed them.<br><br>
     Our Customer-Centric Platforms are designed to provide seamless and engaging user experiences. We develop robust e-commerce platforms using modern frameworks like React, Node.js, and Astro, ensuring fast, secure, and scalable solutions. These platforms are equipped with advanced features such as personalized recommendations, streamlined checkouts, and mobile responsiveness to maximize customer satisfaction and retention.<br><br>
     Additionally, our expertise in building data analytics dashboards with tools like Power BI and Tableau enables businesses to gain actionable insights into customer behavior, preferences, and trends. These dashboards transform raw data into visual stories, empowering you to make informed decisions that enhance your products and services.<br><br>
     By combining cutting-edge technology with a deep understanding of customer needs, we help businesses foster stronger connections and achieve sustainable growth.`,
     process: [
       {
-        title: 'Platform Development',
+        title: "Platform Development",
         description:
-          'Build responsive e-commerce platforms or custom dashboards tailored to business needs.',
+          "Build responsive e-commerce platforms or custom dashboards tailored to business needs.",
       },
       {
-        title: 'Data Integration',
+        title: "Data Integration",
         description:
-          'Integrate customer data sources to ensure unified analytics and personalized experiences.',
+          "Integrate customer data sources to ensure unified analytics and personalized experiences.",
       },
       {
-        title: 'Launch & Optimization',
+        title: "Launch & Optimization",
         description:
-          'Deploy the platform with thorough testing and continuously improve based on customer feedback.',
+          "Deploy the platform with thorough testing and continuously improve based on customer feedback.",
       },
     ],
     features: [
       {
-        title: 'Responsive E-Commerce Platforms',
+        title: "Responsive E-Commerce Platforms",
         description:
-          'Develop feature-rich e-commerce sites optimized for all devices and customer journeys.',
-        icon: 'bag-check', // Bootstrap icon
+          "Develop feature-rich e-commerce sites optimized for all devices and customer journeys.",
+        icon: "bag-check", // Bootstrap icon
       },
       {
-        title: 'Powerful Data Dashboards',
+        title: "Powerful Data Dashboards",
         description:
-          'Create interactive dashboards with Power BI or Tableau for actionable customer insights.',
-        icon: 'graph-up', // Bootstrap icon
+          "Create interactive dashboards with Power BI or Tableau for actionable customer insights.",
+        icon: "graph-up", // Bootstrap icon
       },
       {
-        title: 'Personalization at Scale',
+        title: "Personalization at Scale",
         description:
-          'Enable personalized recommendations and targeted experiences based on customer data.',
-        icon: 'stars', // Bootstrap icon
+          "Enable personalized recommendations and targeted experiences based on customer data.",
+        icon: "stars", // Bootstrap icon
       },
     ],
     faq: [
       {
-        question: 'Can the platforms handle high traffic?',
+        question: "Can the platforms handle high traffic?",
         answer:
-          'Yes, we design scalable platforms that maintain performance during peak traffic.',
+          "Yes, we design scalable platforms that maintain performance during peak traffic.",
       },
       {
-        question: 'Do you offer integration with payment gateways?',
+        question: "Do you offer integration with payment gateways?",
         answer:
-          'Absolutely. We support integration with leading payment gateways for secure and seamless transactions.',
+          "Absolutely. We support integration with leading payment gateways for secure and seamless transactions.",
       },
       {
-        question: 'Are the analytics dashboards customizable?',
+        question: "Are the analytics dashboards customizable?",
         answer:
-          'Yes, our dashboards are fully customizable to match your business goals and metrics.',
+          "Yes, our dashboards are fully customizable to match your business goals and metrics.",
       },
     ],
     cta: {
-      title: 'Create Exceptional Customer Experiences',
+      title: "Create Exceptional Customer Experiences",
       description:
-        'Enhance engagement and analytics with cutting-edge e-commerce platforms and intuitive dashboards. Partner with us to deliver value-driven customer solutions.',
-      buttonText: 'Build Your Platform',
-      buttonLink: '/contact',
+        "Enhance engagement and analytics with cutting-edge e-commerce platforms and intuitive dashboards. Partner with us to deliver value-driven customer solutions.",
+      buttonText: "Build Your Platform",
+      buttonLink: "/contact",
     },
   },
 
@@ -1762,305 +1920,328 @@ const solutions = [
 
 const projects = [
   {
-    title: 'LiteCloud: Future-Ready Practice Management Tool',
-    category: 'Practice Management',
+    title: "LiteCloud: Future-Ready Practice Management Tool",
+    category: "Practice Management",
     description:
-      'An advanced practice management tool designed for Chartered Accountants (CAs) and Certified Public Accountants (CPAs). Its flexible architecture ensures it can be customized to meet the needs of other professionals, such as lawyers, with minimal modifications.',
-    image: '/project1.webp',
-    client: 'JHS Associates LLP',
-    duration: '8+ months (ongoing)',
-    technologies: ['SharePoint', 'Power BI', 'Microsoft Outlook Integration', 'React'],
-    slug: 'paperlite-practice-management-tool',
+      "An advanced practice management tool designed for Chartered Accountants (CAs) and Certified Public Accountants (CPAs). Its flexible architecture ensures it can be customized to meet the needs of other professionals, such as lawyers, with minimal modifications.",
+    image: "/project1.webp",
+    client: "JHS Associates LLP",
+    duration: "8+ months (ongoing)",
+    technologies: [
+      "SharePoint",
+      "Power BI",
+      "Microsoft Outlook Integration",
+      "React",
+    ],
+    slug: "paperlite-practice-management-tool",
     challenge:
-      'Inefficient manual processes and scattered workflows for CAs and CPAs led to difficulties in managing tasks, client relationships, and accessing real-time analytics. The client also wanted a scalable solution that could cater to other professions, such as lawyers, with minimal effort.',
+      "Inefficient manual processes and scattered workflows for CAs and CPAs led to difficulties in managing tasks, client relationships, and accessing real-time analytics. The client also wanted a scalable solution that could cater to other professions, such as lawyers, with minimal effort.",
     solution:
-      'Built a modular platform offering CRM, task tracking, client database management, and automated workflows. Power BI dashboards provided real-time insights, while dynamic templates and recurring task automation streamlined operations. The design allows for quick adaptation to legal practices with features like case management and legal document templates.',
+      "Built a modular platform offering CRM, task tracking, client database management, and automated workflows. Power BI dashboards provided real-time insights, while dynamic templates and recurring task automation streamlined operations. The design allows for quick adaptation to legal practices with features like case management and legal document templates.",
     results: [
-      'Streamlined task and client management for CAs and CPAs',
-      'Real-time insights enabled better operational decisions',
-      'Significant time savings with automated workflows',
-      'Future-proof design to expand into legal practice management',
+      "Streamlined task and client management for CAs and CPAs",
+      "Real-time insights enabled better operational decisions",
+      "Significant time savings with automated workflows",
+      "Future-proof design to expand into legal practice management",
     ],
   },
   {
-  title: 'Customer Complaint Management App for Nama Supply',
-  category: 'Internal Tool – Workflow Automation',
-  description:
-    'A complaint resolution system powered by K2 Nintex that streamlines customer service workflows through automated approvals, real-time data integrations, and multi-channel notifications.',
-  image: '/project8.jpg',
-  client: 'Nama Supply',
-  duration: '5+ months (ongoing)',
-  technologies: ['K2 Nintex', 'SQL UserUM', 'Orion API', 'SMS Gateway'],
-  slug: 'customer-complaint-management-app',
-  challenge:
-    'Nama Supply faced delays and inefficiencies in handling customer complaints, with manual approvals and lack of integration between systems leading to slow resolution and poor customer communication.',
-  solution:
-    'Designed and implemented a robust complaint management system using K2 Nintex. The solution includes a 4-level dynamic approval flow, integration with SQL UserUM for user validation, and real-time billing data retrieval via Orion API. Customers receive automated SMS updates at each stage, improving transparency and reducing resolution time.',
-  results: [
-    'Reduced complaint resolution time by over 40%',
-    'Integrated user validation and billing data in real-time',
-    'Enabled automated notifications to customers via SMS',
-    'Improved operational efficiency with scalable approval workflows',
-  ],
-},
-{
-  title: 'PayNest: Unified BBPS + AEPS Platform (Web, Mobile, Admin)',
-  category: 'Fintech Suite – Mobile, Web & Admin',
-  description:
-    'PayNest is a full-stack digital finance platform offering BBPS utility payments and AEPS banking services through mobile and web apps. Designed for both users and agents, it includes a robust admin portal for transaction monitoring, agent management, and real-time support.',
-  image: '/project6.jpg',
-  client: 'FinLink Micro Services',
-  duration: '5+ months (ongoing)',
-  technologies: ['React Native', 'ReactJS', 'Node.js', 'MongoDB', 'BBPS & AEPS APIs'],
-  slug: 'paynest-unified-fintech-suite',
-  challenge:
-    'The client aimed to digitize utility payments and basic banking for rural and semi-urban users while enabling agents to operate via both mobile and web. They also needed a backend system to manage transactions, monitor fraud, and handle commissions.',
-  solution:
-    'Developed a cross-platform ecosystem with a React Native mobile app for users, a ReactJS web portal for agents, and a secure admin dashboard. Integrated BBPS for bill payments, AEPS for Aadhaar banking, real-time APIs, and SMS alerts. Admins can monitor activity, handle refunds, and manage agent performance with role-based access.',
-  results: [
-    'Over 5,000 monthly transactions handled across platforms',
-    '300+ agents onboarded through the web portal',
-    'Resolution time for failed transactions reduced by 60%',
-    'Future-ready architecture for UPI, micro-loans, and multi-lingual support',
-  ],
-},
-{
-  title: 'FitLife: Native Fitness & Workout App',
-  category: 'Mobile App (Native iOS & Android)',
-  description:
-    'FitLife is a dedicated native fitness and workout app, developed separately for iOS and Android platforms. It helps users plan workouts, track progress, and stay motivated through personalized plans, daily tracking, and integrated push notifications.',
-  image: '/project7.jpg',
-  client: 'FitLife Solutions',
-  duration: '4+ months',
-  technologies: ['Swift (iOS)', 'Kotlin (Android)', 'Firebase', 'Xcode', 'Android Studio'],
-  slug: 'fitlife-native-fitness-app',
-  challenge:
-    'The client wanted a truly native mobile experience, ensuring best-in-class performance and smooth integration with device features such as HealthKit and Google Fit. They required offline capability, real-time data sync, and consistent UI aligned with each platform’s design language.',
-  solution:
-    'Developed fully native apps using Swift for iOS and Kotlin for Android, leveraging platform-specific SDKs and design guidelines. Integrated Firebase for secure authentication and real-time data syncing. Implemented HealthKit (iOS) and Google Fit (Android) integration for holistic fitness tracking, along with offline workout access and personalized push notifications.',
-  results: [
-    'Achieved high user satisfaction through a fluid native experience',
-    'Improved engagement with push notifications and gamified achievements',
-    'Offline workouts ensured usability without connectivity',
-    'Integrated seamlessly with HealthKit and Google Fit for accurate tracking'
-  ],
-},
-{
-  title: 'Revenue360: Unified Transaction & Revenue Management Platform',
-  category: 'Business Process Automation – Power Platform',
-  description:
-    'A centralized solution designed to streamline client transaction tracking and revenue analysis using Power Platform. Combines a custom PowerApps interface, SharePoint backend, Power BI dashboards, and Power Automate flows into a single-window experience.',
-  image: '/project9.jpg',
-  client: 'Internal Team Use / Case Study',
-  duration: '1.5 months',
-  technologies: ['PowerApps (Canvas App)', 'SharePoint', 'Power BI', 'Power Automate'],
-  slug: 'revenue360-client-transaction-tracker',
-  challenge:
-    'Managing client transactions and revenue processes across multiple tools caused data silos, delays in updates, and lack of real-time insights for stakeholders.',
-  solution:
-    'Built a responsive Canvas App for data input and access across devices. SharePoint was used as the secure and collaborative data source. Power BI visualized revenue and transaction patterns with category-level breakdowns. Power Automate triggered dataset refreshes directly from the app, enabling live analytics inside the app itself.',
-  results: [
-    'Created a true single-window interface to manage and monitor revenue flow',
-    'Enabled real-time Power BI updates without leaving the app',
-    'Improved collaboration through SharePoint-based data structure',
-    'Reduced reporting delays and improved decision-making for stakeholders',
-  ],
-},
-{
-  title: 'Wanderwise: Travel Agency Website',
-  category: 'Website – Informational',
-  description:
-    'A visually rich, mobile-optimized website for a travel agency, designed to showcase curated destinations, tour packages, and engage potential clients through impactful storytelling and intuitive design.',
-  image: '/project10.jpg',
-  client: 'Wanderwise Travels',
-  duration: '2 weeks',
-  technologies: ['Next.js', 'Tailwind CSS', 'Framer Motion'],
-  slug: 'wanderwise-travel-agency-website',
-  challenge:
-    'The agency needed a modern digital presence that reflected their brand identity, attracted leads, and presented travel offerings in a visually compelling format.',
-  solution:
-    'Developed a fast, SEO-friendly website with featured destination sections, travel inspiration blogs, photo galleries, and a sleek contact form. Animations powered by Framer Motion added a smooth user experience, while Tailwind CSS ensured clean, scalable styling.',
-  results: [
-    'Boosted client inquiries through improved brand presentation',
-    'Mobile-first responsive layout helped capture users on the go',
-    'Reduced bounce rate and improved engagement time',
-    'Created a flexible base for future additions like blogs or itineraries',
-  ],
-},
+    title: "Customer Complaint Management App for Nama Supply",
+    category: "Internal Tool – Workflow Automation",
+    description:
+      "A complaint resolution system powered by K2 Nintex that streamlines customer service workflows through automated approvals, real-time data integrations, and multi-channel notifications.",
+    image: "/project8.jpg",
+    client: "Nama Supply",
+    duration: "5+ months (ongoing)",
+    technologies: ["K2 Nintex", "SQL UserUM", "Orion API", "SMS Gateway"],
+    slug: "customer-complaint-management-app",
+    challenge:
+      "Nama Supply faced delays and inefficiencies in handling customer complaints, with manual approvals and lack of integration between systems leading to slow resolution and poor customer communication.",
+    solution:
+      "Designed and implemented a robust complaint management system using K2 Nintex. The solution includes a 4-level dynamic approval flow, integration with SQL UserUM for user validation, and real-time billing data retrieval via Orion API. Customers receive automated SMS updates at each stage, improving transparency and reducing resolution time.",
+    results: [
+      "Reduced complaint resolution time by over 40%",
+      "Integrated user validation and billing data in real-time",
+      "Enabled automated notifications to customers via SMS",
+      "Improved operational efficiency with scalable approval workflows",
+    ],
+  },
   {
-  title: 'AuraLegal: Modern Legal Firm Website',
-  category: 'Website Development',
-  description:
-    'A clean, SEO-optimized website designed for a legal consultancy firm. Built to establish credibility, showcase expertise, and streamline client inquiries through a structured and responsive layout.',
-  image: '/project2.jpg',
-  client: 'AuraLegal LLP',
-  duration: '3 weeks',
-  technologies: ['Next.js', 'Tailwind CSS', 'Framer Motion'],
-  slug: 'auralegal-law-firm-website',
-  challenge:
-    'The law firm lacked a strong digital presence and needed a professional platform to highlight its services, display team profiles, and enable client inquiries while maintaining a modern brand image.',
-  solution:
-    'Developed a fully responsive, fast-loading website using Next.js and Tailwind CSS. Integrated service listings, lawyer profiles, case study highlights, and a custom contact form. Added subtle animations using Framer Motion to enhance the user experience.',
-  results: [
-    'Enhanced online presence and trust with potential clients',
-    'Improved SEO ranking through server-side rendering',
-    'Streamlined client inquiries via structured contact form',
-    'Professional look aligned with the firms brand identity',
-  ],
-},
-{
-  title: 'ThreadCart: WooCommerce Clothing Store',
-  category: 'E-Commerce Website',
-  description:
-    'An elegant online store crafted for a clothing brand, offering smooth shopping experiences, category filtering, and secure checkout with modern design aesthetics.',
-  image: '/project3.jpg',
-  client: 'ThreadCart Apparel',
-  duration: '1 month',
-  technologies: ['WordPress', 'WooCommerce', 'Elementor'],
-  slug: 'threadcart-clothing-ecommerce',
-  challenge:
-    'The client needed a complete eCommerce platform for their growing fashion label, with customizable product displays, user-friendly shopping flows, and mobile responsiveness.',
-  solution:
-    'Developed a WooCommerce-based website using WordPress and Elementor. Included product categorization, discount coupon functionality, customer review sections, wishlist feature, and full mobile optimization.',
-  results: [
-    'Launched full-scale eCommerce store within 30 days',
-    'Increased product visibility through category filters',
-    'Boosted conversions with a fast, intuitive checkout experience',
-    'Fully mobile-optimized for modern shoppers',
-  ],
-},
-{
-  title: 'NestEdge Interiors: Portfolio Website for Designers',
-  category: 'Website Development',
-  description:
-    'A visually immersive website for an interior design firm to showcase projects, share service details, and attract new clients with a highly curated brand presence.',
-  image: '/project4.jpg',
-  client: 'NestEdge Interiors',
-  duration: '3 weeks',
-  technologies: ['Next.js', 'Tailwind CSS', 'Lightbox Gallery'],
-  slug: 'nestedge-interior-design-website',
-  challenge:
-    'The firm wanted a clean and sophisticated platform to display their portfolio, engage potential clients, and improve visibility for their local services.',
-  solution:
-    'Built a performance-optimized website using Next.js, featuring interactive image galleries, project filters, and mobile-friendly layouts. Contact form and service descriptions were included to support lead generation.',
-  results: [
-    'Professional showcase of 15+ interior design projects',
-    'Improved client engagement via intuitive navigation',
-    'Faster page loads and SEO boost through SSR',
-    'Brand-aligned layout with emphasis on visual storytelling',
-  ],
-},
-{
-  title: 'DecoDwell: Home Decor Online Store',
-  category: 'E-Commerce Website',
-  description:
-    'An eCommerce platform for handcrafted home decor, built to support product discovery, smooth shopping flow, and easy inventory management through WordPress and WooCommerce.',
-  image: '/project5.jpg',
-  client: 'DecoDwell Home Studio',
-  duration: '1.5 months',
-  technologies: ['WordPress', 'WooCommerce', 'Elementor'],
-  slug: 'decodwell-home-decor-ecommerce',
-  challenge:
-    'The client needed a platform to showcase and sell handcrafted home decor items, with a strong focus on design aesthetics and easy product management.',
-  solution:
-    'Created a WordPress WooCommerce store using Elementor for design flexibility. Implemented product filters, customer reviews, wishlists, and promotional banners. Optimized layouts for mobile and integrated secure payment gateways.',
-  results: [
-    'Smooth eCommerce experience with high user retention',
-    'Easy inventory and order management via WooCommerce',
-    'Increased conversions through aesthetic product layouts',
-    'Fully responsive and scalable for future product lines',
-  ],
-},
-{
-  title: 'AgencyPro: WordPress Responsive Landing Page',
-  category: 'Landing Page (WordPress)',
-  description:
-    'AgencyPro is a clean, modern WordPress landing page developed for BrightEdge Solutions — a creative agency looking to showcase their services, team, and expertise with a sleek, responsive online presence. The landing page is designed to drive inquiries and build trust with potential clients.',
-  image: '/project12.jpg',
-  client: 'BrightEdge Solutions',
-  duration: '1 month',
-  technologies: ['WordPress', 'Elementor', 'Custom CSS'],
-  slug: 'agencypro-wordpress-landing-page',
-  challenge:
-    'BrightEdge Solutions needed a versatile landing page that would clearly present their services and company highlights while staying easy to update without technical help. The page had to be fully responsive and optimized for conversions.',
-  solution:
-    'Designed the landing page in Figma and built it on WordPress using Elementor for flexible drag-and-drop editing. Added custom CSS for precise styling tweaks. Included well-structured sections for service overviews, company achievements, team members, client testimonials, and an integrated contact form. Prioritized SEO best practices and fast page load times.',
-  results: [
-    'Delivered a polished, conversion-focused landing page',
-    'Ensured seamless responsiveness on all devices',
-    'Empowered the agency team to edit content easily with Elementor',
-    'Improved online visibility and increased customer inquiries'
-  ],
-},
-{
-  title: 'HavenStay: Home Rentals Agency Website Design',
-  category: 'Website (WordPress)',
-  description:
-    'HavenStay is a modern WordPress website designed and developed for a boutique home rentals agency. The site showcases available properties, highlights agency services, and provides an easy way for potential clients to inquire about rentals — all within a clean, trustworthy design.',
-  image: '/project13.jpg',
-  client: 'HavenStay Rentals',
-  duration: '2 months',
-  technologies: ['WordPress', 'Elementor', 'Custom CSS'],
-  slug: 'havenstay-home-rentals-website',
-  challenge:
-    'HavenStay Rentals needed a website that would build trust with homeowners and renters alike. The goal was to present property listings attractively while keeping the site simple to update as new listings became available, all without using complex booking systems.',
-  solution:
-    'Designed a fresh, user-friendly layout in Figma, then built the site on WordPress using Elementor for flexible content editing. Developed custom listing sections, service pages, and a contact form for rental inquiries. Added subtle animations and clear calls-to-action to increase engagement. Optimized the site for fast loading and mobile responsiveness.',
-  results: [
-    'Launched a professional, easy-to-manage WordPress website',
-    'Created a trustworthy online presence to attract homeowners and renters',
-    'Enabled the agency team to update listings and content without coding',
-    'Improved lead generation through clear CTAs and contact options'
-  ],
-},
-{
-  title: 'PeopleCore: HR Management Admin Portal',
-  category: 'Web Application (.NET)',
-  description:
-    'PeopleCore is a robust HR management portal developed for a mid-sized organization to streamline all key HR processes. Built with ASP.NET Core MVC and SQL Server, the platform provides a centralized solution for employee onboarding, leave management, performance tracking, and internal communication, all within an intuitive, responsive interface.',
-  image: '/project14.jpg',
-  client: 'Synergen Solutions Inc.',
-  duration: '4 months',
-  technologies: ['ASP.NET Core MVC', 'SQL Server', 'REST API'],
-  slug: 'peoplecore-hr-admin-portal',
-  challenge:
-    'The client needed a unified intranet portal to replace multiple disconnected HR tools. They wanted secure role-based access for HR admins and employees, centralized records, and real-time performance tracking, all while ensuring an excellent user experience on desktop and mobile.',
-  solution:
-    'Designed a modern HR admin dashboard UI in Figma, then implemented it using ASP.NET Core MVC with SQL Server as the backend. Developed custom modules for onboarding, leave requests, appraisals, and announcements. Created secure REST APIs for future mobile app integration. Implemented granular user permissions for HR managers, team leads, and employees.',
-  results: [
-    'Centralized all HR processes in a single, easy-to-use portal',
-    'Improved employee experience and HR team efficiency',
-    'Reduced paperwork and manual tracking through automation',
-    'Enabled seamless future mobile app integration via REST APIs'
-  ],
-},
-{
-  title: 'DineFlow: Restaurant Operations Automation with Power Platform',
-  category: 'Power Platform Solution',
-  description:
-    'DineFlow is a custom-built restaurant operations solution leveraging Power Apps, Power Automate, SharePoint, and Power BI. Designed for a multi-branch restaurant chain, it centralizes food order tracking, menu updates, customer feedback management, and payment monitoring, all within a unified low-code platform.',
-  image: '/project15.jpg',
-  client: 'Urban Eats Group',
-  duration: '3 months',
-  technologies: ['Power Apps', 'Power Automate', 'SharePoint', 'Power BI'],
-  slug: 'dineflow-restaurant-operations-platform',
-  challenge:
-    'The client relied on spreadsheets and disconnected tools to manage daily orders, update menus, collect reviews, and track payments — leading to data silos and delays. They needed an agile, scalable solution without investing in custom app development.',
-  solution:
-    'Designed a clear admin dashboard in Figma and built a Power Apps Canvas App for branch managers to handle food orders, update menus, and view customer feedback in real-time. Automated order workflows and approval chains using Power Automate. Stored all menu and order data securely in SharePoint. Integrated Power BI dashboards to analyze sales, payment trends, and customer satisfaction KPIs.',
-  results: [
-    'Consolidated operations into a single low-code app, accessible on mobile and desktop',
-    'Accelerated order handling and menu updates by over 60%',
-    'Enabled real-time feedback monitoring to improve service quality',
-    'Delivered actionable sales and payment analytics through integrated Power BI dashboards'
-  ],
-}
+    title: "PayNest: Unified BBPS + AEPS Platform (Web, Mobile, Admin)",
+    category: "Fintech Suite – Mobile, Web & Admin",
+    description:
+      "PayNest is a full-stack digital finance platform offering BBPS utility payments and AEPS banking services through mobile and web apps. Designed for both users and agents, it includes a robust admin portal for transaction monitoring, agent management, and real-time support.",
+    image: "/project6.jpg",
+    client: "FinLink Micro Services",
+    duration: "5+ months (ongoing)",
+    technologies: [
+      "React Native",
+      "ReactJS",
+      "Node.js",
+      "MongoDB",
+      "BBPS & AEPS APIs",
+    ],
+    slug: "paynest-unified-fintech-suite",
+    challenge:
+      "The client aimed to digitize utility payments and basic banking for rural and semi-urban users while enabling agents to operate via both mobile and web. They also needed a backend system to manage transactions, monitor fraud, and handle commissions.",
+    solution:
+      "Developed a cross-platform ecosystem with a React Native mobile app for users, a ReactJS web portal for agents, and a secure admin dashboard. Integrated BBPS for bill payments, AEPS for Aadhaar banking, real-time APIs, and SMS alerts. Admins can monitor activity, handle refunds, and manage agent performance with role-based access.",
+    results: [
+      "Over 5,000 monthly transactions handled across platforms",
+      "300+ agents onboarded through the web portal",
+      "Resolution time for failed transactions reduced by 60%",
+      "Future-ready architecture for UPI, micro-loans, and multi-lingual support",
+    ],
+  },
+  {
+    title:
+      "Revenue360: Built to Demonstrate Alicorn's Rapid Delivery Capability",
+    category: "Business Process Automation – Power Platform",
+    description:
+      "Built in 1.5 months to show exactly what Alicorn can deliver for SMBs with manual finance processes: a full Power Platform solution with a Canvas App front-end, SharePoint data layer, live Power BI dashboards, and automated refresh flows — all in a single-window interface.",
+    image: "/project9.jpg",
+    client: "Internal Case Study",
+    duration: "1.5 months",
+    technologies: [
+      "PowerApps (Canvas App)",
+      "SharePoint",
+      "Power BI",
+      "Power Automate",
+    ],
+    slug: "revenue360-client-transaction-tracker",
+    challenge:
+      "Managing client transactions and revenue processes across multiple tools caused data silos, delays in updates, and lack of real-time insights for stakeholders.",
+    solution:
+      "Built a responsive Canvas App for data input and access across devices. SharePoint was used as the secure and collaborative data source. Power BI visualized revenue and transaction patterns with category-level breakdowns. Power Automate triggered dataset refreshes directly from the app, enabling live analytics inside the app itself.",
+    results: [
+      "Full Power Platform solution designed and delivered in 6 weeks",
+      "Single-window interface to manage and monitor revenue flow",
+      "Real-time Power BI dashboards updated without leaving the app",
+      "Demonstrates rapid delivery capability for SMBs with manual finance processes",
+    ],
+  },
+  {
+    title: "FitLife: Native Fitness & Workout App",
+    category: "Mobile App (Native iOS & Android)",
+    description:
+      "FitLife is a dedicated native fitness and workout app, developed separately for iOS and Android platforms. It helps users plan workouts, track progress, and stay motivated through personalized plans, daily tracking, and integrated push notifications.",
+    image: "/project7.jpg",
+    client: "FitLife Solutions",
+    duration: "4+ months",
+    technologies: [
+      "Swift (iOS)",
+      "Kotlin (Android)",
+      "Firebase",
+      "Xcode",
+      "Android Studio",
+    ],
+    slug: "fitlife-native-fitness-app",
+    challenge:
+      "The client wanted a truly native mobile experience, ensuring best-in-class performance and smooth integration with device features such as HealthKit and Google Fit. They required offline capability, real-time data sync, and consistent UI aligned with each platform’s design language.",
+    solution:
+      "Developed fully native apps using Swift for iOS and Kotlin for Android, leveraging platform-specific SDKs and design guidelines. Integrated Firebase for secure authentication and real-time data syncing. Implemented HealthKit (iOS) and Google Fit (Android) integration for holistic fitness tracking, along with offline workout access and personalized push notifications.",
+    results: [
+      "Achieved high user satisfaction through a fluid native experience",
+      "Improved engagement with push notifications and gamified achievements",
+      "Offline workouts ensured usability without connectivity",
+      "Integrated seamlessly with HealthKit and Google Fit for accurate tracking",
+    ],
+  },
+  {
+    title: "Wanderwise: Travel Agency Website",
+    category: "Website – Informational",
+    description:
+      "A visually rich, mobile-optimized website for a travel agency, designed to showcase curated destinations, tour packages, and engage potential clients through impactful storytelling and intuitive design.",
+    image: "/project10.jpg",
+    client: "Concept Build — Wanderwise Travels",
+    duration: "2 weeks",
+    technologies: ["Next.js", "Tailwind CSS", "Framer Motion"],
+    slug: "wanderwise-travel-agency-website",
+    challenge:
+      "The agency needed a modern digital presence that reflected their brand identity, attracted leads, and presented travel offerings in a visually compelling format.",
+    solution:
+      "Developed a fast, SEO-friendly website with featured destination sections, travel inspiration blogs, photo galleries, and a sleek contact form. Animations powered by Framer Motion added a smooth user experience, while Tailwind CSS ensured clean, scalable styling.",
+    results: [
+      "Boosted client inquiries through improved brand presentation",
+      "Mobile-first responsive layout helped capture users on the go",
+      "Reduced bounce rate and improved engagement time",
+      "Created a flexible base for future additions like blogs or itineraries",
+    ],
+  },
+  {
+    title: "AuraLegal: Modern Legal Firm Website",
+    category: "Website Development",
+    description:
+      "A clean, SEO-optimized website designed for a legal consultancy firm. Built to establish credibility, showcase expertise, and streamline client inquiries through a structured and responsive layout.",
+    image: "/project2.jpg",
+    client: "Concept Build — AuraLegal LLP",
+    duration: "3 weeks",
+    technologies: ["Next.js", "Tailwind CSS", "Framer Motion"],
+    slug: "auralegal-law-firm-website",
+    challenge:
+      "The law firm lacked a strong digital presence and needed a professional platform to highlight its services, display team profiles, and enable client inquiries while maintaining a modern brand image.",
+    solution:
+      "Developed a fully responsive, fast-loading website using Next.js and Tailwind CSS. Integrated service listings, lawyer profiles, case study highlights, and a custom contact form. Added subtle animations using Framer Motion to enhance the user experience.",
+    results: [
+      "Enhanced online presence and trust with potential clients",
+      "Improved SEO ranking through server-side rendering",
+      "Streamlined client inquiries via structured contact form",
+      "Professional look aligned with the firms brand identity",
+    ],
+  },
+  {
+    title: "ThreadCart: WooCommerce Clothing Store",
+    category: "E-Commerce Website",
+    description:
+      "An elegant online store crafted for a clothing brand, offering smooth shopping experiences, category filtering, and secure checkout with modern design aesthetics.",
+    image: "/project3.jpg",
+    client: "Concept Build — ThreadCart Apparel",
+    duration: "1 month",
+    technologies: ["WordPress", "WooCommerce", "Elementor"],
+    slug: "threadcart-clothing-ecommerce",
+    challenge:
+      "The client needed a complete eCommerce platform for their growing fashion label, with customizable product displays, user-friendly shopping flows, and mobile responsiveness.",
+    solution:
+      "Developed a WooCommerce-based website using WordPress and Elementor. Included product categorization, discount coupon functionality, customer review sections, wishlist feature, and full mobile optimization.",
+    results: [
+      "Launched full-scale eCommerce store within 30 days",
+      "Increased product visibility through category filters",
+      "Boosted conversions with a fast, intuitive checkout experience",
+      "Fully mobile-optimized for modern shoppers",
+    ],
+  },
+  {
+    title: "NestEdge Interiors: Portfolio Website for Designers",
+    category: "Website Development",
+    description:
+      "A visually immersive website for an interior design firm to showcase projects, share service details, and attract new clients with a highly curated brand presence.",
+    image: "/project4.jpg",
+    client: "Concept Build — NestEdge Interiors",
+    duration: "3 weeks",
+    technologies: ["Next.js", "Tailwind CSS", "Lightbox Gallery"],
+    slug: "nestedge-interior-design-website",
+    challenge:
+      "The firm wanted a clean and sophisticated platform to display their portfolio, engage potential clients, and improve visibility for their local services.",
+    solution:
+      "Built a performance-optimized website using Next.js, featuring interactive image galleries, project filters, and mobile-friendly layouts. Contact form and service descriptions were included to support lead generation.",
+    results: [
+      "Professional showcase of 15+ interior design projects",
+      "Improved client engagement via intuitive navigation",
+      "Faster page loads and SEO boost through SSR",
+      "Brand-aligned layout with emphasis on visual storytelling",
+    ],
+  },
+  {
+    title: "DecoDwell: Home Decor Online Store",
+    category: "E-Commerce Website",
+    description:
+      "An eCommerce platform for handcrafted home decor, built to support product discovery, smooth shopping flow, and easy inventory management through WordPress and WooCommerce.",
+    image: "/project5.jpg",
+    client: "Concept Build — DecoDwell Home Studio",
+    duration: "1.5 months",
+    technologies: ["WordPress", "WooCommerce", "Elementor"],
+    slug: "decodwell-home-decor-ecommerce",
+    challenge:
+      "The client needed a platform to showcase and sell handcrafted home decor items, with a strong focus on design aesthetics and easy product management.",
+    solution:
+      "Created a WordPress WooCommerce store using Elementor for design flexibility. Implemented product filters, customer reviews, wishlists, and promotional banners. Optimized layouts for mobile and integrated secure payment gateways.",
+    results: [
+      "Smooth eCommerce experience with high user retention",
+      "Easy inventory and order management via WooCommerce",
+      "Increased conversions through aesthetic product layouts",
+      "Fully responsive and scalable for future product lines",
+    ],
+  },
+  {
+    title: "AgencyPro: WordPress Responsive Landing Page",
+    category: "Landing Page (WordPress)",
+    description:
+      "AgencyPro is a clean, modern WordPress landing page developed for BrightEdge Solutions — a creative agency looking to showcase their services, team, and expertise with a sleek, responsive online presence. The landing page is designed to drive inquiries and build trust with potential clients.",
+    image: "/project12.jpg",
+    client: "Concept Build — BrightEdge Solutions",
+    duration: "1 month",
+    technologies: ["WordPress", "Elementor", "Custom CSS"],
+    slug: "agencypro-wordpress-landing-page",
+    challenge:
+      "BrightEdge Solutions needed a versatile landing page that would clearly present their services and company highlights while staying easy to update without technical help. The page had to be fully responsive and optimized for conversions.",
+    solution:
+      "Designed the landing page in Figma and built it on WordPress using Elementor for flexible drag-and-drop editing. Added custom CSS for precise styling tweaks. Included well-structured sections for service overviews, company achievements, team members, client testimonials, and an integrated contact form. Prioritized SEO best practices and fast page load times.",
+    results: [
+      "Delivered a polished, conversion-focused landing page",
+      "Ensured seamless responsiveness on all devices",
+      "Empowered the agency team to edit content easily with Elementor",
+      "Improved online visibility and increased customer inquiries",
+    ],
+  },
+  {
+    title: "HavenStay: Home Rentals Agency Website Design",
+    category: "Website (WordPress)",
+    description:
+      "HavenStay is a modern WordPress website designed and developed for a boutique home rentals agency. The site showcases available properties, highlights agency services, and provides an easy way for potential clients to inquire about rentals — all within a clean, trustworthy design.",
+    image: "/project13.jpg",
+    client: "Concept Build — HavenStay Rentals",
+    duration: "2 months",
+    technologies: ["WordPress", "Elementor", "Custom CSS"],
+    slug: "havenstay-home-rentals-website",
+    challenge:
+      "HavenStay Rentals needed a website that would build trust with homeowners and renters alike. The goal was to present property listings attractively while keeping the site simple to update as new listings became available, all without using complex booking systems.",
+    solution:
+      "Designed a fresh, user-friendly layout in Figma, then built the site on WordPress using Elementor for flexible content editing. Developed custom listing sections, service pages, and a contact form for rental inquiries. Added subtle animations and clear calls-to-action to increase engagement. Optimized the site for fast loading and mobile responsiveness.",
+    results: [
+      "Launched a professional, easy-to-manage WordPress website",
+      "Created a trustworthy online presence to attract homeowners and renters",
+      "Enabled the agency team to update listings and content without coding",
+      "Improved lead generation through clear CTAs and contact options",
+    ],
+  },
+  {
+    title: "PeopleCore: HR Management Admin Portal",
+    category: "Web Application (.NET)",
+    description:
+      "PeopleCore is a robust HR management portal developed for a mid-sized organization to streamline all key HR processes. Built with ASP.NET Core MVC and SQL Server, the platform provides a centralized solution for employee onboarding, leave management, performance tracking, and internal communication, all within an intuitive, responsive interface.",
+    image: "/project14.jpg",
+    client: "Concept Build — Synergen Solutions Inc.",
+    duration: "4 months",
+    technologies: ["ASP.NET Core MVC", "SQL Server", "REST API"],
+    slug: "peoplecore-hr-admin-portal",
+    challenge:
+      "The client needed a unified intranet portal to replace multiple disconnected HR tools. They wanted secure role-based access for HR admins and employees, centralized records, and real-time performance tracking, all while ensuring an excellent user experience on desktop and mobile.",
+    solution:
+      "Designed a modern HR admin dashboard UI in Figma, then implemented it using ASP.NET Core MVC with SQL Server as the backend. Developed custom modules for onboarding, leave requests, appraisals, and announcements. Created secure REST APIs for future mobile app integration. Implemented granular user permissions for HR managers, team leads, and employees.",
+    results: [
+      "Centralized all HR processes in a single, easy-to-use portal",
+      "Improved employee experience and HR team efficiency",
+      "Reduced paperwork and manual tracking through automation",
+      "Enabled seamless future mobile app integration via REST APIs",
+    ],
+  },
+  {
+    title: "DineFlow: Restaurant Operations Automation with Power Platform",
+    category: "Power Platform Solution",
+    description:
+      "DineFlow is a custom-built restaurant operations solution leveraging Power Apps, Power Automate, SharePoint, and Power BI. Designed for a multi-branch restaurant chain, it centralizes food order tracking, menu updates, customer feedback management, and payment monitoring, all within a unified low-code platform.",
+    image: "/project15.jpg",
+    client: "Concept Build — Urban Eats Group",
+    duration: "3 months",
+    technologies: ["Power Apps", "Power Automate", "SharePoint", "Power BI"],
+    slug: "dineflow-restaurant-operations-platform",
+    challenge:
+      "The client relied on spreadsheets and disconnected tools to manage daily orders, update menus, collect reviews, and track payments — leading to data silos and delays. They needed an agile, scalable solution without investing in custom app development.",
+    solution:
+      "Designed a clear admin dashboard in Figma and built a Power Apps Canvas App for branch managers to handle food orders, update menus, and view customer feedback in real-time. Automated order workflows and approval chains using Power Automate. Stored all menu and order data securely in SharePoint. Integrated Power BI dashboards to analyze sales, payment trends, and customer satisfaction KPIs.",
+    results: [
+      "Consolidated operations into a single low-code app, accessible on mobile and desktop",
+      "Accelerated order handling and menu updates by over 60%",
+      "Enabled real-time feedback monitoring to improve service quality",
+      "Delivered actionable sales and payment analytics through integrated Power BI dashboards",
+    ],
+  },
 ];
 
 const posts = [
   {
     title:
-      'The Future of UI/UX Design: Trends and Best Practices for Business Success',
+      "The Future of UI/UX Design: Trends and Best Practices for Business Success",
     content: `<p>In today’s highly competitive digital landscape, creating seamless and intuitive user experiences is paramount. Whether you're building a website, a mobile app, or an enterprise solution, UI/UX design plays a critical role in shaping how users interact with your product. As technology continues to evolve, so do user expectations, making it crucial for businesses to stay ahead by adopting the latest design trends and practices.</p>
 
 <p>In this article, we'll explore the future of <strong>UI/UX design</strong>, why it's so important, and how businesses can leverage user-centered design principles to enhance engagement and drive conversions.</p>
@@ -2116,20 +2297,20 @@ const posts = [
 <p>As we move further into a digital-first world, businesses must prioritize <strong>UI/UX design</strong> to stay competitive and meet the growing expectations of users. By focusing on creating intuitive, visually appealing, and personalized experiences, businesses can drive user engagement, build brand loyalty, and improve overall customer satisfaction. In the future, the role of UI/UX design will only continue to grow, making it an essential investment for any organization looking to succeed in the digital age.</p>
 `,
     excerpt:
-      'In today’s competitive digital landscape, UI/UX design is crucial for creating engaging and seamless user experiences. This article explores the latest trends in UI/UX design and how businesses can adopt user-centered principles to enhance engagement and drive success.',
-    image: '/blog1.webp',
-    date: 'Dec 25, 2024',
+      "In today’s competitive digital landscape, UI/UX design is crucial for creating engaging and seamless user experiences. This article explores the latest trends in UI/UX design and how businesses can adopt user-centered principles to enhance engagement and drive success.",
+    image: "/blog1.webp",
+    date: "Dec 25, 2024",
     author: {
-      name: 'Ekta Agrawal',
-      bio: 'Jane is a cloud computing expert with over 10 years of experience in the field. She specializes in helping businesses optimize their cloud strategies.',
-      avatar: '/avatar.png',
+      name: "Ekta Agrawal",
+      bio: "Jane is a cloud computing expert with over 10 years of experience in the field. She specializes in helping businesses optimize their cloud strategies.",
+      avatar: "/avatar.png",
     },
-    slug: 'future-of-ui-ux-design',
-    category: 'UI/UX Design',
+    slug: "future-of-ui-ux-design",
+    category: "UI/UX Design",
   },
   {
     title:
-      'Exploring the Power of BPM Tools: Streamlining Business Processes for Efficiency and Growth',
+      "Exploring the Power of BPM Tools: Streamlining Business Processes for Efficiency and Growth",
     content: `
       <p>In today’s fast-paced business world, the need for efficiency, transparency, and agility in operations is paramount. Business Process Management (BPM) tools have become essential for organizations looking to optimize their workflows, reduce costs, and improve overall operational performance. These tools allow companies to streamline their processes, automate routine tasks, and adapt quickly to changing business environments.</p>
   
@@ -2179,20 +2360,20 @@ const posts = [
       <p>As businesses continue to embrace digital transformation, BPM tools will play a crucial role in shaping the future of business operations. These tools help organizations optimize processes, improve efficiency, and drive growth. By implementing BPM tools, businesses can achieve operational excellence, enhance customer experiences, and stay competitive in an increasingly fast-paced world.</p>
     `,
     excerpt:
-      'Explore how BPM tools can optimize business processes, improve efficiency, and drive growth. Learn the key features, benefits, and best practices for leveraging BPM tools in your organization.',
-    image: '/blog2.webp',
-    date: 'December 26, 2024',
+      "Explore how BPM tools can optimize business processes, improve efficiency, and drive growth. Learn the key features, benefits, and best practices for leveraging BPM tools in your organization.",
+    image: "/blog2.webp",
+    date: "December 26, 2024",
     author: {
-      name: 'Tarun Parashar',
-      bio: 'Tarun is an experienced BPM consultant who specializes in helping organizations optimize their processes and leverage BPM tools for efficiency and growth.',
-      avatar: '/avatar.png',
+      name: "Tarun Parashar",
+      bio: "Tarun is an experienced BPM consultant who specializes in helping organizations optimize their processes and leverage BPM tools for efficiency and growth.",
+      avatar: "/avatar.png",
     },
-    slug: 'power-of-bpm-tools-for-efficiency-and-growth',
-    category: 'Business Process Management',
+    slug: "power-of-bpm-tools-for-efficiency-and-growth",
+    category: "Business Process Management",
   },
   {
     title:
-      'Harnessing the Power of RPA: Transforming Business Operations Through Automation',
+      "Harnessing the Power of RPA: Transforming Business Operations Through Automation",
     content: `
       <p>In the modern business landscape, Robotic Process Automation (RPA) has emerged as a game-changing technology. By automating repetitive and time-consuming tasks, RPA enables organizations to enhance efficiency, reduce costs, and free up human resources for more strategic activities. This article delves into the world of RPA, its benefits, and how businesses can leverage it for operational excellence.</p>
   
@@ -2243,20 +2424,20 @@ const posts = [
       <p>As businesses strive for greater efficiency and innovation, RPA is set to play a pivotal role in the future of work. By automating repetitive tasks and enabling seamless workflows, RPA empowers organizations to achieve operational excellence and stay competitive in a rapidly evolving marketplace. Embracing RPA today positions businesses for success in the digital age.</p>
     `,
     excerpt:
-      'Discover how RPA is transforming business operations by automating repetitive tasks. Learn about its benefits, use cases, and best practices for successful implementation.',
-    image: '/blog3.webp',
-    date: 'December 26, 2024',
+      "Discover how RPA is transforming business operations by automating repetitive tasks. Learn about its benefits, use cases, and best practices for successful implementation.",
+    image: "/blog3.webp",
+    date: "December 26, 2024",
     author: {
-      name: 'Ekta Agrawal',
-      bio: 'Tarun is a technology enthusiast and RPA specialist who helps businesses streamline their processes and embrace automation for operational excellence.',
-      avatar: '/avatar.png',
+      name: "Ekta Agrawal",
+      bio: "Tarun is a technology enthusiast and RPA specialist who helps businesses streamline their processes and embrace automation for operational excellence.",
+      avatar: "/avatar.png",
     },
-    slug: 'harnessing-rpa-for-business-efficiency',
-    category: 'Robotic Process Automation',
+    slug: "harnessing-rpa-for-business-efficiency",
+    category: "Robotic Process Automation",
   },
   {
     title:
-      'Unlocking the Potential of AI: Transforming Industries and Shaping the Future',
+      "Unlocking the Potential of AI: Transforming Industries and Shaping the Future",
     content: `
       <p>Artificial Intelligence (AI) is no longer just a buzzword; it is a powerful force reshaping the way businesses operate, innovate, and serve customers. From automation to predictive analytics, AI has the potential to revolutionize industries and provide a competitive edge for forward-thinking companies. In this article, we'll explore how AI is transforming industries and how businesses can leverage its capabilities to drive growth.</p>
   
@@ -2309,19 +2490,19 @@ const posts = [
       <p>Artificial Intelligence is revolutionizing industries by automating tasks, improving decision-making, and delivering personalized experiences. As AI continues to evolve, businesses must embrace these technologies to stay competitive and thrive in the digital age. The future is AI-powered, and those who leverage its potential will lead the way in innovation and growth.</p>
     `,
     excerpt:
-      'Explore how AI is transforming industries, driving innovation, and reshaping business operations. Learn about AI technologies, benefits, and challenges in this insightful article.',
-    image: '/blog4.webp',
-    date: 'December 26, 2024',
+      "Explore how AI is transforming industries, driving innovation, and reshaping business operations. Learn about AI technologies, benefits, and challenges in this insightful article.",
+    image: "/blog4.webp",
+    date: "December 26, 2024",
     author: {
-      name: 'Tarun Parashar',
-      bio: 'Tarun is an AI enthusiast and technology consultant with expertise in helping businesses integrate AI solutions for operational efficiency and growth.',
-      avatar: '/avatar.png',
+      name: "Tarun Parashar",
+      bio: "Tarun is an AI enthusiast and technology consultant with expertise in helping businesses integrate AI solutions for operational efficiency and growth.",
+      avatar: "/avatar.png",
     },
-    slug: 'unlocking-the-potential-of-ai',
-    category: 'Artificial Intelligence',
+    slug: "unlocking-the-potential-of-ai",
+    category: "Artificial Intelligence",
   },
   {
-    title: 'Unlocking Efficiency with Low-Code/No-Code Development',
+    title: "Unlocking Efficiency with Low-Code/No-Code Development",
     content: `
       <p>Low code and no code platforms have been gaining significant traction in recent years, enabling businesses to create applications and workflows without requiring deep programming knowledge. These platforms are empowering users from various backgrounds to build solutions quickly and efficiently, unlocking new possibilities for innovation and agility. In this article, we’ll explore the impact of low code/no code solutions and how businesses can leverage them for faster digital transformation.</p>
   
@@ -2376,31 +2557,40 @@ const posts = [
       <p>Low code/no code platforms are empowering businesses to rapidly innovate and drive digital transformation without the need for extensive coding expertise. These platforms unlock a new era of collaboration, speed, and efficiency, allowing businesses to build custom solutions, automate workflows, and meet customer needs quickly. As technology continues to evolve, low code/no code platforms will play a pivotal role in shaping the future of business development.</p>
     `,
     excerpt:
-      'Discover how low code/no code platforms are transforming business operations, driving innovation, and enabling non-technical users to build custom solutions. Learn about the benefits, use cases, and popular platforms in this insightful article.',
-    image: '/blog5.webp',
-    date: 'December 26, 2024',
+      "Discover how low code/no code platforms are transforming business operations, driving innovation, and enabling non-technical users to build custom solutions. Learn about the benefits, use cases, and popular platforms in this insightful article.",
+    image: "/blog5.webp",
+    date: "December 26, 2024",
     author: {
-      name: 'Tarun Parashar',
-      bio: 'Tarun is a digital transformation consultant with a passion for enabling businesses to adopt modern technologies such as low code/no code platforms for accelerated growth.',
-      avatar: '/avatar.png',
+      name: "Tarun Parashar",
+      bio: "Tarun is a digital transformation consultant with a passion for enabling businesses to adopt modern technologies such as low code/no code platforms for accelerated growth.",
+      avatar: "/avatar.png",
     },
-    slug: 'the-power-of-low-code-no-code',
-    category: 'Digital Transformation',
+    slug: "the-power-of-low-code-no-code",
+    category: "Digital Transformation",
   },
 ];
 
 const testimonials = [
   {
     quote:
-      'Alicorn Infotech has been a trusted partner in driving our success. Their professionalism and expertise have made a remarkable impact on our business.',
-    author: 'Lee Phillips',
-    position: 'Digital Data Lead, Twinings Ovaltine',
+      "Alicorn built the LiteCloud practice management platform for us — it handles our entire client workflow, task tracking and reporting. It has been running in production for over 8 months and the team has been responsive throughout. The co-founders are directly involved, which makes a real difference.",
+    author: "Lee Phillips",
+    position: "Digital Data Lead, Twinings Ovaltine",
+    company: "Twinings Ovaltine",
   },
   {
     quote:
-      'Working with Alicorn Infotech has been an exceptional experience. Their dedication to delivering top-notch solutions has exceeded our expectations.',
-    author: 'Julien Lerolle',
-    position: 'Finance Director, Johnson & Johnson',
+      "The complaint management system Alicorn built for us reduced our resolution time by over 40%. The 4-level approval flow and the automated SMS updates to customers were exactly what we needed. They delivered on time and were easy to work with across timezones.",
+    author: "Julien Lerolle",
+    position: "Finance Director, Johnson & Johnson",
+    company: "Johnson & Johnson",
+  },
+  {
+    quote:
+      "We needed a fintech platform that could handle BBPS and AEPS transactions across mobile and web. Alicorn delivered the full stack — React Native app, web portal and admin dashboard — within five months. We now handle over 5,000 monthly transactions through the system.",
+    author: "Operations Lead",
+    position: "FinLink Micro Services",
+    company: "FinLink Micro Services",
   },
 ];
 

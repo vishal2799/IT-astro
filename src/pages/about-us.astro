@@ -8,55 +8,55 @@ import AboutBreadcrumbImage from '../assets/images/AboutBreadcrumb.webp';
 
 const companyValues = [
   {
-    title: 'Innovation',
+    title: 'Small by design',
     description:
-      'We constantly push the boundaries of technology to deliver cutting-edge solutions.',
-    icon: 'robot',
+      'We stay small on purpose — it means you always talk to the people who are actually building your product, not an account manager.',
+    icon: 'people',
   },
   {
-    title: 'Integrity',
+    title: 'Built around your timezone',
     description:
-      'We uphold the highest ethical standards in all our business practices.',
+      'We work IST, but our clients are in New York, London and Sydney. We have built our communication and delivery around that reality.',
+    icon: 'globe',
+  },
+  {
+    title: 'Honest scoping',
+    description:
+      'We tell you what a project will actually take — in time and cost — before we start. No surprise invoices, no scope creep without your approval.',
     icon: 'shield-check',
   },
   {
-    title: 'Collaboration',
+    title: 'Outcomes over outputs',
     description:
-      'We believe in the power of teamwork and partnerships to achieve exceptional results.',
-    icon: 'person-circle',
-  },
-  {
-    title: 'Excellence',
-    description:
-      'We strive for excellence in every project and service we deliver.',
-    icon: 'star-fill',
+      'We measure success by what changes for your business, not by lines of code written or tickets closed.',
+    icon: 'graph-up-arrow',
   },
 ];
 
 const achievements = [
   {
     id: 1,
-    title: 'Positive Feedback',
-    value: '100%',
-    icon: 'emoji-smile',
+    title: 'Projects Delivered',
+    value: '14+',
+    icon: 'clipboard-check',
   },
   {
     id: 2,
-    title: 'Customer Satisfaction',
-    value: 'Exceeding Expectations',
-    icon: 'heart',
+    title: 'Years in Operation',
+    value: '5+',
+    icon: 'calendar',
   },
   {
     id: 3,
-    title: 'Passionate Team',
-    value: 'Committed to Excellence',
-    icon: 'people',
+    title: 'Countries Served',
+    value: '4',
+    icon: 'globe',
   },
   {
     id: 4,
-    title: 'Creative Solutions',
-    value: 'Tailored for Every Need',
-    icon: 'lightbulb',
+    title: 'Active Enterprise Clients',
+    value: '2 Ongoing',
+    icon: 'building',
   },
 ];
 ---
@@ -84,22 +84,21 @@ const achievements = [
         <h1 class='text-4xl md:text-6xl font-bold mb-4'>
           About Alicorn Infotech
         </h1>
-        <p class='text-xl md:text-2xl mb-8'>Innovating for a Better Tomorrow</p>
+        <p class='text-xl md:text-2xl mb-8'>A small team. Real projects. Clients across four continents.</p>
       </div>
     </section>
 
-    <!-- Mission Statement -->
+    <!-- Founding Story -->
     <section class='section-padding px-4'>
       <div class='container mx-auto max-w-4xl text-center'>
         <h2 class='text-3xl md:text-4xl font-bold mb-6 text-gray-900'>
-          Our Mission
+          Our Story
         </h2>
-        <p class='text-xl text-gray-700 leading-relaxed'>
-          At Alicorn Infotech, our mission is to empower businesses through
-          innovative technology solutions. We strive to be at the forefront of
-          digital transformation, helping our clients navigate the complex world
-          of IT to achieve their goals and stay ahead in today's fast-paced
-          digital landscape.
+        <p class='text-xl text-gray-700 leading-relaxed mb-6'>
+          We started Alicorn in 2020 because we kept seeing startups and growing businesses pay large agency prices for work that could be done better — and faster — by a small, dedicated team that actually cared about the outcome. That is still what we do.
+        </p>
+        <p class='text-lg text-gray-600 leading-relaxed'>
+          Today we work with clients in the US, UK, Australia and India — building web and mobile products, integrating AI and automation, and running QA. The co-founders are involved in every project. The people you speak to are the same people building your product.
         </p>
       </div>
     </section>
@@ -110,7 +109,7 @@ const achievements = [
         <h2
           class='text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900'
         >
-          Our Values
+          How We Work
         </h2>
         <div class='grid grid-cols-1 md:grid-cols-2 gap-8'>
           {
@@ -151,48 +150,50 @@ const achievements = [
       </div>
     </section>
 
-    <!-- Why Choose Us -->
+    <!-- Meet the Team -->
     <section class='section-padding px-4 bg-primary-50'>
-      <div class='container mx-auto max-w-4xl'>
-        <h2
-          class='text-gray-900 text-3xl md:text-4xl font-bold text-center mb-12'
-        >
-          Why Choose Alicorn Infotech?
+      <div class='container mx-auto max-w-5xl'>
+        <h2 class='text-gray-900 text-3xl md:text-4xl font-bold text-center mb-12'>
+          Meet the Team
         </h2>
-        <div class='grid md:grid-cols-2 gap-8'>
-          <div>
-            <h3 class='text-2xl text-gray-800 font-semibold mb-4'>Expertise</h3>
-            <p class='text-gray-700'>
-              Our team of seasoned professionals brings years of experience and
-              deep industry knowledge to every project.
+        <div class='grid md:grid-cols-2 gap-10'>
+          <!-- Tarun -->
+          <div class='bg-white rounded-xl shadow-md p-8 flex flex-col items-center text-center'>
+            <div class='w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center mb-4'>
+              <span class='text-3xl font-bold text-primary'>T</span>
+            </div>
+            <h3 class='text-2xl font-bold text-gray-900 mb-1'>Tarun Parashar</h3>
+            <p class='text-primary font-semibold mb-3'>Co-Founder & Tech Lead</p>
+            <p class='text-gray-600 leading-relaxed mb-4'>
+              Tarun leads delivery across all client projects. With deep expertise in business automation, Power Platform and backend development, he has built solutions for clients in finance, supply chain and healthcare across the US, UK and India.
             </p>
+            <a
+              href='https://www.linkedin.com/in/tarun-parashar'
+              target='_blank'
+              rel='noopener noreferrer'
+              class='inline-flex items-center text-primary font-medium hover:text-primary-dark transition-colors'
+            >
+              Connect on LinkedIn →
+            </a>
           </div>
-          <div>
-            <h3 class='text-2xl text-gray-800 font-semibold mb-4'>
-              Cutting-edge Technology
-            </h3>
-            <p class='text-gray-700'>
-              We stay at the forefront of technological advancements to provide
-              you with the most innovative solutions.
+          <!-- Ekta -->
+          <div class='bg-white rounded-xl shadow-md p-8 flex flex-col items-center text-center'>
+            <div class='w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center mb-4'>
+              <span class='text-3xl font-bold text-primary'>E</span>
+            </div>
+            <h3 class='text-2xl font-bold text-gray-900 mb-1'>Ekta Agrawal</h3>
+            <p class='text-primary font-semibold mb-3'>Co-Founder & Design Lead</p>
+            <p class='text-gray-600 leading-relaxed mb-4'>
+              Ekta oversees UI/UX design and client communication. She brings a user-first approach to every product — ensuring that what gets built is both technically solid and genuinely enjoyable to use.
             </p>
-          </div>
-          <div>
-            <h3 class='text-2xl text-gray-800 font-semibold mb-4'>
-              Client-centric Approach
-            </h3>
-            <p class='text-gray-700'>
-              Your success is our priority. We work closely with you to
-              understand your unique needs and deliver tailored solutions.
-            </p>
-          </div>
-          <div>
-            <h3 class='text-2xl text-gray-800 font-semibold mb-4'>
-              Proven Track Record
-            </h3>
-            <p class='text-gray-700'>
-              Our portfolio of successful projects and satisfied clients speaks
-              to our commitment to excellence.
-            </p>
+            <a
+              href='https://www.linkedin.com/in/ekta-agrawal-8a491176'
+              target='_blank'
+              rel='noopener noreferrer'
+              class='inline-flex items-center text-primary font-medium hover:text-primary-dark transition-colors'
+            >
+              Connect on LinkedIn →
+            </a>
           </div>
         </div>
       </div>
