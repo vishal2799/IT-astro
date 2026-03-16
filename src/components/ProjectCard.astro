@@ -16,6 +16,8 @@ const {
   class='bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl flex flex-col'
   data-aos="fade-up"
   data-aos-delay={index * 100}
+  data-category={category}
+  data-technologies={technologies.join(',')}
 >
   <div class='relative'>
     <img src={image} alt={title} class='w-full h-48 object-cover' />

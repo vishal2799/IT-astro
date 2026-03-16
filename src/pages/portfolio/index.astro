@@ -80,40 +80,46 @@ import CTA from '../../components/CTA.astro';
 </MainLayout>
 
 <script>
-  // Map filter tab labels to category keywords
-  const filterMap: Record<string, string[]> = {
-    'All': [],
-    'Web & Mobile': ['website', 'web', 'mobile', 'landing page', 'wordpress', 'ecommerce', 'e-commerce', 'fintech'],
-    'Power Platform': ['power platform', 'power apps', 'power automate', 'sharepoint'],
-    'Enterprise Tools': ['.net', 'enterprise', 'hr management', 'business process'],
-    'E-Commerce': ['e-commerce', 'ecommerce', 'woocommerce', 'shopify'],
-    'AI & Automation': ['automation', 'rpa', 'ai', 'bpm', 'workflow'],
+  // These match exactly against data-category and data-technologies on each card
+  // Format: { tabLabel: { categories: [...], technologies: [...] } }
+  // A card matches if its data-category OR any of its data-technologies contains a keyword
+  const filterRules: Record<string, { cats: string[]; techs: string[] }> = {
+    'All':              { cats: [], techs: [] },
+    'Web & Mobile':     { cats: ['website', 'web application', 'landing page', 'fintech suite', 'mobile app'], techs: ['react native', 'reactjs', 'next.js', 'flutter', 'swift', 'kotlin', 'node.js', 'wordpress', 'elementor', 'django'] },
+    'Power Platform':   { cats: ['power platform', 'business process automation'], techs: ['powerapps', 'power apps', 'power automate', 'power bi', 'sharepoint'] },
+    'Enterprise Tools': { cats: ['enterprise', 'practice management', 'internal tool', 'workflow automation'], techs: ['sharepoint', 'k2 nintex', 'asp.net', 'sql server', 'nintex'] },
+    'E-Commerce':       { cats: ['e-commerce'], techs: ['woocommerce', 'shopify', 'magento'] },
+    'AI & Automation':  { cats: ['automation', 'power platform'], techs: ['power automate', 'uipath', 'automation anywhere', 'k2 nintex'] },
   };
 
   const tabs = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
-  const cards = document.querySelectorAll<HTMLElement>('#projects-grid > div');
+  const cards = document.querySelectorAll<HTMLElement>('#projects-grid > div[data-category]');
 
-  // Set first tab active
+  // Set first tab active on load
   tabs[0]?.classList.add('bg-primary', 'text-white');
 
   tabs.forEach((tab) => {
     tab.addEventListener('click', () => {
-      const filter = tab.dataset.filter || 'All';
+      const filter = tab.dataset.filter ?? 'All';
 
-      // Update active styles
+      // Swap active styles
       tabs.forEach((t) => t.classList.remove('bg-primary', 'text-white'));
       tab.classList.add('bg-primary', 'text-white');
 
-      // Filter cards
       cards.forEach((card) => {
         if (filter === 'All') {
           card.style.display = '';
           return;
         }
-        const keywords = filterMap[filter] || [];
-        const cardText = card.innerText.toLowerCase();
-        const match = keywords.some((kw) => cardText.includes(kw));
-        card.style.display = match ? '' : 'none';
+
+        const { cats, techs } = filterRules[filter] ?? { cats: [], techs: [] };
+        const cardCat  = (card.dataset.category  ?? '').toLowerCase();
+        const cardTech = (card.dataset.technologies ?? '').toLowerCase();
+
+        const catMatch  = cats.some((kw)  => cardCat.includes(kw));
+        const techMatch = techs.some((kw) => cardTech.includes(kw));
+
+        card.style.display = (catMatch || techMatch) ? '' : 'none';
       });
     });
   });
