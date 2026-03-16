@@ -1933,7 +1933,7 @@ const projects = [
       "Microsoft Outlook Integration",
       "React",
     ],
-    slug: "paperlite-practice-management-tool",
+    slug: "litecloud-practice-management-tool",
     challenge:
       "Inefficient manual processes and scattered workflows for CAs and CPAs led to difficulties in managing tasks, client relationships, and accessing real-time analytics. The client also wanted a scalable solution that could cater to other professions, such as lawyers, with minimal effort.",
     solution:
@@ -2302,7 +2302,7 @@ const posts = [
     date: "Dec 25, 2024",
     author: {
       name: "Ekta Agrawal",
-      bio: "Jane is a cloud computing expert with over 10 years of experience in the field. She specializes in helping businesses optimize their cloud strategies.",
+      bio: "Ekta is co-founder of Alicorn Infotech and leads UI/UX design and client communication across all projects. She brings a user-first approach to every product — ensuring what gets built is both technically solid and genuinely enjoyable to use.",
       avatar: "/avatar.png",
     },
     slug: "future-of-ui-ux-design",
@@ -2429,11 +2429,64 @@ const posts = [
     date: "December 26, 2024",
     author: {
       name: "Ekta Agrawal",
-      bio: "Tarun is a technology enthusiast and RPA specialist who helps businesses streamline their processes and embrace automation for operational excellence.",
+      bio: "Ekta is co-founder of Alicorn Infotech and has led automation and digital transformation engagements for clients across supply chain, finance and healthcare. She specialises in translating complex business processes into practical, scalable solutions.",
       avatar: "/avatar.png",
     },
     slug: "harnessing-rpa-for-business-efficiency",
     category: "Robotic Process Automation",
+  },
+  {
+    title:
+      "How We Built an AI-Powered Document Intelligence Feature in 4 Weeks",
+    content: `
+      <p>One of the most common conversations we have with startup founders in 2026 goes like this: they have a product that's working, users are growing, but there's a manual step somewhere in the workflow — usually involving reading documents, classifying data, or extracting information — that is becoming a real bottleneck. They've seen what AI can do, but they're not sure where to start or what it would actually cost.</p>
+
+      <p>This is a post about how we approached exactly that problem for a recent client, and what we learned.</p>
+
+      <h2>The Problem</h2>
+      <p>The client had an internal workflow where their team was manually reviewing and classifying incoming documents — contracts, invoices, compliance forms — before routing them to the right department. With volume growing, this was taking hours each day and becoming a source of errors and delays.</p>
+      <p>They didn't want a new product. They wanted this specific task automated and integrated into the tool their team already used.</p>
+
+      <h2>The Approach: Scope First, Build Second</h2>
+      <p>We always start with a 30-minute discovery call before writing a single line of code. In this case, we spent the first week mapping the exact documents involved, the classification categories, the error tolerance, and what "done" actually looked like for the team.</p>
+      <p>This scoping step is where most AI projects go wrong. People jump straight to "let's use GPT-4" without first defining what success looks like. Our rule: if you can't describe the output precisely, you're not ready to build.</p>
+
+      <h2>The Build</h2>
+      <p>We used Azure OpenAI (GPT-4o) for the classification and extraction layer, with a retrieval-augmented approach for the client's specific document taxonomy. The pipeline looked like this:</p>
+      <ul>
+        <li>Document arrives via existing upload endpoint</li>
+        <li>Pre-processing extracts clean text (handling PDFs, scanned images via OCR)</li>
+        <li>GPT-4o classifies the document type and extracts key fields using a structured JSON output schema</li>
+        <li>Confidence score below threshold → flags for human review automatically</li>
+        <li>Result written back to the client's existing database and triggers their workflow routing</li>
+      </ul>
+      <p>Total new code: around 400 lines of Python and a thin API layer. No new infrastructure — we deployed it as an Azure Function that hooks into what they already had.</p>
+
+      <h2>Results After 4 Weeks</h2>
+      <p>The classification accuracy came in at 94% on their real document corpus in testing. Manual review time dropped from several hours daily to around 20 minutes — covering only the flagged edge cases. The team adopted it immediately because it didn't change their existing workflow; it just removed the slow part.</p>
+
+      <h2>What This Means for Your Business</h2>
+      <p>Most AI integration projects don't need to be big, expensive transformation programmes. The highest-value use cases are usually narrow: one specific manual task, automated well, integrated cleanly into what you already have. That's where we focus.</p>
+      <p>If you have a workflow step that involves reading, classifying or extracting information from documents — or any repetitive task that a person does by reading and making a decision — it's worth a 30-minute conversation to see whether AI can handle it.</p>
+
+      <h2>A Few Things We'd Do Differently</h2>
+      <p>We underestimated the variability in document formatting in the early testing phase, which meant we spent an extra three days on the pre-processing layer. In future projects we now ask for a sample of 50–100 real documents before scoping — not five clean examples.</p>
+      <p>We'd also build the human review flagging earlier in the process. It's not just a fallback — it's the mechanism that builds client confidence in the system over time.</p>
+
+      <h2>Conclusion</h2>
+      <p>AI integration doesn't have to mean rebuilding your product. The best projects start with a specific problem, a defined output, and a realistic timeline. If you're curious whether something in your workflow is a good candidate, reach out — we're happy to give you an honest answer before you commit to anything.</p>
+    `,
+    excerpt:
+      "A practical walkthrough of how we scoped, built and delivered an AI document intelligence feature in four weeks — what worked, what didn't, and what it cost.",
+    image: "/blog4.webp",
+    date: "March 10, 2026",
+    author: {
+      name: "Tarun Parashar",
+      bio: "Tarun is co-founder and Tech Lead at Alicorn Infotech. He has led AI integration, business automation and full-stack development projects for clients across fintech, legal tech and enterprise operations.",
+      avatar: "/avatar.png",
+    },
+    slug: "ai-document-intelligence-4-weeks",
+    category: "AI Integration",
   },
   {
     title:

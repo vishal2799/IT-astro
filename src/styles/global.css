@@ -3,8 +3,14 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     @apply antialiased;
+  }
+  *:focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2;
   }
 }
 
@@ -16,6 +22,21 @@
   .section-padding {
     @apply py-8 md:py-10 lg:py-14;
   }
+
+  /* Reusable pill badge */
+  .badge {
+    @apply inline-block bg-primary/10 text-primary text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full;
+  }
+
+  /* Reusable card hover lift */
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+  }
+}
+
+/* Animated underline for nav links */
+.underline-animation {
+  position: relative;
 }
 .underline-animation::after {
   content: '';
@@ -27,7 +48,15 @@
   background: white;
   transition: width 0.4s ease-in-out;
 }
-
 .underline-animation:hover::after {
   width: 100%;
+}
+
+/* Fade-in utility (used with AOS fallback) */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease-out both;
 }

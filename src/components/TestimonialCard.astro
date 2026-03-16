@@ -1,27 +1,41 @@
 ---
 const { quote, author, position, company } = Astro.props;
+
+const companyColors: Record<string, { bg: string; text: string }> = {
+  "Twinings Ovaltine":     { bg: "#1a5276", text: "#ffffff" },
+  "Johnson & Johnson":     { bg: "#cc0000", text: "#ffffff" },
+  "FinLink Micro Services":{ bg: "#117a65", text: "#ffffff" },
+};
+
+const colors   = companyColors[company] ?? { bg: "#2563eb", text: "#ffffff" };
+const initials = company
+  ? company.split(' ').map((w: string) => w[0]).slice(0, 2).join('')
+  : author.split(' ').map((w: string) => w[0]).slice(0, 2).join('');
 ---
 
-<div
-  class='bg-white rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-xl flex flex-col'
->
-  <!-- Quote icon -->
-  <div class='text-primary/20 mb-3'>
-    <svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' fill='currentColor' viewBox='0 0 16 16'>
+<div class='bg-white rounded-xl shadow-md p-7 transition-all duration-300 hover:shadow-xl flex flex-col border border-gray-50'>
+
+  <!-- Quote mark -->
+  <div class='text-primary/20 mb-4'>
+    <svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' fill='currentColor' viewBox='0 0 16 16'>
       <path d='M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z'/>
     </svg>
   </div>
 
-  <blockquote class='text-gray-700 leading-relaxed flex-grow mb-5'>{quote}</blockquote>
+  <blockquote class='text-gray-700 leading-relaxed flex-grow mb-6 text-[0.95rem]'>{quote}</blockquote>
 
-  <div class='flex items-center mt-auto pt-4 border-t border-gray-100'>
-    <div class='w-10 h-10 rounded-full mr-3 flex items-center justify-center bg-primary/10 flex-shrink-0'>
-      <span class='text-primary font-bold text-sm'>{company ? company.charAt(0).toUpperCase() : author.charAt(0).toUpperCase()}</span>
+  <div class='flex items-center mt-auto pt-4 border-t border-gray-100 gap-3'>
+    <!-- Branded company initial avatar -->
+    <div
+      class='w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0 font-bold text-sm'
+      style={`background-color:${colors.bg};color:${colors.text};`}
+    >
+      {initials}
     </div>
     <div>
       <p class='font-semibold text-gray-900 text-sm'>{author}</p>
       <p class='text-gray-500 text-xs'>{position}</p>
-      {company && <p class='text-primary text-xs font-medium'>{company}</p>}
+      {company && <p class='text-primary text-xs font-medium mt-0.5'>{company}</p>}
     </div>
   </div>
 </div>
