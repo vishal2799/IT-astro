@@ -26,8 +26,8 @@ import CTA from '../../components/CTA.astro';
       />
       <div class='absolute inset-0 bg-black opacity-50'></div>
       <div class='relative z-10 text-center text-white px-4'>
-        <h1 class='text-4xl md:text-6xl font-bold mb-4' data-aos="fade-down">Portfolio</h1>
-        <p class='text-xl md:text-2xl mb-8' data-aos="fade-down" data-aos-delay="200">
+        <h1 class='text-4xl md:text-6xl font-bold mb-4'>Portfolio</h1>
+        <p class='text-xl md:text-2xl mb-8'>
           Innovative Solutions Driving Business Success
         </p>
       </div>
@@ -80,9 +80,6 @@ import CTA from '../../components/CTA.astro';
 </MainLayout>
 
 <script>
-  // These match exactly against data-category and data-technologies on each card
-  // Format: { tabLabel: { categories: [...], technologies: [...] } }
-  // A card matches if its data-category OR any of its data-technologies contains a keyword
   const filterRules: Record<string, { cats: string[]; techs: string[] }> = {
     'All':              { cats: [], techs: [] },
     'Web & Mobile':     { cats: ['website', 'web application', 'landing page', 'fintech suite', 'mobile app'], techs: ['react native', 'reactjs', 'next.js', 'flutter', 'swift', 'kotlin', 'node.js', 'wordpress', 'elementor', 'django'] },
@@ -92,8 +89,17 @@ import CTA from '../../components/CTA.astro';
     'AI & Automation':  { cats: ['automation', 'power platform'], techs: ['power automate', 'uipath', 'automation anywhere', 'k2 nintex'] },
   };
 
-  const tabs = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
+  const tabs  = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
   const cards = document.querySelectorAll<HTMLElement>('#projects-grid > div[data-category]');
+
+  // Strip AOS from all cards immediately — we don't want scroll-hiding on a filter page
+  cards.forEach((card) => {
+    card.removeAttribute('data-aos');
+    card.removeAttribute('data-aos-delay');
+    card.style.opacity   = '1';
+    card.style.transform = 'none';
+    card.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
+  });
 
   // Set first tab active on load
   tabs[0]?.classList.add('bg-primary', 'text-white');
@@ -102,24 +108,25 @@ import CTA from '../../components/CTA.astro';
     tab.addEventListener('click', () => {
       const filter = tab.dataset.filter ?? 'All';
 
-      // Swap active styles
       tabs.forEach((t) => t.classList.remove('bg-primary', 'text-white'));
       tab.classList.add('bg-primary', 'text-white');
 
       cards.forEach((card) => {
         if (filter === 'All') {
-          card.style.display = '';
+          card.style.display   = '';
+          card.style.opacity   = '1';
+          card.style.transform = 'none';
           return;
         }
 
         const { cats, techs } = filterRules[filter] ?? { cats: [], techs: [] };
-        const cardCat  = (card.dataset.category  ?? '').toLowerCase();
+        const cardCat  = (card.dataset.category     ?? '').toLowerCase();
         const cardTech = (card.dataset.technologies ?? '').toLowerCase();
+        const visible  = cats.some((kw) => cardCat.includes(kw)) || techs.some((kw) => cardTech.includes(kw));
 
-        const catMatch  = cats.some((kw)  => cardCat.includes(kw));
-        const techMatch = techs.some((kw) => cardTech.includes(kw));
-
-        card.style.display = (catMatch || techMatch) ? '' : 'none';
+        card.style.display   = visible ? ''     : 'none';
+        card.style.opacity   = visible ? '1'    : '';
+        card.style.transform = visible ? 'none' : '';
       });
     });
   });
