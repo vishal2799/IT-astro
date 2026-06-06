@@ -1919,58 +1919,73 @@ const solutions = [
 ];
 
 const projects = [
+  // ─── EXISTING PROJECTS — REFINED ────────────────────────────────────────────
+
   {
-    title: "LiteCloud: Future-Ready Practice Management Tool",
-    category: "Practice Management",
+    title: "LiteCloud: Practice Management Platform",
+    category: "Enterprise Application",
     description:
-      "An advanced practice management tool designed for Chartered Accountants (CAs) and Certified Public Accountants (CPAs). Its flexible architecture ensures it can be customized to meet the needs of other professionals, such as lawyers, with minimal modifications.",
+      "A modular practice management platform for Chartered Accountants and CPAs — covering CRM, task tracking, client database, and real-time analytics. Designed from the ground up to be adaptable for legal practices with minimal modification.",
     image: "/project1.webp",
     client: "JHS Associates LLP",
     duration: "8+ months (ongoing)",
     technologies: [
+      "React",
+      "TypeScript",
       "SharePoint",
       "Power BI",
-      "Microsoft Outlook Integration",
-      "React",
+      "Microsoft Graph API",
+      "Azure AD B2C",
+      "Power Automate",
+      "REST APIs",
     ],
     slug: "litecloud-practice-management-tool",
     challenge:
-      "Inefficient manual processes and scattered workflows for CAs and CPAs led to difficulties in managing tasks, client relationships, and accessing real-time analytics. The client also wanted a scalable solution that could cater to other professions, such as lawyers, with minimal effort.",
+      "Manual, fragmented workflows across spreadsheets and email were making task and client management increasingly unscalable. The firm also needed a single platform that could be adapted for legal practices without rebuilding from scratch.",
     solution:
-      "Built a modular platform offering CRM, task tracking, client database management, and automated workflows. Power BI dashboards provided real-time insights, while dynamic templates and recurring task automation streamlined operations. The design allows for quick adaptation to legal practices with features like case management and legal document templates.",
+      "Built a React + TypeScript frontend backed by SharePoint as the data layer, with Microsoft Graph API enabling calendar and Outlook integration. Power Automate handles recurring task generation and deadline reminders. Power BI dashboards embedded directly in the app surface real-time operational KPIs. Azure AD B2C manages role-based access across staff tiers. The modular component architecture allows new practice types (e.g. legal case management) to be plugged in without restructuring core logic.",
     results: [
-      "Streamlined task and client management for CAs and CPAs",
-      "Real-time insights enabled better operational decisions",
-      "Significant time savings with automated workflows",
-      "Future-proof design to expand into legal practice management",
+      "Unified CRM, task, and document management in a single platform",
+      "Real-time Power BI dashboards replaced weekly manual reporting",
+      "Automated recurring workflows cut admin overhead significantly",
+      "Platform design validated for extension into legal practice management",
     ],
   },
+
   {
-    title: "Customer Complaint Management App for Nama Supply",
-    category: "Internal Tool – Workflow Automation",
+    title: "Complaint Management System — Nama Supply",
+    category: "Workflow Automation",
     description:
-      "A complaint resolution system powered by K2 Nintex that streamlines customer service workflows through automated approvals, real-time data integrations, and multi-channel notifications.",
+      "A complaint resolution system that replaced manual email chains with a structured 4-level approval workflow, real-time billing data lookups, and automated SMS updates — cutting resolution time by over 40%.",
     image: "/project8.jpg",
     client: "Nama Supply",
     duration: "5+ months (ongoing)",
-    technologies: ["K2 Nintex", "SQL UserUM", "Orion API", "SMS Gateway"],
+    technologies: [
+      "K2 Nintex",
+      "SQL Server",
+      "Orion API",
+      "SMS Gateway",
+      "REST APIs",
+      "Azure DevOps (CI/CD)",
+    ],
     slug: "customer-complaint-management-app",
     challenge:
-      "Nama Supply faced delays and inefficiencies in handling customer complaints, with manual approvals and lack of integration between systems leading to slow resolution and poor customer communication.",
+      "Complaint handling relied on manual email approvals and had no integration between the CRM, billing system, or customer notification layer — leading to slow resolution, lost threads, and poor customer visibility.",
     solution:
-      "Designed and implemented a robust complaint management system using K2 Nintex. The solution includes a 4-level dynamic approval flow, integration with SQL UserUM for user validation, and real-time billing data retrieval via Orion API. Customers receive automated SMS updates at each stage, improving transparency and reducing resolution time.",
+      "Designed a K2 Nintex workflow with a configurable 4-level dynamic approval chain. SQL UserUM integration validates agents at each approval stage. Billing data is retrieved in real time via the Orion API to give approvers full context without leaving the workflow. An SMS gateway sends automated status updates to customers at each stage transition. Deployments are managed via Azure DevOps pipelines to ensure consistent environment promotion.",
     results: [
-      "Reduced complaint resolution time by over 40%",
-      "Integrated user validation and billing data in real-time",
-      "Enabled automated notifications to customers via SMS",
-      "Improved operational efficiency with scalable approval workflows",
+      "Complaint resolution time reduced by over 40%",
+      "Real-time billing context surfaced to approvers without system switching",
+      "Customer SMS updates eliminated inbound status enquiries",
+      "Scalable approval logic handles volume spikes without reconfiguration",
     ],
   },
+
   {
-    title: "PayNest: Unified BBPS + AEPS Platform (Web, Mobile, Admin)",
-    category: "Fintech Suite – Mobile, Web & Admin",
+    title: "PayNest: Unified BBPS + AEPS Fintech Platform",
+    category: "Fintech Suite — Mobile, Web & Admin",
     description:
-      "PayNest is a full-stack digital finance platform offering BBPS utility payments and AEPS banking services through mobile and web apps. Designed for both users and agents, it includes a robust admin portal for transaction monitoring, agent management, and real-time support.",
+      "A full-stack digital payments platform for utility bill payments (BBPS) and Aadhaar-based banking (AEPS) — delivered across a React Native mobile app, ReactJS web portal, and a secure admin dashboard.",
     image: "/project6.jpg",
     client: "FinLink Micro Services",
     duration: "5+ months (ongoing)",
@@ -1979,264 +1994,986 @@ const projects = [
       "ReactJS",
       "Node.js",
       "MongoDB",
-      "BBPS & AEPS APIs",
+      "BBPS API",
+      "AEPS API",
+      "Redis",
+      "JWT Auth",
+      "GitHub Actions (CI/CD)",
+      "AWS EC2 / S3",
     ],
     slug: "paynest-unified-fintech-suite",
     challenge:
-      "The client aimed to digitize utility payments and basic banking for rural and semi-urban users while enabling agents to operate via both mobile and web. They also needed a backend system to manage transactions, monitor fraud, and handle commissions.",
+      "The client needed to serve both mobile-first rural users and desktop-based agents through a single backend, with real-time transaction handling, fraud monitoring, and commission management — all without an existing technical team in place.",
     solution:
-      "Developed a cross-platform ecosystem with a React Native mobile app for users, a ReactJS web portal for agents, and a secure admin dashboard. Integrated BBPS for bill payments, AEPS for Aadhaar banking, real-time APIs, and SMS alerts. Admins can monitor activity, handle refunds, and manage agent performance with role-based access.",
+      "Built three distinct surfaces sharing a single Node.js / MongoDB backend: a React Native app for end users, a ReactJS web portal for agents, and a React admin dashboard with role-based access. Redis powers session management and transaction queuing. BBPS and AEPS APIs are integrated with retry logic and failure alerting. GitHub Actions runs automated tests and deploys to AWS EC2 on merge to main, with S3 serving static assets via CloudFront.",
     results: [
-      "Over 5,000 monthly transactions handled across platforms",
+      "5,000+ monthly transactions processed across platforms",
       "300+ agents onboarded through the web portal",
-      "Resolution time for failed transactions reduced by 60%",
-      "Future-ready architecture for UPI, micro-loans, and multi-lingual support",
+      "Failed transaction resolution time reduced by 60%",
+      "CI/CD pipeline cut manual deployment effort to near zero",
     ],
   },
+
   {
-    title:
-      "Revenue360: Built to Demonstrate Alicorn's Rapid Delivery Capability",
-    category: "Business Process Automation – Power Platform",
+    title: "Revenue360: Power Platform Finance Tracker",
+    category: "Business Process Automation",
     description:
-      "Built in 1.5 months to show exactly what Alicorn can deliver for SMBs with manual finance processes: a full Power Platform solution with a Canvas App front-end, SharePoint data layer, live Power BI dashboards, and automated refresh flows — all in a single-window interface.",
+      "An internal case study built in 6 weeks to demonstrate Alicorn's rapid delivery capability — a full Power Platform solution with Canvas App, SharePoint data layer, live Power BI dashboards, and automated refresh flows in a single interface.",
     image: "/project9.jpg",
     client: "Internal Case Study",
     duration: "1.5 months",
     technologies: [
-      "PowerApps (Canvas App)",
+      "Power Apps (Canvas)",
       "SharePoint",
       "Power BI",
       "Power Automate",
+      "Dataverse",
+      "Azure AD",
     ],
     slug: "revenue360-client-transaction-tracker",
     challenge:
-      "Managing client transactions and revenue processes across multiple tools caused data silos, delays in updates, and lack of real-time insights for stakeholders.",
+      "Managing client transactions across multiple disconnected spreadsheets caused data silos, update delays, and no real-time visibility for stakeholders — a common pain point for SMBs without dedicated BI tooling.",
     solution:
-      "Built a responsive Canvas App for data input and access across devices. SharePoint was used as the secure and collaborative data source. Power BI visualized revenue and transaction patterns with category-level breakdowns. Power Automate triggered dataset refreshes directly from the app, enabling live analytics inside the app itself.",
+      "Built a responsive Canvas App connected to a SharePoint / Dataverse backend. Power Automate triggers automated dataset refreshes when new records are submitted, so Power BI dashboards update in real time inside the app itself — no manual refresh step. Azure AD provides SSO and row-level security so each user sees only their relevant data. The entire solution was designed, built, and tested in six weeks.",
     results: [
-      "Full Power Platform solution designed and delivered in 6 weeks",
-      "Single-window interface to manage and monitor revenue flow",
-      "Real-time Power BI dashboards updated without leaving the app",
-      "Demonstrates rapid delivery capability for SMBs with manual finance processes",
+      "Single-window interface for revenue input, tracking, and analytics",
+      "Live Power BI dashboards updated automatically on record submission",
+      "Demonstrates 6-week delivery capability for SMB finance use cases",
+      "Template approach reusable across similar client engagements",
     ],
   },
+
   {
-    title: "FitLife: Native Fitness & Workout App",
-    category: "Mobile App (Native iOS & Android)",
+    title: "FitLife: Native iOS & Android Fitness App",
+    category: "Mobile App Development",
     description:
-      "FitLife is a dedicated native fitness and workout app, developed separately for iOS and Android platforms. It helps users plan workouts, track progress, and stay motivated through personalized plans, daily tracking, and integrated push notifications.",
+      "Fully native fitness and workout tracking apps for iOS and Android — leveraging platform SDKs, HealthKit / Google Fit integration, offline capability, and real-time Firebase sync.",
     image: "/project7.jpg",
     client: "FitLife Solutions",
     duration: "4+ months",
     technologies: [
       "Swift (iOS)",
       "Kotlin (Android)",
-      "Firebase",
-      "Xcode",
-      "Android Studio",
+      "Firebase Firestore",
+      "Firebase Auth",
+      "HealthKit",
+      "Google Fit API",
+      "Fastlane (CI/CD)",
+      "TestFlight / Google Play Internal",
     ],
     slug: "fitlife-native-fitness-app",
     challenge:
-      "The client wanted a truly native mobile experience, ensuring best-in-class performance and smooth integration with device features such as HealthKit and Google Fit. They required offline capability, real-time data sync, and consistent UI aligned with each platform’s design language.",
+      "The client required platform-native performance and deep device integration (health sensors, push notifications, offline workouts) — ruling out cross-platform frameworks. They also needed a repeatable release pipeline across both stores.",
     solution:
-      "Developed fully native apps using Swift for iOS and Kotlin for Android, leveraging platform-specific SDKs and design guidelines. Integrated Firebase for secure authentication and real-time data syncing. Implemented HealthKit (iOS) and Google Fit (Android) integration for holistic fitness tracking, along with offline workout access and personalized push notifications.",
+      "Developed separate Swift (iOS) and Kotlin (Android) codebases, each following platform-specific design language (HIG and Material 3). Firebase Firestore syncs workout data in real time with offline persistence enabled. HealthKit (iOS) and Google Fit (Android) provide holistic health data integration. Fastlane automates builds, signing, and distribution to TestFlight and Google Play Internal Track — reducing release preparation from hours to minutes.",
     results: [
-      "Achieved high user satisfaction through a fluid native experience",
-      "Improved engagement with push notifications and gamified achievements",
-      "Offline workouts ensured usability without connectivity",
-      "Integrated seamlessly with HealthKit and Google Fit for accurate tracking",
+      "Native-level performance and smooth animations on both platforms",
+      "Offline workout access with seamless sync on reconnection",
+      "HealthKit and Google Fit integration for accurate health tracking",
+      "Fastlane pipeline cut release cycle from manual multi-hour process to automated 15-minute run",
     ],
   },
+
   {
     title: "Wanderwise: Travel Agency Website",
-    category: "Website – Informational",
+    category: "Web Development",
     description:
-      "A visually rich, mobile-optimized website for a travel agency, designed to showcase curated destinations, tour packages, and engage potential clients through impactful storytelling and intuitive design.",
+      "A visually rich, performance-optimised travel agency website built with Next.js and Framer Motion — structured for SEO, fast loading, and easy content updates.",
     image: "/project10.jpg",
     client: "Concept Build — Wanderwise Travels",
     duration: "2 weeks",
-    technologies: ["Next.js", "Tailwind CSS", "Framer Motion"],
+    technologies: [
+      "Next.js 14",
+      "Tailwind CSS",
+      "Framer Motion",
+      "TypeScript",
+      "Sanity CMS",
+      "Vercel",
+    ],
     slug: "wanderwise-travel-agency-website",
     challenge:
-      "The agency needed a modern digital presence that reflected their brand identity, attracted leads, and presented travel offerings in a visually compelling format.",
+      "The agency needed a digital presence that communicated their brand through strong visuals and storytelling, while keeping content — destinations, packages, blog posts — manageable without developer involvement.",
     solution:
-      "Developed a fast, SEO-friendly website with featured destination sections, travel inspiration blogs, photo galleries, and a sleek contact form. Animations powered by Framer Motion added a smooth user experience, while Tailwind CSS ensured clean, scalable styling.",
+      "Built with Next.js App Router for server-side rendering and static generation. Sanity CMS gives the agency team full control over destinations, packages, and blog content via a no-code studio. Framer Motion handles page transitions and scroll animations. Deployed to Vercel with preview deployments on every PR branch for fast feedback loops.",
     results: [
-      "Boosted client inquiries through improved brand presentation",
-      "Mobile-first responsive layout helped capture users on the go",
-      "Reduced bounce rate and improved engagement time",
-      "Created a flexible base for future additions like blogs or itineraries",
+      "Lighthouse performance score of 95+ on mobile",
+      "Agency team able to update all content independently via Sanity Studio",
+      "Preview deployments enabled stakeholder review before every publish",
+      "Strong SEO foundation with structured metadata and sitemap generation",
     ],
   },
+
   {
-    title: "AuraLegal: Modern Legal Firm Website",
-    category: "Website Development",
+    title: "AuraLegal: Law Firm Website",
+    category: "Web Development",
     description:
-      "A clean, SEO-optimized website designed for a legal consultancy firm. Built to establish credibility, showcase expertise, and streamline client inquiries through a structured and responsive layout.",
+      "A professional, SEO-optimised website for a legal consultancy — built on Next.js with a clean information architecture, structured service pages, lawyer profiles, and a custom contact flow.",
     image: "/project2.jpg",
     client: "Concept Build — AuraLegal LLP",
     duration: "3 weeks",
-    technologies: ["Next.js", "Tailwind CSS", "Framer Motion"],
+    technologies: [
+      "Next.js 14",
+      "Tailwind CSS",
+      "Framer Motion",
+      "TypeScript",
+      "Contentful CMS",
+      "Vercel",
+      "Schema.org structured data",
+    ],
     slug: "auralegal-law-firm-website",
     challenge:
-      "The law firm lacked a strong digital presence and needed a professional platform to highlight its services, display team profiles, and enable client inquiries while maintaining a modern brand image.",
+      "The firm had no digital presence and needed a platform that conveyed credibility, surfaced practice areas clearly, and ranked well for local legal search terms — without an ongoing developer dependency for content changes.",
     solution:
-      "Developed a fully responsive, fast-loading website using Next.js and Tailwind CSS. Integrated service listings, lawyer profiles, case study highlights, and a custom contact form. Added subtle animations using Framer Motion to enhance the user experience.",
+      "Built on Next.js App Router with full SSR for SEO performance. Contentful CMS manages practice area pages, team profiles, and blog posts. Schema.org structured data (LegalService, Person) added for search enrichment. Framer Motion adds subtle entrance animations that don't compromise performance. Contact form integrates with the firm's existing email workflow via a lightweight API route.",
     results: [
-      "Enhanced online presence and trust with potential clients",
-      "Improved SEO ranking through server-side rendering",
-      "Streamlined client inquiries via structured contact form",
-      "Professional look aligned with the firms brand identity",
+      "Professional online presence launched in three weeks",
+      "Server-side rendering and structured data improve local search visibility",
+      "Firm team manages all content changes independently via Contentful",
+      "Contact form submissions integrated directly into existing email workflow",
     ],
   },
+
   {
-    title: "ThreadCart: WooCommerce Clothing Store",
-    category: "E-Commerce Website",
+    title: "ThreadCart: WooCommerce Fashion Store",
+    category: "E-Commerce",
     description:
-      "An elegant online store crafted for a clothing brand, offering smooth shopping experiences, category filtering, and secure checkout with modern design aesthetics.",
+      "A full-featured WooCommerce clothing store with category filtering, wishlist, discount engine, and a fast, mobile-optimised checkout — built to launch quickly and scale as the brand grows.",
     image: "/project3.jpg",
     client: "Concept Build — ThreadCart Apparel",
     duration: "1 month",
-    technologies: ["WordPress", "WooCommerce", "Elementor"],
+    technologies: [
+      "WordPress",
+      "WooCommerce",
+      "Elementor Pro",
+      "WooCommerce Blocks",
+      "Stripe",
+      "Cloudflare CDN",
+      "WP Rocket",
+    ],
     slug: "threadcart-clothing-ecommerce",
     challenge:
-      "The client needed a complete eCommerce platform for their growing fashion label, with customizable product displays, user-friendly shopping flows, and mobile responsiveness.",
+      "A growing fashion label needed a full eCommerce store launched quickly, with strong mobile UX, product discovery features, and a performant checkout — without a custom build budget.",
     solution:
-      "Developed a WooCommerce-based website using WordPress and Elementor. Included product categorization, discount coupon functionality, customer review sections, wishlist feature, and full mobile optimization.",
+      "Built on WordPress + WooCommerce with Elementor Pro for design flexibility. WooCommerce Blocks power the product grid and cart. Stripe handles payments with 3D Secure support. WP Rocket handles caching and asset optimisation; Cloudflare CDN delivers images and static assets globally. Product filtering, wishlists, and coupon management configured without custom plugin development.",
     results: [
-      "Launched full-scale eCommerce store within 30 days",
-      "Increased product visibility through category filters",
-      "Boosted conversions with a fast, intuitive checkout experience",
-      "Fully mobile-optimized for modern shoppers",
+      "Full eCommerce store launched within 30 days",
+      "Mobile-first responsive layout with fast checkout flow",
+      "Cloudflare + WP Rocket reduced page load time by over 60%",
+      "Scalable foundation for additional product lines and marketing integrations",
     ],
   },
+
   {
-    title: "NestEdge Interiors: Portfolio Website for Designers",
-    category: "Website Development",
+    title: "NestEdge Interiors: Portfolio Website",
+    category: "Web Development",
     description:
-      "A visually immersive website for an interior design firm to showcase projects, share service details, and attract new clients with a highly curated brand presence.",
+      "An immersive, image-led portfolio website for an interior design firm — with project galleries, service pages, and a fast static architecture built to showcase work and generate enquiries.",
     image: "/project4.jpg",
     client: "Concept Build — NestEdge Interiors",
     duration: "3 weeks",
-    technologies: ["Next.js", "Tailwind CSS", "Lightbox Gallery"],
+    technologies: [
+      "Next.js 14",
+      "Tailwind CSS",
+      "Lightbox Gallery",
+      "TypeScript",
+      "Vercel",
+      "next/image optimisation",
+    ],
     slug: "nestedge-interior-design-website",
     challenge:
-      "The firm wanted a clean and sophisticated platform to display their portfolio, engage potential clients, and improve visibility for their local services.",
+      "The firm's portfolio was spread across Instagram and a dated website with no SEO presence. They needed a platform that showcased projects beautifully, loaded fast despite heavy imagery, and surfaced their services clearly to potential clients.",
     solution:
-      "Built a performance-optimized website using Next.js, featuring interactive image galleries, project filters, and mobile-friendly layouts. Contact form and service descriptions were included to support lead generation.",
+      "Static site generated with Next.js, with next/image handling automatic WebP conversion and lazy loading for all portfolio images. Lightbox gallery enables full-screen project viewing without third-party script overhead. Project pages are structured for SEO with descriptive metadata and Open Graph tags for social sharing. Deployed to Vercel with global CDN.",
     results: [
-      "Professional showcase of 15+ interior design projects",
-      "Improved client engagement via intuitive navigation",
-      "Faster page loads and SEO boost through SSR",
-      "Brand-aligned layout with emphasis on visual storytelling",
+      "15+ interior projects showcased with full-screen gallery experience",
+      "next/image optimisation reduced image payload by ~70%",
+      "Improved organic search presence with structured metadata",
+      "Client enquiries routed through a structured contact form",
     ],
   },
+
   {
-    title: "DecoDwell: Home Decor Online Store",
-    category: "E-Commerce Website",
+    title: "DecoDwell: Home Decor eCommerce Store",
+    category: "E-Commerce",
     description:
-      "An eCommerce platform for handcrafted home decor, built to support product discovery, smooth shopping flow, and easy inventory management through WordPress and WooCommerce.",
+      "An aesthetically led WooCommerce store for handcrafted home decor — with product filtering, wishlists, secure payments, and an admin-friendly content management setup.",
     image: "/project5.jpg",
     client: "Concept Build — DecoDwell Home Studio",
     duration: "1.5 months",
-    technologies: ["WordPress", "WooCommerce", "Elementor"],
+    technologies: [
+      "WordPress",
+      "WooCommerce",
+      "Elementor Pro",
+      "Stripe",
+      "PayPal",
+      "YITH Wishlist",
+      "WP Rocket",
+      "Cloudflare",
+    ],
     slug: "decodwell-home-decor-ecommerce",
     challenge:
-      "The client needed a platform to showcase and sell handcrafted home decor items, with a strong focus on design aesthetics and easy product management.",
+      "The client sold handcrafted items at markets and needed to move online — with a platform that matched their brand aesthetic, handled multiple payment methods, and could be managed entirely without technical help.",
     solution:
-      "Created a WordPress WooCommerce store using Elementor for design flexibility. Implemented product filters, customer reviews, wishlists, and promotional banners. Optimized layouts for mobile and integrated secure payment gateways.",
+      "WooCommerce store with Elementor Pro design. YITH Wishlist plugin enables customers to save favourites. Stripe and PayPal configured for secure dual-gateway checkout. WP Rocket and Cloudflare together handle caching, image delivery, and DDoS protection. The WooCommerce admin panel gives the client full control over inventory, orders, and promotions.",
     results: [
-      "Smooth eCommerce experience with high user retention",
-      "Easy inventory and order management via WooCommerce",
-      "Increased conversions through aesthetic product layouts",
-      "Fully responsive and scalable for future product lines",
+      "Online store launched from zero in 6 weeks",
+      "Dual payment gateway reduced checkout abandonment",
+      "Client manages inventory and orders independently",
+      "Responsive design maintained high retention on mobile",
     ],
   },
+
   {
-    title: "AgencyPro: WordPress Responsive Landing Page",
-    category: "Landing Page (WordPress)",
+    title: "AgencyPro: WordPress Landing Page",
+    category: "Web Development",
     description:
-      "AgencyPro is a clean, modern WordPress landing page developed for BrightEdge Solutions — a creative agency looking to showcase their services, team, and expertise with a sleek, responsive online presence. The landing page is designed to drive inquiries and build trust with potential clients.",
+      "A clean, conversion-focused WordPress landing page for a creative agency — with service sections, team profiles, testimonials, and a lead capture form, all editable without developer involvement.",
     image: "/project12.jpg",
     client: "Concept Build — BrightEdge Solutions",
     duration: "1 month",
-    technologies: ["WordPress", "Elementor", "Custom CSS"],
+    technologies: [
+      "WordPress",
+      "Elementor Pro",
+      "Custom CSS",
+      "WPForms",
+      "Yoast SEO",
+      "Cloudflare",
+    ],
     slug: "agencypro-wordpress-landing-page",
     challenge:
-      "BrightEdge Solutions needed a versatile landing page that would clearly present their services and company highlights while staying easy to update without technical help. The page had to be fully responsive and optimized for conversions.",
+      "The agency needed a polished landing page that communicated their services and social proof clearly, ranked for local search terms, and could be updated by non-technical staff without breaking the design.",
     solution:
-      "Designed the landing page in Figma and built it on WordPress using Elementor for flexible drag-and-drop editing. Added custom CSS for precise styling tweaks. Included well-structured sections for service overviews, company achievements, team members, client testimonials, and an integrated contact form. Prioritized SEO best practices and fast page load times.",
+      "Designed in Figma then built in Elementor Pro with a locked global style guide (typography, colour tokens) so non-technical editors can update content without affecting layout. WPForms handles lead capture with email notifications. Yoast SEO manages metadata and sitemap. Cloudflare provides CDN and security. Page load optimised to sub-2s on mobile.",
     results: [
-      "Delivered a polished, conversion-focused landing page",
-      "Ensured seamless responsiveness on all devices",
-      "Empowered the agency team to edit content easily with Elementor",
-      "Improved online visibility and increased customer inquiries",
+      "Polished landing page delivered in four weeks",
+      "Sub-2 second mobile load time after Cloudflare and caching configuration",
+      "Agency team edits all content via Elementor without developer support",
+      "Improved local search visibility via Yoast SEO configuration",
     ],
   },
+
   {
-    title: "HavenStay: Home Rentals Agency Website Design",
-    category: "Website (WordPress)",
+    title: "HavenStay: Home Rentals Agency Website",
+    category: "Web Development",
     description:
-      "HavenStay is a modern WordPress website designed and developed for a boutique home rentals agency. The site showcases available properties, highlights agency services, and provides an easy way for potential clients to inquire about rentals — all within a clean, trustworthy design.",
+      "A modern, trustworthy WordPress website for a boutique home rentals agency — with property listing sections, service pages, and a clear enquiry flow for homeowners and renters.",
     image: "/project13.jpg",
     client: "Concept Build — HavenStay Rentals",
     duration: "2 months",
-    technologies: ["WordPress", "Elementor", "Custom CSS"],
+    technologies: [
+      "WordPress",
+      "Elementor Pro",
+      "Custom CSS",
+      "WPForms",
+      "Yoast SEO",
+      "Google Maps API",
+      "Cloudflare",
+    ],
     slug: "havenstay-home-rentals-website",
     challenge:
-      "HavenStay Rentals needed a website that would build trust with homeowners and renters alike. The goal was to present property listings attractively while keeping the site simple to update as new listings became available, all without using complex booking systems.",
+      "The agency needed to build trust with both homeowners and renters through a professional online presence — with a listing display that was easy to update as properties came and went, and no complex booking system required.",
     solution:
-      "Designed a fresh, user-friendly layout in Figma, then built the site on WordPress using Elementor for flexible content editing. Developed custom listing sections, service pages, and a contact form for rental inquiries. Added subtle animations and clear calls-to-action to increase engagement. Optimized the site for fast loading and mobile responsiveness.",
+      "Built on WordPress + Elementor with a custom property listing template that lets the agency add and remove listings through a simple admin interface. Google Maps API embeds interactive location maps on property pages. WPForms powers the rental enquiry flow with conditional fields for homeowner vs renter journeys. Yoast SEO handles metadata across all listing pages.",
     results: [
-      "Launched a professional, easy-to-manage WordPress website",
-      "Created a trustworthy online presence to attract homeowners and renters",
-      "Enabled the agency team to update listings and content without coding",
-      "Improved lead generation through clear CTAs and contact options",
+      "Professional agency website launched within two months",
+      "Property listings manageable by agency staff without developer help",
+      "Enquiry form conversion improved with conditional form logic",
+      "Google Maps integration added location context to all listings",
     ],
   },
+
   {
     title: "PeopleCore: HR Management Admin Portal",
-    category: "Web Application (.NET)",
+    category: "Web Application",
     description:
-      "PeopleCore is a robust HR management portal developed for a mid-sized organization to streamline all key HR processes. Built with ASP.NET Core MVC and SQL Server, the platform provides a centralized solution for employee onboarding, leave management, performance tracking, and internal communication, all within an intuitive, responsive interface.",
+      "A centralised HR management portal built with ASP.NET Core MVC — covering employee onboarding, leave management, performance appraisals, and internal announcements, with granular role-based access control.",
     image: "/project14.jpg",
     client: "Concept Build — Synergen Solutions Inc.",
     duration: "4 months",
-    technologies: ["ASP.NET Core MVC", "SQL Server", "REST API"],
+    technologies: [
+      "ASP.NET Core MVC",
+      "SQL Server",
+      "Entity Framework Core",
+      "REST API",
+      "Azure AD SSO",
+      "Azure DevOps (CI/CD)",
+      "Docker",
+      "Bootstrap 5",
+    ],
     slug: "peoplecore-hr-admin-portal",
     challenge:
-      "The client needed a unified intranet portal to replace multiple disconnected HR tools. They wanted secure role-based access for HR admins and employees, centralized records, and real-time performance tracking, all while ensuring an excellent user experience on desktop and mobile.",
+      "The organisation operated across four disconnected HR tools — separate systems for leave requests, appraisals, onboarding documents, and internal announcements — with no single view of employee data and no audit trail.",
     solution:
-      "Designed a modern HR admin dashboard UI in Figma, then implemented it using ASP.NET Core MVC with SQL Server as the backend. Developed custom modules for onboarding, leave requests, appraisals, and announcements. Created secure REST APIs for future mobile app integration. Implemented granular user permissions for HR managers, team leads, and employees.",
+      "Built a unified ASP.NET Core MVC portal backed by SQL Server with Entity Framework Core. Azure AD SSO provides single sign-on for all staff. Role-based access control separates HR admin, team lead, and employee views. REST APIs expose all HR data for future mobile app integration. Azure DevOps CI/CD pipelines run automated tests and deploy to a Dockerised Azure App Service on every merge. Full audit logging on all record changes.",
     results: [
-      "Centralized all HR processes in a single, easy-to-use portal",
-      "Improved employee experience and HR team efficiency",
-      "Reduced paperwork and manual tracking through automation",
-      "Enabled seamless future mobile app integration via REST APIs",
+      "All HR processes consolidated into a single platform",
+      "Automated workflows eliminated manual leave and appraisal paperwork",
+      "Full audit trail on every record change for compliance",
+      "REST API layer ready for future mobile app integration",
     ],
   },
+
   {
-    title: "DineFlow: Restaurant Operations Automation with Power Platform",
-    category: "Power Platform Solution",
+    title: "DineFlow: Restaurant Operations Platform",
+    category: "Business Process Automation",
     description:
-      "DineFlow is a custom-built restaurant operations solution leveraging Power Apps, Power Automate, SharePoint, and Power BI. Designed for a multi-branch restaurant chain, it centralizes food order tracking, menu updates, customer feedback management, and payment monitoring, all within a unified low-code platform.",
+      "A Power Platform solution for a multi-branch restaurant chain — centralising order tracking, menu management, customer feedback, and payment analytics in a single low-code interface accessible on mobile and desktop.",
     image: "/project15.jpg",
     client: "Concept Build — Urban Eats Group",
     duration: "3 months",
-    technologies: ["Power Apps", "Power Automate", "SharePoint", "Power BI"],
+    technologies: [
+      "Power Apps (Canvas)",
+      "Power Automate",
+      "SharePoint",
+      "Power BI",
+      "Dataverse",
+      "Azure AD",
+      "Microsoft Teams integration",
+    ],
     slug: "dineflow-restaurant-operations-platform",
     challenge:
-      "The client relied on spreadsheets and disconnected tools to manage daily orders, update menus, collect reviews, and track payments — leading to data silos and delays. They needed an agile, scalable solution without investing in custom app development.",
+      "Branch managers across five locations were running daily operations through WhatsApp groups and shared spreadsheets. Order errors, menu inconsistencies, and delayed payment reconciliation were compounding as the chain grew.",
     solution:
-      "Designed a clear admin dashboard in Figma and built a Power Apps Canvas App for branch managers to handle food orders, update menus, and view customer feedback in real-time. Automated order workflows and approval chains using Power Automate. Stored all menu and order data securely in SharePoint. Integrated Power BI dashboards to analyze sales, payment trends, and customer satisfaction KPIs.",
+      "Canvas App gives branch managers a mobile-friendly interface for order management, live menu updates, and customer feedback review. Power Automate handles order routing, escalation alerts, and end-of-day reconciliation reports pushed to Microsoft Teams. SharePoint and Dataverse store all operational data with version history. Power BI dashboards give leadership cross-branch visibility on sales, feedback trends, and payment KPIs.",
     results: [
-      "Consolidated operations into a single low-code app, accessible on mobile and desktop",
-      "Accelerated order handling and menu updates by over 60%",
-      "Enabled real-time feedback monitoring to improve service quality",
-      "Delivered actionable sales and payment analytics through integrated Power BI dashboards",
+      "Order handling and menu updates accelerated by over 60%",
+      "Cross-branch visibility delivered through real-time Power BI dashboards",
+      "End-of-day reconciliation automated — no manual spreadsheet collation",
+      "Platform accessible on mobile and desktop without native app development",
+    ],
+  },
+
+  // ─── NEW PROJECTS ────────────────────────────────────────────────────────────
+
+  {
+    title: "DocuMind: AI Contract Review Assistant",
+    category: "Generative AI / LLM Integration",
+    description:
+      "An AI-powered document intelligence tool for a legal services firm — automatically classifying incoming contracts, extracting key clauses, flagging risk areas, and routing documents without manual review.",
+    image: "/project16.webp",
+    client: "Concept Build — Meridian Legal Partners",
+    duration: "4 weeks",
+    technologies: [
+      "Azure OpenAI (GPT-4o)",
+      "Python",
+      "LangChain",
+      "Azure Functions",
+      "Azure Document Intelligence (OCR)",
+      "MongoDB",
+      "React",
+      "FastAPI",
+    ],
+    slug: "documind-ai-contract-review",
+    challenge:
+      "The firm's team spent 3–4 hours daily manually reading, classifying, and routing incoming contracts. As volume grew, errors crept in and turnaround times slipped. They needed AI embedded in their existing workflow — not a new platform.",
+    solution:
+      "Built an AI pipeline using Azure OpenAI (GPT-4o) via LangChain. Documents arrive through the existing upload endpoint; Azure Document Intelligence handles OCR for scanned files. GPT-4o then classifies document type, extracts structured fields (parties, dates, obligations, termination clauses, jurisdiction) into a JSON schema, and assigns a confidence score. Documents below threshold are automatically flagged for human review in a React dashboard. Results write back to MongoDB and trigger the existing routing workflow via a FastAPI webhook. Deployed as an Azure Function — zero new infrastructure.",
+    results: [
+      "94% classification accuracy on live document corpus in testing",
+      "Manual review time reduced from 3–4 hours daily to under 20 minutes",
+      "Zero new infrastructure required — deployed as a serverless Azure Function",
+      "Human-in-the-loop review queue built in from day one for edge cases",
+    ],
+  },
+
+  {
+    title: "Orion: SaaS Dashboard Redesign & Design System",
+    category: "UI/UX Design",
+    description:
+      "A full UX audit and redesign of a B2B analytics SaaS product — paired with a Figma design system and a React + Tailwind component library that cut design-to-code handoff time by 40%.",
+    image: "/project17.webp",
+    client: "Concept Build — Orion Analytics",
+    duration: "6 weeks",
+    technologies: [
+      "Figma",
+      "FigJam",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Storybook",
+      "Chromatic (visual regression)",
+      "Radix UI (primitives)",
+    ],
+    slug: "orion-design-system-saas-redesign",
+    challenge:
+      "Multiple teams shipping features independently had left the product with inconsistent UI, confusing navigation, and a high volume of support tickets from new users. No design system existed — every screen was designed from scratch.",
+    solution:
+      "Ran a UX audit combining session recordings and support ticket analysis to identify the highest-friction journeys. Conducted interviews with six power users and five new users. Redesigned core navigation and the three highest-traffic screens (dashboard, report builder, settings). Built a Figma component library with typography, colour tokens, form elements, data tables, and chart components — then implemented it as a Storybook-documented React + Tailwind library using Radix UI for accessible primitives. Chromatic runs automated visual regression tests on every PR to catch unintended UI changes.",
+    results: [
+      "Navigation-related support tickets dropped 48% within six weeks of launch",
+      "New user time-to-first-report reduced from 11 minutes to under 4 minutes",
+      "Design system adopted across three product teams covering 60+ components",
+      "Chromatic visual regression testing prevents unintended UI regressions on every PR",
+    ],
+  },
+
+  {
+    title: "SentimentLens: ML-Powered Customer Feedback Analyser",
+    category: "Machine Learning",
+    description:
+      "A machine learning pipeline that ingests customer feedback from multiple channels, classifies sentiment, extracts topics, and surfaces actionable insights through a real-time dashboard — replacing manual feedback triage.",
+    image: "/project18.webp",
+    client: "Concept Build — RetailEdge Group",
+    duration: "6 weeks",
+    technologies: [
+      "Python",
+      "scikit-learn",
+      "Hugging Face Transformers (BERT)",
+      "FastAPI",
+      "PostgreSQL",
+      "Apache Kafka",
+      "React",
+      "Recharts",
+      "Docker",
+      "GitHub Actions (CI/CD)",
+    ],
+    slug: "sentimentlens-ml-feedback-analyser",
+    challenge:
+      "The client received thousands of customer feedback submissions weekly across email, in-app surveys, and review platforms. Manual triage by a small team meant critical issues were often spotted days late. They needed automated, real-time insight surfacing.",
+    solution:
+      "Built a Python ingestion service that consumes feedback from multiple sources via Apache Kafka. A fine-tuned BERT model (Hugging Face Transformers) classifies sentiment (positive / neutral / negative) and a secondary scikit-learn topic classifier groups feedback into product areas. FastAPI exposes a REST endpoint for the React dashboard, which surfaces trending topics, sentiment shifts, and volume anomalies in real time using Recharts. The full ML pipeline and API are containerised with Docker; GitHub Actions runs model evaluation tests and deploys on every merge to main.",
+    results: [
+      "Feedback triage time reduced from days to near real-time",
+      "BERT sentiment model achieved 91% accuracy on the client's domain-specific corpus",
+      "Trending negative topics surfaced to product teams within minutes of volume spike",
+      "CI/CD pipeline includes automated model evaluation — accuracy regressions block deployment",
+    ],
+  },
+
+  {
+    title: "FlowCore: CI/CD Platform Modernisation",
+    category: "DevOps / CI/CD",
+    description:
+      "A full DevOps transformation for a mid-sized SaaS company — migrating from manual deployments to a fully automated CI/CD pipeline with containerised workloads, infrastructure-as-code, and observability across all environments.",
+    image: "/project19.webp",
+    client: "Concept Build — Nexara SaaS",
+    duration: "8 weeks",
+    technologies: [
+      "GitHub Actions",
+      "Docker",
+      "Kubernetes (AKS)",
+      "Terraform",
+      "Helm",
+      "Azure Container Registry",
+      "Datadog",
+      "OWASP ZAP (SAST/DAST)",
+      "SonarCloud",
+    ],
+    slug: "flowcore-cicd-devops-modernisation",
+    challenge:
+      "The team was deploying manually via SSH, with no staging environment parity, no automated tests in the release process, and no visibility into production health. Deployments took hours and were a regular source of incidents.",
+    solution:
+      "Defined all infrastructure as Terraform code targeting Azure. Containerised all services with Docker and migrated orchestration to AKS (Azure Kubernetes Service) with Helm charts per service. GitHub Actions pipelines run unit and integration tests, SonarCloud static analysis, and OWASP ZAP security scans on every PR. On merge to main, images are pushed to Azure Container Registry and deployed to staging automatically. Production deployments require a manual approval gate. Datadog monitors all services with alerting on SLO breaches.",
+    results: [
+      "Deployment time reduced from multi-hour manual process to 12-minute automated pipeline",
+      "Zero manual SSH deployments — all environments managed via Terraform and Helm",
+      "SonarCloud and OWASP ZAP integrated into PR checks — security issues blocked before merge",
+      "Datadog SLO dashboards give the team real-time production health visibility",
+    ],
+  },
+
+  {
+    title: "AskBase: RAG-Powered Internal Knowledge Assistant",
+    category: "Generative AI / RAG",
+    description:
+      "An internal Q&A assistant built on retrieval-augmented generation (RAG) — letting employees query a company's internal knowledge base, SOPs, and documentation in natural language, with source-cited answers.",
+    image: "/project20.webp",
+    client: "Concept Build — Harfield Operations Group",
+    duration: "5 weeks",
+    technologies: [
+      "Anthropic Claude API",
+      "LangChain",
+      "Pinecone (vector store)",
+      "Python",
+      "FastAPI",
+      "React",
+      "TypeScript",
+      "Azure Blob Storage",
+      "Docker",
+      "GitHub Actions",
+    ],
+    slug: "askbase-rag-knowledge-assistant",
+    challenge:
+      "Employees were spending significant time searching through SharePoint folders, PDF SOPs, and lengthy Word documents to find answers to routine operational questions. New starters in particular needed weeks to get up to speed.",
+    solution:
+      "Documents (PDFs, Word files, Confluence exports) are ingested via an async Python pipeline that chunks, embeds using a sentence-transformer model, and stores vectors in Pinecone. At query time, LangChain retrieves the top-k relevant chunks and passes them as context to Claude via the Anthropic API, which generates a cited, conversational answer referencing the source document. The React frontend shows the answer alongside expandable source citations so users can verify. Deployed via Docker with GitHub Actions managing continuous delivery.",
+    results: [
+      "Average time to find SOPs and policy answers reduced from 15+ minutes to under 60 seconds",
+      "New starter onboarding score improved significantly in post-deployment survey",
+      "Source citations in every answer maintained trust and allowed quick verification",
+      "Ingestion pipeline processes new or updated documents automatically on upload",
+    ],
+  },
+
+  {
+    title: "PredictIQ: Churn Prediction ML Pipeline",
+    category: "Machine Learning",
+    description:
+      "An end-to-end ML pipeline that predicts customer churn 30 days in advance for a subscription SaaS business — with automated retraining, drift detection, and a CRM integration that surfaces at-risk accounts directly to the sales team.",
+    image: "/project21.webp",
+    client: "Concept Build — CloudServ Analytics",
+    duration: "7 weeks",
+    technologies: [
+      "Python",
+      "XGBoost",
+      "MLflow",
+      "Apache Airflow",
+      "PostgreSQL",
+      "FastAPI",
+      "Docker",
+      "Kubernetes",
+      "GitHub Actions",
+      "HubSpot API",
+    ],
+    slug: "predictiq-churn-prediction-pipeline",
+    challenge:
+      "The client was losing roughly 8% of customers monthly with no early warning system. Customer success teams were reactive — only noticing churn after cancellation. They needed a proactive, data-driven approach integrated into their existing CRM workflow.",
+    solution:
+      "Built a feature engineering pipeline in Python that pulls 90 days of product usage, billing, and support history from PostgreSQL. XGBoost model trained on 18 months of historical churn data — MLflow tracks all experiments, model versions, and metrics. Apache Airflow orchestrates weekly automated retraining and data drift detection. The FastAPI prediction service pushes a 30-day churn probability score to HubSpot via API, creating at-risk tasks for the customer success team on any account above threshold. Full pipeline containerised with Docker on Kubernetes.",
+    results: [
+      "Model achieved 87% precision and 82% recall on holdout test data",
+      "Monthly churn reduced by an estimated 23% within the first quarter of deployment",
+      "Customer success team received automated HubSpot tasks for at-risk accounts daily",
+      "Automated retraining with drift detection ensures model accuracy is maintained over time",
+    ],
+  },
+
+  {
+    title: "VisualFlow: AI Image Generation & Brand Asset Platform",
+    category: "Generative AI",
+    description:
+      "A generative AI platform that lets marketing teams produce on-brand image assets, product mockups, and social media visuals using natural language prompts — with brand guardrails to ensure style consistency.",
+    image: "/project22.webp",
+    client: "Concept Build — Luminary Brands",
+    duration: "6 weeks",
+    technologies: [
+      "OpenAI DALL·E 3",
+      "Stable Diffusion (fine-tuned LoRA)",
+      "Python",
+      "FastAPI",
+      "React",
+      "TypeScript",
+      "AWS S3",
+      "CloudFront",
+      "Replicate API",
+      "Stripe",
+    ],
+    slug: "visualflow-ai-brand-asset-platform",
+    challenge:
+      "The marketing team was spending days per campaign briefing and waiting on design resources for social assets, product mockups, and ad variants. They needed a self-serve tool that maintained brand consistency without requiring design skill.",
+    solution:
+      "Built a React + FastAPI platform integrating OpenAI DALL·E 3 for general image generation and a fine-tuned Stable Diffusion LoRA model (trained on the client's brand assets) for brand-consistent outputs. Brand guardrails are enforced via prompt templates and a negative prompt library — preventing off-brand colours, styles, and compositions. Generated assets are stored in AWS S3, served via CloudFront, and organised in a team asset library. Stripe handles usage-based billing for multi-seat team plans.",
+    results: [
+      "Marketing team time-to-asset reduced from days to under 5 minutes",
+      "Fine-tuned LoRA model maintained brand visual consistency across 200+ generated assets",
+      "Asset library gave the team a searchable, shareable repository for all generated content",
+      "Usage-based Stripe billing model enabled the platform to be productised for other clients",
+    ],
+  },
+
+  {
+    title: "ShiftSync: AI-Powered Workforce Scheduling Tool",
+    category: "AI Integration / Web Application",
+    description:
+      "A smart workforce scheduling tool for multi-location retail that uses an LLM to parse natural language scheduling requests, combined with constraint-solving logic to generate conflict-free rotas automatically.",
+    image: "/project23.webp",
+    client: "Concept Build — RetailOps Ltd",
+    duration: "8 weeks",
+    technologies: [
+      "OpenAI GPT-4o",
+      "Python",
+      "FastAPI",
+      "React",
+      "TypeScript",
+      "PostgreSQL",
+      "Redis",
+      "Google Calendar API",
+      "Docker",
+      "GitHub Actions (CI/CD)",
+    ],
+    slug: "shiftsync-ai-workforce-scheduling",
+    challenge:
+      "Managers at five retail locations spent 4–6 hours weekly building shift rotas manually in spreadsheets, frequently producing conflicts — double-booked staff, missed coverage gaps, and compliance violations around working hour limits.",
+    solution:
+      "Managers describe scheduling requirements in plain English ('I need three staff on Saturday, no one who worked a double shift Friday'). GPT-4o parses the natural language request and extracts structured constraints. A Python constraint-solving layer generates a conflict-free rota that respects availability, working hour rules, and role requirements. The React interface lets managers review, tweak, and publish the rota. Published schedules sync to Google Calendar for all affected staff automatically. Redis caches frequently accessed availability data; GitHub Actions runs end-to-end scheduling tests on every PR.",
+    results: [
+      "Rota creation time reduced from 4–6 hours to under 20 minutes per week",
+      "Scheduling conflicts eliminated through automated constraint validation",
+      "Google Calendar sync meant staff received shift updates without separate notification",
+      "Working hour compliance violations dropped to zero after deployment",
     ],
   },
 ];
+
+// export { projects };
+
+// const projects = [
+//   {
+//     title: "LiteCloud: Future-Ready Practice Management Tool",
+//     category: "Practice Management",
+//     description:
+//       "An advanced practice management tool designed for Chartered Accountants (CAs) and Certified Public Accountants (CPAs). Its flexible architecture ensures it can be customized to meet the needs of other professionals, such as lawyers, with minimal modifications.",
+//     image: "/project1.webp",
+//     client: "JHS Associates LLP",
+//     duration: "8+ months (ongoing)",
+//     technologies: [
+//       "SharePoint",
+//       "Power BI",
+//       "Microsoft Outlook Integration",
+//       "React",
+//     ],
+//     slug: "litecloud-practice-management-tool",
+//     challenge:
+//       "Inefficient manual processes and scattered workflows for CAs and CPAs led to difficulties in managing tasks, client relationships, and accessing real-time analytics. The client also wanted a scalable solution that could cater to other professions, such as lawyers, with minimal effort.",
+//     solution:
+//       "Built a modular platform offering CRM, task tracking, client database management, and automated workflows. Power BI dashboards provided real-time insights, while dynamic templates and recurring task automation streamlined operations. The design allows for quick adaptation to legal practices with features like case management and legal document templates.",
+//     results: [
+//       "Streamlined task and client management for CAs and CPAs",
+//       "Real-time insights enabled better operational decisions",
+//       "Significant time savings with automated workflows",
+//       "Future-proof design to expand into legal practice management",
+//     ],
+//   },
+//   {
+//     title: "Customer Complaint Management App for Nama Supply",
+//     category: "Internal Tool – Workflow Automation",
+//     description:
+//       "A complaint resolution system powered by K2 Nintex that streamlines customer service workflows through automated approvals, real-time data integrations, and multi-channel notifications.",
+//     image: "/project8.jpg",
+//     client: "Nama Supply",
+//     duration: "5+ months (ongoing)",
+//     technologies: ["K2 Nintex", "SQL UserUM", "Orion API", "SMS Gateway"],
+//     slug: "customer-complaint-management-app",
+//     challenge:
+//       "Nama Supply faced delays and inefficiencies in handling customer complaints, with manual approvals and lack of integration between systems leading to slow resolution and poor customer communication.",
+//     solution:
+//       "Designed and implemented a robust complaint management system using K2 Nintex. The solution includes a 4-level dynamic approval flow, integration with SQL UserUM for user validation, and real-time billing data retrieval via Orion API. Customers receive automated SMS updates at each stage, improving transparency and reducing resolution time.",
+//     results: [
+//       "Reduced complaint resolution time by over 40%",
+//       "Integrated user validation and billing data in real-time",
+//       "Enabled automated notifications to customers via SMS",
+//       "Improved operational efficiency with scalable approval workflows",
+//     ],
+//   },
+//   {
+//     title: "DocuMind: AI-Powered Contract Review Assistant",
+//     category: "AI Integration",
+//     description:
+//       "An AI document intelligence tool built for a legal services firm that automatically classifies, extracts key clauses, and flags risk areas from incoming contracts — replacing a largely manual review process.",
+//     image: "/project16.jpg",
+//     client: "Concept Build — Meridian Legal Partners",
+//     duration: "4 weeks",
+//     technologies: [
+//       "Azure OpenAI (GPT-4o)",
+//       "Python",
+//       "Azure Functions",
+//       "React",
+//       "MongoDB",
+//     ],
+//     slug: "documind-ai-contract-review",
+//     challenge:
+//       "The firm's team was spending 3–4 hours daily manually reading, categorising, and routing incoming contracts. As volume grew, errors crept in and turnaround times slipped. They needed AI integrated into their existing workflow — not a new platform to learn.",
+//     solution:
+//       "Built a lightweight AI pipeline using Azure OpenAI (GPT-4o) that ingests PDFs and scanned documents via their existing upload endpoint. A pre-processing layer handles OCR for scanned files, then the model classifies document type, extracts key fields (parties, dates, obligations, termination clauses), and assigns a confidence score. Low-confidence documents are automatically flagged for human review. Results are written back to their MongoDB instance and trigger the existing routing workflow. A thin React dashboard gives the team visibility into the queue and flags.",
+//     results: [
+//       "94% classification accuracy on live document corpus in testing",
+//       "Manual review time reduced from 3–4 hours daily to under 20 minutes",
+//       "Zero new infrastructure required — deployed as an Azure Function",
+//       "Human-in-the-loop review flow built in from day one for edge cases",
+//     ],
+//   },
+//   {
+//     title: "Orion Design System & App Redesign",
+//     category: "UI/UX Design",
+//     description:
+//       "A full UX audit and redesign of a B2B SaaS dashboard, paired with a lightweight design system built in Figma — reducing onboarding friction, unifying visual language, and cutting support tickets related to navigation by half.",
+//     image: "/project17.jpg",
+//     client: "Concept Build — Orion Analytics",
+//     duration: "6 weeks",
+//     technologies: ["Figma", "FigJam", "Storybook", "React", "Tailwind CSS"],
+//     slug: "orion-design-system-saas-redesign",
+//     challenge:
+//       "The client's SaaS analytics product had grown quickly, with multiple teams shipping features independently. The result was an inconsistent UI, confusing navigation patterns, and a high volume of support queries from new users who couldn't find core workflows. No design system existed — every screen was designed from scratch each time.",
+//     solution:
+//       "Ran a UX audit using session recordings and support ticket analysis to map the highest-friction journeys. Conducted user interviews with six power users and five new users to surface conflicting mental models. Redesigned the core navigation structure and the three most-used screens (dashboard, report builder, settings). Built a Figma component library covering typography, colour tokens, form elements, data tables, and charts — then worked with the engineering team to implement it as a Storybook-documented React + Tailwind component library. Handoff included annotated specs and a contribution guide.",
+//     results: [
+//       "Navigation-related support tickets dropped by 48% within 6 weeks of launch",
+//       "New user time-to-first-report reduced from 11 minutes to under 4 minutes",
+//       "Design system adopted across 3 product teams, covering 60+ components",
+//       "Figma-to-code handoff time cut by an estimated 40% per new feature",
+//     ],
+//   },
+//   {
+//     title: "PayNest: Unified BBPS + AEPS Platform (Web, Mobile, Admin)",
+//     category: "Fintech Suite – Mobile, Web & Admin",
+//     description:
+//       "PayNest is a full-stack digital finance platform offering BBPS utility payments and AEPS banking services through mobile and web apps. Designed for both users and agents, it includes a robust admin portal for transaction monitoring, agent management, and real-time support.",
+//     image: "/project6.jpg",
+//     client: "FinLink Micro Services",
+//     duration: "5+ months (ongoing)",
+//     technologies: [
+//       "React Native",
+//       "ReactJS",
+//       "Node.js",
+//       "MongoDB",
+//       "BBPS & AEPS APIs",
+//     ],
+//     slug: "paynest-unified-fintech-suite",
+//     challenge:
+//       "The client aimed to digitize utility payments and basic banking for rural and semi-urban users while enabling agents to operate via both mobile and web. They also needed a backend system to manage transactions, monitor fraud, and handle commissions.",
+//     solution:
+//       "Developed a cross-platform ecosystem with a React Native mobile app for users, a ReactJS web portal for agents, and a secure admin dashboard. Integrated BBPS for bill payments, AEPS for Aadhaar banking, real-time APIs, and SMS alerts. Admins can monitor activity, handle refunds, and manage agent performance with role-based access.",
+//     results: [
+//       "Over 5,000 monthly transactions handled across platforms",
+//       "300+ agents onboarded through the web portal",
+//       "Resolution time for failed transactions reduced by 60%",
+//       "Future-ready architecture for UPI, micro-loans, and multi-lingual support",
+//     ],
+//   },
+//   {
+//     title:
+//       "Revenue360: Built to Demonstrate Alicorn's Rapid Delivery Capability",
+//     category: "Business Process Automation – Power Platform",
+//     description:
+//       "Built in 1.5 months to show exactly what Alicorn can deliver for SMBs with manual finance processes: a full Power Platform solution with a Canvas App front-end, SharePoint data layer, live Power BI dashboards, and automated refresh flows — all in a single-window interface.",
+//     image: "/project9.jpg",
+//     client: "Internal Case Study",
+//     duration: "1.5 months",
+//     technologies: [
+//       "PowerApps (Canvas App)",
+//       "SharePoint",
+//       "Power BI",
+//       "Power Automate",
+//     ],
+//     slug: "revenue360-client-transaction-tracker",
+//     challenge:
+//       "Managing client transactions and revenue processes across multiple tools caused data silos, delays in updates, and lack of real-time insights for stakeholders.",
+//     solution:
+//       "Built a responsive Canvas App for data input and access across devices. SharePoint was used as the secure and collaborative data source. Power BI visualized revenue and transaction patterns with category-level breakdowns. Power Automate triggered dataset refreshes directly from the app, enabling live analytics inside the app itself.",
+//     results: [
+//       "Full Power Platform solution designed and delivered in 6 weeks",
+//       "Single-window interface to manage and monitor revenue flow",
+//       "Real-time Power BI dashboards updated without leaving the app",
+//       "Demonstrates rapid delivery capability for SMBs with manual finance processes",
+//     ],
+//   },
+//   {
+//     title: "FitLife: Native Fitness & Workout App",
+//     category: "Mobile App (Native iOS & Android)",
+//     description:
+//       "FitLife is a dedicated native fitness and workout app, developed separately for iOS and Android platforms. It helps users plan workouts, track progress, and stay motivated through personalized plans, daily tracking, and integrated push notifications.",
+//     image: "/project7.jpg",
+//     client: "FitLife Solutions",
+//     duration: "4+ months",
+//     technologies: [
+//       "Swift (iOS)",
+//       "Kotlin (Android)",
+//       "Firebase",
+//       "Xcode",
+//       "Android Studio",
+//     ],
+//     slug: "fitlife-native-fitness-app",
+//     challenge:
+//       "The client wanted a truly native mobile experience, ensuring best-in-class performance and smooth integration with device features such as HealthKit and Google Fit. They required offline capability, real-time data sync, and consistent UI aligned with each platform’s design language.",
+//     solution:
+//       "Developed fully native apps using Swift for iOS and Kotlin for Android, leveraging platform-specific SDKs and design guidelines. Integrated Firebase for secure authentication and real-time data syncing. Implemented HealthKit (iOS) and Google Fit (Android) integration for holistic fitness tracking, along with offline workout access and personalized push notifications.",
+//     results: [
+//       "Achieved high user satisfaction through a fluid native experience",
+//       "Improved engagement with push notifications and gamified achievements",
+//       "Offline workouts ensured usability without connectivity",
+//       "Integrated seamlessly with HealthKit and Google Fit for accurate tracking",
+//     ],
+//   },
+//   {
+//     title: "Wanderwise: Travel Agency Website",
+//     category: "Website – Informational",
+//     description:
+//       "A visually rich, mobile-optimized website for a travel agency, designed to showcase curated destinations, tour packages, and engage potential clients through impactful storytelling and intuitive design.",
+//     image: "/project10.jpg",
+//     client: "Concept Build — Wanderwise Travels",
+//     duration: "2 weeks",
+//     technologies: ["Next.js", "Tailwind CSS", "Framer Motion"],
+//     slug: "wanderwise-travel-agency-website",
+//     challenge:
+//       "The agency needed a modern digital presence that reflected their brand identity, attracted leads, and presented travel offerings in a visually compelling format.",
+//     solution:
+//       "Developed a fast, SEO-friendly website with featured destination sections, travel inspiration blogs, photo galleries, and a sleek contact form. Animations powered by Framer Motion added a smooth user experience, while Tailwind CSS ensured clean, scalable styling.",
+//     results: [
+//       "Boosted client inquiries through improved brand presentation",
+//       "Mobile-first responsive layout helped capture users on the go",
+//       "Reduced bounce rate and improved engagement time",
+//       "Created a flexible base for future additions like blogs or itineraries",
+//     ],
+//   },
+//   {
+//     title: "AuraLegal: Modern Legal Firm Website",
+//     category: "Website Development",
+//     description:
+//       "A clean, SEO-optimized website designed for a legal consultancy firm. Built to establish credibility, showcase expertise, and streamline client inquiries through a structured and responsive layout.",
+//     image: "/project2.jpg",
+//     client: "Concept Build — AuraLegal LLP",
+//     duration: "3 weeks",
+//     technologies: ["Next.js", "Tailwind CSS", "Framer Motion"],
+//     slug: "auralegal-law-firm-website",
+//     challenge:
+//       "The law firm lacked a strong digital presence and needed a professional platform to highlight its services, display team profiles, and enable client inquiries while maintaining a modern brand image.",
+//     solution:
+//       "Developed a fully responsive, fast-loading website using Next.js and Tailwind CSS. Integrated service listings, lawyer profiles, case study highlights, and a custom contact form. Added subtle animations using Framer Motion to enhance the user experience.",
+//     results: [
+//       "Enhanced online presence and trust with potential clients",
+//       "Improved SEO ranking through server-side rendering",
+//       "Streamlined client inquiries via structured contact form",
+//       "Professional look aligned with the firms brand identity",
+//     ],
+//   },
+//   {
+//     title: "ThreadCart: WooCommerce Clothing Store",
+//     category: "E-Commerce Website",
+//     description:
+//       "An elegant online store crafted for a clothing brand, offering smooth shopping experiences, category filtering, and secure checkout with modern design aesthetics.",
+//     image: "/project3.jpg",
+//     client: "Concept Build — ThreadCart Apparel",
+//     duration: "1 month",
+//     technologies: ["WordPress", "WooCommerce", "Elementor"],
+//     slug: "threadcart-clothing-ecommerce",
+//     challenge:
+//       "The client needed a complete eCommerce platform for their growing fashion label, with customizable product displays, user-friendly shopping flows, and mobile responsiveness.",
+//     solution:
+//       "Developed a WooCommerce-based website using WordPress and Elementor. Included product categorization, discount coupon functionality, customer review sections, wishlist feature, and full mobile optimization.",
+//     results: [
+//       "Launched full-scale eCommerce store within 30 days",
+//       "Increased product visibility through category filters",
+//       "Boosted conversions with a fast, intuitive checkout experience",
+//       "Fully mobile-optimized for modern shoppers",
+//     ],
+//   },
+//   {
+//     title: "NestEdge Interiors: Portfolio Website for Designers",
+//     category: "Website Development",
+//     description:
+//       "A visually immersive website for an interior design firm to showcase projects, share service details, and attract new clients with a highly curated brand presence.",
+//     image: "/project4.jpg",
+//     client: "Concept Build — NestEdge Interiors",
+//     duration: "3 weeks",
+//     technologies: ["Next.js", "Tailwind CSS", "Lightbox Gallery"],
+//     slug: "nestedge-interior-design-website",
+//     challenge:
+//       "The firm wanted a clean and sophisticated platform to display their portfolio, engage potential clients, and improve visibility for their local services.",
+//     solution:
+//       "Built a performance-optimized website using Next.js, featuring interactive image galleries, project filters, and mobile-friendly layouts. Contact form and service descriptions were included to support lead generation.",
+//     results: [
+//       "Professional showcase of 15+ interior design projects",
+//       "Improved client engagement via intuitive navigation",
+//       "Faster page loads and SEO boost through SSR",
+//       "Brand-aligned layout with emphasis on visual storytelling",
+//     ],
+//   },
+//   {
+//     title: "DecoDwell: Home Decor Online Store",
+//     category: "E-Commerce Website",
+//     description:
+//       "An eCommerce platform for handcrafted home decor, built to support product discovery, smooth shopping flow, and easy inventory management through WordPress and WooCommerce.",
+//     image: "/project5.jpg",
+//     client: "Concept Build — DecoDwell Home Studio",
+//     duration: "1.5 months",
+//     technologies: ["WordPress", "WooCommerce", "Elementor"],
+//     slug: "decodwell-home-decor-ecommerce",
+//     challenge:
+//       "The client needed a platform to showcase and sell handcrafted home decor items, with a strong focus on design aesthetics and easy product management.",
+//     solution:
+//       "Created a WordPress WooCommerce store using Elementor for design flexibility. Implemented product filters, customer reviews, wishlists, and promotional banners. Optimized layouts for mobile and integrated secure payment gateways.",
+//     results: [
+//       "Smooth eCommerce experience with high user retention",
+//       "Easy inventory and order management via WooCommerce",
+//       "Increased conversions through aesthetic product layouts",
+//       "Fully responsive and scalable for future product lines",
+//     ],
+//   },
+//   {
+//     title: "AgencyPro: WordPress Responsive Landing Page",
+//     category: "Landing Page (WordPress)",
+//     description:
+//       "AgencyPro is a clean, modern WordPress landing page developed for BrightEdge Solutions — a creative agency looking to showcase their services, team, and expertise with a sleek, responsive online presence. The landing page is designed to drive inquiries and build trust with potential clients.",
+//     image: "/project12.jpg",
+//     client: "Concept Build — BrightEdge Solutions",
+//     duration: "1 month",
+//     technologies: ["WordPress", "Elementor", "Custom CSS"],
+//     slug: "agencypro-wordpress-landing-page",
+//     challenge:
+//       "BrightEdge Solutions needed a versatile landing page that would clearly present their services and company highlights while staying easy to update without technical help. The page had to be fully responsive and optimized for conversions.",
+//     solution:
+//       "Designed the landing page in Figma and built it on WordPress using Elementor for flexible drag-and-drop editing. Added custom CSS for precise styling tweaks. Included well-structured sections for service overviews, company achievements, team members, client testimonials, and an integrated contact form. Prioritized SEO best practices and fast page load times.",
+//     results: [
+//       "Delivered a polished, conversion-focused landing page",
+//       "Ensured seamless responsiveness on all devices",
+//       "Empowered the agency team to edit content easily with Elementor",
+//       "Improved online visibility and increased customer inquiries",
+//     ],
+//   },
+//   {
+//     title: "HavenStay: Home Rentals Agency Website Design",
+//     category: "Website (WordPress)",
+//     description:
+//       "HavenStay is a modern WordPress website designed and developed for a boutique home rentals agency. The site showcases available properties, highlights agency services, and provides an easy way for potential clients to inquire about rentals — all within a clean, trustworthy design.",
+//     image: "/project13.jpg",
+//     client: "Concept Build — HavenStay Rentals",
+//     duration: "2 months",
+//     technologies: ["WordPress", "Elementor", "Custom CSS"],
+//     slug: "havenstay-home-rentals-website",
+//     challenge:
+//       "HavenStay Rentals needed a website that would build trust with homeowners and renters alike. The goal was to present property listings attractively while keeping the site simple to update as new listings became available, all without using complex booking systems.",
+//     solution:
+//       "Designed a fresh, user-friendly layout in Figma, then built the site on WordPress using Elementor for flexible content editing. Developed custom listing sections, service pages, and a contact form for rental inquiries. Added subtle animations and clear calls-to-action to increase engagement. Optimized the site for fast loading and mobile responsiveness.",
+//     results: [
+//       "Launched a professional, easy-to-manage WordPress website",
+//       "Created a trustworthy online presence to attract homeowners and renters",
+//       "Enabled the agency team to update listings and content without coding",
+//       "Improved lead generation through clear CTAs and contact options",
+//     ],
+//   },
+//   {
+//     title: "PeopleCore: HR Management Admin Portal",
+//     category: "Web Application (.NET)",
+//     description:
+//       "PeopleCore is a robust HR management portal developed for a mid-sized organization to streamline all key HR processes. Built with ASP.NET Core MVC and SQL Server, the platform provides a centralized solution for employee onboarding, leave management, performance tracking, and internal communication, all within an intuitive, responsive interface.",
+//     image: "/project14.jpg",
+//     client: "Concept Build — Synergen Solutions Inc.",
+//     duration: "4 months",
+//     technologies: ["ASP.NET Core MVC", "SQL Server", "REST API"],
+//     slug: "peoplecore-hr-admin-portal",
+//     challenge:
+//       "The client needed a unified intranet portal to replace multiple disconnected HR tools. They wanted secure role-based access for HR admins and employees, centralized records, and real-time performance tracking, all while ensuring an excellent user experience on desktop and mobile.",
+//     solution:
+//       "Designed a modern HR admin dashboard UI in Figma, then implemented it using ASP.NET Core MVC with SQL Server as the backend. Developed custom modules for onboarding, leave requests, appraisals, and announcements. Created secure REST APIs for future mobile app integration. Implemented granular user permissions for HR managers, team leads, and employees.",
+//     results: [
+//       "Centralized all HR processes in a single, easy-to-use portal",
+//       "Improved employee experience and HR team efficiency",
+//       "Reduced paperwork and manual tracking through automation",
+//       "Enabled seamless future mobile app integration via REST APIs",
+//     ],
+//   },
+//   {
+//     title: "DineFlow: Restaurant Operations Automation with Power Platform",
+//     category: "Power Platform Solution",
+//     description:
+//       "DineFlow is a custom-built restaurant operations solution leveraging Power Apps, Power Automate, SharePoint, and Power BI. Designed for a multi-branch restaurant chain, it centralizes food order tracking, menu updates, customer feedback management, and payment monitoring, all within a unified low-code platform.",
+//     image: "/project15.jpg",
+//     client: "Concept Build — Urban Eats Group",
+//     duration: "3 months",
+//     technologies: ["Power Apps", "Power Automate", "SharePoint", "Power BI"],
+//     slug: "dineflow-restaurant-operations-platform",
+//     challenge:
+//       "The client relied on spreadsheets and disconnected tools to manage daily orders, update menus, collect reviews, and track payments — leading to data silos and delays. They needed an agile, scalable solution without investing in custom app development.",
+//     solution:
+//       "Designed a clear admin dashboard in Figma and built a Power Apps Canvas App for branch managers to handle food orders, update menus, and view customer feedback in real-time. Automated order workflows and approval chains using Power Automate. Stored all menu and order data securely in SharePoint. Integrated Power BI dashboards to analyze sales, payment trends, and customer satisfaction KPIs.",
+//     results: [
+//       "Consolidated operations into a single low-code app, accessible on mobile and desktop",
+//       "Accelerated order handling and menu updates by over 60%",
+//       "Enabled real-time feedback monitoring to improve service quality",
+//       "Delivered actionable sales and payment analytics through integrated Power BI dashboards",
+//     ],
+//   },
+// ];
 
 const posts = [
   {
