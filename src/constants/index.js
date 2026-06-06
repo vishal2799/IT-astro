@@ -578,6 +578,97 @@ Our team of experts ensures smooth integration, ongoing support, and training, h
         "Book a free 30-minute call and we will map out exactly what AI can do for your specific situation — no jargon, no sales pitch.",
     },
   },
+  {
+    title: "SEO & Digital Visibility",
+    icon: "search",
+    description:
+      "We improve organic search rankings through technical SEO audits, on-page optimisation, structured data, Core Web Vitals fixes, and content strategy — for websites built on any stack.",
+    heroImage: "/service-seo.webp",
+    overview:
+      "Most businesses we talk to have the same problem: a website that looks good but ranks nowhere. Paid ads stop working the moment you stop paying. SEO compounds — every improvement you make today keeps paying back months and years later.<br><br>We approach SEO technically first. Before touching content, we audit your site for crawlability issues, indexation problems, slow page speeds, broken structured data, and missing canonical signals — the things that silently suppress rankings regardless of how good your content is.<br><br>Once the technical foundation is solid, we work on on-page optimisation: title tags, meta descriptions, heading structure, internal linking, and content gaps against your actual search competitors. For local businesses, we handle Google Business Profile optimisation, local citations, and location-specific structured data.<br><br>We work with sites built on any stack — Next.js, Astro, WordPress, Webflow, custom — and integrate SEO requirements into new build projects from day one rather than bolting them on afterwards.",
+    features: [
+      "Full technical SEO audit — crawlability, indexation, canonicals, redirects",
+      "Core Web Vitals and page speed optimisation (LCP, CLS, INP)",
+      "Schema.org structured data implementation (Organisation, Product, FAQ, BreadcrumbList, Article)",
+      "On-page optimisation — title tags, headings, meta descriptions, internal linking",
+      "Local SEO — Google Business Profile, NAP citations, local structured data",
+      "Content gap analysis and keyword mapping against search competitors",
+      "XML sitemap and robots.txt configuration",
+      "Monthly rank tracking and performance reporting",
+    ],
+    benefits: [
+      {
+        title: "Compounding organic growth",
+        desc: "Unlike paid ads, SEO improvements accumulate over time — rankings built this month keep working without ongoing spend.",
+      },
+      {
+        title: "Technical issues fixed at the root",
+        desc: "We identify and fix the crawlability, speed, and indexation problems that suppress rankings regardless of content quality.",
+      },
+      {
+        title: "Stack-agnostic",
+        desc: "We work with Next.js, Astro, WordPress, Webflow, and custom codebases — SEO integrated into your build, not bolted on.",
+      },
+      {
+        title: "Transparent reporting",
+        desc: "Monthly rank tracking and plain-English reporting on what moved, what didn't, and what's next.",
+      },
+    ],
+    process: [
+      {
+        title: "Technical Audit",
+        description:
+          "Crawl your site to identify indexation blocks, speed issues, broken structured data, duplicate content, and redirect chains.",
+      },
+      {
+        title: "Keyword & Competitor Research",
+        description:
+          "Map your target keywords, assess search intent, and identify content gaps against the pages that currently rank.",
+      },
+      {
+        title: "On-Page & Technical Fixes",
+        description:
+          "Implement fixes across title tags, headings, page speed, structured data, internal linking, and canonicalisation.",
+      },
+      {
+        title: "Content & Local Optimisation",
+        description:
+          "Optimise or produce content targeting priority keywords; handle local SEO for location-based businesses.",
+      },
+      {
+        title: "Monthly Reporting & Iteration",
+        description:
+          "Track rank movements, organic traffic, and Core Web Vitals monthly — adjust strategy based on what the data shows.",
+      },
+    ],
+    faq: [
+      {
+        question: "How long before we see results?",
+        answer:
+          "Technical fixes and structured data changes can show impact within 4–8 weeks. Meaningful rank movement on competitive terms typically takes 3–6 months. We set realistic expectations upfront based on your domain authority and competition level.",
+      },
+      {
+        question: "Do you work with sites not built by Alicorn?",
+        answer:
+          "Yes — we audit and optimise sites built on any platform. For WordPress sites we implement changes directly; for custom or framework-based sites we work with your dev team or implement changes ourselves.",
+      },
+      {
+        question: "What's included in a technical SEO audit?",
+        answer:
+          "Crawl analysis, indexation review, Core Web Vitals assessment, structured data validation, sitemap and robots.txt check, redirect audit, duplicate content check, and internal linking review — delivered as a prioritised fix list.",
+      },
+      {
+        question: "Do you handle content writing?",
+        answer:
+          "We produce keyword-mapped content briefs and can write or commission content as part of an engagement. Our focus is always on search intent — content that actually answers what users are looking for, not keyword-stuffed filler.",
+      },
+    ],
+    cta: {
+      title: "Find out why your site isn't ranking",
+      description:
+        "Book a free technical SEO audit call — we'll review your site live and tell you exactly what's holding your rankings back.",
+    },
+  },
 ];
 
 const technology = [
@@ -2075,6 +2166,37 @@ const projects = [
   },
 
   {
+    title: "RankReady: Technical SEO Overhaul for a SaaS Platform",
+    category: "SEO & Digital Visibility",
+    description:
+      "A full technical SEO audit and implementation for a B2B SaaS platform — fixing Core Web Vitals failures, structured data errors, and crawlability issues that were suppressing organic rankings despite strong content.",
+    image: "/project24.webp",
+    client: "Concept Build — Vantara SaaS",
+    duration: "10 weeks",
+    technologies: [
+      "Screaming Frog",
+      "Google Search Console",
+      "Lighthouse / PageSpeed Insights",
+      "Schema.org structured data",
+      "Next.js (implementation)",
+      "Ahrefs",
+      "Google Tag Manager",
+      "Datadog (Core Web Vitals monitoring)",
+    ],
+    slug: "rankready-saas-seo-overhaul",
+    challenge:
+      "The client had invested heavily in content — 80+ blog posts, detailed feature pages, and comparison landing pages — but organic traffic had plateaued at a fraction of what competitors were pulling. A surface-level review showed strong content but no attention had ever been paid to the technical layer underneath it.",
+    solution:
+      "Started with a full Screaming Frog crawl and Google Search Console audit. Found 340+ indexation issues: duplicate title tags, missing canonical tags, self-referencing canonicals, a misconfigured robots.txt blocking key landing pages, and 12 redirect chains. Core Web Vitals were failing on mobile across all key pages — LCP averaging 6.2s due to unoptimised hero images and render-blocking scripts. Structured data was absent on all blog posts and broken (invalid JSON-LD) on product pages. Fixed all crawlability issues, implemented next/image across the site, deferred non-critical scripts via Google Tag Manager, and added valid Schema.org markup (Article, SoftwareApplication, BreadcrumbList, FAQPage) across all content types. Ahrefs was used for keyword gap analysis — 60+ high-intent, low-competition keywords identified that competitors ranked for but the client had no content targeting. Delivered a prioritised content brief for each. Datadog synthetic monitoring set up to alert on Core Web Vitals regressions on every deployment.",
+    results: [
+      "Organic sessions increased 140% over 6 months post-implementation",
+      "Core Web Vitals moved from failing to passing on all key pages — LCP from 6.2s to 1.8s",
+      "Google Search Console showed 3x growth in indexed pages within 8 weeks of crawlability fixes",
+      "Structured data rich results (FAQs, breadcrumbs) appeared in SERPs within 6 weeks of implementation",
+    ],
+  },
+
+  {
     title: "Wanderwise: Travel Agency Website",
     category: "Web Development",
     description:
@@ -2605,8 +2727,6 @@ const projects = [
   },
 ];
 
-// export { projects };
-
 // const projects = [
 //   {
 //     title: "LiteCloud: Future-Ready Practice Management Tool",
@@ -2976,6 +3096,105 @@ const projects = [
 // ];
 
 const posts = [
+  {
+    title:
+      "Technical SEO in 2026: What Actually Moves Rankings for SaaS and Service Businesses",
+    content: `
+<p>Most SEO advice on the internet is written for content farms and affiliate sites. If you run a SaaS product or a service business, a lot of it doesn't apply — and some of it actively wastes your time. This post is about the technical SEO layer specifically: the things that suppress your rankings regardless of how good your content is.</p>
+ 
+<p>We've audited dozens of sites over the past two years. The pattern is remarkably consistent. Companies invest in content, get frustrated that it doesn't rank, then assume they need more content or more backlinks. Usually the real problem is something much more fixable sitting underneath.</p>
+ 
+<h2>1. Crawlability issues are more common than you think</h2>
+ 
+<p>Google can only rank pages it can find and index. A surprising number of sites have configuration errors that quietly block this. The most common we see:</p>
+ 
+<ul>
+  <li><strong>robots.txt blocking key pages</strong> — often introduced accidentally during a staging migration. If your robots.txt disallows <code>/blog/</code> or <code>/features/</code>, none of those pages will rank regardless of their content quality.</li>
+  <li><strong>Redirect chains</strong> — each hop in a redirect loses a small amount of link equity and slows crawl. Chains of 3+ redirects are a crawl budget problem on larger sites.</li>
+  <li><strong>Canonical tag errors</strong> — self-referencing canonicals on paginated pages, missing canonicals on duplicate content, or canonicals pointing to the wrong URL variant (http vs https, trailing slash vs none).</li>
+  <li><strong>Noindex tags left from development</strong> — we see this regularly on Next.js and Astro sites where a noindex meta tag was added during development and never removed in production.</li>
+</ul>
+ 
+<p>A Screaming Frog crawl combined with Google Search Console's Coverage report will surface all of these. Fix them before doing anything else.</p>
+ 
+<h2>2. Core Web Vitals are a ranking factor — but only above a threshold</h2>
+ 
+<p>Google's Page Experience signals including Core Web Vitals (LCP, CLS, INP) are a tiebreaker, not a primary ranking factor. A page with a failing LCP won't automatically outrank a faster page just because the content is better. But when two pages are comparable on content and authority, the faster one tends to win — and failing Core Web Vitals metrics are common enough to be worth fixing on their own terms.</p>
+ 
+<p>The most impactful fixes by effort:</p>
+ 
+<ul>
+  <li><strong>LCP (Largest Contentful Paint)</strong>: Almost always caused by an unoptimised hero image or a slow server response. Use next/image or astro:assets for automatic WebP conversion and lazy loading. Preload your LCP image with <code>&lt;link rel="preload"&gt;</code>. Target under 2.5s.</li>
+  <li><strong>CLS (Cumulative Layout Shift)</strong>: Most commonly caused by images without explicit width/height attributes, web fonts causing FOUT, or dynamically injected banners. Set dimensions on all images. Use <code>font-display: swap</code> with a system font fallback.</li>
+  <li><strong>INP (Interaction to Next Paint)</strong>: Replaced FID in 2024 as the interactivity metric. Heavy JavaScript execution on the main thread is the usual culprit — defer non-critical scripts, split large bundles, and avoid long tasks blocking the main thread.</li>
+</ul>
+ 
+<h2>3. Structured data is underused on SaaS sites</h2>
+ 
+<p>Schema.org structured data tells Google exactly what your content is — and eligible content gets rich results in SERPs (star ratings, FAQ dropdowns, breadcrumbs, sitelinks search box). These increase click-through rate without necessarily changing your rank position.</p>
+ 
+<p>For a typical SaaS or service business, the most valuable schema types to implement:</p>
+ 
+<ul>
+  <li><strong>Organization</strong> — on your homepage, with name, URL, logo, sameAs links to your social profiles</li>
+  <li><strong>SoftwareApplication</strong> — on your product page, with applicationCategory, operatingSystem, offers (pricing)</li>
+  <li><strong>FAQPage</strong> — on any page with a Q&amp;A section; eligible for FAQ rich results in SERPs</li>
+  <li><strong>Article / BlogPosting</strong> — on blog posts, with author, datePublished, dateModified</li>
+  <li><strong>BreadcrumbList</strong> — on all interior pages, helps Google understand your site hierarchy</li>
+</ul>
+ 
+<p>Implement as JSON-LD in your page <code>&lt;head&gt;</code>. Validate with Google's Rich Results Test before deploying. Common errors: missing required fields, incorrect date format (must be ISO 8601), and mismatched URLs between schema and canonical.</p>
+ 
+<h2>4. Internal linking is a free ranking lever most sites ignore</h2>
+ 
+<p>Internal links pass authority between pages and signal to Google which pages are most important. Most sites have a navigation and footer linking to top-level pages, then nothing else — meaning deep content pages are orphaned.</p>
+ 
+<p>A practical internal linking audit:</p>
+ 
+<ol>
+  <li>Export all your pages from Screaming Frog</li>
+  <li>Filter for pages with zero or one internal links pointing to them</li>
+  <li>For each important page with low internal links, find 3–5 existing pages that naturally reference the same topic</li>
+  <li>Add contextual links from those pages using descriptive anchor text (not "click here")</li>
+</ol>
+ 
+<p>This alone can move rankings for pages that Google hasn't been treating as authoritative because no other pages on your site pointed to them.</p>
+ 
+<h2>5. Keyword mapping: one page, one intent</h2>
+ 
+<p>Keyword cannibalism — multiple pages competing for the same search term — is one of the most common issues on sites that have grown organically over time. Google doesn't know which page to rank, so it tends to rank neither well.</p>
+ 
+<p>Run an Ahrefs or SEMrush crawl, export your keyword rankings, and identify any keyword where two or more of your pages appear. For each conflict:</p>
+ 
+<ul>
+  <li>If one page is clearly stronger (more links, better content, more traffic): add a canonical from the weaker page to the stronger one, or 301 redirect if the weaker page has no unique value</li>
+  <li>If both pages serve different intent for the same keyword: differentiate the content more clearly so Google can understand they answer different questions</li>
+</ul>
+ 
+<h2>The order matters</h2>
+ 
+<p>Technical SEO work should follow a specific sequence. Fix crawlability first — there's no point optimising content Google can't find. Then fix Core Web Vitals so the pages Google does find pass the page experience threshold. Then add structured data for rich result eligibility. Then work on on-page content and internal linking. Then address keyword gaps with new content.</p>
+ 
+<p>Doing these in the wrong order wastes time. Producing new content while crawlability issues remain means that content may not get indexed at all.</p>
+ 
+<h2>Conclusion</h2>
+ 
+<p>Technical SEO is unglamorous work — it's mostly fixing configuration errors and implementation details rather than producing new content. But it's also the work that unlocks the value of everything else you've already built. If you've invested in content and aren't seeing the organic traffic you expected, the technical layer is the right place to start looking.</p>
+ 
+<p>If you'd like us to run a technical audit on your site, we're happy to do a free review call — we'll look at your Search Console data and crawl a sample of pages, and give you a clear picture of what's holding your rankings back.</p>
+  `,
+    excerpt:
+      "Most SaaS and service sites have the same problem: good content that doesn't rank because the technical foundation underneath it is broken. This post covers the crawlability issues, Core Web Vitals failures, and structured data gaps we see most often — and how to fix them in the right order.",
+    image: "/blog-seo.webp",
+    date: "June 2, 2026",
+    author: {
+      name: "Tarun Parashar",
+      bio: "Tarun is co-founder and Tech Lead at Alicorn Infotech. He has led technical SEO, AI integration, and full-stack development projects for clients across SaaS, fintech, legal tech, and enterprise operations.",
+      avatar: "/avatar.png",
+    },
+    slug: "technical-seo-2026-saas-service-businesses",
+    category: "SEO",
+  },
   {
     title:
       "The Future of UI/UX Design: Trends and Best Practices for Business Success",

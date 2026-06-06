@@ -5,6 +5,29 @@ import { projects } from '../../constants';
 import ProjectBreadcrumbImage from '../../assets/images/ProjectBreadcrumb.webp';
 import { Image } from 'astro:assets';
 import CTA from '../../components/CTA.astro';
+
+// ─── Tab grouping config ──────────────────────────────────────────────────────
+// Maps a display label to a list of substrings matched against project.category.
+// Order here controls tab order. Add new categories here as your portfolio grows.
+const TAB_GROUPS: Record<string, string[]> = {
+  'All':              [],
+  'AI & ML':          ['generative ai', 'llm', 'machine learning', 'rag', 'ai integration'],
+  'Web & Mobile':     ['web development', 'web application', 'mobile app', 'fintech suite', 'landing page'],
+  'Power Platform':   ['business process automation', 'power platform'],
+  'Enterprise':       ['enterprise application', 'workflow automation'],
+  'E-Commerce':       ['e-commerce'],
+  'UI/UX Design':     ['ui/ux design'],
+  'DevOps':           ['devops', 'ci/cd'],
+  'SEO': ['seo', 'digital visibility'],
+};
+
+// Derive which tabs actually have matching projects (skip empty tabs except All)
+const activeTabs = Object.entries(TAB_GROUPS).filter(([label, keywords]) => {
+  if (label === 'All') return true;
+  return projects.some((p) =>
+    keywords.some((kw) => p.category.toLowerCase().includes(kw))
+  );
+}).map(([label]) => label);
 ---
 
 <MainLayout
@@ -13,10 +36,9 @@ import CTA from '../../components/CTA.astro';
   canonicalUrl='https://alicorninfotech.com/projects'
 >
   <main class='bg-gradient-to-b from-gray-100 to-white'>
+
     <!-- Hero Section -->
-    <section
-      class='relative h-[40vh] min-h-[300px] flex items-center justify-center'
-    >
+    <section class='relative h-[40vh] min-h-[300px] flex items-center justify-center'>
       <Image
         src={ProjectBreadcrumbImage}
         alt='Alicorn Infotech Projects'
@@ -27,9 +49,7 @@ import CTA from '../../components/CTA.astro';
       <div class='absolute inset-0 bg-black opacity-50'></div>
       <div class='relative z-10 text-center text-white px-4'>
         <h1 class='text-4xl md:text-6xl font-bold mb-4'>Portfolio</h1>
-        <p class='text-xl md:text-2xl mb-8'>
-          Innovative Solutions Driving Business Success
-        </p>
+        <p class='text-xl md:text-2xl mb-8'>Innovative Solutions Driving Business Success</p>
       </div>
     </section>
 
@@ -37,11 +57,11 @@ import CTA from '../../components/CTA.astro';
     <section class='section-padding px-4'>
       <div class='container mx-auto max-w-6xl'>
 
-        <!-- Filter Tabs -->
+        <!-- Filter Tabs — generated from TAB_GROUPS + live project data -->
         <div class='flex flex-wrap justify-center gap-3 mb-12' id='filter-tabs'>
-          {['All', 'Web & Mobile', 'Power Platform', 'Enterprise Tools', 'E-Commerce', 'AI & Automation'].map((tab) => (
+          {activeTabs.map((tab, i) => (
             <button
-              class='filter-btn px-5 py-2 rounded-full border-2 border-primary text-primary font-semibold text-sm transition-all duration-200 hover:bg-primary hover:text-white focus:outline-none'
+              class={`filter-btn px-5 py-2 rounded-full border-2 border-primary font-semibold text-sm transition-all duration-200 hover:bg-primary hover:text-white focus:outline-none ${i === 0 ? 'bg-primary text-white' : 'text-primary'}`}
               data-filter={tab}
             >
               {tab}
@@ -49,27 +69,35 @@ import CTA from '../../components/CTA.astro';
           ))}
         </div>
 
+        <!-- Project count indicator -->
+        <p class='text-center text-sm text-gray-500 mb-8' id='project-count'>
+          Showing all {projects.length} projects
+        </p>
+
         <div class='grid grid-cols-1 md:grid-cols-2 gap-12' id='projects-grid'>
-          {
-            projects.map((project, index) => (
-              <ProjectCard
-                title={project.title}
-                category={project.category}
-                description={project.description}
-                image={project.image}
-                client={project.client}
-                duration={project.duration}
-                technologies={project.technologies}
-                slug={project.slug}
-                index={index}
-              />
-            ))
-          }
+          {projects.map((project, index) => (
+            <ProjectCard
+              title={project.title}
+              category={project.category}
+              description={project.description}
+              image={project.image}
+              client={project.client}
+              duration={project.duration}
+              technologies={project.technologies}
+              slug={project.slug}
+              index={index}
+            />
+          ))}
         </div>
+
+        <!-- Empty state -->
+        <div id='empty-state' class='hidden text-center py-20'>
+          <p class='text-gray-400 text-lg'>No projects in this category yet.</p>
+        </div>
+
       </div>
     </section>
 
-    <!-- CTA Section -->
     <CTA
       title='Ready to Start Your Project?'
       description='Lets discuss how we can bring your ideas to life and drive your business forward.'
@@ -80,19 +108,26 @@ import CTA from '../../components/CTA.astro';
 </MainLayout>
 
 <script>
-  const filterRules: Record<string, { cats: string[]; techs: string[] }> = {
-    'All':              { cats: [], techs: [] },
-    'Web & Mobile':     { cats: ['website', 'web application', 'landing page', 'fintech suite', 'mobile app'], techs: ['react native', 'reactjs', 'next.js', 'flutter', 'swift', 'kotlin', 'node.js', 'wordpress', 'elementor', 'django'] },
-    'Power Platform':   { cats: ['power platform', 'business process automation'], techs: ['powerapps', 'power apps', 'power automate', 'power bi', 'sharepoint'] },
-    'Enterprise Tools': { cats: ['enterprise', 'practice management', 'internal tool', 'workflow automation'], techs: ['sharepoint', 'k2 nintex', 'asp.net', 'sql server', 'nintex'] },
-    'E-Commerce':       { cats: ['e-commerce'], techs: ['woocommerce', 'shopify', 'magento'] },
-    'AI & Automation':  { cats: ['automation', 'power platform'], techs: ['power automate', 'uipath', 'automation anywhere', 'k2 nintex'] },
+  // ─── Tab keyword groups (mirrors server-side config) ─────────────────────────
+  // Kept in sync manually — if you add a group above, add it here too.
+  const TAB_KEYWORDS: Record<string, string[]> = {
+    'All':            [],
+    'AI & ML':        ['generative ai', 'llm', 'machine learning', 'rag', 'ai integration'],
+    'Web & Mobile':   ['web development', 'web application', 'mobile app', 'fintech suite', 'landing page'],
+    'Power Platform': ['business process automation', 'power platform'],
+    'Enterprise':     ['enterprise application', 'workflow automation'],
+    'E-Commerce':     ['e-commerce'],
+    'UI/UX Design':   ['ui/ux design'],
+    'DevOps':         ['devops', 'ci/cd'],
+    'SEO':            ['seo', 'digital visibility'], 
   };
 
-  const tabs  = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
-  const cards = document.querySelectorAll<HTMLElement>('#projects-grid > div[data-category]');
+  const tabs       = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
+  const cards      = document.querySelectorAll<HTMLElement>('#projects-grid > *');
+  const countEl    = document.getElementById('project-count')!;
+  const emptyEl    = document.getElementById('empty-state')!;
 
-  // Strip AOS from all cards immediately — we don't want scroll-hiding on a filter page
+  // Remove AOS attributes so cards don't re-animate on filter
   cards.forEach((card) => {
     card.removeAttribute('data-aos');
     card.removeAttribute('data-aos-delay');
@@ -101,33 +136,44 @@ import CTA from '../../components/CTA.astro';
     card.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
   });
 
-  // Set first tab active on load
-  tabs[0]?.classList.add('bg-primary', 'text-white');
+  function applyFilter(activeTab: string) {
+    const keywords = TAB_KEYWORDS[activeTab] ?? [];
+    let visible = 0;
+
+    cards.forEach((card) => {
+      const cat = (card.dataset.category ?? '').toLowerCase();
+      const show = activeTab === 'All' || keywords.some((kw) => cat.includes(kw));
+
+      if (show) {
+        card.style.display = '';
+        // Tiny delay so display:'' takes effect before opacity transition
+        requestAnimationFrame(() => { card.style.opacity = '1'; card.style.transform = 'none'; });
+        visible++;
+      } else {
+        card.style.opacity   = '0';
+        card.style.transform = 'translateY(4px)';
+        setTimeout(() => { if (card.style.opacity === '0') card.style.display = 'none'; }, 200);
+      }
+    });
+
+    // Update count label
+    const total = cards.length;
+    countEl.textContent = activeTab === 'All'
+      ? `Showing all ${total} projects`
+      : `Showing ${visible} of ${total} projects`;
+
+    // Show/hide empty state
+    emptyEl.classList.toggle('hidden', visible > 0);
+  }
 
   tabs.forEach((tab) => {
     tab.addEventListener('click', () => {
-      const filter = tab.dataset.filter ?? 'All';
-
       tabs.forEach((t) => t.classList.remove('bg-primary', 'text-white'));
       tab.classList.add('bg-primary', 'text-white');
-
-      cards.forEach((card) => {
-        if (filter === 'All') {
-          card.style.display   = '';
-          card.style.opacity   = '1';
-          card.style.transform = 'none';
-          return;
-        }
-
-        const { cats, techs } = filterRules[filter] ?? { cats: [], techs: [] };
-        const cardCat  = (card.dataset.category     ?? '').toLowerCase();
-        const cardTech = (card.dataset.technologies ?? '').toLowerCase();
-        const visible  = cats.some((kw) => cardCat.includes(kw)) || techs.some((kw) => cardTech.includes(kw));
-
-        card.style.display   = visible ? ''     : 'none';
-        card.style.opacity   = visible ? '1'    : '';
-        card.style.transform = visible ? 'none' : '';
-      });
+      applyFilter(tab.dataset.filter ?? 'All');
     });
   });
+
+  // Initialise
+  applyFilter('All');
 </script>
